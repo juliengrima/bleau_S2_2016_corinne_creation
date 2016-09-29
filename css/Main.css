@@ -1,0 +1,573 @@
+/*----- INDEX  ------
+//
+//  1. BALISE RESPONSIVE
+//  2. PARALLAX
+//  3. HEADER
+//  4. barre de vavigation
+//  5. ENTETE
+//  6. LOGO
+//  7. SLIDER
+//  8. TEXT-HOVER
+//  9. IMAGES-HOVER
+//  10. FORMULAIRES
+//  11. FOOTER
+//  12. ICONE RETOUR HAUT
+//
+//
+//
+//
+//
+//
+//
+//
+//
+-------------------*/
+
+body{
+    font-family: 'Crete Round', sans-serif,
+}
+
+/* BALISES TITRE H1,2,... */
+h1{
+    
+
+}
+h2{
+   
+}
+h3{
+   
+}
+h4{
+    font-family: 'Nunito', sans-serif;
+}
+h5{
+    
+}
+h6{
+   
+
+}
+
+
+/* COULEURS */
+
+/*  BALISES P*/
+.p-padding{
+    padding-left: 50px;
+}
+
+/*1. balise responsive */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .contenu {
+        width: 500px;
+        background-color: blue;
+    }
+    .hide-on-med-and-down {
+        display: none;
+    }
+    #mobile-demo {
+        display: inline-block !important;
+    }
+    .brand-logo {
+        left: 15% !important;
+    }
+    .imglogo {
+        width: 90px !important;
+    }
+    i.small {
+        display: none;
+    }
+    footer {
+        text-align: center;
+    }
+    #fbplugin {
+        display: none;
+    }
+    #PJ {
+        display: none;
+    }
+    .logo {
+        float: none !important;
+        width: 75px !important;
+    }
+
+    #logofooter {
+        float: none !important;
+        width: 75px !important;
+    }
+
+    footer ul li {
+        list-style: none !important;
+    }
+    footer p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .white-text {
+        margin-top: 20px !important;
+    }
+    .card {
+        width: 80%;
+        margin-left: 15%;
+    }
+    .card-title {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hide-on-med-and-down {
+        display: none;
+    }
+    #mobile-demo {
+        display: inline-block !important;
+    }
+    .brand-logo {
+        left: 35% !important;
+    }
+    .imglogo {
+        width: 25% !important;
+    }
+    footer {
+        text-align: center;
+    }
+    #fbplugin {
+        display: none;
+    }
+    #PJ {
+        display: none;
+    }
+    .logo {
+        float: left !important;
+        width: 75px !important;
+    }
+    
+    #logofooter {
+        float: none !important;
+        width: 75px !important;
+    }
+
+    footer ul li {
+        list-style: none !important;
+    }
+    footer p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    #icnfooter {
+        display: none;
+    }
+    .white-text {
+        margin-top: 20px !important;
+    }
+    .card {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (min-width: 993px) {
+    .contenu {
+        width: 800px;
+        background-color: red;
+    }
+}
+
+/* ---------2. PARALLAX ---------------  */
+    .parallax-container {
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        display: inherit;
+    }
+    body{
+        margin:0;
+        font-family:'Nunito',sans-serif;
+    }
+    /* background setup */
+    .background {
+        background-repeat:repeat;
+        /* custom background-position */
+        background-position:50% 50%;
+        /* ie8- graceful degradation */
+        background-position:50% 50%\9 !important;
+        background-attachment: inherit;
+        width: 100%;
+    }
+
+.parallax #image {
+  display: block;
+  position: inherit;
+  left: 50%;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/*---------- FIN PARALLAX ------------*/
+
+/*3. HEADER */
+
+.imglogo {
+   
+}
+
+.containermain {
+    
+    
+}
+
+.rightmain {
+    
+}
+
+.contact {
+    
+}
+
+/*4. barre de navigation */
+nav,
+i.material-icons {
+    
+}
+
+nav .button-collapsemain {
+    float: left;
+    position: relative;
+    z-index: 1;
+    height: 56px;
+    margin-left: auto;
+}
+
+
+#mobile-demo {
+    display: none;
+}
+
+nav .nav-wrapper {
+    width: 100%;
+    margin-top: 0px;
+}
+
+/*5. ENTETE */
+
+/*6. LOGO */
+
+/*7. SLIDER */
+
+/*8. TEXT-HOVER */
+a{
+    color : #ffab40;
+}
+
+.lien:link {
+    COLOR: rgb(255, 255, 255);
+}
+.lien:hover {
+    COLOR: rgb(218, 255, 32);
+}
+
+/* CARD HORIZONTAL */
+#card-horizontal-height{
+    height: 300px;
+    max-height: 300px;
+}
+
+#card-image-height .image-height{
+    height: 300px;
+    width: 500px;
+}
+
+#card-image-collection-height .image-height{
+    height: 300px;
+    width: 500px;
+}
+
+/*9. HOVER EFFECTS IMAGES STYLE */
+.grid {
+	position: relative;
+	margin: 0 auto;
+	/*padding: 1em 0 4em;*/
+	/*max-width: 1000px;*/
+	list-style: none;
+	text-align: center;
+}
+
+.margin-grid{
+    position: inherit;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	//float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 100%;
+	/*background: #3085a3;*/
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure .img-hover {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+
+/*---------------*/
+/***** Sarah *****/
+/*---------------*/
+
+figure.effect-sarah {
+	background: #42b078;
+}
+
+figure.effect-sarah .img-hover {
+	max-width: none;
+	width: -webkit-calc(100% + 20px);
+	width: calc(100% + 20px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-10px,0,0);
+	transform: translate3d(-10px,0,0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover .img-hover {
+	opacity: 0.4;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah figcaption {
+	text-align: left;
+}
+
+figure.effect-sarah h2 {
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 0;
+}
+
+figure.effect-sarah h2::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+	padding: 1em 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+
+figure.effect-sarah:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+/*10. FORMULAIRES */
+.formulaire {
+    display: inline-block;
+}
+
+.formulaire .champ {
+    background-color: rgb(36, 121, 0);
+    width: 300px;
+    height: 35px;
+}
+
+.formulaire .bouton {
+    background-color: rgb(70, 121, 0);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+}
+
+#contactform {
+    width: 60%;
+    height: 100%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.modal-content p {
+    text-align: center;
+}
+
+.modal-content h4 {
+    color: #9ccc65;
+    text-align: center;
+}
+.btn {
+    float: right;
+    background-color: #9ccc65;
+}
+
+.contacth3 {
+    color: #9ccc65;
+}
+.input-field .prefix {
+     color: #9ccc65;
+   }
+
+
+/*11. FOOTER */
+
+footer.page-footer {
+    background-color: #9ccc65;
+    color: white;
+    margin-top: 0px;
+}
+
+footer ul li {
+    list-style: disc;
+}
+
+footer.page-footer .footer-copyright {
+    background: none;
+    text-align: center;
+}
+
+#logofooter {
+    width: 50px;
+    float: left;
+    padding-right: 1px;
+    margin-right: 2px;
+}
+
+.white-text {
+    margin-top: 4px;
+}
+
+.phone {
+    padding: 3px;
+}
+
+i.small {
+    float: left;
+    margin-right: 5px;
+}
+
+fb-page {
+    text-align: center;
+}
+
+
+.icone {
+    width: 50%;
+}
+
+.taille {
+    padding: 0%;
+}
+
+.haut {
+    padding-top: 15%;
+}
+
+
+/*12. ICONE RETOUR HAUT*/
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #9ccc65 url("../images/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+
