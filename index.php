@@ -15,6 +15,9 @@
                 <!-- FIN MENU NAVBAR ET LOGO -->
         
                 <!-- EVENEMENTS ET ATELIER -->
+                <?php require ('includes/slider.php');?>
+                
+                
     <div class="container">
         <div class="row">
             <div class="col s12 m6 l12 ">
@@ -65,4 +68,4 @@
 
 
 
-<?php include('includes/footer.php'); ?>
+<?php require ('includes/footer.php'); ?>
