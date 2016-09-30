@@ -44,7 +44,7 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
     });</SCRIPT>
   
 
-    <script src="../js/slider.js" type="text/javascript"></script>
+    <script src="js/slider.js" type="text/javascript"></script>
     
 </body>
 
