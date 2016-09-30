@@ -38,6 +38,6 @@
 
 
 
-  
+  <!-- FIN DU CORPS DE PAGE -->
 
 <?php include('includes/footer.php'); ?>
