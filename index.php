@@ -1,21 +1,14 @@
 <?php include('includes/header.php'); ?>
 
-<!-- DIV VIDE POUR ESPACER HE HEADER -->
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12"></div>
-        </div>
-    </div>
-    
-        
-                <!-- MENU NAVBAR ET LOGO -->
-      
-<?php //includes('includes/*.php'); ?>  <!-- EN ATTENT D'AVOIR LA NAVBARRE  -->
-        
-                <!-- FIN MENU NAVBAR ET LOGO -->
-        
+
                 <!-- EVENEMENTS ET ATELIER -->
     <div class="container">
+    <div class="row">
+            <!-- <div class="col s12 m12 l12"></div> -->
+        </div>
+        <div class="row">
+            <!-- <div class="col s12 m12 l12"></div> -->
+        </div>
         <div class="row">
             <div class="col s12 m6 l12 ">
                 <div class="card horizontal" id="card-horizontal-height"> 
