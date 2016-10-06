@@ -58,11 +58,12 @@ h6{
 }
 
 /*1. balise responsive */
-@media screen and (min-width: 1024px) and (max-width: 2 880px) {
-    /*.contenu {
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .contenu {
         width: 500px;
         background-color: blue;
-    }*/
+    }
     .hide-on-med-and-down {
         display: none;
     }
@@ -116,7 +117,7 @@ h6{
     }
 }
 
-/*@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .hide-on-med-and-down {
         display: none;
     }
@@ -165,13 +166,13 @@ h6{
         width: 90%;
         margin-left: 5%;
     }
-}*/
+}
 
-/*@media screen and (min-width: 993px) {
+@media screen and (min-width: 993px) {
     .contenu {
         width: 800px;
         background-color: red;
-    }*/
+    }
 }
 
 /* ---------2. PARALLAX ---------------  */
