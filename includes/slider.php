@@ -11,11 +11,7 @@
 <div id="modal1" class="modal">
     <div class="modal-content center">
         <h4>Votre attention...</h4>
-
         <p><br><br>Ceci est une de mes oeuvres .<br> C'est le fruit de mon travail. <br> Merci de le respecter.</p>
-
-
-
     </div>
     <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"> OK </a>
