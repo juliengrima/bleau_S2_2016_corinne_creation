@@ -25,7 +25,7 @@
 
     <div class="parallax-container">
         <div class="parallax">
-            <img id="image" src="images/vitraux.jpg" >
+            <img id="image" src="images/baroque3.jpg" >
         </div>
 
 
@@ -50,7 +50,7 @@
                     </div>
                     <div class="row row-margin">
                         <div class="col offset-m3">
-                            <a href=""><span  class="text-size">Mes créations</span></a>
+                            <a href="mes_creations.php"><span  class="text-size">Mes créations</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">
@@ -63,10 +63,15 @@
                             <a href=""><span id="lien5" class="text-size">Contact</span></a>
                         </div>
                     </div>
-                </div>  
-            </div>
+                </div> 
+            </div>     
 
-     <!-- <?php //include('slider.php'); ?> -->
+                <div class="row center">
+                    <div class="carousel">
+                        <!-- EVENEMENTS ET ATELIER -->
+                        <?php require ('includes/slider.php');?>
+                    </div>
+                </div>
 
         </div>
         <div class="row row-img center">
@@ -75,6 +80,7 @@
             </div>
         </div>
     </div>
+
 
 
        
