@@ -24,7 +24,11 @@
 -------------------*/
 
 body{
-    font-family: 'Crete Round', sans-serif,
+    font-family: 'Crete Round', sans-serif;
+}
+    
+.back {
+    background-color: black;
 }
 
 /* BALISES TITRE H1,2,... */
@@ -245,9 +249,13 @@ h6{
     /*display: flex;*/
     /*flex-direction: column;*/
     justify-content: center;
-    height: 350px;
+    height: 400px;
     background-color: white;
-    opacity: 0.9;
+    opacity: 0.8;
+    /*border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;*/
 }
 
 /* POSITION DE BOX */
@@ -259,19 +267,8 @@ h6{
     flex-direction: row;
 }
 
-/* DESIGN CSS */
+/* DESIGN BOX */
 
-.arrow-down-top {
-    position: absolute;
-    width: 0; 
-    height: 0px; 
-    border-left: 300px solid transparent;
-    border-right: 300px solid transparent;
-  
-    border-top: 40px solid grey;
-    opacity: 0.9; 
-    margin-left: 100px;
-}
 .arrow-down {
     position: absolute;
     width: 0; 
@@ -280,8 +277,7 @@ h6{
     border-right: 300px solid transparent;
   
     border-top: 40px solid white; 
-    opacity: 0.9;
-    /*margin-left: 90px;*/
+    opacity: 0.8;
 }
 
 .row-img {
@@ -290,6 +286,10 @@ h6{
 
 #col-img {
     margin-left: 53px;
+}
+
+.carousel {
+    margin-top: -100px;
 }
 
 /*4. barre de navigation */
