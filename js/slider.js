@@ -1,7 +1,17 @@
+function maBoucle() {
+    setTimeout(function() {
+        $('.carousel').carousel('next');
+        maBoucle();
+    }, 3000);
+}
+
+
 $(document).ready(function () {
     $('.modal-trigger').leanModal();
     
     $('.carousel').carousel();
+    maBoucle();
+    //$('.carousel').carousel('next', 3); // Move next n times.
 
     function disableselect(e) {
         return false
