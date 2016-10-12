@@ -4,6 +4,13 @@
     Author     : pascal
 */
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
 
 #body-contact {
     display: flex;
