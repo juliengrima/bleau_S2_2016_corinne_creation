@@ -1,21 +1,15 @@
 <?php include('includes/header.php'); ?>
 
-
-                <!-- EVENEMENTS ET ATELIER -->
-    <div class="container">
+<div class="container">
     <div class="row">
-            <!-- <div class="col s12 m12 l12"></div> -->
-        </div>
-        <div class="row">
-            <!-- <div class="col s12 m12 l12"></div> -->
-        </div>
-
+        
     </div>
+    <div class="row">
+        
+    </div>
+</div>
 
-                <!-- EVENEMENTS ET ATELIER -->
-                <?php require ('includes/slider.php');?>
-                
-                
+            
     <div class="container">
     
         <div class="row">
