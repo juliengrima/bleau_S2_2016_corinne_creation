@@ -45,7 +45,7 @@
                     </div>
                     <div class="row row-margin">
                         <div class="col offset-m2">
-                            <a href=""><span id="lien2" class="text-size">Eco-lablel</span></a>
+                            <a href="eco_label.php"><span id="lien2" class="text-size">Eco-lablel</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">

@@ -29,6 +29,7 @@ body{
     
 .back {
     background-color: grey;
+    color: grey;
 }
 
 /* BALISES TITRE H1,2,... */
@@ -53,10 +54,11 @@ h6{
 
 }
 
-
-/* COULEURS */
-
 /*  BALISES P*/
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
 .p-padding{
     padding-left: 50px;
 }
@@ -269,17 +271,6 @@ h6{
 }
 
 /* DESIGN BOX */
-
-.arrow-down {
-    position: inherit;
-    width: 0; 
-    height: 0px; 
-    border-left: 300px solid transparent;
-    border-right: 300px solid transparent;
-  
-    border-top: 40px solid white; 
-    opacity: 0.8;
-}
 
 .row-img {
     margin-top: -20px;
