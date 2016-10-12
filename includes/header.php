@@ -64,21 +64,23 @@
                         </div>
                     </div>
                 </div> 
-            </div>     
-
-                <div class="row center">
-                    <div class="carousel">
-                        <!-- EVENEMENTS ET ATELIER -->
-                        <?php require ('includes/slider.php');?>
-                    </div>
+            </div> 
+            <div class="row center">
+                <div class="carousel">
+                    <!-- EVENEMENTS ET ATELIER -->
+                    <?php require ('includes/slider.php');?>
                 </div>
-
+            </div>    
         </div>
-        <div class="row row-img center">
+
+        <div class="row row-img">
             <div class="col s12 m12 l12" id="col-img">
+                <div class="center">
                 <div class="arrow-down"></div>
+                </div>
             </div>
         </div>
+
     </div>
 
 

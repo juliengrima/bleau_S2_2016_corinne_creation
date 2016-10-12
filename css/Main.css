@@ -235,13 +235,14 @@ h6{
 }
 
 .text-size {
-    font-size: 0.8em;
+    font-size: 1.2em;
     font-family: 'Pinyon Script', cursive;
+    color: white;
 }
 /* position des liens */
 .col-margin {
     margin-top: 15px;
-    margin-left: -190px;
+    margin-left: -150px;
 }
 
 /* CONTENEUR DE BOX */
@@ -249,7 +250,7 @@ h6{
     /*display: flex;*/
     /*flex-direction: column;*/
     justify-content: center;
-    height: 400px;
+    height: 425px;
     background-color: white;
     opacity: 0.8;
     /*border-bottom-right-radius: 5px;
@@ -270,13 +271,13 @@ h6{
 /* DESIGN BOX */
 
 .arrow-down {
-    position: absolute;
+    position: inherit;
     width: 0; 
     height: 0px; 
     border-left: 300px solid transparent;
     border-right: 300px solid transparent;
   
-    border-top: 40px solid white; 
+    border-top: 40px solid black; 
     opacity: 0.8;
 }
 
@@ -285,7 +286,8 @@ h6{
 }
 
 #col-img {
-    margin-left: 53px;
+    margin-left: 200px;
+    margin-right: auto;
 }
 
 .carousel {
