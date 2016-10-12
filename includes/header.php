@@ -25,7 +25,7 @@
 
     <div class="parallax-container">
         <div class="parallax">
-            <img id="image" src="images/vitraux.jpg" >
+            <img id="image" src="images/baroque3.jpg" >
         </div>
 
 
@@ -38,43 +38,51 @@
                 </div>
                 <div class="col s12 m12 l12 border col-margin" id="menus">
 
-                    <div class="row row-margin1 hide-on-med-and-down">
+                    <div class="row row-margin1">
                         <div class="">
                             <a href=""><span id="lien1" class="text-size">Mon histoire</span></a>
                         </div>
                     </div>
-                    <div class="row row-margin hide-on-med-and-down">
+                    <div class="row row-margin">
                         <div class="col offset-m2">
                             <a href=""><span id="lien2" class="text-size">Eco-lablel</span></a>
                         </div>
                     </div>
-                    <div class="row row-margin hide-on-med-and-down">
+                    <div class="row row-margin">
                         <div class="col offset-m3">
-                            <a href=""><span  class="text-size">Mes créations</span></a>
+                            <a href="mes_creations.php"><span  class="text-size">Mes créations</span></a>
                         </div>
                     </div>
-                    <div class="row row-margin hide-on-med-and-down">
+                    <div class="row row-margin">
                         <div class="col offset-m2">
                             <a href=""><span id="lien4" class="text-size">Coin presse</span></a>
                         </div>
                     </div>
-                    <div class="row row-margin hide-on-med-and-down">
+                    <div class="row row-margin">
                         <div class="col offset-m1">
                             <a href=""><span id="lien5" class="text-size">Contact</span></a>
                         </div>
                     </div>
-                </div>  
-            </div>
-
-     <!-- <?php //include('slider.php'); ?> -->
-
+                </div> 
+            </div> 
+            <div class="row center">
+                <div class="carousel">
+                    <!-- EVENEMENTS ET ATELIER -->
+                    <?php require ('includes/slider.php');?>
+                </div>
+            </div>    
         </div>
-        <div class="row row-img center">
+
+        <div class="row row-img">
             <div class="col s12 m12 l12" id="col-img">
+                <div class="center">
                 <div class="arrow-down"></div>
+                </div>
             </div>
         </div>
+
     </div>
+
 
 
        

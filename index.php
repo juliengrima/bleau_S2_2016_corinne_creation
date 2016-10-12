@@ -1,14 +1,17 @@
 <?php include('includes/header.php'); ?>
 
-
-                <!-- EVENEMENTS ET ATELIER -->
-    <div class="container">
+<div class="container">
     <div class="row">
-            <!-- <div class="col s12 m12 l12"></div> -->
-        </div>
-        <div class="row">
-            <!-- <div class="col s12 m12 l12"></div> -->
-        </div>
+        
+    </div>
+    <div class="row">
+        
+    </div>
+</div>
+
+            
+    <div class="container">
+    
         <div class="row">
             <div class="col s12 m6 l12 ">
                 <div class="card horizontal" id="card-horizontal-height"> 
@@ -58,4 +61,4 @@
 
 
 
-<?php include('includes/footer.php'); ?>
+<?php require ('includes/footer.php'); ?>
