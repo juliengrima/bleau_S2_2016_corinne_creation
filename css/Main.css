@@ -28,7 +28,7 @@ body{
 }
     
 .back {
-    background-color: black;
+    background-color: grey;
 }
 
 /* BALISES TITRE H1,2,... */
@@ -194,9 +194,9 @@ h6{
     .background {
         background-repeat:repeat;
         /* custom background-position */
-        background-position:50% 50%;
+        background-position: 100% 100%;
         /* ie8- graceful degradation */
-        background-position:50% 50%\9 !important;
+        background-position:100% 100%\9 !important;
         background-attachment: inherit;
         width: 100%;
     }
@@ -237,7 +237,7 @@ h6{
 .text-size {
     font-size: 1.2em;
     font-family: 'Pinyon Script', cursive;
-    color: white;
+    color: black;
 }
 /* position des liens */
 .col-margin {
@@ -277,7 +277,7 @@ h6{
     border-left: 300px solid transparent;
     border-right: 300px solid transparent;
   
-    border-top: 40px solid black; 
+    border-top: 40px solid white; 
     opacity: 0.8;
 }
 
