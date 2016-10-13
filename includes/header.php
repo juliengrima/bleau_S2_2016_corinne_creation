@@ -9,7 +9,7 @@
 
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Changa+One|Crete+Round|Days+One|Fredoka+One|Nunito|Pinyon+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
@@ -23,12 +23,6 @@
 
 <body class="back">
 
-    <div class="parallax-container">
-        <div class="parallax">
-            <img id="image" src="images/baroque3.jpg" >
-        </div>
-
-
     <div class="container">
         
         <div class="row containeur center">
@@ -36,36 +30,39 @@
                 <div class="img-logo valign">
                     <a href="index.php"><img src="images/logo.png" class="img-logo"></a>
                 </div>
-                <div class="col s12 m12 l12 border col-margin" id="menus">
+                <div class="col s12 m12 l12 border col-margin">
 
                     <div class="row row-margin1">
                         <div class="">
-                            <a href=""><span id="lien1" class="text-size">Mon histoire</span></a>
-                        </div>
-                    </div>
-                    <div class="row row-margin">
-                        <div class="col offset-m2">
-                            <a href="eco_label.php"><span id="lien2" class="text-size">Eco-lablel</span></a>
+                            <div class="lien">
+                                <a href=""><span id="lien1" class="text-size">Mon histoire</span></a>
+                            </div>
                         </div>
                     </div>
                     <div class="row row-margin">
                         <div class="col offset-m3">
+                            <a href="eco_label.php"><span id="lien2" class="text-size">Eco-lablel</span></a>
+                        </div>
+                    </div>
+                    <div class="row row-margin">
+                        <div class="col offset-m4 col-size">
                             <a href="mes_creations.php"><span  class="text-size">Mes créations</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">
-                        <div class="col offset-m2">
+                        <div class="col offset-m3">
                             <a href=""><span id="lien4" class="text-size">Coin presse</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">
-                        <div class="col offset-m1">
+                        <div class="col offset-m2">
                             <a href=""><span id="lien5" class="text-size">Contact</span></a>
                         </div>
                     </div>
                 </div> 
-            </div> 
-            <div class="row center">
+            </div>
+
+        <div class="row center">
                 <div class="carousel">
                     <!-- EVENEMENTS ET ATELIER -->
                     <?php require ('includes/slider.php');?>
@@ -73,15 +70,14 @@
             </div>    
         </div>
 
-        <div class="row row-img">
-            <div class="col s12 m12 l12" id="col-img">
-                <div class="center">
-                <div class="arrow-down"></div>
-                </div>
-            </div>
         </div>
 
+        
+
+
     </div>
+
+    
 
 
 
