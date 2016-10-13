@@ -18,15 +18,15 @@
                     <div class="card-stacked">
                         <div class="card-content">
                             <h4 class="header center">Mes évènements</h4>
-                            <p class="p-padding">Bonjour,<br>
+                            <p class="p-padding">
                             Dans cette rubrique,<br>
                             vous trouverez tous les<br>
                             évènements dans lesquels<br>
                             je serais présente.
                             </p>
                         </div>
-                        <div class="card-action center">
-                            <a href="#">Venir à mes évènements</a>
+                        <div class="card-action center hover-margin">
+                            <a href=""><h5>Venir à mes évènements</h5></a>
                         </div>
                     </div>
                     <div class="card-image" id="card-image-collection-height">
@@ -34,6 +34,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            
         </div>
         <div class="row">
             <div class="col s12 m6 l12">
@@ -51,7 +54,7 @@
                             </p>
                           </div>
                           <div class="card-action center">
-                            <a href="#">Visiter mon atelier</a>
+                            <a href=""><h5>Visiter mon atelier</h5></a>
                           </div>
                     </div>
                 </div>
