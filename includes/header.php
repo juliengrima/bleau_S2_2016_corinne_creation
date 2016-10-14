@@ -35,7 +35,7 @@
                     <div class="row row-margin1">
                         <div class="">
                             <div class="lien">
-                                <a href=""><span id="lien1" class="text-size">Mon histoire</span></a>
+                                <a href="parcours.php"><span id="lien1" class="text-size">Mon histoire</span></a>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="row row-margin">
                         <div class="col offset-m2">
-                            <a href=""><span id="lien5" class="text-size">Contact</span></a>
+                            <a href="contact.php"><span id="lien5" class="text-size">Contact</span></a>
                         </div>
                     </div>
                 </div> 
