@@ -215,7 +215,7 @@ a .lien:hover {
 
 /* taille image */
 .img-logo{
-    width: 175%;
+    width: 250%;
     float: left;
 }
 
@@ -228,7 +228,7 @@ a .lien:hover {
 .row-margin {
     margin-bottom: -50px;
 }
-
+/* NAVBAR*/
 .text-size {
     font-size: 1.6em;
     font-family: 'Pinyon Script', cursive;
@@ -236,7 +236,7 @@ a .lien:hover {
     margin-left: 75px;
 }
 .text-size2 {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* position des liens */
