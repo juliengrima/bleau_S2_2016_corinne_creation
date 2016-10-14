@@ -22,21 +22,22 @@
         <div class="col s12 m12 l12">
 
 
-    <nav>
+    
     
         <div class="col s12 m12 l12">
-            <div class="navac-wrapper orange">
-                <a href="#" class="brandac-logo">Mon parcours :</a>
-            </div>
+           
+                <div class="text-size2"><h3>Mon parcours :</h3></div>
+            
         </div>
     
-    </nav>
+    
 
 	<br>
 
 
     <div class="row">
         <div class="col s12 z-depth-5">
+        <div class="text-size2">
 
             Tout d'abord, intéressée par les activités manuelles, je me suis formée pendant plusieurs années à l'école des Beaux-Arts de Nimes (Gard), ma ville de naissance. J'y ai appris à comprendre les couleurs, les différentes techniques du dessin, de la peinture, de l'encre de Chine ...
 
@@ -59,6 +60,7 @@
             Chaque pièce est un jeu de couleurs où se marient verre, peinture et oxydes mais aussi des inclusions.
 
             Je puise mon inspiration dans la nature et dans le monde qui m'entoure.
+            </div>
         </div>
     </div>
   </div>

@@ -227,6 +227,13 @@ a .lien:hover {
     color: #ffd700;
     margin-left: 75px;
 }
+.text-size2 {
+    font-size: 2em;
+    font-family: 'Pinyon Script', cursive;
+    color: #ffd700;
+    margin-left: 75px;
+}
+
 /* position des liens */
 .col-margin {
     width: 300px !important;
