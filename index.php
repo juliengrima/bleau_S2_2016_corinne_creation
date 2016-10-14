@@ -33,7 +33,11 @@
             <div class="col s12 m6 l12">
                 <div class="card horizontal" id="card-horizontal-height">
                     <div class="card-image" id="card-image-height">
+<<<<<<< HEAD
                         <a href="#"><img src="images/atelier1.jpg" alt="atelier" class="image-height"></a>
+=======
+                        <a href="#"><img src="images/atelier1.JPG" class="image-height"></a>
+>>>>>>> 73bcbcb5f5378fbbc7db9067ba0da31cd46ee92a
                     </div>
                     <div class="card-stacked">
                           <div class="card-content">
@@ -45,7 +49,7 @@
                             </p>
                           </div>
                           <div class="card-action center">
-                            <a href=""><h5>Visiter mon atelier</h5></a>
+                              <a href=""><h5>Visiter mon atelier</h5></a>
                           </div>
                     </div>
                 </div>

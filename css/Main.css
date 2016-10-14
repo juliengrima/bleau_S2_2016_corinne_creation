@@ -14,13 +14,6 @@
 //  12. ICONE RETOUR HAUT
 //
 //
-//
-//
-//
-//
-//
-//
-//
 -------------------*/
 
 body{
@@ -33,26 +26,18 @@ body{
 .back {
     background-color: grey;
     color: #ffd700;
-
 }
 
 /* BALISES TITRE H1,2,... */
-h1{
-    
+h1{}
+h2{}
+h3{}
 
-}
-h2{
-   
-}
-h3{
-   
-}
 h4{
     font-family: 'Pinyon Script';
 }
 h5{
-    font-family: 'Pinyon Script', cursive;
-    
+    font-family: 'Pinyon Script', cursive;    
 }
 h6{
    
@@ -71,11 +56,11 @@ p {
 
 /*8. TEXT-HOVER */
 a .lien {
-    color: : #ffab40;
+    color: #ffab40;
     transition: color .3s ease;
 }
 a .lien:hover {
-    color: : rgb(218, 255, 32);
+    color:  rgb(218, 255, 32);
 }
 
 /* LES IMAGES*/
@@ -207,11 +192,32 @@ a .lien:hover {
 
 /* taille image */
 .img-logo{
-    width: 250%;
+    width: 800%;
     float: left;
+    margin-top: 15px;
 }
 
-/* taille de texte */
+/* ***************************************************************************
+                           4. barre de vavigation
+**************************************************************************** */
+.navTextCC {
+    font-size: 1.6em;
+    font-family: 'Pinyon Script', cursive;
+    color: #ffd700;
+    margin-left: 75px;
+    transition-property: color;
+    transition-duration: 0.8s;
+}
+
+.navTextCC:hover {
+    /*background-color: white!important;*/
+    color: white!important;
+   
+}
+
+/* ************************************************************************* */
+
+/* position de texte */
 
 .row-margin1 {
     margin-bottom: 5px;
@@ -221,13 +227,7 @@ a .lien:hover {
     margin-bottom: -50px;
 }
 /* NAVBAR*/
-.text-size {
-    font-size: 1.6em;
-    font-family: 'Pinyon Script', cursive;
-    color: #ffd700;
-    margin-left: 75px;
-    margin-top: 10px;
-}
+
 .text-size2 {
     font-size: 16px;
 }
@@ -302,7 +302,9 @@ a .lien:hover {
 
 
                 /*MES_CREATIONS.PHP*/
-/*9. HOVER EFFECTS IMAGES STYLE */
+/* **********************************************************************
+                      9. HOVER EFFECTS IMAGES STYLE 
+************************************************************************* */
 .grid {
 	position: relative;
 	margin: 0 auto;
@@ -394,9 +396,9 @@ a .lien:hover {
 }
 
 
-/*---------------*/
-/***** Sarah *****/
-/*---------------*/
+/* ************************************************************************ */
+/*                           *** Sarah ***                                  */
+/* ************************************************************************ */
 
 figure.effect-sarah {
 	background: #42b078;
