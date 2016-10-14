@@ -24,11 +24,15 @@
 -------------------*/
 
 body{
-    font-family: 'Crete Round', sans-serif;
+    font-family: 'Pinyon Script' !important;
+    background-image: url("../images/backg.jpg");
+    background-size: cover;
+
 }
     
 .back {
     background-color: grey;
+    color: #ffd700;
 }
 
 /* BALISES TITRE H1,2,... */
@@ -43,9 +47,10 @@ h3{
    
 }
 h4{
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Pinyon Script';
 }
 h5{
+    font-family: 'Pinyon Script', cursive;
     
 }
 h6{
@@ -53,12 +58,29 @@ h6{
 
 }
 
-
-/* COULEURS */
-
 /*  BALISES P*/
+p {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 1.4em;
+}
+
 .p-padding{
     padding-left: 50px;
+}
+
+/*8. TEXT-HOVER */
+a .lien {
+    color: : #ffab40;
+    transition: color .3s ease;
+}
+a .lien:hover {
+    color: : rgb(218, 255, 32);
+}
+
+/* LES IMAGES*/
+.img-size{
+    width: 600px;
+    height: 500px;
 }
 
 /*1. balise responsive */
@@ -115,6 +137,7 @@ h6{
     .card {
         width: 80%;
         margin-left: 15%;
+        font-family: 'Pinyon Script', cursive;
     }
     .card-title {
         font-size: 12px;
@@ -178,53 +201,16 @@ h6{
         background-color: red;
     }
 }
-
-/* ---------2. PARALLAX ---------------  */
-    .parallax-container {
-        width:100%;
-        height:100%;
-        overflow:hidden;
-        display: inherit;
-    }
-    body{
-        margin:0;
-        font-family:'Nunito',sans-serif;
-    }
-    /* background setup */
-    .background {
-        background-repeat:repeat;
-        /* custom background-position */
-        background-position: 100% 100%;
-        /* ie8- graceful degradation */
-        background-position:100% 100%\9 !important;
-        background-attachment: inherit;
-        width: 100%;
-    }
-
-.parallax #image {
-  display: block;
-  position: inherit;
-  left: 50%;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-/*---------- FIN PARALLAX ------------*/
-
+            /*HEADER.PHP*/
 /*3. HEADER */
 
-/* TAILLE IMAGE */
+/* taille image */
 .img-logo{
-    width: 120%;
+    width: 200%;
     float: left;
 }
 
-/* TAILLE TEXTE */
+/* taille de texte */
 
 .row-margin1 {
     margin-bottom: 5px;
@@ -235,31 +221,30 @@ h6{
 }
 
 .text-size {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-family: 'Pinyon Script', cursive;
-    color: black;
+    color: #ffd700;
+    margin-left: 75px;
 }
 /* position des liens */
 .col-margin {
-    margin-top: 15px;
-    margin-left: -150px;
+    width: 300px !important;
+    margin-top: 30px;
+    /*margin-left: 25px !important;*/
 }
 
-/* CONTENEUR DE BOX */
+.col-size{
+    width: 250px;
+}
+
+/* conteneur de box */
 .containeur {
-    /*display: flex;*/
-    /*flex-direction: column;*/
     justify-content: center;
     height: 425px;
-    background-color: white;
-    opacity: 0.8;
-    /*border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;*/
+    margin-top: 200px;
 }
 
-/* POSITION DE BOX */
+/* position de box */
 
 .bloc1 {
     top: -100px;
@@ -268,18 +253,7 @@ h6{
     flex-direction: row;
 }
 
-/* DESIGN BOX */
-
-.arrow-down {
-    position: inherit;
-    width: 0; 
-    height: 0px; 
-    border-left: 300px solid transparent;
-    border-right: 300px solid transparent;
-  
-    border-top: 40px solid white; 
-    opacity: 0.8;
-}
+/* design de box */
 
 .row-img {
     margin-top: -20px;
@@ -294,50 +268,17 @@ h6{
     margin-top: -100px;
 }
 
-/*4. barre de navigation */
-nav,
-i.material-icons {
-    
-}
-
-nav .button-collapsemain {
-    float: left;
-    position: relative;
-    z-index: 1;
-    height: 56px;
-    margin-left: auto;
-}
-
-
-#mobile-demo {
-    display: none;
-}
-
-nav .nav-wrapper {
-    width: 100%;
-    margin-top: 0px;
-}
-
-/*5. ENTETE */
-
-/*6. LOGO */
-
-/*7. SLIDER */
-
-/*8. TEXT-HOVER */
-a{
-    /*color : #ffab40;*/
-    color: rgb(0,0,0);
-}
-
-.lien:link {
-    COLOR: rgb(255, 255, 255);
-}
-.lien:hover {
-    COLOR: rgb(218, 255, 32);
-}
-
+            /*INDEX.PHP*/
 /* CARD HORIZONTAL */
+
+.card{
+    background-color: black;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    text-transform: initial;
+}
+
 #card-horizontal-height{
     height: 300px;
     max-height: 300px;
@@ -353,6 +294,8 @@ a{
     width: 500px;
 }
 
+
+                /*MES_CREATIONS.PHP*/
 /*9. HOVER EFFECTS IMAGES STYLE */
 .grid {
 	position: relative;
@@ -372,7 +315,7 @@ a{
 /* Common style */
 .grid figure {
 	position: relative;
-	//float: left;
+	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
 	min-width: 320px;
@@ -395,7 +338,7 @@ a{
 .grid figure figcaption {
 	padding: 2em;
 	color: #fff;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -562,7 +505,14 @@ figure.effect-sarah:hover p {
      color: #9ccc65;
    }
 
+            /*ECO_LABEL.PHP*/
+/*ALIGNEMENT DU TEXTE*/
+.vertical{
+    margin-top: 115px;
+}
 
+
+            /*FOOTER.PHP*/
 /*11. FOOTER */
 
 footer.page-footer {
