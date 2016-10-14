@@ -15,7 +15,7 @@
 
 <!-- Fichier source off line -->
 <script src="js/slider.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/parallax.js"></script>
+<!--<script type="text/javascript" src="js/parallax.js"></script>-->
 <script type="text/javascript" src="js/index.js"></script>
 
 <!-- RETOUR VERS LE HAUT -->
@@ -39,7 +39,6 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
 	return false;
 });
 </script>  
-
 <!-- ZOOM SUR LES IMAGES -->
 <SCRIPT>
  $(document).ready(function(){
@@ -47,7 +46,6 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
   });
 </SCRIPT>
 
-    
     
 </body>
 

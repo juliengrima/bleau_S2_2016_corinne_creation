@@ -58,7 +58,6 @@
                                 <a href="contact.php"><span id="idContact" class="navTextCC">Contact</span></a>
                             </div>
                         </div>
-
                     </div> 
                 </div>  
             </div>

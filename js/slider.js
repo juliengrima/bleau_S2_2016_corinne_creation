@@ -2,7 +2,7 @@ function maBoucle() {
     setTimeout(function() {
         $('.carousel').carousel('next');
         maBoucle();
-    }, 3000);
+    }, 6000);
 }
 
 
