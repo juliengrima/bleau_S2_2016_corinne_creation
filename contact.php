@@ -20,20 +20,22 @@
     <body  id="body-contact">
 
         <header>
-            <nav class="white"> 
-                <div class="col s12">
-                    <div class="navac-wrapper">
-                        <a href="#" class="brandac-logo black-text" id="" >Contact</a>
-                    </div>
+           
+
+            <nav class="black">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center white-text">Contactez-nous</a>
+         
                 </div>
             </nav>
+
         </header>
 
 
         <main role="main" id="main-contact">
 
             <div id="form-contact">
-
+ 
                 <div class="container" >
                     <div class="row">
                         <form class="col s12 z-depth-5">
@@ -77,12 +79,12 @@
                                 </div>
 
                                 <div class="row">
-                                    <button class="btn waves-effect waves-light col s12 offset-m2 m2" type="submit" name="submit_action">Envoyer
+                                    <button class="btn waves-effect waves-light col s12 offset-m2 m2 black white-text" type="submit" name="submit_action">Envoyer
                                         <i class="material-icons right">send</i>
                                     </button>
 
 
-                                    <button class="btn waves-effect waves-light col s12 offset-m4 m2 " type="reset" name="reset_action">Annuler
+                                    <button class="btn waves-effect waves-light col s12 offset-m4 m2 black white-text " type="reset" name="reset_action">Annuler
                                         <i class="material-icons right">loop</i>
                                     </button>
 
@@ -102,6 +104,6 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
 
         <script src="js/contact.js" type="text/javascript"></script>
-        
+
     </body>
 </html>

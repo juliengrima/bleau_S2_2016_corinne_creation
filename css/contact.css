@@ -16,9 +16,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: 'Pinyon Script', cursive;
-
-
+    font-family: 'Crete Round', sans-serif;
 }
 
 #form-contact {
@@ -36,5 +34,5 @@ main {
 }
 
 #main-contact {
-    background-color: black;
+   
 }
