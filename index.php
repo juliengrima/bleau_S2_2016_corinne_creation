@@ -1,5 +1,4 @@
 <?php include('includes/header.php'); ?>
-
             
     <div class="container">
     
@@ -17,11 +16,11 @@
                             </p>
                         </div>
                         <div class="card-action center hover-margin">
-                            <a href=""><h5>Venir à mes évènements</h5></a>
+                            <a href="events.php"><h5>Venir à mes évènements</h5></a>
                         </div>
                     </div>
                     <div class="card-image" id="card-image-collection-height">
-                        <a href="#"><img src="images/collection.jpg" alt="events" class="image-height"></a>
+                        <a href="events.php"><img src="images/collection.jpg" alt="events" class="image-height"></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +44,7 @@
                             </p>
                           </div>
                           <div class="card-action center">
-                              <a href=""><h5>Visiter mon atelier</h5></a>
+                            <a href=""><h5>Visiter mon atelier</h5></a>
                           </div>
                     </div>
                 </div>
