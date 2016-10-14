@@ -206,7 +206,7 @@ a .lien:hover {
 
 /* taille image */
 .img-logo{
-    width: 120%;
+    width: 200%;
     float: left;
 }
 
@@ -221,19 +221,20 @@ a .lien:hover {
 }
 
 .text-size {
-    font-size: 1.2em;
+    font-size: 1.6em;
     font-family: 'Pinyon Script', cursive;
     color: #ffd700;
+    margin-left: 75px;
 }
 /* position des liens */
 .col-margin {
     width: 300px !important;
-    margin-top: 20px;
-    margin-left: 25px !important;
+    margin-top: 30px;
+    /*margin-left: 25px !important;*/
 }
 
 .col-size{
-    width: 150px;
+    width: 250px;
 }
 
 /* conteneur de box */
@@ -509,6 +510,7 @@ figure.effect-sarah:hover p {
 .vertical{
     margin-top: 115px;
 }
+
 
             /*FOOTER.PHP*/
 /*11. FOOTER */

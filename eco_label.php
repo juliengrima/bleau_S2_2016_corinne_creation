@@ -3,13 +3,9 @@
  
 <!-- DIV VIDE POUR ESPACER LE HEADER -->
 	<div class="container">
-		<div class="row">
-		    
-		</div>
-		<div class="row">
-		    
-		</div>
-	</div>
+    <div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div>
+</div>
 <!-- FIN DE LA DIV D'ESPACE DU HEADER-->
 
 

@@ -40,18 +40,18 @@
                         </div>
                     </div>
                     <div class="row row-margin">
-                        <div class="col offset-m3">
-                            <a href="eco_label.php"><span id="lien2" class="text-size">Eco-lablel</span></a>
+                        <div class="col offset-m3 col-size">
+                            <a href="mes_creations.php"><span id="lien2" class="text-size">Mes créations</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">
                         <div class="col offset-m4 col-size">
-                            <a href="mes_creations.php"><span  class="text-size">Mes créations</span></a>
+                            <a href=""><span  class="text-size">Coin presse</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">
                         <div class="col offset-m3">
-                            <a href=""><span id="lien4" class="text-size">Coin presse</span></a>
+                            <a href="eco_label.php"><span id="lien4" class="text-size">Eco-lablel</span></a>
                         </div>
                     </div>
                     <div class="row row-margin">
@@ -73,7 +73,6 @@
         </div>
 
         
-
 
     </div>
 
