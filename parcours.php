@@ -22,7 +22,7 @@
 
 
     <div class="row">
-        <div class="col s12 z-depth-5">
+        <div class="col s12 m12 l12">
             <div class="text-size2">
 
                 <p>Tout d'abord, intéressée par les activités manuelles, je me suis formée pendant plusieurs années à l'école des Beaux-Arts de Nimes (Gard), ma ville de naissance. J'y ai appris à comprendre les couleurs, les différentes techniques du dessin, de la peinture, de l'encre de Chine ...<br>
