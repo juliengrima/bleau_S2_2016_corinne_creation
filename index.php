@@ -1,5 +1,5 @@
 <?php include('includes/header.php'); ?>
-            
+
     <div class="container">
     
         <div class="row">
@@ -32,7 +32,8 @@
             <div class="col s12 m6 l12">
                 <div class="card horizontal" id="card-horizontal-height">
                     <div class="card-image" id="card-image-height">
-                        <a href="#"><img src="images/atelier1.jpg" alt="atelier" class="image-height"></a>
+                        <a href="#"><img src="images/atelier1.JPG" class="image-height" alt="atelier1"></a>
+
                     </div>
                     <div class="card-stacked">
                           <div class="card-content">

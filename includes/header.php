@@ -18,7 +18,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
         <link type="text/css" rel="stylesheet" href="css/Main.css">
-
     </head>
 
     <body class="back">
@@ -31,10 +30,11 @@
                 </div>
                 <div class="col s12 m12 l12 col-margin">
                     <div class="col s12 m12 l12 col-margin" id="navCC">
+
                         <div class="row row-margin1">
                             <div>
                                 <div class="lien">
-                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon histoire</span></a>
+                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>
                                 </div>
                             </div>
                         </div>                    

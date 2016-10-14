@@ -4,6 +4,5 @@ $(function() {
     console.log( "Ca roule pour jQuery" );
     
     $('#body-contact').hide();
-    
-    
+     
 });
