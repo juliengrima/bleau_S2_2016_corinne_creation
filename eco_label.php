@@ -21,7 +21,7 @@
 				</div>
 			</div>
 			<div class="col s12 m6 l6">
-				<img src="images/eco-label.jpg" alt="EcoLabel" class="img-size materialboxed">
+				<img src="images/ecodefis.jpg" alt="EcoLabel" class="img-size materialboxed">
 			</div>
 		</div>		
 	</div>

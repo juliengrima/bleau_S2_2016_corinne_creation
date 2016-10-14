@@ -43,10 +43,16 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
 </script>  
 
 <!-- ZOOM SUR LES IMAGES -->
-<SCRIPT>
+<SCRIPT type='text/javascript'>
  $(document).ready(function(){
     $('.materialboxed').materialbox();
   });
+</SCRIPT>
+
+<SCRIPT type='text/javascript'>
+
+  $('.carousel.carousel-slider').carousel({full_width: true});
+        
 </SCRIPT>
 
 <!-- GOOGLE MAPS -->
