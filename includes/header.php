@@ -62,7 +62,8 @@
                 </div> 
             </div>
 
-        <div class="row center">
+        
+
         </div>
 
         <div class="row center">
@@ -71,8 +72,6 @@
                     <?php require ('includes/slider.php');?>
                 </div>
             </div>    
-        </div>
-
         </div>
 
         
