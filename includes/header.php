@@ -28,9 +28,9 @@
         <div class="row containeur center">
             <div class="col m4 valign-wrapper">
                 <div class="img-logo valign">
-                    <a href="index.php"><img src="images/logo.png" class="img-logo"></a>
+                    <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="img-logo"></a>
                 </div>
-                <div class="col s12 m12 l12 border col-margin">
+                <div class="col s12 m12 l12 col-margin">
 
                     <div class="row row-margin1">
                         <div class="">

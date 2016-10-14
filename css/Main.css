@@ -226,6 +226,7 @@ a .lien:hover {
     font-family: 'Pinyon Script', cursive;
     color: #ffd700;
     margin-left: 75px;
+    margin-top: 10px;
 }
 .text-size2 {
     font-size: 16px;
@@ -513,7 +514,7 @@ figure.effect-sarah:hover p {
             /*ECO_LABEL.PHP*/
 /*ALIGNEMENT DU TEXTE*/
 .vertical{
-    margin-top: 115px;
+    margin-top: 50px;
 }
 
 
