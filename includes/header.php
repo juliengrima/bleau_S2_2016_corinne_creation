@@ -63,6 +63,9 @@
             </div>
 
         <div class="row center">
+        </div>
+
+        <div class="row center">
                 <div class="carousel">
                     <!-- EVENEMENTS ET ATELIER -->
                     <?php require ('includes/slider.php');?>
