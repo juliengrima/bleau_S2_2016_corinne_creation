@@ -20,7 +20,7 @@
         <link type="text/css" rel="stylesheet" href="css/Main.css">
     </head>
 
-    <body class="back">
+    <body onload="initialiser()" class="back">
 
     <div class="container">  
         <div class="row containeur center">

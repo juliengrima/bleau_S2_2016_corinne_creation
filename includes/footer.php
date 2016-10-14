@@ -82,7 +82,7 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
 					function(){
 						infowindow.open(map,marker);});
 						infowindow.open(map,marker);}
-			// 			// FIN FONCTION
+					// FIN FONCTION
 
 						google.maps.event.addDomListener(window, 'load', init_map);
 	</script>
