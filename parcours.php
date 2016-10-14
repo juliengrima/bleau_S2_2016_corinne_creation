@@ -1,30 +1,14 @@
 <?php include('includes/header.php'); ?>
 
- 
-<!-- DIV VIDE POUR ESPACER LE HEADER -->
-    <div class="container">
-        <div class="row"></div>
-    </div>
-<!-- FIN DE LA DIV D'ESPACE DU HEADER-->
-
        <!--  CONTAINER DU CORPS DE LA PAGE POUR AJOUTER DU CONTENU     -->  
 
 
     <div class="container">
-        
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="text-size2"><h3>Mon parcours :</h3></div>
-            </div>
-        </div>
-
-    	<br>
-
-
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="text-size2">
-
+                <span>
+                    <h4>Mon parcour</h4>
                     <p>Tout d'abord, intéressée par les activités manuelles, je me suis formée pendant plusieurs années à l'école des Beaux-Arts de Nimes (Gard), ma ville de naissance. J'y ai appris à comprendre les couleurs, les différentes techniques du dessin, de la peinture, de l'encre de Chine ...<br>
                     Plus tard, j'ai décidé de me former aux techniques de la mosaique, à la méthode du vitrail Tiffany, serti au cuivre et à la fusion et au thermoformage.<br>
                     <br>
@@ -40,7 +24,7 @@
                     Chaque pièce est un jeu de couleurs où se marient verre, peinture et oxydes mais aussi des inclusions.<br>
                     Je puise mon inspiration dans la nature et dans le monde qui m'entoure.
                     </p>
-                </div>
+                </span>
             </div>
         </div>
   </div>
