@@ -18,23 +18,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
         <link type="text/css" rel="stylesheet" href="css/Main.css">
-
     </head>
 
     <body class="back">
-
         <div class="container">
             <div class="row containeur center" >
                 <div class="col m4 valign-wrapper">
                     <div class="img-logo valign">
-                        <a href="index.php"><img src="images/logo.png" class="img-logo"></a>
+                        <a href="index.php"><img src="images/logo.png" class="img-logo" alt="logo corinne création"></a>
                     </div>
 
                     <div class="col s12 m12 l12 border col-margin" id="navCC">
                         <div class="row row-margin1">
                             <div>
                                 <div class="lien">
-                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon histoire</span></a>
+                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>
                                 </div>
                             </div>
                         </div>                    
