@@ -71,11 +71,11 @@ p {
 
 /*8. TEXT-HOVER */
 a .lien {
-    color: : #ffab40;
+    color: #ffab40;
     transition: color .3s ease;
 }
 a .lien:hover {
-    color: : rgb(218, 255, 32);
+    color:  rgb(218, 255, 32);
 }
 
 /* LES IMAGES*/
@@ -586,3 +586,16 @@ a.back-to-top {
 }
 
 
+
+.navTextCC {
+    font-size: 1.6em;
+    font-family: 'Pinyon Script', cursive;
+    color: #ffd700;
+    margin-left: 75px;
+}
+
+.navTextCC:hover {
+    background-color: white!important;
+    color: black!important;
+   
+}
