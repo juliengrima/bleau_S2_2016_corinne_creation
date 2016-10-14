@@ -1,9 +1,11 @@
 <?php include('includes/header.php'); ?>
 
-<div class="container">
-    <div class="row"></div><div class="row"></div><div class="row"></div>
-    <div class="row"></div><div class="row"></div>
-</div>
+<!-- DIV VIDE POUR ESPACER LE HEADER -->
+    <div class="container">
+        <div class="row"></div><div class="row"></div>
+    </div>
+<!-- FIN DE LA DIV D'ESPACE DU HEADER-->
+
 
             
     <div class="container">

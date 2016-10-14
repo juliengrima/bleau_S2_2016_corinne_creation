@@ -227,6 +227,10 @@ a .lien:hover {
     color: #ffd700;
     margin-left: 75px;
 }
+.text-size2 {
+    font-size: 20px;
+}
+
 /* position des liens */
 .col-margin {
     width: 300px !important;
@@ -584,7 +588,46 @@ a.back-to-top {
 	-moz-border-radius: 30px;
 	border-radius: 30px;
 }
+header {
+    /*height: 75px;*/
+}
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+footer {
+    /*height:75px;*/
+}
+
+/* Access Pages */
+
+.brandac-logo{
+    font-size: 03vh;
+}
+
+.navac-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#access-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#access-form {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
 
 
 .navTextCC {

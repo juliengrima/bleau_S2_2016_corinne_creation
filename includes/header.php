@@ -9,7 +9,7 @@
 
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Changa+One|Crete+Round|Days+One|Fredoka+One|Nunito|Pinyon+Script" rel="stylesheet">
 
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
@@ -61,21 +61,22 @@
                         </div>
 
                     </div> 
-                </div>
-
-                <div class="row center">
-                    <div class="carousel">
-                         EVENEMENTS ET ATELIER 
-                        <?php require ('includes/slider.php'); ?>
-                    </div>
-                </div>    
+                </div>  
             </div>
-
         </div>
 
 
-
+        <div class="row center">
+            <div class="carousel">
+                <!-- EVENEMENTS ET ATELIER -->
+                <?php require ('includes/slider.php'); ?>
+            </div>
+        </div>    
     </div>
+
+
+
+</div>
 
 
 
