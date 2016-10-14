@@ -16,7 +16,7 @@
 <!-- Fichier source off line -->
 <script src="js/slider.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/parallax.js"></script>
-
+<script type="text/javascript" src="js/index.js"></script>
 
 <!-- RETOUR VERS LE HAUT -->
 <script type="text/javascript">
@@ -45,7 +45,7 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
  $(document).ready(function(){
     $('.materialboxed').materialbox();
   });
-  </SCRIPT>
+</SCRIPT>
 
     
     

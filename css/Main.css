@@ -14,13 +14,6 @@
 //  12. ICONE RETOUR HAUT
 //
 //
-//
-//
-//
-//
-//
-//
-//
 -------------------*/
 
 body{
@@ -33,26 +26,18 @@ body{
 .back {
     background-color: grey;
     color: #ffd700;
-
 }
 
 /* BALISES TITRE H1,2,... */
-h1{
-    
+h1{}
+h2{}
+h3{}
 
-}
-h2{
-   
-}
-h3{
-   
-}
 h4{
     font-family: 'Pinyon Script';
 }
 h5{
-    font-family: 'Pinyon Script', cursive;
-    
+    font-family: 'Pinyon Script', cursive;    
 }
 h6{
    
@@ -205,6 +190,29 @@ a .lien:hover {
             /*HEADER.PHP*/
 /*3. HEADER */
 
+
+
+
+/* ***************************************************************************
+                           4. barre de vavigation
+**************************************************************************** */
+.navTextCC {
+    font-size: 1.6em;
+    font-family: 'Pinyon Script', cursive;
+    color: #ffd700;
+    margin-left: 75px;
+    transition-property: color;
+    transition-duration: 0.8s;
+}
+
+.navTextCC:hover {
+    /*background-color: white!important;*/
+    color: white!important;
+   
+}
+
+/* ************************************************************************* */
+
 /* taille image */
 .img-logo{
     width: 175%;
@@ -301,7 +309,9 @@ a .lien:hover {
 
 
                 /*MES_CREATIONS.PHP*/
-/*9. HOVER EFFECTS IMAGES STYLE */
+/* **********************************************************************
+                      9. HOVER EFFECTS IMAGES STYLE 
+************************************************************************* */
 .grid {
 	position: relative;
 	margin: 0 auto;
@@ -393,9 +403,9 @@ a .lien:hover {
 }
 
 
-/*---------------*/
-/***** Sarah *****/
-/*---------------*/
+/* ************************************************************************ */
+/*                           *** Sarah ***                                  */
+/* ************************************************************************ */
 
 figure.effect-sarah {
 	background: #42b078;
@@ -629,16 +639,3 @@ footer {
 
 }
 
-
-.navTextCC {
-    font-size: 1.6em;
-    font-family: 'Pinyon Script', cursive;
-    color: #ffd700;
-    margin-left: 75px;
-}
-
-.navTextCC:hover {
-    background-color: white!important;
-    color: black!important;
-   
-}

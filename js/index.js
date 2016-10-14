@@ -3,9 +3,7 @@
 $(function() {
     console.log( "Ca roule pour jQuery" );
     
+    $('#body-contact').hide();
     
-    $('#navCC a').mouseover(fonction() {
-        $(this).
-    })
     
 });

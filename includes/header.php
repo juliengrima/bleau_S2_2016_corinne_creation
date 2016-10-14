@@ -24,7 +24,6 @@
     <body class="back">
 
         <div class="container">
-
             <div class="row containeur center" >
                 <div class="col m4 valign-wrapper">
                     <div class="img-logo valign">

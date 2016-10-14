@@ -1,7 +1,8 @@
 
 // Shorthand for $( document ).ready()
-$(function() {
-    console.log( "Ca roule pour jQuery" );
-     $('#textarea1').trigger('autoresize');
+$(function () {
+    console.log("Ca roule pour jQuery");
+    $("#body-contact").hide().show(2000).css("display", "flex");
+    $('#textarea1').trigger('autoresize');
     
 });
