@@ -1,13 +1,8 @@
-<?php include('includes/header.php'); ?>
+<?php include('includes/header.php'); 
+$googleKey = ' AIzaSyDeoLfCFyeAzPQ-pkNyeen0aBrSovpmMFs ';
+ $googleKey = 'AIzaSyBIw9bE1Vw1NV6IP1HoSbubKycFxp_Qmek'; 
 
- 
-<!-- DIV VIDE POUR ESPACER HE HEADER -->
-	<div class="container">
-    <div class="row"></div><div class="row"></div>
-</div>
-
-
-
+?>
 
 <div class="container">
 	<div class="row">
@@ -23,22 +18,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- FIN DU CORPS DE PAGE -->

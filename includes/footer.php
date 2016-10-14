@@ -55,7 +55,8 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
         
 </SCRIPT>
 
-<!-- GOOGLE MAPS -->
+<!-- GOOGLE MAPS SCRIPT -->
+
 <script type='text/javascript'>
 		function init_map(){
 			// DEBUT FONCTION
@@ -66,12 +67,13 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
 				map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
 				marker = new google.maps.Marker({
 					map: map,position: new google.maps.LatLng(48.109367,2.7571100000000115)});
+
+				infowindow = new google.maps.InfoWindow({
+					content:'<strong>les 22 et 23 octobre au salon d\'Art et Artisanat de Nargis (45)</strong><br>nargis<br>'});
 					
 				marker = new google.maps.Marker({
 					map: map,position: new google.maps.LatLng(48.1951399,3.2688646)});
 
-				infowindow = new google.maps.InfoWindow({
-					content:'<strong>les 22 et 23 octobre au salon d\'Art et Artisanat de Nargis (45)</strong><br>nargis<br>'});
 				infowindow = new google.maps.InfoWindow({
 					content:'<strong>du 1er au 31 octobre, à l\'office de tourisme de Sens (89)<br>'});
 
@@ -80,11 +82,10 @@ $('a.back-to-top, a.simple-back-to-top').click(function() {
 					function(){
 						infowindow.open(map,marker);});
 						infowindow.open(map,marker);}
-						// FIN FONCTION
+			// 			// FIN FONCTION
 
 						google.maps.event.addDomListener(window, 'load', init_map);
 	</script>
-
     
     
 </body>
