@@ -1,7 +1,6 @@
 <?php include('includes/header.php'); ?>
 
-       <!--  CONTAINER DU CORPS DE LA PAGE POUR AJOUTER DU CONTENU     -->  
-
+       <!--  CONTAINER DU CORPS DE LA PAGE POUR AJOUTER DU CONTENU     --> 
 
     <div class="container">
         <div class="row">

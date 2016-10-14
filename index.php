@@ -1,14 +1,5 @@
 <?php include('includes/header.php'); ?>
 
-<!-- DIV VIDE POUR ESPACER LE HEADER -->
-    <div class="container">
-        <div class="row"></div>
-        <div class="row"></div>
-    </div>
-<!-- FIN DE LA DIV D'ESPACE DU HEADER-->
-
-
-            
     <div class="container">
     
         <div class="row">
@@ -42,6 +33,7 @@
                 <div class="card horizontal" id="card-horizontal-height">
                     <div class="card-image" id="card-image-height">
                         <a href="#"><img src="images/atelier1.JPG" class="image-height" alt="atelier1"></a>
+
                     </div>
                     <div class="card-stacked">
                           <div class="card-content">

@@ -190,8 +190,11 @@ a .lien:hover {
             /*HEADER.PHP*/
 /*3. HEADER */
 
-
-
+/* taille image */
+.img-logo{
+    width: 800%;
+    margin-top: 15px;
+}
 
 /* ***************************************************************************
                            4. barre de vavigation
@@ -213,13 +216,7 @@ a .lien:hover {
 
 /* ************************************************************************* */
 
-/* taille image */
-.img-logo{
-    width: 250%;
-    float: left;
-}
-
-/* taille de texte */
+/* position de texte */
 
 .row-margin1 {
     margin-bottom: 5px;
@@ -229,12 +226,7 @@ a .lien:hover {
     margin-bottom: -50px;
 }
 /* NAVBAR*/
-.text-size {
-    font-size: 1.6em;
-    font-family: 'Pinyon Script', cursive;
-    color: #ffd700;
-    margin-left: 75px;
-}
+
 .text-size2 {
     font-size: 16px;
 }
@@ -523,7 +515,7 @@ figure.effect-sarah:hover p {
             /*ECO_LABEL.PHP*/
 /*ALIGNEMENT DU TEXTE*/
 .vertical{
-    margin-top: 115px;
+    margin-top: 50px;
 }
 
 
