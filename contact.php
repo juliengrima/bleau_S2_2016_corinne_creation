@@ -8,7 +8,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Changa+One|Crete+Round|Days+One|Fredoka+One|Nunito|Pinyon+Script" rel="stylesheet">
 
-        <link href="css/Main.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="css/Main.css" rel="stylesheet" type="text/css"/>-->
         <link href="css/contact.css" rel="stylesheet" type="text/css"/>
 
         <!--Let browser know website is optimized for mobile-->
@@ -17,7 +17,7 @@
 
     </head>
 
-    <body  id="body-contact">
+    <body  id="body-contact" class="white">
 
         <header>
            
@@ -45,12 +45,12 @@
                                 <div class="row">
                                     <div class="input-field col s12 m6">
                                         <i class="material-icons prefix white-text">perm_identity</i>
-                                        <input id="prenom" type="text" class="validate white-text"  autofocus required="" >
+                                        <input id="prenom" type="text" class="validate black-text"  autofocus required="" >
                                         <label for="prenom">Prénom</label>
                                     </div>
                                     <div class="input-field col s12 m6">
                                         <i class="material-icons prefix  white-text">perm_identity</i>
-                                        <input id="nom" type="text" class="validate white-text" required="">
+                                        <input id="nom" type="text" class="validate black-text" required="">
                                         <label for="nom">Nom</label>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@
                                 <div class="row">
                                     <div class="input-field col s12">    
                                         <i class="material-icons prefix  white-text">phone</i>
-                                        <input id="telephone" type="tel" class="validate white-text">
+                                        <input id="telephone" type="tel" class="validate black-text">
                                         <label for="telephone">Téléphone</label>
                                     </div>
                                 </div>
@@ -66,14 +66,14 @@
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix  white-text">email</i>
-                                        <input id="email" type="email" class="validate white-text">
+                                        <input id="email" type="email" class="validate black-text">
                                         <label for="email">Email</label>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <i class="material-icons prefix white-text">mode_edit</i>
-                                        <textarea  class="materialize-textarea white-text" name="textarea1" id="" cols="30" rows="10"> </textarea>
+                                        <textarea  class="materialize-textarea black-text" name="textarea1" id="" cols="30" rows="10"> </textarea>
                                         <label for="textarea1">Votre message</label>
                                     </div>
                                 </div>
