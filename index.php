@@ -16,11 +16,11 @@
                             </p>
                         </div>
                         <div class="card-action center hover-margin">
-                            <a href=""><h5>Venir à mes évènements</h5></a>
+                            <a href="events.php"><h5>Venir à mes évènements</h5></a>
                         </div>
                     </div>
                     <div class="card-image" id="card-image-collection-height">
-                        <a href="#"><img src="images/collection.jpg" class="image-height" alt="collection.jpg"></a>
+                        <a href="events.php"><img src="images/collection.jpg" alt="events" class="image-height"></a>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
             <div class="col s12 m6 l12">
                 <div class="card horizontal" id="card-horizontal-height">
                     <div class="card-image" id="card-image-height">
-                        <a href="#"><img src="images/atelier1.JPG" class="image-height" alt="atelier1"></a>
+                        <a href="atelier.php"><img src="images/atelier1.JPG" class="image-height" alt="atelier1"></a>
 
                     </div>
                     <div class="card-stacked">
@@ -45,7 +45,7 @@
                             </p>
                           </div>
                           <div class="card-action center">
-                              <a href=""><h5>Visiter mon atelier</h5></a>
+                            <a href="atelier.php"><h5>Visiter mon atelier</h5></a>
                           </div>
                     </div>
                 </div>
