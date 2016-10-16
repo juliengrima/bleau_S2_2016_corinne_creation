@@ -6,10 +6,6 @@
 .materialize-red {
   background-color: #e51c23 !important;
 }
-.materialize-blue {
-  background-color: rgb(150, 140, 100) !important;
-}
-
 
 .materialize-red-text {
   color: #e51c23 !important;
@@ -3413,8 +3409,8 @@ input[type=range] + .thumb {
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1280px;
+  margin: 0 auto;
+  max-width: 1280px;
   width: 90%;
 }
 
@@ -3453,9 +3449,9 @@ input[type=range] + .thumb {
 }
 
 .row {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .row:after {
