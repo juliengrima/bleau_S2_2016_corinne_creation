@@ -4,7 +4,7 @@
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 
         <link href="https://fonts.googleapis.com/css?family=Changa+One|Crete+Round|Days+One|Fredoka+One|Nunito|Pinyon+Script" rel="stylesheet">
 
@@ -79,12 +79,12 @@
                                 </div>
 
                                 <div class="row">
-                                    <button class="btn waves-effect waves-light col s12 offset-m2 m2 black white-text" type="submit" name="submit_action">Envoyer
+                                    <button class="btn waves-effect waves-light offset-s2 col s3  offset-m2 m2 black white-text" type="submit" name="submit_action">Envoyer
                                         <i class="material-icons right">send</i>
                                     </button>
 
 
-                                    <button class="btn waves-effect waves-light col s12 offset-m4 m2 black white-text " type="reset" name="reset_action">Annuler
+                                    <button class="btn waves-effect waves-light offset-s2 col s3 offset-m4 m2 black white-text " type="reset" name="reset_action">Annuler
                                         <i class="material-icons right">loop</i>
                                     </button>
 
@@ -102,7 +102,7 @@
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="js/contact.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
 
     </body>
 </html>

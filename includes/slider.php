@@ -35,10 +35,12 @@
 
 <div class="row">
     <div class="carousel carousel-slider  hide-on-med-and-up" >
-        <a class="carousel-item" href="#one!">  <img  class="" src="img-slider/tiffany_310.jpg" alt="tiffany"/>  </a>
-        <a class="carousel-item" href="#two!"> <img   class="responsive-img mobile-img"  src="img-slider/croix_310.jpg" alt="croix"/> </a>
-        <a class="carousel-item" href="#three!"> <img  class="responsive-img mobile-img"  src="img-slider/fleur_verre_fusionne_310.jpg" alt="fleur verre fusonné"/>   </a>
-        <a class="carousel-item" href="#four!">  <img  class="responsive-img mobile-img"  src="img-slider/la_tendresse_310.jpg" alt="la tendresse"/> </a>
+          
+        
+        <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="img-slider/fleur_verre_fusionne_310.jpg" alt="fleur verre fusonné"/>   </a>
+        <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="img-slider/la_tendresse_310.jpg" alt="la tendresse"/> </a>
+        <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="img-slider/bracelet_cabochon.jpg" alt="la tendresse"/> </a>
+        <a class="carousel-item" href="#quatre!">  <img  class="responsive-img mobile-img"  src="img-slider/anneau_de_feu.jpg" alt="la tendresse"/> </a>
     </div>
 </div>
 

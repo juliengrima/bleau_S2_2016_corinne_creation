@@ -100,12 +100,12 @@
                             </div>
 
                             <ul class="side-nav" id="mobile-demo">
-                                <li> <a href="parcours.php"         class="center-align navTextMobileCC amber-text">Mon histoire</a></li>
-                                <li> <a href="mes_creations.php"    class="center-align  navTextMobileCC amber-text">Mes créations</a> </li>                       
-                                <li> <a href="#"                    class="center-align  navTextMobileCC amber-text">Coin presse</a>  </li>
-                                <li> <a href="eco_label.php"  class="center-align  navTextMobileCC amber-text">Eco-label</a> </li>  
-                                <li> <a href="contact.php"  class="center-align  navTextMobileCC amber-text">Contact</a> </li>
-                            </ul>
+                                <li> <a href="parcours.php"         class="center-align navTextMobileCC amber-text">MON HISTOIRE</a></li>
+                                <li> <a href="mes_creations.php"    class="center-align  navTextMobileCC amber-text">MES CREATIONS</a> </li>                       
+                                <li> <a href="#"                    class="center-align  navTextMobileCC amber-text">COIN PRESSE</a>  </li>
+                                <li> <a href="eco_label.php"  class="center-align  navTextMobileCC amber-text">ECO-LABEL</a> </li>  
+                                <li> <a href="contact.php"  class="center-align  navTextMobileCC amber-text">CONTACT</a> </li>
+                            </ul> 
 
                         </div>
                         <div  class="row"> 
