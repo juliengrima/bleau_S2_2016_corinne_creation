@@ -5,19 +5,19 @@
         <a class="carousel-item" href="#two!"><img  class="responsive-img" src="img-slider/tiffany.jpg" alt="tiffany"/></a>   
         <a class="carousel-item" href="#three!"><img  class="responsive-img"  src="img-slider/croix.jpg" alt="croix"/></a>
         <a class="carousel-item" href="#four!"><img  class="responsive-img"  src="img-slider/fleur_verre_fusionne_1024.jpg" alt="fleur verre fusonné"/></a>
-        <a class="carousel-item" href="#five!"><img  class="responsive-img"  src="img-slider/la_tendresse.jpg" alt="la tendresse"/></a>
+        <a class="carousel-item" href="#five!"><img  class="responsive-img"  src="img-slider/la_tendresse.jpg" alt="la tendresse"/> </a>
     </div>
 </div>
 
-
-  <div class="carousel carousel-slider center hide-on-med-and-up" data-indicators="true">
+<!--
+  <div class="carousel carousel-slider center" data-indicators="true">
     <div class="carousel-fixed-item center">
       <a class="btn waves-effect white grey-text darken-text-2">button</a>
     </div>
     <div class="carousel-item red white-text" href="#one!">
       <h2>First Panel</h2>
       <p class="white-text">This is your first panel</p> 
-      <a class="carousel-item " href="#one!"><img src="img-slider/anneau_de_feu_310.jpg" alt="anneau de feu"/></a>
+     
     </div>
     <div class="carousel-item amber white-text" href="#two!">
       <h2>Second Panel</h2>
@@ -31,10 +31,18 @@
       <h2>Fourth Panel</h2>
       <p class="white-text">This is your fourth panel</p>
     </div>
-  </div>
+  </div>-->
 
+<div class="row">
+    <div class="carousel carousel-slider  hide-on-med-and-up" >
+        <a class="carousel-item" href="#one!">  <img  class="" src="img-slider/tiffany_310.jpg" alt="tiffany"/>  </a>
+        <a class="carousel-item" href="#two!"> <img   class="responsive-img mobile-img"  src="img-slider/croix_310.jpg" alt="croix"/> </a>
+        <a class="carousel-item" href="#three!"> <img  class="responsive-img mobile-img"  src="img-slider/fleur_verre_fusionne_310.jpg" alt="fleur verre fusonné"/>   </a>
+        <a class="carousel-item" href="#four!">  <img  class="responsive-img mobile-img"  src="img-slider/la_tendresse_310.jpg" alt="la tendresse"/> </a>
+    </div>
+</div>
 
-
+ <!--<a class="carousel-item " href="#one!"><img src="img-slider/anneau_de_feu_310.jpg" alt="anneau de feu"/></a>-->
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
