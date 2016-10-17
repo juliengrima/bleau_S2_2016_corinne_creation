@@ -5,8 +5,19 @@
 <?php require ('includes/slider.php'); ?>
 
 <main role="main">
+    
+    <!--Enluminure Coeur-->
     <section>
-
+        <div class="row">
+            <div class="col offset-s2 s8  m6 offset-l3 l8">
+            <img src="images/Enluminure-COEURpng.png"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
+    
+    <!--Collections-->
+    <section>
         <div class="container">
             <div class="row">
                 <!--partie écran large et tablette-->
