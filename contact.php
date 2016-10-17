@@ -4,38 +4,34 @@
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 
         <link href="https://fonts.googleapis.com/css?family=Changa+One|Crete+Round|Days+One|Fredoka+One|Nunito|Pinyon+Script" rel="stylesheet">
 
         <!--<link href="css/Main.css" rel="stylesheet" type="text/css"/>-->
-        <link href="css/contact.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="css/contact.css" rel="stylesheet" type="text/css"/>-->
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
     </head>
 
-    <body  id="body-contact" class="white">
+    <body  id="contact-body" class="white">
 
         <header>
-           
-
             <nav class="black">
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo center white-text">Contactez-nous</a>
-         
+
                 </div>
             </nav>
-
         </header>
 
 
-        <main role="main" id="main-contact">
+        <main role="main" id="contact-main">
 
-            <div id="form-contact">
- 
+            <div id="contact-form">
+
                 <div class="container" >
                     <div class="row">
                         <form class="col s12 z-depth-5">
@@ -79,12 +75,12 @@
                                 </div>
 
                                 <div class="row">
-                                    <button class="btn waves-effect waves-light col s12 offset-m2 m2 black white-text" type="submit" name="submit_action">Envoyer
+                                    <button class="btn waves-effect waves-light offset-s2 col s3  offset-m2 m2 black white-text" type="submit" name="submit_action">Envoyer
                                         <i class="material-icons right">send</i>
                                     </button>
 
 
-                                    <button class="btn waves-effect waves-light col s12 offset-m4 m2 black white-text " type="reset" name="reset_action">Annuler
+                                    <button class="btn waves-effect waves-light offset-s2 col s3 offset-m4 m2 black white-text " type="reset" name="reset_action">Annuler
                                         <i class="material-icons right">loop</i>
                                     </button>
 
@@ -102,7 +98,8 @@
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script src="js/contact.js" type="text/javascript"></script>
+       
+        <script src="js/app.js" type="text/javascript"></script>
 
     </body>
 </html>

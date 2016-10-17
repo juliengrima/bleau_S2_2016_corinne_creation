@@ -1,7 +1,17 @@
+
+
 <?php include('includes/header.php'); ?>
 
+<?php require ('includes/slider.php'); ?>
+
+<main role="main">
+
+
+
+
+<!--
+
     <div class="container">
-    
         <div class="row">
             <div class="col s12 m6 l12 ">
                 <div class="card horizontal" id="card-horizontal-height"> 
@@ -9,10 +19,10 @@
                         <div class="card-content">
                             <h4 class="header center">Mes évènements</h4>
                             <p class="p-padding">
-                            Dans cette rubrique,<br>
-                            vous trouverez tous les<br>
-                            évènements dans lesquels<br>
-                            je serais présente.
+                                Dans cette rubrique,<br>
+                                vous trouverez tous les<br>
+                                évènements dans lesquels<br>
+                                je serais présente.
                             </p>
                         </div>
                         <div class="card-action center hover-margin">
@@ -25,9 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            
-        </div>
+
         <div class="row">
             <div class="col s12 m6 l12">
                 <div class="card horizontal" id="card-horizontal-height">
@@ -36,23 +44,24 @@
 
                     </div>
                     <div class="card-stacked">
-                          <div class="card-content">
-                          <h4 class="header center">Mon atelier</h4>
+                        <div class="card-content">
+                            <h4 class="header center">Mon atelier</h4>
                             <p class="p-padding">Voici mon atelier,<br>
                                 là ou la magie opère<br>
                                 et d'ou sortent de mon<br>
                                 imagination toutes les créations.
                             </p>
-                          </div>
-                          <div class="card-action center">
-                            <a href="atelier.php"><h5>Visiter mon atelier</h5></a>
-                          </div>
+                        </div>
+                        <div class="card-action center">
+                            <a href=""><h5>Visiter mon atelier</h5></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
+</main>
 
 
 <?php require ('includes/footer.php'); ?>

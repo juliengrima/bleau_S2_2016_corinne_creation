@@ -1,11 +1,50 @@
-<div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="http://corinnecreations.france-artisanat.fr/fa/uploadify/uploads-folder/acf68bbf1537c18e1a47e05a9c0b3c42_small.jpg" alt="image carousel 1"></a>
-    <a class="carousel-item" href="#two!"><img src="http://corinnecreations.france-artisanat.fr/fa/uploadify/uploads-folder/490f138de6bffe6adfa06d4ca6c58409.jpg" alt="image carousel 2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://corinnecreations.france-artisanat.fr/fa/uploadify/uploads-folder/7905d00a1b5534796a67c74ea5fe3d65.jpg" alt="image carousel 3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://corinnecreations.france-artisanat.fr/fa/uploadify/uploads-folder/e0d2e6c4e32958fae524c43b4e364f95.jpg" alt="image carousel 4"></a>
-    <a class="carousel-item" href="#five!"><img src="http://corinnecreations.france-artisanat.fr/fa/uploadify/uploads-folder/1582252821eadf960bad2fabd8aec475_small.jpg" alt="image carousel 5"></a>
+
+<div class="row ">
+    <div class="carousel hide-on-small-only" id="carousel-index">
+        <a class="carousel-item" href="#one!"><img  class="responsive-img" src="img-slider/anneau_de_feu.jpg" alt="anneau de feu"/></a>
+        <a class="carousel-item" href="#two!"><img  class="responsive-img" src="img-slider/tiffany.jpg" alt="tiffany"/></a>   
+        <a class="carousel-item" href="#three!"><img  class="responsive-img"  src="img-slider/croix.jpg" alt="croix"/></a>
+        <a class="carousel-item" href="#four!"><img  class="responsive-img"  src="img-slider/fleur_verre_fusionne_1024.jpg" alt="fleur verre fusonné"/></a>
+        <a class="carousel-item" href="#five!"><img  class="responsive-img"  src="img-slider/la_tendresse.jpg" alt="la tendresse"/> </a>
+    </div>
 </div>
 
+<!--
+  <div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p> 
+     
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>-->
+
+<div class="row">
+    <div class="carousel carousel-slider  hide-on-med-and-up" >
+          
+        
+        <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="img-slider/fleur_verre_fusionne_310.jpg" alt="fleur verre fusonné"/>   </a>
+        <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="img-slider/la_tendresse_310.jpg" alt="la tendresse"/> </a>
+        <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="img-slider/bracelet_cabochon.jpg" alt="la tendresse"/> </a>
+        <a class="carousel-item" href="#quatre!">  <img  class="responsive-img mobile-img"  src="img-slider/anneau_de_feu.jpg" alt="la tendresse"/> </a>
+    </div>
+</div>
+
+ <!--<a class="carousel-item " href="#one!"><img src="img-slider/anneau_de_feu_310.jpg" alt="anneau de feu"/></a>-->
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
@@ -17,3 +56,5 @@
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat"> OK </a>
     </div>
 </div>
+<!--
+            <img src="http://corinnecreations.france-artisanat.fr/fa/uploadify/uploads-folder/acf68bbf1537c18e1a47e05a9c0b3c42_small.jpg" alt="image carousel 1">-->

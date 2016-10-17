@@ -11,28 +11,25 @@ main {
     flex: 1 0 auto;
 }
 
-
-#body-contact {
+#contact-body {
     display: none;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Crete Round', sans-serif;
 }
 
-#form-contact {
+#contact-form {
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     font-family: 'Crete Round', sans-serif;
-
 }
 
-#fieldset-contact {
+#contact-fieldset {
     border: none;
 }
 
-#main-contact {
+#contact-main {
    
 }
