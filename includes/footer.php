@@ -7,8 +7,7 @@
 <!-- Import jQuery before materialize.js -->
 <!-- APPEL SCRIPT JQUERY on line -->
 
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-</script>    
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>    
 
 <!-- Compiled and minified JavaScript on line -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -20,7 +19,7 @@ crossorigin="anonymous"></script>
 
 
 <!-- Fichier source off line -->
-<script src="js/slider.js" type="text/javascript"></script>
+<!--<script src="js/slider.js" type="text/javascript"></script>-->
 <!--<script type="text/javascript" src="js/parallax.js"></script>-->
 <script type="text/javascript" src="js/app.js"></script>
 

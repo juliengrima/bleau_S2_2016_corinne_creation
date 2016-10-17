@@ -14,28 +14,24 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-
     </head>
 
-    <body  id="body-contact" class="white">
+    <body  id="contact-body" class="white">
 
         <header>
-           
-
             <nav class="black">
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo center white-text">Contactez-nous</a>
-         
+
                 </div>
             </nav>
-
         </header>
 
 
-        <main role="main" id="main-contact">
+        <main role="main" id="contact-main">
 
-            <div id="form-contact">
- 
+            <div id="contact-form">
+
                 <div class="container" >
                     <div class="row">
                         <form class="col s12 z-depth-5">

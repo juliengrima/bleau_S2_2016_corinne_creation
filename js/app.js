@@ -20,11 +20,14 @@ $(function () {
 
     $('.modal-trigger').leanModal();
 
-
-
     $('.carousel.carousel-slider').carousel({full_width: true, indicators: true});
-
     $('.carousel').carousel({indicators: true});
+
+    autoplay()
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+    }
 
     $("#body-contact").hide().show(1000).css("display", "flex");
     $('#textarea1').trigger('autoresize');

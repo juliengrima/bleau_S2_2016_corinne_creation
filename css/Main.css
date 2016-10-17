@@ -23,7 +23,7 @@ html {
     background-size: cover; 
 }
 
-
+/*Exemples de mise en place de police de caractère dans CSS*/
 /*  font-family: 'Parisienne', cursive;
     font-family: 'Rochester', cursive;
     font-family: 'Sacramento', cursive;
@@ -40,6 +40,16 @@ body{
     font-family: 'Crete Round', serif;
 }
 
+ /*Important pour positionner le footer en bas de page*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+
+/*Pour déboguer la mise en place dans la page*/
 .debug {
     background-color: greenyellow;
     border: 1px solid bisque;
@@ -56,21 +66,12 @@ body{
 h1{}
 h2{}
 h3{}
-
-h4{
-
-}
-h5{
-
-}
-h6{
-
-
-}
+h4{}
+h5{}
+h6{}
 
 /*  BALISES P*/
 p {
-
     font-size: 1.4em;
 }
 
@@ -571,13 +572,35 @@ figure.effect-sarah:hover p {
 
 /* ------------------------------------------------------------------------ */
 /* *********            10.1  formulaire  Contact              ************ */
-#contactform {
+#contact-form {
     width: 60%;
     height: 100%;
     margin-bottom: 100px;
     margin-top: 50px;
 }
 
+#contact-body {
+    display: none;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Crete Round', sans-serif;
+}
+
+#contact-form {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Crete Round', sans-serif;
+}
+
+#contact-fieldset {
+    border: none;
+}
+
+#contact-main {
+   
+}
 
 /*                      Fin formulaire CONTACT                             */
 /* ------------------------------------------------------------------------*/
@@ -586,7 +609,6 @@ figure.effect-sarah:hover p {
 /* ----------------------------------------------------------------------- */
 
 /* *********            10.2 Formulaire  ACCESS               ************ */
-
 
 #access-body {
     display: flex;
@@ -599,12 +621,10 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
-
-
 /*                      Fin formulaire ACCESS                              */
 /* ------------------------------------------------------------------------*/
+
 
 .modal-content p {
     text-align: center;
