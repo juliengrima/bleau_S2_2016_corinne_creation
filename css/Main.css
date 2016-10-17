@@ -252,12 +252,13 @@ a .lien:hover {
     max-height: 300px;
 }
 
-#card-image-height .image-height{
+#card-horizontal-height-test{
     height: 300px;
-    width: 500px;
+    max-height: 300px;
 }
 
-#card-image-collection-height .image-height{
+
+#card-image-height .image-height{
     height: 300px;
     width: 500px;
 }
@@ -638,3 +639,7 @@ footer {
     justify-content: center;
 }
 
+
+/***************************************************************************
+*                            13. A CLASSER
+****************************************************************************/
