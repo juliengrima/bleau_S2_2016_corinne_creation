@@ -38,7 +38,7 @@ html {
 
 
 body{
-    font-family: 'Crete Round', serif;
+    font-family: 'Rochester', serif;
 }
 
  /*Important pour positionner le footer en bas de page*/
@@ -80,7 +80,7 @@ p {
     padding-left: 50px;
 }
 
-/*8. TEXT-HOVER */
+/* TEXT-HOVER */
 a .lien {
     color: #ffab40;
     transition: color .3s ease;
@@ -95,12 +95,12 @@ a .lien:hover {
     height: 500px;
 }
 
-/*1. balise responsive */
-
-/*
-
 /*HEADER.PHP*/
-/*3. HEADER */
+/* ***************************************************************************
+*
+*                           4. BARRE DE NAVIGATION
+*
+**************************************************************************** */
 
 /* taille image */
 .img-logo{
@@ -109,11 +109,6 @@ a .lien:hover {
 
 }
 
-/* ***************************************************************************
-*
-*                           4. BARRE DE NAVIGATION
-*
-**************************************************************************** */
 #menu-index {
     margin-top: 18%;
     background-color: transparent;
@@ -543,58 +538,13 @@ figure.effect-sarah:hover p {
 /****************************************************************************
 *                               11. FOOTER 
 *****************************************************************************/
-footer.page-footer {
-    background-color: #9ccc65;
-    color: white;
-    margin-top: 0px;
-}
-
-footer ul li {
-    list-style: disc;
-}
-
-footer.page-footer .footer-copyright {
-    background: none;
+.text-copyright { text-align: center;
     text-align: center;
+    margin-top: 1px;
+    position: relative;
+    top: 17px;
+    color: #ffffff;
 }
-
-#logofooter {
-    width: 50px;
-    float: left;
-    padding-right: 1px;
-    margin-right: 2px;
-}
-
-.white-text {
-    margin-top: 4px;
-}
-
-.phone {
-    padding: 3px;
-}
-
-i.small {
-    float: left;
-    margin-right: 5px;
-}
-
-fb-page {
-    text-align: center;
-}
-
-
-.icone {
-    width: 50%;
-}
-
-.taille {
-    padding: 0%;
-}
-
-.haut {
-    padding-top: 15%;
-}
-
 
 /***************************************************************************
 *                            12. ICONE RETOUR HAUT

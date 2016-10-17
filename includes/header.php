@@ -18,63 +18,8 @@
         <link type="text/css" rel="stylesheet" href="css/Main.css">
     </head>
 
-<!--    <body onload="initialiser()" class="back">
-
-    <div class="container">  
-        <div class="row containeur center">
-            <div class="col m4 valign-wrapper">
-                <div class="img-logo valign">
-                    <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="img-logo"></a>
-                </div>
-                <div class="col s12 m12 l12 col-margin">
-                    <div class="col s12 m12 l12 col-margin" id="navCC">
-
-                        <div class="row row-margin1">
-                            <div>
-                                <div class="lien">
-                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>-->
     <body>
         <header>
-
-            <!--                <div class="row containeur center">
-                                <div class="valign-wrapper">
-                                    <div class="valign col s13 m3 l3">
-                                        <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="img-logo"></a>
-                                    </div>
-            
-                                    <div class="col s3 m4 l4">
-            
-                                        <div class="row">
-                                            <div>
-                                                <div class="">
-                                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>
-                                                </div>
-                                            </div>
-                                        </div>                    
-                                        <div class="row">
-                                            <div class="col offset-m3 col-size">
-                                                <a href="mes_creations.php"><span id="idMesCreations" class="navTextCC">Mes créations</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col offset-m4 col-size">
-                                                <a href=""><span  class="navTextCC">Coin presse</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col offset-m3">
-                                                <a href="eco_label.php"><span id="idEcoLabel" class="navTextCC">Eco-lablel</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col offset-m3">
-                                                <a href="contact.php"><span id="idContact" class="navTextCC">Contact</span></a>
-                                            </div>
-                                        </div>
-                                    </div> 
-            
-                                </div>
-                            </div>-->
             <div class="container"> 
                 <nav id="menu-index" class="transparent">
                     <div class="nav-wrapper">
@@ -138,6 +83,14 @@
                 </nav>
             </div>
         </header>
+
+
+<div id="slap_fb_slider" style="display: none">
+    <script type="text/javascript" src="http://surlapage.fr/script/facebook-slider?
+                  fb_url=https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/&amp;fb_width=70&amp;fb_height=70&amp;fb_faces=true&amp;fb_stream=true&amp;fb_header=true&amp;fb_border=true&amp;fb_theme=light&amp;speed=SLOW&amp;fb_pic=sign&amp;position=LEFT">
+    </script>
+    <a href="http://rigolotes.fr" title="blagues caramba">blagues caramba</a>
+</div>
 
 
 

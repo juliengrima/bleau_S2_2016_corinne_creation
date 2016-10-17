@@ -34,11 +34,11 @@
                                 </p>
                             </div>
                             <div class="card-action center hover-margin">
-                                <a href=""><h5>Venir à mes évènements</h5></a>
+                                <a href="events.php"><h5>Venir à mes évènements</h5></a>
                             </div>
                         </div>
                         <div class="card-image" id="card-image-collection-height">
-                            <a href="#">
+                            <a href="events.php">
                                 <img src="images/collection.jpg" class="image-height" alt="collection.jpg">
                             </a>
                         </div>
@@ -47,7 +47,7 @@
                 <!--partie pour Mobile-->
                 <div class="row hide-on-med-and-up">
                     <div class="card-image" id="">
-                        <a href="events.php"><img src="images/collection.jpg" alt="events" class="responsive-img"></a>
+                        <a href="events.php.php"><img src="images/collection.jpg" alt="events" class="responsive-img"></a>
                     </div>
                     <h4 class="center amber-text">Mes évènements</h4> 
                     <p class="amber-text center">
@@ -72,7 +72,7 @@
                     
                     <div class="card horizontal hide-on-small-only"> 
                         <div class="card-image" id="card-image-collection-height">
-                            <a href="#">
+                            <a href="atelier.php">
                                 <img src="images/atelier1.JPG" class="image-height" alt="collection.jpg">
                             </a>                        </div>
                         <div class="card-stacked">
@@ -85,7 +85,7 @@
                                 </p>
                             </div>
                             <div class="card-action center hover-margin">
-                                <a href=""><h5>Venir à mes évènements</h5></a>
+                                <a href="atelier.php"><h5>Venir à mes évènements</h5></a>
                             </div>
                         </div>
                     </div>
