@@ -18,8 +18,7 @@
         <link type="text/css" rel="stylesheet" href="css/Main.css">
     </head>
 
-<<<<<<< HEAD
-    <body onload="initialiser()" class="back">
+<!--    <body onload="initialiser()" class="back">
 
     <div class="container">  
         <div class="row containeur center">
@@ -33,8 +32,7 @@
                         <div class="row row-margin1">
                             <div>
                                 <div class="lien">
-                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>
-=======
+                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>-->
     <body>
         <header>
 
@@ -75,7 +73,6 @@
                                         </div>
                                     </div> 
             
->>>>>>> pj-index
                                 </div>
                             </div>-->
             <div class="container"> 

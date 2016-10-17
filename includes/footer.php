@@ -19,15 +19,11 @@ crossorigin="anonymous"></script>
 
 
 <!-- Fichier source off line -->
-<<<<<<< HEAD
-<script src="js/slider.js" type="text/javascript"></script>
 
-<script type="text/javascript" src="js/index.js"></script>
-=======
 <!--<script src="js/slider.js" type="text/javascript"></script>-->
 <!--<script type="text/javascript" src="js/parallax.js"></script>-->
 <script type="text/javascript" src="js/app.js"></script>
->>>>>>> pj-index
+
 
 <!-- GOOGLE MAPS -->
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
