@@ -9,7 +9,7 @@
 
 
 
-<!--
+
 
     <div class="container">
         <div class="row">
@@ -17,8 +17,9 @@
                 <div class="card horizontal" id="card-horizontal-height"> 
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h4 class="header center">Mes évènements</h4>
-                            <p class="p-padding">
+                            <h4 class="center amber-text">Mes évènements</h4>
+                        
+                            <p class="p-padding amber-text">
                                 Dans cette rubrique,<br>
                                 vous trouverez tous les<br>
                                 évènements dans lesquels<br>
@@ -45,8 +46,8 @@
                     </div>
                     <div class="card-stacked">
                         <div class="card-content">
-                            <h4 class="header center">Mon atelier</h4>
-                            <p class="p-padding">Voici mon atelier,<br>
+                            <h4 class="header center amber-text">Mon atelier</h4>
+                            <p class="p-padding amber-text">Voici mon atelier,<br>
                                 là ou la magie opère<br>
                                 et d'ou sortent de mon<br>
                                 imagination toutes les créations.
@@ -59,7 +60,7 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 
 </main>
 

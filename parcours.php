@@ -1,34 +1,34 @@
 <?php include('includes/header.php'); ?>
 
-       <!--  CONTAINER DU CORPS DE LA PAGE POUR AJOUTER DU CONTENU     --> 
+<!--  CONTAINER DU CORPS DE LA PAGE POUR AJOUTER DU CONTENU     --> 
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="text-size2">
+<div class="container">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="text-size2 amber-text">
                 <span>
                     <h4>Mon parcour</h4>
                     <p>Tout d'abord, intéressée par les activités manuelles, je me suis formée pendant plusieurs années à l'école des Beaux-Arts de Nimes (Gard), ma ville de naissance. J'y ai appris à comprendre les couleurs, les différentes techniques du dessin, de la peinture, de l'encre de Chine ...<br>
-                    Plus tard, j'ai décidé de me former aux techniques de la mosaique, à la méthode du vitrail Tiffany, serti au cuivre et à la fusion et au thermoformage.<br>
-                    <br>
-                    Avec les maitres verriers et vitraillistes, j'ai découvert le verre bullseye, un verre teinté dans la masse produit d'après des méthodes de fabrication du XVIIème siècle.<br>
-                    Enfin, ma rencontre avec le verre de Murano, ce magnifique verre italien fabriqué depuis le 9ème siècle, a été décisive.<br>
-                    <br>
-                    Encouragée par le succés de mes premières expositions, je décide de m'installer dans un cabanon dans mon jardin. J'ai pu m'y faire une petite place pour y installer mon four, une table de travail et ranger mes plaques de verre.<br>
-                    Avant de pouvoir exprimer ma créativité, ma démarche artisanale m'a demandé une certaine maîtrise de la technique.<br>
-                    <br>
-                    Pour travailler un bijou en verre, il faut d'abord savoir le couper puis le faire chauffer pendant près de 15 heures, avec toutes les incertitudes que cela implique à l'ouverture du four.<br>
-                    Ensuite, il faut apprendre à travailler avec les inclusions, maîtriser les bulles, respecter les montées en température pour atteindre le point de fusion et une fois le verre fusionné, surveiller les courbes de re-descente et celles de re-cuisson.<br>
-                    Ainsi chaque pièce est unique et c'est ce qui lui donne tout son charme.<br>
-                    Chaque pièce est un jeu de couleurs où se marient verre, peinture et oxydes mais aussi des inclusions.<br>
-                    Je puise mon inspiration dans la nature et dans le monde qui m'entoure.
+                        Plus tard, j'ai décidé de me former aux techniques de la mosaique, à la méthode du vitrail Tiffany, serti au cuivre et à la fusion et au thermoformage.<br>
+                        <br>
+                        Avec les maitres verriers et vitraillistes, j'ai découvert le verre bullseye, un verre teinté dans la masse produit d'après des méthodes de fabrication du XVIIème siècle.<br>
+                        Enfin, ma rencontre avec le verre de Murano, ce magnifique verre italien fabriqué depuis le 9ème siècle, a été décisive.<br>
+                        <br>
+                        Encouragée par le succés de mes premières expositions, je décide de m'installer dans un cabanon dans mon jardin. J'ai pu m'y faire une petite place pour y installer mon four, une table de travail et ranger mes plaques de verre.<br>
+                        Avant de pouvoir exprimer ma créativité, ma démarche artisanale m'a demandé une certaine maîtrise de la technique.<br>
+                        <br>
+                        Pour travailler un bijou en verre, il faut d'abord savoir le couper puis le faire chauffer pendant près de 15 heures, avec toutes les incertitudes que cela implique à l'ouverture du four.<br>
+                        Ensuite, il faut apprendre à travailler avec les inclusions, maîtriser les bulles, respecter les montées en température pour atteindre le point de fusion et une fois le verre fusionné, surveiller les courbes de re-descente et celles de re-cuisson.<br>
+                        Ainsi chaque pièce est unique et c'est ce qui lui donne tout son charme.<br>
+                        Chaque pièce est un jeu de couleurs où se marient verre, peinture et oxydes mais aussi des inclusions.<br>
+                        Je puise mon inspiration dans la nature et dans le monde qui m'entoure.
                     </p>
                 </span>
             </div>
         </div>
-  </div>
- 
+    </div>
 
- <!-- FIN DU CORPS DE PAGE -->
 
-<?php include('includes/footer.php'); ?>
+    <!-- FIN DU CORPS DE PAGE -->
+
+    <?php include('includes/footer.php'); ?>
