@@ -18,70 +18,15 @@
         <link type="text/css" rel="stylesheet" href="css/Main.css">
     </head>
 
-<!--    <body onload="initialiser()" class="back">
-
-    <div class="container">  
-        <div class="row containeur center">
-            <div class="col m4 valign-wrapper">
-                <div class="img-logo valign">
-                    <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="img-logo"></a>
-                </div>
-                <div class="col s12 m12 l12 col-margin">
-                    <div class="col s12 m12 l12 col-margin" id="navCC">
-
-                        <div class="row row-margin1">
-                            <div>
-                                <div class="lien">
-                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>-->
     <body>
         <header>
-
-            <!--                <div class="row containeur center">
-                                <div class="valign-wrapper">
-                                    <div class="valign col s13 m3 l3">
-                                        <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="img-logo"></a>
-                                    </div>
-            
-                                    <div class="col s3 m4 l4">
-            
-                                        <div class="row">
-                                            <div>
-                                                <div class="">
-                                                    <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon hist oire</span></a>
-                                                </div>
-                                            </div>
-                                        </div>                    
-                                        <div class="row">
-                                            <div class="col offset-m3 col-size">
-                                                <a href="mes_creations.php"><span id="idMesCreations" class="navTextCC">Mes créations</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col offset-m4 col-size">
-                                                <a href=""><span  class="navTextCC">Coin presse</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col offset-m3">
-                                                <a href="eco_label.php"><span id="idEcoLabel" class="navTextCC">Eco-lablel</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col offset-m3">
-                                                <a href="contact.php"><span id="idContact" class="navTextCC">Contact</span></a>
-                                            </div>
-                                        </div>
-                                    </div> 
-            
-                                </div>
-                            </div>-->
             <div class="container"> 
                 <nav id="menu-index" class="transparent">
                     <div class="nav-wrapper">
                         <div class="row valign-wrapper">
                             <div class="valign col s12 offset-m1 m3 right">
                                 <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="hide-on-med-and-down img-logo "></a>
-
+                                
                             </div>
                             <div class="valign col s12 m8" id="menu-index-text">
                                 <ul id="nav-mobile" class="left hide-on-med-and-down">
