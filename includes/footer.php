@@ -1,8 +1,12 @@
-<!-- DIV FIN PARALLAX -->
+<footer>
+    <div class="row">
+        <div class="col l12 s12">
+            <p class="text-copyright"> © Copyright all rights reserved - design by Wild Code School </p>
+        </div>
+    </div>
+</footer>
 
-<!--<footer class="page-footer">
-    
-</footer>-->
+<!-- Fin du footer -->
 
 <!-- Import jQuery before materialize.js -->
 <!-- APPEL SCRIPT JQUERY on line -->
@@ -21,7 +25,6 @@ crossorigin="anonymous"></script>
 <!-- Fichier source off line -->
 
 <!--<script src="js/slider.js" type="text/javascript"></script>-->
-<!--<script type="text/javascript" src="js/parallax.js"></script>-->
 <script type="text/javascript" src="js/app.js"></script>
 
 

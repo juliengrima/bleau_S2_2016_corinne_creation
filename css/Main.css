@@ -537,58 +537,13 @@ figure.effect-sarah:hover p {
 /****************************************************************************
 *                               11. FOOTER 
 *****************************************************************************/
-footer.page-footer {
-    background-color: #9ccc65;
-    color: white;
-    margin-top: 0px;
-}
-
-footer ul li {
-    list-style: disc;
-}
-
-footer.page-footer .footer-copyright {
-    background: none;
+.text-copyright { text-align: center;
     text-align: center;
+    margin-top: 1px;
+    position: relative;
+    top: 17px;
+    color: #ffffff;
 }
-
-#logofooter {
-    width: 50px;
-    float: left;
-    padding-right: 1px;
-    margin-right: 2px;
-}
-
-.white-text {
-    margin-top: 4px;
-}
-
-.phone {
-    padding: 3px;
-}
-
-i.small {
-    float: left;
-    margin-right: 5px;
-}
-
-fb-page {
-    text-align: center;
-}
-
-
-.icone {
-    width: 50%;
-}
-
-.taille {
-    padding: 0%;
-}
-
-.haut {
-    padding-top: 15%;
-}
-
 
 /***************************************************************************
 *                            12. ICONE RETOUR HAUT
