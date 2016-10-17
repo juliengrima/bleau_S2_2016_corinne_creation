@@ -26,7 +26,7 @@
                         <div class="row valign-wrapper">
                             <div class="valign col s12 offset-m1 m3 right">
                                 <a href="index.php"><img src="images/logo.png" alt="CorinneCreation" class="hide-on-med-and-down img-logo "></a>
-                                
+
                             </div>
                             <div class="valign col s12 m8" id="menu-index-text">
                                 <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -83,6 +83,14 @@
                 </nav>
             </div>
         </header>
+
+
+<div id="slap_fb_slider" style="display: none">
+    <script type="text/javascript" src="http://surlapage.fr/script/facebook-slider?
+                  fb_url=https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/&amp;fb_width=70&amp;fb_height=70&amp;fb_faces=true&amp;fb_stream=true&amp;fb_header=true&amp;fb_border=true&amp;fb_theme=light&amp;speed=SLOW&amp;fb_pic=sign&amp;position=LEFT">
+    </script>
+    <a href="http://rigolotes.fr" title="blagues caramba">blagues caramba</a>
+</div>
 
 
 
