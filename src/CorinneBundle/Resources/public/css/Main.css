@@ -461,10 +461,11 @@ figure.effect-sarah:hover p {
 }
 
 #contact-body {
-    display: none;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Crete Round', sans-serif;
+    background-image: none;
 }
 
 #contact-form {
@@ -472,6 +473,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-family: 'Crete Round', sans-serif;
 }
 
@@ -480,7 +482,7 @@ figure.effect-sarah:hover p {
 }
 
 #contact-main {
-   
+display: flex;
 }
 
 /*                      Fin formulaire CONTACT                             */

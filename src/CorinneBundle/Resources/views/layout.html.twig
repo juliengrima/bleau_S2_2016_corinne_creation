@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+
 {% block header %}
 
     <header>
@@ -8,19 +9,19 @@
                 <div class="nav-wrapper">
                     <div class="row valign-wrapper">
                         <div class="valign col s12 offset-m1 m3 right">
-                            <a href="index.php"><img src="{{ asset('bundles/corinne/images/logo.png') }}" alt="CorinneCreation" class="hide-on-med-and-down img-logo "></a>
+                            <a href="{{ path('corinne_homepage') }}"><img src="{{ asset('bundles/corinne/images/logo.png') }}" alt="CorinneCreation" class="hide-on-med-and-down img-logo "></a>
 
                         </div>
                         <div class="valign col s12 m8" id="menu-index-text">
                             <ul id="nav-mobile" class="left hide-on-med-and-down">
                                 <div class="row">
                                     <li class="col s12 m12">
-                                        <a href="parcours.php"><span id="idMonHistoire" class="navTextCC">Mon histoire</span></a>
+                                        <a href="{{ path('corinne_parcour') }}"><span id="idMonHistoire" class="navTextCC">Mon histoire</span></a>
                                     </li>
                                 </div>
                                 <div class="row">
                                     <li class="col s12  offset-m3">
-                                        <a href="""mes_creations.php"><span id="idMesCreations" class="navTextCC">Mes créations</span></a>
+                                        <a href="{{ path('corinne_creation') }}"><span id="idMesCreations" class="navTextCC">Mes créations</span></a>
                                     </li>
                                 </div>
                                 <div class="row">
@@ -31,12 +32,12 @@
 
                                 <div class="row">
                                     <li class="col s12 offset-m3">
-                                        <a href="eco_label.php"><span id="idEcoLabel" class="navTextCC">Eco-label</span></a>
+                                        <a href="{{ path('corinne_ecolabel') }}"><span id="idEcoLabel" class="navTextCC">Eco-label</span></a>
                                     </li>
                                 </div>
                                 <div class="row">
                                     <li class="col s12 m12">
-                                        <a href="contact.php"><span id="idContact" class="navTextCC">Contact</span></a>
+                                        <a href="{{ path('corinne_contact') }}"><span id="idContact" class="navTextCC">Contact</span></a>
                                     </li>
                                 </div>
                             </ul>

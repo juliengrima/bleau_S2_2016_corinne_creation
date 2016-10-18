@@ -5,7 +5,7 @@ $(function () {
 
     $(".button-collapse").sideNav();
 
-    $('#body-contact').hide();
+    $('#contact-body').hide();
 
     $('.navTextCC').mouseenter(function () {
         $(this).effect('highlight', 'slow');
@@ -15,7 +15,7 @@ $(function () {
         $(this).effect('highlight', 'slow');
     });
 
-    $("#body-contact").hide().show(1000).css("display", "flex");
+    $("#contact-body").hide().show(1000).css("display", "flex");
     $('#textarea1').trigger('autoresize');
 
     $('.modal-trigger').leanModal();
