@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 /nbproject/private/
 /nbproject/
-.idea/
-/idea/workspace.xml
-=======
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*
@@ -17,5 +13,7 @@
 /bin/
 /composer.phar
 /.idea/
->>>>>>> e595c588150afd0ab4078075c57075ab20b12711
+/.idea/workspace.xml
+
+
 
