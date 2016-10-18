@@ -1,0 +1,26 @@
+CorinneBundle\Entity\Event:
+    type: entity
+    table: null
+    repositoryClass: CorinneBundle\Repository\EventRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        titre:
+            type: string
+            length: 255
+        descriptif:
+            type: text
+        dateDebut:
+            type: datetime
+            column: date_debut
+        dateFin:
+            type: datetime
+            column: date_fin
+        lieu:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

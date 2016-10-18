@@ -1,0 +1,8 @@
+back:
+    resource: "@BackBundle/Resources/config/routing.yml"
+    prefix:   /
+
+corinne:
+    resource: "@CorinneBundle/Resources/config/routing.yml"
+    prefix:   /
+

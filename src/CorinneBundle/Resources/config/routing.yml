@@ -1,0 +1,3 @@
+corinne_homepage:
+    path:     /
+    defaults: { _controller: CorinneBundle:Default:index }

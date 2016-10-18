@@ -1,0 +1,15 @@
+CorinneBundle\Entity\Categorie:
+    type: entity
+    table: null
+    repositoryClass: CorinneBundle\Repository\CategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomcat:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

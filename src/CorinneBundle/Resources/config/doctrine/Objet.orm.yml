@@ -1,0 +1,22 @@
+CorinneBundle\Entity\Objet:
+    type: entity
+    table: null
+    repositoryClass: CorinneBundle\Repository\ObjetRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        source:
+            type: string
+            length: 255
+        alt:
+            type: string
+            length: 255
+        definition:
+            type: text
+        slider:
+            type: boolean
+    lifecycleCallbacks: {  }
