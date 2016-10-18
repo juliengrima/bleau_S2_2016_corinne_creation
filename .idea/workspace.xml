@@ -2,74 +2,101 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc3b09c-aa96-4e3c-935c-1752a3a675c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/cache/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/logs/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AppCache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/SymfonyRequirements.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/autoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/check.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/config_test.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/console" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/corinne.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackBundle/BackBundle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackBundle/Controller/DefaultController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackBundle/Resources/config/routing.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackBundle/Resources/config/services.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackBundle/Resources/views/Default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/CorinneBundle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Entity/Categorie.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Entity/Ecolabel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Entity/Event.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Entity/Objet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Entity/Presse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Entity/SousCategorie.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Repository/CategorieRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Repository/EcolabelRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Repository/EventRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Repository/ObjetRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Repository/PresseRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Repository/SousCategorieRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/doctrine/Categorie.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/doctrine/Ecolabel.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/doctrine/Event.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/doctrine/Objet.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/doctrine/Presse.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/doctrine/SousCategorie.orm.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/services.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/footer.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/header.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/BackBundle/Controller/DefaultControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/CorinneBundle/Controller/DefaultControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/app.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/app_dev.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bleau_S2_2016_corinne_creation" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/delicious/Delicious-Bold.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/delicious/Delicious-BoldItalic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/delicious/Delicious-Heavy.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/delicious/Delicious-Italic.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/delicious/Delicious-Roman.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/delicious/Delicious-SmallCaps.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/footer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/includes/slider.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nbproject/project.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/Main.css" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/contact.css" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/contact.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/css/materialize.css" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/materialize.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/Enlum.b.g.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/Enlum.b.g.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/Enluminure-COEURpng.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/Enluminure-COEURpng.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/artdeco.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/artdeco.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/atelier1.JPG" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/atelier1.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/atelier2.JPG" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/atelier2.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/atelier3.JPG" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/atelier3.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/atelier4.JPG" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/atelier4.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/atelier5.JPG" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/atelier5.JPG" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/backg (copie).jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/backg (copie).jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/backg-landscape.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/backg-landscape.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/backg.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/backg.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bague.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/bague.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/bracelet.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/bracelet.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/collection.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/collection.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/collier1.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/collier1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/collier2.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/collier2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/collier3.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/collier3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/collier4.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/collier4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/eco-label.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/eco-label.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/ecodefis.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/ecodefis.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/element or 2.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/element or 2.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/element or 6 copie.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/element or 6 copie.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/lampe1.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/lampe1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/logo-f.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/logo-f.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/logo.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/logo_coeur.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/logo_coeur.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/madeinfrance.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/madeinfrance.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/up-arrow.png" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/up-arrow.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/vase1.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/vase1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/images/vase2.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/images/vase2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/anneau_de_feu.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/anneau_de_feu.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/anneau_de_feu_310.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/anneau_de_feu_310.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/bracelet_cabochon.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/bracelet_cabochon.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/bracelet_cabochon_310.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/bracelet_cabochon_310.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/croix.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/croix.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/croix_310.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/croix_310.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/fleur_verre_fusionne.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/fleur_verre_fusionne.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/fleur_verre_fusionne_1024.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/fleur_verre_fusionne_1024.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/fleur_verre_fusionne_310.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/fleur_verre_fusionne_310.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/fleur_verre_fusionné.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/fleur_verre_fusionné.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/la_tendresse.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/la_tendresse.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/la_tendresse_310.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/la_tendresse_310.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/tiffany.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/tiffany.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/tiffany_233.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/tiffany_233.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/img-slider/tiffany_310.jpg" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-slider/tiffany_310.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/contact.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/contact.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/index.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/jquery.arctext.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/jquery.arctext.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/materialize.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/materialize.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/materialize.min.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/materialize.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/slider.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/slider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/footer.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/footer.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/header.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/header.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
     </list>
     <ignored path="bleau_S2_2016_corinne_creation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,37 +118,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="22">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#37#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="66">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -130,6 +178,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/web/bundles/corinne/css/plop.css" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/plop.css" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/header.html.twig" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/footer.html.twig" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -189,6 +249,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bundles" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="corinne" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -271,6 +385,126 @@
               <option name="myItemId" value="Resources" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CorinneBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CorinneBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CorinneBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CorinneBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -304,7 +538,73 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="includes" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bleau_S2_2016_corinne_creation" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,6 +616,44 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CorinneBundle/Resources/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -334,21 +672,22 @@
       <workItem from="1476445722631" duration="3000" />
       <workItem from="1476635684585" duration="17000" />
       <workItem from="1476635713668" duration="8000" />
-      <workItem from="1476779950852" duration="475000" />
+      <workItem from="1476779950852" duration="10985000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1172000" />
+    <option name="totallyTimeSpent" value="11682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1008" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25498652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17466307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -359,7 +698,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -444,7 +782,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/web/bundles/corinne/css/plop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/plop.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -460,11 +806,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/contact.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/header.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="70" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="78" selection-end-column="14" />
+          <folding>
+            <element signature="e#12#28#0#Twig" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#217#256#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
