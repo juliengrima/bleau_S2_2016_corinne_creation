@@ -472,8 +472,7 @@ figure.effect-sarah:hover p {
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     font-family: 'Crete Round', sans-serif;
 }
 
@@ -482,7 +481,10 @@ figure.effect-sarah:hover p {
 }
 
 #contact-main {
-display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 /*                      Fin formulaire CONTACT                             */

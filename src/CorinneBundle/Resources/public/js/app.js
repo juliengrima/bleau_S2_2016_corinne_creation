@@ -56,5 +56,6 @@ $(function () {
     // ZOOM SUR LES IMAGES
     
     $('.materialboxed').materialbox();
-      
+
+
 });
