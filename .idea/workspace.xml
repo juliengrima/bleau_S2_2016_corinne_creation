@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bc3b09c-aa96-4e3c-935c-1752a3a675c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/contact.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/eco_label.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/mes_creations.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/parcour.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mes_creations.php" afterPath="$PROJECT_DIR$/mes_creations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
-    </list>
+    <list default="true" id="7bc3b09c-aa96-4e3c-935c-1752a3a675c6" name="Default" comment="" />
     <ignored path="bleau_S2_2016_corinne_creation.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -51,8 +37,8 @@
       <file leaf-file-name="Main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="484" column="14" selection-start-line="484" selection-start-column="14" selection-end-line="484" selection-end-column="14" />
+            <state relative-caret-position="325">
+              <caret line="477" column="1" selection-start-line="477" selection-start-column="1" selection-end-line="477" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -649,12 +635,12 @@
       <workItem from="1476445722631" duration="3000" />
       <workItem from="1476635684585" duration="17000" />
       <workItem from="1476635713668" duration="8000" />
-      <workItem from="1476779950852" duration="20126000" />
+      <workItem from="1476779950852" duration="20218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20823000" />
+    <option name="totallyTimeSpent" value="20915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1008" extended-state="6" />
@@ -981,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="484" column="14" selection-start-line="484" selection-start-column="14" selection-end-line="484" selection-end-column="14" />
+        <state relative-caret-position="325">
+          <caret line="477" column="1" selection-start-line="477" selection-start-column="1" selection-end-line="477" selection-end-column="1" />
           <folding />
         </state>
       </provider>
