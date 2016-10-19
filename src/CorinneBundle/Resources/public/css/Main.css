@@ -499,6 +499,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
 #access-form {
@@ -506,6 +507,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 /*                      Fin formulaire ACCESS                              */
 /* ------------------------------------------------------------------------*/
