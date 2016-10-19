@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc3b09c-aa96-4e3c-935c-1752a3a675c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/img-presse/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/presse.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/access.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
     </list>
     <ignored path="bleau_S2_2016_corinne_creation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,61 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-222">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="presse.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/presse.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="access.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/access.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+            <state relative-caret-position="195">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -141,7 +67,6 @@
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/mes_creations.html.twig" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/eco_label.html.twig" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/contact.html.twig" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -151,6 +76,7 @@
         <option value="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -582,12 +508,12 @@
       <workItem from="1476866996126" duration="777000" />
       <workItem from="1476867779992" duration="1213000" />
       <workItem from="1476873886465" duration="3927000" />
-      <workItem from="1476882934396" duration="268000" />
+      <workItem from="1476882934396" duration="663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31210000" />
+    <option name="totallyTimeSpent" value="31605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -739,13 +665,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contact.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="830">
@@ -877,8 +796,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+        <state relative-caret-position="420">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding />
         </state>
       </provider>
