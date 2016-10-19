@@ -1,7 +1,12 @@
+function autoplay() {
+    // Next slide
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}
 
 // Shorthand for $( document ).ready()
 $(function () {
-    console.log("jQuery est normalement prêt pour corinne création");
+    console.log("jQuery est toujours prêt pour corinne création");
 
     $(".button-collapse").sideNav();
 
@@ -23,22 +28,12 @@ $(function () {
     $('.carousel.carousel-slider').carousel({full_width: true, indicators: true});
     $('.carousel').carousel({indicators: true});
 
+    autoplay();
 
-    $('.carousel').carousel('next');
 
-    autoplay()
-    function autoplay() {
-        // Next slide
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
-    }
+    // RETOUR VERS LE HAUT
 
-    $("#body-contact").hide().show(1000).css("display", "flex");
-    $('#textarea1').trigger('autoresize');
-
-    // RETOUR VERS LE HAUT 
-    
-        $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+    $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
     var amountScrolled = 300;
 
@@ -58,7 +53,7 @@ $(function () {
     });
 
     // ZOOM SUR LES IMAGES
-    
+
     $('.materialboxed').materialbox();
 
 
