@@ -28,6 +28,11 @@ class DefaultController extends Controller
 
     public function contactAction()
     {
-        return $this->render('CorinneBundle:User:contact.html.twig');
+    return $this->render('CorinneBundle:User:contact.html.twig');
+    }
+
+    public function atelierAction()
+    {
+        return $this->render('CorinneBundle:User:atelier.html.twig');
     }
 }
