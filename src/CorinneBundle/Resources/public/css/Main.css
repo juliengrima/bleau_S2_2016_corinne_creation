@@ -133,7 +133,6 @@ p {
 }
 
 .navTextCC:hover {
-    /*background-color: white!important;*/
     color: white!important;
 }
 
@@ -241,14 +240,14 @@ p {
     background-color: black;
 }
 
-.card-action {
+#a-action h5{
     color: #ffd700 !important;
-    transition: color .3s ease;
-    text-transform: inherit;
+    text-transform: none !important;
+    transition: color .8s;
 }
 
-.card-action:hover {
-    color: white;
+#a-action h5:hover {
+    color: white !important;
 }
 
 #card-horizontal-height{
