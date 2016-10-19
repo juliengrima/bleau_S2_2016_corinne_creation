@@ -81,13 +81,15 @@ p {
 }
 
 /* TEXT-HOVER */
-a .lien {
-    color: #ffab40;
-    transition: color .3s ease;
-}
-a .lien:hover {
-    color:  rgb(218, 255, 32);
-}
+/*a .lien {*/
+    /*color: #ffab40;*/
+    /*transition: color .3s ease;*/
+/*}*/
+/*a .lien:hover {*/
+    /*color:  rgb(218, 255, 32);*/
+/*}*/
+
+
 
 /* LES IMAGES*/
 .img-size{
@@ -124,7 +126,7 @@ a .lien:hover {
 .navTextCC {
     font-size: 1.6em;
     font-family: 'Rochester', cursive;
-    color: #ffd700;
+    color: #ffd700 !important;
     margin-left: 15px;
     transition-property: color;
     transition-duration: 0.8s;
@@ -239,8 +241,14 @@ a .lien:hover {
     background-color: black;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    text-transform: initial;
+.card-action {
+    color: #ffd700 !important;
+    transition: color .3s ease;
+    text-transform: inherit;
+}
+
+.card-action:hover {
+    color: white;
 }
 
 #card-horizontal-height{
@@ -262,7 +270,6 @@ a .lien:hover {
     height: 300px;
     width: 500px;
 }
-
 
 /*MES_CREATIONS.PHP*/
 /* **********************************************************************
