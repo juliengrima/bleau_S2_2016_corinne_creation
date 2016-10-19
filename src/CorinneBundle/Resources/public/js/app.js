@@ -1,7 +1,9 @@
 
 // Shorthand for $( document ).ready()
 $(function () {
-    console.log("jQuery est normalement prêt pour corinne création");
+
+    console.log("jQuery est logiquement prêt pour corinne création");
+
 
     $(".button-collapse").sideNav();
 

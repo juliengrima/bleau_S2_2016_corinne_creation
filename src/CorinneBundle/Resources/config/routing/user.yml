@@ -21,3 +21,8 @@ corinne_contact:
 corinne_atelier:
     path:     /atelier
     defaults: { _controller: CorinneBundle:Default:atelier }
+
+corinne_access:
+    path:     /access
+    defaults: { _controller: CorinneBundle:Default:access }
+

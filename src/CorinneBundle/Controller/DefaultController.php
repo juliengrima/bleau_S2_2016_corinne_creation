@@ -35,4 +35,14 @@ class DefaultController extends Controller
     {
         return $this->render('CorinneBundle:User:atelier.html.twig');
     }
+
+    public function accessAction()
+    {
+        return $this->render('@Corinne/access.html.twig');
+    }
+
+    public function presseAction()
+    {
+        return $this->render('@Corinne/User/presse.twig');
+    }
 }
