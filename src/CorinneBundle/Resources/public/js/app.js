@@ -1,7 +1,7 @@
 
 // Shorthand for $( document ).ready()
 $(function () {
-    console.log("jQuery est prêt pour corinne création");
+    console.log("jQuery est normalement prêt pour corinne création");
 
     $(".button-collapse").sideNav();
 
@@ -23,8 +23,12 @@ $(function () {
     $('.carousel.carousel-slider').carousel({full_width: true, indicators: true});
     $('.carousel').carousel({indicators: true});
 
+
+    $('.carousel').carousel('next');
+
     autoplay()
     function autoplay() {
+        // Next slide
         $('.carousel').carousel('next');
         setTimeout(autoplay, 4500);
     }
