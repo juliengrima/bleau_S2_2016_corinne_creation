@@ -17,8 +17,8 @@
 -------------------*/
 
 html {
-    margin:0;
-    padding:0;
+    /*margin:0;*/
+    /*padding:0;*/
     background: url("../images/backg-landscape.jpg") no-repeat center fixed;
 /*      background-image: radial-gradient(circle at center, white, green);*/
     background-size: cover; 
@@ -253,6 +253,10 @@ a .lien:hover {
     max-height: 300px;
 }
 
+.image-height{
+    height: 300px;
+    width: 500px;
+}
 
 #card-image-height .image-height{
     height: 300px;
