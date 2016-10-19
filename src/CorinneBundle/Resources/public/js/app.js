@@ -26,15 +26,6 @@ $(function () {
     $('.carousel').carousel({indicators: true});
 
 
-    $('.carousel').carousel('next');
-
-    autoplay()
-    function autoplay() {
-        // Next slide
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
-    }
-
     $("#body-contact").hide().show(1000).css("display", "flex");
     $('#textarea1').trigger('autoresize');
 
@@ -62,6 +53,7 @@ $(function () {
     // ZOOM SUR LES IMAGES
     
     $('.materialboxed').materialbox();
+
 
 
 });
