@@ -4,10 +4,18 @@
     <list default="true" id="7bc3b09c-aa96-4e3c-935c-1752a3a675c6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
+=======
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/public/css/Main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/mes_creations.html.twig" afterPath="$PROJECT_DIR$/src/CorinneBundle/Resources/views/User/mes_creations.html.twig" />
+=======
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
     </list>
     <ignored path="bleau_S2_2016_corinne_creation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +39,14 @@
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="315">
               <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="583">
+              <caret line="81" column="201" selection-start-line="81" selection-start-column="201" selection-end-line="81" selection-end-column="201" />
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
               <folding />
             </state>
           </provider>
@@ -41,6 +55,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-405">
               <caret line="52" column="56" selection-start-line="52" selection-start-column="56" selection-end-line="52" selection-end-column="56" />
               <folding>
@@ -67,7 +82,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
               <caret line="4686" column="0" selection-start-line="4686" selection-start-column="0" selection-end-line="4686" selection-end-column="0" />
+=======
+            <state relative-caret-position="690">
+              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+              <folding>
+                <element signature="e#12#37#0#Twig" expanded="true" />
+              </folding>
+=======
+            <state relative-caret-position="195">
+              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
               <folding />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
             </state>
           </provider>
         </entry>
@@ -108,6 +134,8 @@
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/public/js/app.js" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/access.html.twig" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -159,7 +187,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="Scratches" />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,6 +352,15 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -347,10 +387,14 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+=======
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -469,6 +513,10 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+<<<<<<< HEAD
+      <pane id="Scratches" />
+=======
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -545,12 +593,28 @@
       <workItem from="1476866996126" duration="777000" />
       <workItem from="1476867779992" duration="1213000" />
       <workItem from="1476873886465" duration="3927000" />
+<<<<<<< HEAD
       <workItem from="1476882934396" duration="3374000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1476879453595" duration="2674000" />
+=======
+      <workItem from="1476882934396" duration="663000" />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="34316000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="33616000" />
+=======
+    <option name="totallyTimeSpent" value="31605000" />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
@@ -733,6 +797,24 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/access.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="33" column="80" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2209">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -787,15 +869,40 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="59" />
+=======
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="253">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+=======
+        <state relative-caret-position="405">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.gitignore">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding>
+            <element signature="e#12#37#0#Twig" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/config/routing/user.yml">
+>>>>>>> 6643f08314bc78ee1fd6ae0288f557bb2b7a2820
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -807,6 +914,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+          <folding />
+>>>>>>> dd3dc267e9e2706dfdde43c20ee721cf385debb3
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorinneBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="81" column="201" selection-start-line="81" selection-start-column="201" selection-end-line="81" selection-end-column="201" />
           <folding />
         </state>
       </provider>
