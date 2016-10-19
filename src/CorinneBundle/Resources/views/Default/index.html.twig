@@ -1,15 +1,34 @@
-
-{% block header %}{% endblock %}
+{% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
+
+    <div class="row ">
+        <div class="carousel hide-on-small-only" id="carousel-index">
+            <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('bundles/corinne/img-slider/anneau_de_feu.jpg') }}" alt="anneau de feu"/></a>
+            <a class="carousel-item" href="#two!"><img  class="responsive-img" src="{{ asset('bundles/corinne/img-slider/tiffany.jpg') }}" alt="tiffany"/></a>
+            <a class="carousel-item" href="#three!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/croix.jpg') }}" alt="croix"/></a>
+            <a class="carousel-item" href="#four!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/fleur_verre_fusionne_1024.jpg') }}" alt="fleur verre fusonné"/></a>
+            <a class="carousel-item" href="#five!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/la_tendresse.jpg') }}" alt="la tendresse"/> </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="carousel carousel-slider  hide-on-med-and-up" >
+
+
+            <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/fleur_verre_fusionne_1024.jpg') }}" alt="fleur verre fusonné"/>   </a>
+            <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/la_tendresse.jpg') }}" alt="la tendresse"/> </a>
+            <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/bracelet_cabochon.jpg') }}" alt="la tendresse"/> </a>
+            <a class="carousel-item" href="#quatre!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/anneau_de_feu.jpg') }}" alt="la tendresse"/> </a>
+        </div>
+    </div>
 
     <main role="main">
 
         <!--Enluminure Coeur-->
         <section>
             <div class="row">
-                <div class="col offset-s2 s8  m6 offset-l3 l8">
-                    <img src="images/Enluminure-COEURpng.png"  class="responsive-img" alt="Enluminure coeur">
+                <div class="col s8  m4 l8 center-align">
+                    <img src="{{ asset('bundles/corinne/images/Enluminure-COEURpng.png') }}"  class="responsive-img" alt="Enluminure coeur">
                 </div>
                 <div class="col s2 m6 l1 "></div>
             </div>
@@ -38,7 +57,7 @@
                             </div>
                             <div class="card-image" id="card-image-collection-height">
                                 <a href="events.php">
-                                    <img src="images/collection.jpg" class="image-height" alt="collection.jpg">
+                                    <img src="{{ asset('bundles/corinne/images/collection.jpg') }}" class="image-height" alt="collection.jpg">
                                 </a>
                             </div>
                         </div>
@@ -46,7 +65,7 @@
                     <!--partie pour Mobile-->
                     <div class="row hide-on-med-and-up">
                         <div class="card-image" id="">
-                            <a href="events.php.php"><img src="images/collection.jpg" alt="events" class="responsive-img"></a>
+                            <a href="events.php.php"><img src="{{ asset('bundles/corinne/images/collection.jpg') }}" alt="events" class="responsive-img"></a>
                         </div>
                         <h4 class="center amber-text">Mes évènements</h4>
                         <p class="amber-text center">
@@ -72,7 +91,7 @@
                         <div class="card horizontal hide-on-small-only">
                             <div class="card-image" id="card-image-collection-height">
                                 <a href="atelier.php">
-                                    <img src="images/atelier1.JPG" class="image-height" alt="collection.jpg">
+                                    <img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="image-height" alt="collection.jpg">
                                 </a>                        </div>
                             <div class="card-stacked">
                                 <div class="card-content">
@@ -92,7 +111,7 @@
                     <!--partie pour mobile-->
                     <div class="row hide-on-med-and-up">
                         <div class="card-image" id="">
-                            <a href="atelier.php"><img src="images/atelier1.JPG" class="responsive-img" alt="atelier1"></a>
+                            <a href="atelier.php"><img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="responsive-img" alt="atelier1"></a>
                             <h4 class="center amber-text">Mon atelier</h4>
                             <p class="amber-text center">Voici mon atelier,<br>
                                 là ou la magie opère<br>
@@ -107,5 +126,3 @@
     </main>
 
 {% endblock %}
-
- {% block footer %} {% endblock %}

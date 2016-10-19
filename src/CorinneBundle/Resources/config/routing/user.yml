@@ -1,0 +1,19 @@
+corinne_homepage:
+    path:     /
+    defaults: { _controller: CorinneBundle:Default:index }
+
+corinne_parcour:
+    path:     /parcour
+    defaults: { _controller: CorinneBundle:Default:parcour }
+
+corinne_creation:
+    path:     /creation
+    defaults: { _controller: CorinneBundle:Default:creation }
+
+corinne_ecolabel:
+    path:     /ecolabel
+    defaults: { _controller: CorinneBundle:Default:ecolabel }
+
+corinne_contact:
+    path:     /contact
+    defaults: { _controller: CorinneBundle:Default:contact }
