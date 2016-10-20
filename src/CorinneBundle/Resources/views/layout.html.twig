@@ -1,7 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block header %}
-
     <header>
         <div class="container">
             <nav id="menu-index" class="transparent">
@@ -9,7 +8,6 @@
                     <div class="row valign-wrapper">
                         <div class="valign col s12 offset-m1 m3 right">
                             <a href="{{ path('corinne_homepage') }}"><img src="{{ asset('bundles/corinne/images/logo.png') }}" alt="CorinneCreation" class="hide-on-med-and-down img-logo "></a>
-
                         </div>
                         <div class="valign col s12 m8" id="menu-index-text">
                             <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -25,7 +23,7 @@
                                 </div>
                                 <div class="row">
                                     <li class="col s12 offset-m6">
-                                        <a href=""><span  class="navTextCC">Coin presse</span></a>
+                                        <a href="{{ path('corinne_presse') }}"><span  class="navTextCC">Coin presse</span></a>
                                     </li>
                                 </div>
 
@@ -67,21 +65,17 @@
         </div>
     </header>
 
-    <div id="slap_fb_slider" style="display: none">
-        <script type="text/javascript" src="http://surlapage.fr/script/facebook-slider?
-                      fb_url=https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/&amp;fb_width=70&amp;fb_height=70&amp;fb_faces=true&amp;fb_stream=true&amp;fb_header=true&amp;fb_border=true&amp;fb_theme=light&amp;speed=SLOW&amp;fb_pic=sign&amp;position=LEFT">
-        </script>
-        <a href="http://rigolotes.fr" title="blagues caramba">blagues caramba</a>
-    </div>
 
 {% endblock %}
 
 
 {% block footer %}
-    <footer>
+    <footer class="container">
         <div class="row">
             <div class="col l12 s12">
-                <p class="text-copyright"> © Copyright all rights reserved - design by Wild Code School </p>
+                <p class="text-copyright"><a href="{{ path('corinne_access') }}"> ©</a> Copyright all rights reserved - design by <a href="{{ asset('http://www.wildcodeschool.fr') }}">Wild Code School.</a></p>
+                <div id="facebook" class="fb-like" data-href="https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/?pnref=lhc"
+                     data-width="70" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             </div>
         </div>
     </footer>

@@ -1,6 +1,15 @@
 {% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
+    <!--Enluminure -->
+    <section>
+        <div class="row center">
+            <div class="col s12  m12 l12">
+                <img src="{{ asset('bundles/corinne/images/element or 6 copie.png') }}"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
 
     <div class="row ">
         <div class="carousel hide-on-small-only" id="carousel-index">
@@ -13,8 +22,6 @@
     </div>
     <div class="row">
         <div class="carousel carousel-slider  hide-on-med-and-up" >
-
-
             <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/fleur_verre_fusionne_1024.jpg') }}" alt="fleur verre fusonné"/>   </a>
             <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/la_tendresse.jpg') }}" alt="la tendresse"/> </a>
             <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/bracelet_cabochon.jpg') }}" alt="la tendresse"/> </a>
@@ -22,12 +29,22 @@
         </div>
     </div>
 
+    <!--Enluminure droit-->
+    <section>
+        <div class="row center">
+            <div class="col s12  m12 l12">
+                <img src="{{ asset('bundles/corinne/images/element or 6 copie.png') }}"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
+<br><br>
     <main role="main">
 
         <!--Enluminure Coeur-->
         <section>
-            <div class="row">
-                <div class="col offset-s2 s8  m6 offset-l3 l8">
+            <div class="row center">
+                <div class="col s12  m12 l12">
                     <img src="{{ asset('bundles/corinne/images/Enluminure-COEURpng.png') }}"  class="responsive-img" alt="Enluminure coeur">
                 </div>
                 <div class="col s2 m6 l1 "></div>
@@ -51,8 +68,13 @@
                                         je serais présente.
                                     </p>
                                 </div>
+<<<<<<< HEAD
                                 <div class="card-action center hover-margin">
                                     <a href="events.php"><h5 class="amber-text">Venir à mes évènements</h5></a>
+=======
+                                <div class="card-action center" id="a-action">
+                                    <a href="events.php"><h5>Venir à mes évènements</h5></a>
+>>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
                                 </div>
                             </div>
                             <div class="card-image" id="card-image-collection-height">
@@ -89,10 +111,15 @@
                     <div class="col s12 m12 l12  ">
 
                         <div class="card horizontal hide-on-small-only">
+<<<<<<< HEAD
                             {#<div class="card-image" id="card-image-collection-heigh">#}
                                 <div class="card-image" id="">
 
                                 <a href="atelier.php">
+=======
+                            <div class="card-image" id="card-image-collection-height">
+                                <a href="{{ path('corinne_atelier') }}">
+>>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
                                     <img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="image-height" alt="collection.jpg">
                                 </a>                        </div>
                             <div class="card-stacked">
@@ -104,8 +131,13 @@
                                         imagination toutes les créations.
                                     </p>
                                 </div>
+<<<<<<< HEAD
                                 <div class="card-action center hover-margin">
                                     <a href="atelier.php"><h5 class="amber-text">Venir à mes évènements</h5></a>
+=======
+                                <div class=" card-action center" id="a-action">
+                                    <a href="{{ path('corinne_atelier') }}"><h5 class="a-action">Mon atelier</h5></a>
+>>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
                                 </div>
                             </div>
                         </div>
@@ -113,7 +145,7 @@
                     <!--partie pour mobile-->
                     <div class="row hide-on-med-and-up">
                         <div class="card-image" id="">
-                            <a href="atelier.php"><img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="responsive-img" alt="atelier1"></a>
+                            <a href="{{ path('corinne_atelier') }}"><img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="responsive-img" alt="atelier1"></a>
                             <h4 class="center amber-text">Mon atelier</h4>
                             <p class="amber-text center">Voici mon atelier,<br>
                                 là ou la magie opère<br>
@@ -127,4 +159,28 @@
         </section>
     </main>
 
+    <!--Enluminure Coeur-->
+    <section>
+        <div class="row center">
+            <div class="col s12  m12 l12">
+                <img src="{{ asset('bundles/corinne/images/element or 2.png') }}"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block javascripts %}
+<SCRIPT>
+    $('.carousel').carousel('next');
+
+
+    function autoplay() {
+        // Next slide
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+    }
+    autoplay()
+</SCRIPT>
 {% endblock %}
