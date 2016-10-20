@@ -1,13 +1,6 @@
 
 // Shorthand for $( document ).ready()
-<<<<<<< HEAD
-=======
 $(function () {
-
-    console.log("jQuery est logiquement prêt pour corinne création");
-
->>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
-
 jQuery(document).ready(function($) {
     console.log("jQuery est prêt  pour corinne création");
 
@@ -25,9 +18,6 @@ jQuery(document).ready(function($) {
         indicators: true
     });
 
-
-<<<<<<< HEAD
-
     autoplay();
     function autoplay() {
         $('.carousel').carousel('next');
@@ -35,11 +25,6 @@ jQuery(document).ready(function($) {
     }
 
     // RETOUR VERS LE HAUT
-=======
-    $("#body-contact").hide().show(1000).css("display", "flex");
-    $('#textarea1').trigger('autoresize');
->>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
-
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
     var amountScrolled = 300;
