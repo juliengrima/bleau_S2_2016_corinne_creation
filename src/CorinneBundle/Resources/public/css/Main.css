@@ -19,9 +19,9 @@
 html {
     /*margin:0;*/
     /*padding:0;*/
+    z-index: 5;
     background: url("../images/backg-news.png") no-repeat center fixed;
-    /*background-image: radial-gradient(circle at center, yellow, black);*/
-    background-size: cover; 
+    background-size: cover;
 }
 
 /*Exemples de mise en place de police de caractère dans CSS*/
@@ -38,7 +38,10 @@ html {
 
 
 body{
+    z-index:-1000;
     font-family: 'Rochester', serif;
+    background-image: radial-gradient(circle at center, yellow, black);
+    background-position: flex;
 }
 
  /*Important pour positionner le footer en bas de page*/
@@ -239,10 +242,15 @@ p {
 .card{
     background-color: black;
     height: 300px;
+    opacity: 0.5 !important;
 }
 
 .horizontal{
     height: 300px;
+}
+
+.card .horizontal{
+
 }
 
 #a-action h5{

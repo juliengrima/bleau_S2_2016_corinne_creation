@@ -12,4 +12,8 @@ CorinneBundle\Entity\Categorie:
         nomcat:
             type: string
             length: 255
+    oneToMany:
+        souscategorie:
+            targetEntity: CorinneBundle\Entity\SousCategorie
+            mappedBy: categorie
     lifecycleCallbacks: {  }
