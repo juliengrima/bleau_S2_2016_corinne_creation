@@ -1,6 +1,6 @@
 
 // Shorthand for $( document ).ready()
-$(function () {
+
 jQuery(document).ready(function($) {
     console.log("jQuery est prêt  pour corinne création");
 
@@ -24,7 +24,7 @@ jQuery(document).ready(function($) {
         setTimeout(autoplay, 4500);
     }
 
-    // RETOUR VERS LE HAUT
+    // // RETOUR VERS LE HAUT
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
     var amountScrolled = 300;
