@@ -1,30 +1,35 @@
 
 // Shorthand for $( document ).ready()
 
-jQuery(document).ready(function($) {
-    console.log("jQuery est prêt  pour corinne création");
 
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}
+
+function gestionSlider() {
+
+    $('.carousel.carousel-slider').carousel({full_width: true, indicators: true});
+    $('.carousel').carousel({
+        indicators: true
+    });
+}
+
+
+function init_corinne()
+{
+    // pour le menu hamburger
     $(".button-collapse").sideNav();
     $('#contact-body').hide();
-
 
     $("#contact-body").hide().show(1000).css("display", "flex");
     $('#textarea1').trigger('autoresize');
 
     $('.modal-trigger').leanModal();
 
-    $('.carousel.carousel-slider').carousel({full_width: true, indicators: true});
-    $('.carousel').carousel({
-        indicators: true
-    });
+}
 
-    autoplay();
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
-    }
-
-    // // RETOUR VERS LE HAUT
+function retour_haut() {
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
 
     var amountScrolled = 300;
@@ -43,10 +48,13 @@ jQuery(document).ready(function($) {
         }, 700);
         return false;
     });
+}
 
-    // ZOOM SUR LES IMAGES
-
+function zoom_images() {
     $('.materialboxed').materialbox();
+}
+
+function gere_facebook() {
 
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -56,4 +64,23 @@ jQuery(document).ready(function($) {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
+}
+
+// ********************************************************************
+// *                       Programme principal
+// ********************************************************************
+jQuery(document).ready(function($) {
+    console.log("jQuery est prêt  pour corinne création");
+
+    init_corinne();
+    gestionSlider();
+    autoplay();
+
+    // // RETOUR VERS LE HAUT
+    retour_haut();
+
+    // ZOOM SUR LES IMAGES
+    zoom_images();
+
+    gere_facebook();
 });
