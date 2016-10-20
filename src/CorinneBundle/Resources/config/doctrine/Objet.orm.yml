@@ -20,17 +20,17 @@ CorinneBundle\Entity\Objet:
         slider:
             type: boolean
     manyToOne:
-        product:
+        sousCateg:
             targetEntity: CorinneBundle\Entity\SousCategorie
             inversedBy: objet
             joinColumn:
                 name: souscat_id
                 referencedColumnName: id
-    manyToOne:
-        product:
+        categ:
             targetEntity: CorinneBundle\Entity\Categorie
             inversedBy: objet
             joinColumn:
                 name: cat_id
                 referencedColumnName: id
+
     lifecycleCallbacks: {  }

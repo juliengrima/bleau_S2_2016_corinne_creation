@@ -8,9 +8,14 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CorinneBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
+
+        return $this->render('CorinneBundle:Default:index.html.twig', array(
+                'categories' => $categories
+        ));
     }
-    
+
     public function parcourAction()
     {
         return $this->render('CorinneBundle:User:parcour.html.twig');

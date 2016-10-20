@@ -9,8 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Categorie
 {
+
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -19,6 +20,24 @@ class Categorie
      */
     private $nomcat;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $souscategorie;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $objet;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->souscategorie = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->objet = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -52,18 +71,6 @@ class Categorie
     {
         return $this->nomcat;
     }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $souscategorie;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->souscategorie = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add souscategorie
@@ -96,5 +103,38 @@ class Categorie
     public function getSouscategorie()
     {
         return $this->souscategorie;
+    }
+
+    /**
+     * Add objet
+     *
+     * @param \CorinneBundle\Entity\Objet $objet
+     * @return Categorie
+     */
+    public function addObjet(\CorinneBundle\Entity\Objet $objet)
+    {
+        $this->objet[] = $objet;
+
+        return $this;
+    }
+
+    /**
+     * Remove objet
+     *
+     * @param \CorinneBundle\Entity\Objet $objet
+     */
+    public function removeObjet(\CorinneBundle\Entity\Objet $objet)
+    {
+        $this->objet->removeElement($objet);
+    }
+
+    /**
+     * Get objet
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getObjet()
+    {
+        return $this->objet;
     }
 }

@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Objet
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -30,9 +30,19 @@ class Objet
     private $definition;
 
     /**
-     * @var bool
+     * @var boolean
      */
     private $slider;
+
+    /**
+     * @var \CorinneBundle\Entity\SousCategorie
+     */
+    private $sousCateg;
+
+    /**
+     * @var \CorinneBundle\Entity\Categorie
+     */
+    private $categ;
 
 
     /**
@@ -136,32 +146,50 @@ class Objet
     {
         return $this->slider;
     }
-    /**
-     * @var \CorinneBundle\Entity\SousCategorie
-     */
-    private $product;
-
 
     /**
-     * Set product
+     * Set sousCateg
      *
-     * @param \CorinneBundle\Entity\SousCategorie $product
+     * @param \CorinneBundle\Entity\SousCategorie $sousCateg
      * @return Objet
      */
-    public function setProduct(\CorinneBundle\Entity\SousCategorie $product = null)
+    public function setSousCateg(\CorinneBundle\Entity\SousCategorie $sousCateg = null)
     {
-        $this->product = $product;
+        $this->sousCateg = $sousCateg;
 
         return $this;
     }
 
     /**
-     * Get product
+     * Get sousCateg
      *
      * @return \CorinneBundle\Entity\SousCategorie 
      */
-    public function getProduct()
+    public function getSousCateg()
     {
-        return $this->product;
+        return $this->sousCateg;
+    }
+
+    /**
+     * Set categ
+     *
+     * @param \CorinneBundle\Entity\Categorie $categ
+     * @return Objet
+     */
+    public function setCateg(\CorinneBundle\Entity\Categorie $categ = null)
+    {
+        $this->categ = $categ;
+
+        return $this;
+    }
+
+    /**
+     * Get categ
+     *
+     * @return \CorinneBundle\Entity\Categorie 
+     */
+    public function getCateg()
+    {
+        return $this->categ;
     }
 }

@@ -9,8 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class SousCategorie
 {
+  
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -19,6 +20,23 @@ class SousCategorie
      */
     private $nomsouscat;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $objet;
+
+    /**
+     * @var \CorinneBundle\Entity\Categorie
+     */
+    private $categorie;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->objet = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -51,23 +69,6 @@ class SousCategorie
     public function getNomsouscat()
     {
         return $this->nomsouscat;
-    }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $objet;
-
-    /**
-     * @var \CorinneBundle\Entity\Categorie
-     */
-    private $categorie;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->objet = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
