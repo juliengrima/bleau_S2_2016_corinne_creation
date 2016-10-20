@@ -523,6 +523,8 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Crete Round', sans-serif;
+    background-image: none;
 
 }
 
