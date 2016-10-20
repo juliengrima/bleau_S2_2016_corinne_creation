@@ -81,13 +81,15 @@ p {
 }
 
 /* TEXT-HOVER */
-a .lien {
-    color: #ffab40;
-    transition: color .3s ease;
-}
-a .lien:hover {
-    color:  rgb(218, 255, 32);
-}
+/*a .lien {*/
+    /*color: #ffab40;*/
+    /*transition: color .3s ease;*/
+/*}*/
+/*a .lien:hover {*/
+    /*color:  rgb(218, 255, 32);*/
+/*}*/
+
+
 
 /* LES IMAGES*/
 .img-size{
@@ -124,14 +126,13 @@ a .lien:hover {
 .navTextCC {
     font-size: 1.6em;
     font-family: 'Rochester', cursive;
-    color: #ffd700;
+    color: #ffd700 !important;
     margin-left: 15px;
     transition-property: color;
     transition-duration: 0.8s;
 }
 
 .navTextCC:hover {
-    /*background-color: white!important;*/
     color: white!important;
 }
 
@@ -239,8 +240,14 @@ a .lien:hover {
     background-color: black;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    text-transform: initial;
+#a-action h5{
+    color: #ffd700 !important;
+    text-transform: none !important;
+    transition: color .8s;
+}
+
+#a-action h5:hover {
+    color: white !important;
 }
 
 #card-horizontal-height{
@@ -262,7 +269,6 @@ a .lien:hover {
     height: 300px;
     width: 500px;
 }
-
 
 /*MES_CREATIONS.PHP*/
 /* **********************************************************************
@@ -602,5 +608,15 @@ footer {
 
 
 /***************************************************************************
-*                            13. A CLASSER
+*                            13. Facebook LIKE
 ****************************************************************************/
+#facebook{
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.fb-element{
+    z-index: 2;
+    width: 70px;
+}

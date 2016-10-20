@@ -27,6 +27,6 @@ corinne_access:
     defaults: { _controller: CorinneBundle:Default:access }
 
 corinne_presse:
-    path:     /access
+    path:     /presse
     defaults: { _controller: CorinneBundle:Default:presse }
 
