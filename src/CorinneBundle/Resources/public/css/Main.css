@@ -40,8 +40,8 @@ html {
 body{
     z-index:-1000;
     font-family: 'Rochester', serif;
-    background-image: radial-gradient(circle at center, yellow, black);
-    background-position: flex;
+    /*background-image: radial-gradient(closest-side ellipse at center, #ffd700, black);*/
+    /*background-position: flex;*/
 }
 
  /*Important pour positionner le footer en bas de page*/
@@ -507,6 +507,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
