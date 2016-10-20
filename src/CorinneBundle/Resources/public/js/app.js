@@ -1,24 +1,12 @@
-function autoplay() {
-    // Next slide
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 4500);
-}
 
 // Shorthand for $( document ).ready()
-$(function () {
-    console.log("jQuery est toujours prêt pour corinne création");
+
+jQuery(document).ready(function($) {
+    console.log("jQuery est prêt  pour corinne création");
 
     $(".button-collapse").sideNav();
-
     $('#contact-body').hide();
 
-    $('.navTextCC').mouseenter(function () {
-        $(this).effect('highlight', 'slow');
-    });
-
-    $('.navTextMobileCC').mouseenter(function () {
-        $(this).effect('highlight', 'slow');
-    });
 
     $("#contact-body").hide().show(1000).css("display", "flex");
     $('#textarea1').trigger('autoresize');
@@ -26,10 +14,17 @@ $(function () {
     $('.modal-trigger').leanModal();
 
     $('.carousel.carousel-slider').carousel({full_width: true, indicators: true});
-    $('.carousel').carousel({indicators: true});
+    $('.carousel').carousel({
+        indicators: true
+    });
+
+
 
     autoplay();
-
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+    }
 
     // RETOUR VERS LE HAUT
 
