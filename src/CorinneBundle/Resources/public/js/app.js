@@ -1,6 +1,6 @@
 
 // Shorthand for $( document ).ready()
-$(function () {
+
 jQuery(document).ready(function($) {
     console.log("jQuery est prêt  pour corinne création");
 
