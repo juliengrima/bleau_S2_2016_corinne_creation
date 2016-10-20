@@ -136,4 +136,32 @@ class Objet
     {
         return $this->slider;
     }
+    /**
+     * @var \CorinneBundle\Entity\SousCategorie
+     */
+    private $product;
+
+
+    /**
+     * Set product
+     *
+     * @param \CorinneBundle\Entity\SousCategorie $product
+     * @return Objet
+     */
+    public function setProduct(\CorinneBundle\Entity\SousCategorie $product = null)
+    {
+        $this->product = $product;
+
+        return $this;
+    }
+
+    /**
+     * Get product
+     *
+     * @return \CorinneBundle\Entity\SousCategorie 
+     */
+    public function getProduct()
+    {
+        return $this->product;
+    }
 }

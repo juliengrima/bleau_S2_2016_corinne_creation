@@ -15,7 +15,7 @@ CorinneBundle\Entity\SousCategorie:
     manyToOne:
         categorie:
             targetEntity: CorinneBundle\Entity\Categorie
-            inversedBy: categorie
+            inversedBy: souscategorie
             joinColumn:
                 name: cat_id
                 referencedColumnName: id
