@@ -15,7 +15,9 @@ class CategorieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nomcat')
+            ->add('nomcat', 'text', array(
+                "label" => 'Nom de la categorie'
+            ))
         ;
     }
     

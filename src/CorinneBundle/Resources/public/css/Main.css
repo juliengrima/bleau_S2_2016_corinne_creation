@@ -84,13 +84,17 @@ p {
 }
 
 /* TEXT-HOVER */
-/*a .lien {*/
-    /*color: #ffab40;*/
-    /*transition: color .3s ease;*/
-/*}*/
-/*a .lien:hover {*/
-    /*color:  rgb(218, 255, 32);*/
-/*}*/
+.lien {
+    font-size: 18px;
+    color: white !important;
+    -webkit-transition: width 1s, height 1s; /* Safari */
+    transition: width 1s, height 1s;
+    padding-left: 2em;
+}
+.lien:hover {
+    color:  #ffd700;
+    transition: 2s;
+}
 
 
 
@@ -120,6 +124,7 @@ p {
     /*background-color: green;*/
     height: 250px;
     line-height: 1em;
+    box-shadow: none;
 }
 
 #menu-index-text {
@@ -242,6 +247,8 @@ p {
 .card{
     background: rgba(0,0,0,0);
     height: 300px;
+    border: none;
+    box-shadow: none;
 }
 
 .horizontal{
@@ -291,8 +298,6 @@ p {
 .grid {
     position: relative;
     margin: 0 auto;
-    /*padding: 1em 0 4em;*/
-    /*max-width: 1000px;*/
     list-style: none;
     text-align: center;
 }
@@ -313,7 +318,6 @@ p {
     max-width: 480px;
     max-height: 360px;
     width: 100%;
-    /*background: #3085a3;*/
     text-align: center;
     cursor: pointer;
 }
@@ -327,10 +331,10 @@ p {
 }
 
 .grid figure figcaption {
-    padding: 2em;
+    /*padding: 2em;*/
     color: #fff;
-    /*text-transform: uppercase;*/
-    font-size: 1.25em;
+    /*font-size: 1.25em;*/
+    font-size: 1.70em;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -360,8 +364,9 @@ p {
 }
 
 .grid figure h2 {
-    word-spacing: -0.15em;
+    word-spacing: -0.10em;
     font-weight: 300;
+    text-align: center;
 }
 
 .grid figure h2 span {
@@ -375,7 +380,7 @@ p {
 
 .grid figure p {
     letter-spacing: 1px;
-    font-size: 68.5%;
+    font-size: 70%;
 }
 
 
