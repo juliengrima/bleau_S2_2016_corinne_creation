@@ -497,12 +497,11 @@ figure.effect-sarah:hover p {
     height: 500px;
     display: flex;
     flex-direction: column;
-
     font-family: 'Crete Round', sans-serif;
 }
 
 #contact-fieldset {
-    border: none;
+    border: #ffd700;
 }
 
 #contact-main {
@@ -525,6 +524,8 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Crete Round', sans-serif;
+    background-image: none;
 
 }
 
