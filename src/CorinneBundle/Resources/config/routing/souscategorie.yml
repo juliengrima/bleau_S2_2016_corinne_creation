@@ -1,0 +1,24 @@
+souscategorie_index:
+    path:     /
+    defaults: { _controller: "CorinneBundle:SousCategorie:index" }
+    methods:  GET
+
+souscategorie_show:
+    path:     /{id}/show
+    defaults: { _controller: "CorinneBundle:SousCategorie:show" }
+    methods:  GET
+
+souscategorie_new:
+    path:     /new
+    defaults: { _controller: "CorinneBundle:SousCategorie:new" }
+    methods:  [GET, POST]
+
+souscategorie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CorinneBundle:SousCategorie:edit" }
+    methods:  [GET, POST]
+
+souscategorie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CorinneBundle:SousCategorie:delete" }
+    methods:  DELETE

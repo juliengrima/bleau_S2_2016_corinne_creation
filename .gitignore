@@ -1,0 +1,24 @@
+/web/bundles/
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/app/phpunit.xml
+/build/
+/vendor/
+/bin/
+/composer.phar
+<<<<<<< HEAD
+/.idea/
+/.idea/workspace.xml
+.idea/
+.idea/workspace.xml
+=======
+.idea/workspace.xml
+.idea/
+
+>>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
+
+
