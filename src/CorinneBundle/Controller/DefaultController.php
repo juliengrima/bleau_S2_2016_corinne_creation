@@ -8,9 +8,14 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CorinneBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
+
+        return $this->render('CorinneBundle:Default:index.html.twig', array(
+                'categories' => $categories
+        ));
     }
-    
+
     public function parcourAction()
     {
         return $this->render('CorinneBundle:User:parcour.html.twig');
@@ -28,6 +33,21 @@ class DefaultController extends Controller
 
     public function contactAction()
     {
-        return $this->render('CorinneBundle:User:contact.html.twig');
+    return $this->render('CorinneBundle:User:contact.html.twig');
+    }
+
+    public function atelierAction()
+    {
+        return $this->render('CorinneBundle:User:atelier.html.twig');
+    }
+
+    public function accessAction()
+    {
+        return $this->render('@Corinne/access.html.twig');
+    }
+
+    public function presseAction()
+    {
+        return $this->render('@Corinne/User/presse.twig');
     }
 }

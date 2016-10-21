@@ -1,6 +1,19 @@
 {% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
+    {% for categorie in categories %}
+        {{ categorie.nomcat }}
+    {% endfor %}
+
+    <!--Enluminure -->
+    <section>
+        <div class="row center">
+            <div class="col s12  m12 l12">
+                <img src="{{ asset('bundles/corinne/images/element or 6 copie.png') }}"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
 
     <div class="row ">
         <div class="carousel hide-on-small-only" id="carousel-index">
@@ -13,8 +26,6 @@
     </div>
     <div class="row">
         <div class="carousel carousel-slider  hide-on-med-and-up" >
-
-
             <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/fleur_verre_fusionne_1024.jpg') }}" alt="fleur verre fusonné"/>   </a>
             <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/la_tendresse.jpg') }}" alt="la tendresse"/> </a>
             <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/bracelet_cabochon.jpg') }}" alt="la tendresse"/> </a>
@@ -22,12 +33,22 @@
         </div>
     </div>
 
+    <!--Enluminure droit-->
+    <section>
+        <div class="row center">
+            <div class="col s12  m12 l12">
+                <img src="{{ asset('bundles/corinne/images/element or 6 copie.png') }}"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
+<br><br>
     <main role="main">
 
         <!--Enluminure Coeur-->
         <section>
-            <div class="row">
-                <div class="col s8  m4 l8 center-align">
+            <div class="row center">
+                <div class="col s12  m12 l12">
                     <img src="{{ asset('bundles/corinne/images/Enluminure-COEURpng.png') }}"  class="responsive-img" alt="Enluminure coeur">
                 </div>
                 <div class="col s2 m6 l1 "></div>
@@ -51,7 +72,8 @@
                                         je serais présente.
                                     </p>
                                 </div>
-                                <div class="card-action center hover-margin">
+
+                                <div class="card-action center" id="a-action">
                                     <a href="events.php"><h5>Venir à mes évènements</h5></a>
                                 </div>
                             </div>
@@ -90,7 +112,7 @@
 
                         <div class="card horizontal hide-on-small-only">
                             <div class="card-image" id="card-image-collection-height">
-                                <a href="atelier.php">
+                                <a href="{{ path('corinne_atelier') }}">
                                     <img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="image-height" alt="collection.jpg">
                                 </a>                        </div>
                             <div class="card-stacked">
@@ -102,8 +124,9 @@
                                         imagination toutes les créations.
                                     </p>
                                 </div>
-                                <div class="card-action center hover-margin">
-                                    <a href="atelier.php"><h5>Venir à mes évènements</h5></a>
+
+                                <div class=" card-action center" id="a-action">
+                                    <a href="{{ path('corinne_atelier') }}"><h5 class="a-action">Mon atelier</h5></a>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +134,7 @@
                     <!--partie pour mobile-->
                     <div class="row hide-on-med-and-up">
                         <div class="card-image" id="">
-                            <a href="atelier.php"><img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="responsive-img" alt="atelier1"></a>
+                            <a href="{{ path('corinne_atelier') }}"><img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="responsive-img" alt="atelier1"></a>
                             <h4 class="center amber-text">Mon atelier</h4>
                             <p class="amber-text center">Voici mon atelier,<br>
                                 là ou la magie opère<br>
@@ -125,4 +148,28 @@
         </section>
     </main>
 
+    <!--Enluminure Coeur-->
+    <section>
+        <div class="row center">
+            <div class="col s12  m12 l12">
+                <img src="{{ asset('bundles/corinne/images/element or 2.png') }}"  class="responsive-img" alt="Enluminure coeur">
+            </div>
+            <div class="col s2 m6 l1 "></div>
+        </div>
+    </section>
+
 {% endblock %}
+
+{#{% block javascripts %}#}
+{#<SCRIPT>#}
+    {#$('.carousel').carousel('next');#}
+
+
+    {#function autoplay() {#}
+        {#// Next slide#}
+        {#$('.carousel').carousel('next');#}
+        {#setTimeout(autoplay, 4500);#}
+    {#}#}
+    {#autoplay()#}
+{#</SCRIPT>#}
+{#{% endblock %}#}

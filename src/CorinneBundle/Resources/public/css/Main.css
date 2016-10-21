@@ -17,11 +17,11 @@
 -------------------*/
 
 html {
-    margin:0;
-    padding:0;
-    background: url("../images/backg-landscape.jpg") no-repeat center fixed;
-/*      background-image: radial-gradient(circle at center, white, green);*/
-    background-size: cover; 
+    /*margin:0;*/
+    /*padding:0;*/
+    z-index: 5;
+    background: url("../images/backg-news.png") no-repeat center fixed;
+    background-size: cover;
 }
 
 /*Exemples de mise en place de police de caractère dans CSS*/
@@ -38,7 +38,10 @@ html {
 
 
 body{
+    z-index:-1000;
     font-family: 'Rochester', serif;
+    /*background-image: radial-gradient(closest-side ellipse at center, #ffd700, black);*/
+    /*background-position: flex;*/
 }
 
  /*Important pour positionner le footer en bas de page*/
@@ -81,13 +84,15 @@ p {
 }
 
 /* TEXT-HOVER */
-a .lien {
-    color: #ffab40;
-    transition: color .3s ease;
-}
-a .lien:hover {
-    color:  rgb(218, 255, 32);
-}
+/*a .lien {*/
+    /*color: #ffab40;*/
+    /*transition: color .3s ease;*/
+/*}*/
+/*a .lien:hover {*/
+    /*color:  rgb(218, 255, 32);*/
+/*}*/
+
+
 
 /* LES IMAGES*/
 .img-size{
@@ -124,14 +129,13 @@ a .lien:hover {
 .navTextCC {
     font-size: 1.6em;
     font-family: 'Rochester', cursive;
-    color: #ffd700;
+    color: #ffd700 !important;
     margin-left: 15px;
     transition-property: color;
     transition-duration: 0.8s;
 }
 
 .navTextCC:hover {
-    /*background-color: white!important;*/
     color: white!important;
 }
 
@@ -236,11 +240,26 @@ a .lien:hover {
 /* CARD HORIZONTAL */
 
 .card{
-    background-color: black;
+    background: rgba(0,0,0,0);
+    height: 300px;
 }
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-    text-transform: initial;
+.horizontal{
+    height: 300px;
+}
+
+.card .horizontal{
+
+}
+
+#a-action h5{
+    color: #ffd700 !important;
+    text-transform: none !important;
+    transition: color .8s;
+}
+
+#a-action h5:hover {
+    color: white !important;
 }
 
 #card-horizontal-height{
@@ -253,12 +272,15 @@ a .lien:hover {
     max-height: 300px;
 }
 
+.image-height{
+    height: 300px;
+    width: 500px;
+}
 
 #card-image-height .image-height{
     height: 300px;
     width: 500px;
 }
-
 
 /*MES_CREATIONS.PHP*/
 /* **********************************************************************
@@ -484,6 +506,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -499,6 +522,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
 }
 
 #access-form {
@@ -506,6 +530,7 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 /*                      Fin formulaire ACCESS                              */
 /* ------------------------------------------------------------------------*/
@@ -596,5 +621,15 @@ footer {
 
 
 /***************************************************************************
-*                            13. A CLASSER
+*                            13. Facebook LIKE
 ****************************************************************************/
+#facebook{
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.fb-element{
+    z-index: 2;
+    width: 70px;
+}

@@ -12,4 +12,15 @@ CorinneBundle\Entity\SousCategorie:
         nomsouscat:
             type: string
             length: 255
+    manyToOne:
+        categorie:
+            targetEntity: CorinneBundle\Entity\Categorie
+            inversedBy: souscategorie
+            joinColumn:
+                name: cat_id
+                referencedColumnName: id
+    oneToMany:
+        objet:
+            targetEntity: CorinneBundle\Entity\Objet
+            mappedBy: souscategorie
     lifecycleCallbacks: {  }
