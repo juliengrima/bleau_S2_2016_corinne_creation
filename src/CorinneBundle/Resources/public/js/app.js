@@ -23,7 +23,7 @@ function init_corinne()
     $('#contact-body').hide();
 
     $("#contact-body").hide().show(1000).css("display", "flex");
-    $("#access-body").hide().fadeIn(2000).css("display" ,"flex");
+    $("#access-body").hide().show(2000).css("display" ,"flex");
 
     $('#textarea1').trigger('autoresize');
 
