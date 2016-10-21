@@ -20,7 +20,7 @@ html {
     /*margin:0;*/
     /*padding:0;*/
     z-index: 5;
-    background: url("../images/backg-news.png") no-repeat center fixed;
+    background: url("../images/backg-news2.png") no-repeat center fixed;
     background-size: cover;
 }
 
@@ -40,8 +40,6 @@ html {
 body{
     z-index:-1000;
     font-family: 'Rochester', serif;
-    background-image: radial-gradient(circle at center, yellow, black);
-    background-position: flex;
 }
 
  /*Important pour positionner le footer en bas de page*/

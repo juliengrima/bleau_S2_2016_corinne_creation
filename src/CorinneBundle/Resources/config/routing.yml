@@ -26,3 +26,6 @@ corinne_ecolabel:
         resource: "@CorinneBundle/Resources/config/routing/ecolabel.yml"
         prefix:   /ecolabel
 
+corinne_contact:
+        resource: "@CorinneBundle/Resources/config/routing/contact.yml"
+        prefix:   /contact
