@@ -1,0 +1,28 @@
+CorinneBundle\Entity\Contact:
+    type: entity
+    table: null
+    repositoryClass: CorinneBundle\Repository\ContactRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            column: Nom
+        prenom:
+            type: string
+            length: 255
+            column: Prenom
+        mail:
+            type: string
+            length: 255
+            column: Mail
+        tel:
+            type: string
+            length: 255
+            column: Tel
+    lifecycleCallbacks: {  }

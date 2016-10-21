@@ -4,8 +4,16 @@
     <h1>Categorie creation</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
+
+        <div style="background-color: red">
+            <p>Name</p>
+            {{ form_widget(form.nomcat) }}
+            {{ form_errors(form.nomcat) }}
+        </div>
+
+
         <input type="submit" value="Create" />
+
     {{ form_end(form) }}
 
     <ul>

@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CategorieType extends AbstractType
+class ContactType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -15,9 +15,10 @@ class CategorieType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nomcat', 'text', array(
-                "label" => 'Nom de la categorie'
-            ))
+            ->add('nom')
+            ->add('prenom')
+            ->add('mail')
+            ->add('tel')
         ;
     }
     
@@ -27,7 +28,7 @@ class CategorieType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CorinneBundle\Entity\Categorie'
+            'data_class' => 'CorinneBundle\Entity\Contact'
         ));
     }
 }
