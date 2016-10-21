@@ -9,8 +9,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class SousCategorie
 {
+  
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -19,6 +20,23 @@ class SousCategorie
      */
     private $nomsouscat;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $objet;
+
+    /**
+     * @var \CorinneBundle\Entity\Categorie
+     */
+    private $categorie;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->objet = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -51,5 +69,61 @@ class SousCategorie
     public function getNomsouscat()
     {
         return $this->nomsouscat;
+    }
+
+    /**
+     * Add objet
+     *
+     * @param \CorinneBundle\Entity\Objet $objet
+     * @return SousCategorie
+     */
+    public function addObjet(\CorinneBundle\Entity\Objet $objet)
+    {
+        $this->objet[] = $objet;
+
+        return $this;
+    }
+
+    /**
+     * Remove objet
+     *
+     * @param \CorinneBundle\Entity\Objet $objet
+     */
+    public function removeObjet(\CorinneBundle\Entity\Objet $objet)
+    {
+        $this->objet->removeElement($objet);
+    }
+
+    /**
+     * Get objet
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getObjet()
+    {
+        return $this->objet;
+    }
+
+    /**
+     * Set categorie
+     *
+     * @param \CorinneBundle\Entity\Categorie $categorie
+     * @return SousCategorie
+     */
+    public function setCategorie(\CorinneBundle\Entity\Categorie $categorie = null)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \CorinneBundle\Entity\Categorie 
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
     }
 }

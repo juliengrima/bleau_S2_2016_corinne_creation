@@ -19,4 +19,18 @@ CorinneBundle\Entity\Objet:
             type: text
         slider:
             type: boolean
+    manyToOne:
+        sousCateg:
+            targetEntity: CorinneBundle\Entity\SousCategorie
+            inversedBy: objet
+            joinColumn:
+                name: souscat_id
+                referencedColumnName: id
+        categ:
+            targetEntity: CorinneBundle\Entity\Categorie
+            inversedBy: objet
+            joinColumn:
+                name: cat_id
+                referencedColumnName: id
+
     lifecycleCallbacks: {  }

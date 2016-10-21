@@ -1,6 +1,10 @@
 {% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
+    {% for categorie in categories %}
+        {{ categorie.nomcat }}
+    {% endfor %}
+
     <!--Enluminure -->
     <section>
         <div class="row center">

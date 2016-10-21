@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ecolabel list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Source</th>
+                <th>Alt</th>
+                <th>Texte</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ecolabel in ecolabels %}
+            <tr>
+                <td><a href="{{ path('ecolabel_show', { 'id': ecolabel.id }) }}">{{ ecolabel.id }}</a></td>
+                <td>{{ ecolabel.source }}</td>
+                <td>{{ ecolabel.alt }}</td>
+                <td>{{ ecolabel.texte }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('ecolabel_show', { 'id': ecolabel.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('ecolabel_edit', { 'id': ecolabel.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('ecolabel_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}
