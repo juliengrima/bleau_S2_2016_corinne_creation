@@ -20,7 +20,7 @@ html {
     /*margin:0;*/
     /*padding:0;*/
     z-index: 5;
-    background: url("../images/backg-news.png") no-repeat center fixed;
+    background: url("../images/backg-landscape.jpg") no-repeat center fixed;
     background-size: cover;
 }
 
@@ -495,12 +495,11 @@ figure.effect-sarah:hover p {
     height: 500px;
     display: flex;
     flex-direction: column;
-
     font-family: 'Crete Round', sans-serif;
 }
 
 #contact-fieldset {
-    border: none;
+    border: #ffd700;
 }
 
 #contact-main {
