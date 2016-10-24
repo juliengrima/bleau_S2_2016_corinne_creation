@@ -8,12 +8,10 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
 
-        return $this->render('CorinneBundle:Default:index.html.twig', array(
-                'categories' => $categories
-        ));
+//        return $this->render('X', array(
+//                'categories' => $categories
+//        ));
     }
 
     public function parcourAction()
@@ -23,7 +21,20 @@ class DefaultController extends Controller
 
     public function creationAction()
     {
-        return $this->render('CorinneBundle:User:mes_creations.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
+
+//        foreach ($categories as $categorie):
+//            $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findBy(
+//                array('categorie' => $categorie
+//                ));
+//        var_dump($sousCategories);
+//        endforeach;
+//        $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findAll();
+
+        return $this->render('CorinneBundle:User:mes_creations.html.twig', array(
+            'categories' => $categories
+        ));
     }
 
     public function ecolabelAction()
