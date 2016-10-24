@@ -17,11 +17,9 @@
 -------------------*/
 
 html {
-    /*margin:0;*/
-    /*padding:0;*/
-    z-index: 5;
+    z-index: -999999;
     background: url("../images/backg-news2.png") no-repeat center fixed;
-    background-size: cover;
+    background-size:100% 100%;
 }
 
 /*Exemples de mise en place de police de caractère dans CSS*/
@@ -34,8 +32,6 @@ html {
     font-family: 'Fredoka One', cursive;
     font-family: 'Nunito', sans-serif;
     font-family: 'Pinyon Script', cursive;*/
-
-
 
 body{
     z-index:-1000;
@@ -117,7 +113,6 @@ p {
 }
 
 #menu-index {
-    margin-top: 18%;
     background-color: transparent;
     /*background-color: green;*/
     height: 250px;
@@ -150,11 +145,10 @@ p {
 .navTextMobileCC:hover {
     color: #ffd700;
 }
+
 #mobile-demo
 {
     background-color: black!important;
-    background-color: black;
-
 }
 /*                      Fin BARRE DE NAVIGATION                            */
 /* ------------------------------------------------------------------------*/
@@ -294,11 +288,11 @@ p {
 
 ************************************************************************* */
 .grid {
-    position: relative;
-    margin: 0 auto;
-    list-style: none;
-    text-align: center;
-}
+     position: relative;
+     margin: 0 auto;
+     list-style: none;
+     text-align: center;
+ }
 
 .margin-grid{
     position: inherit;
@@ -452,6 +446,67 @@ figure.effect-sarah:hover p {
     transform: translate3d(0,0,0);
 }
 
+/****************************************************************************
+*                                                                           *
+*                           *** GRID ***                                    *
+*                                                                           *
+****************************************************************************/
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid.effect-6 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid.effect-6 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotateX(-80deg);
+    transform: rotateX(-80deg);
+    -webkit-animation: flip .8s ease-in-out forwards;
+    animation: flip .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes flip {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes flip {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+.grid_press {
+    max-width: 69em;
+    list-style: none;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.grid_press li {
+    display: block;
+    float: left;
+    padding: 7px;
+    width: 33%;
+    opacity: 0;
+}
+
+.grid_press li.shown,
+.no-js .grid_press li,
+.no-cssanimations .grid li {
+    opacity: 1;
+}
+
+.grid_press li a,
+.grid_press li img {
+    outline: none;
+    border: none;
+    display: block;
+    max-width: 100%;
+}
 
 /****************************************************************************
 *                                                                           *
@@ -478,38 +533,21 @@ figure.effect-sarah:hover p {
 
 /* ------------------------------------------------------------------------ */
 /* *********            10.1  formulaire  Contact              ************ */
+/* ------------------------------------------------------------------------ */
+
 #contact-form {
-    width: 60%;
     height: 100%;
     margin-bottom: 100px;
     margin-top: 50px;
 }
 
 #contact-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     font-family: 'Crete Round', sans-serif;
     background-image: none;
 }
 
-#contact-form {
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-
-    font-family: 'Crete Round', sans-serif;
-}
-
 #contact-fieldset {
-    border: none;
-}
-
-#contact-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    border: #ffd700;
 }
 
 /*                      Fin formulaire CONTACT                             */
@@ -524,6 +562,8 @@ figure.effect-sarah:hover p {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Crete Round', sans-serif;
+    background-image: none;
 
 }
 
@@ -596,13 +636,6 @@ a.back-to-top {
 }
 header {
     /*height: 75px;*/
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex: 1 0 auto;
 }
 
 footer {

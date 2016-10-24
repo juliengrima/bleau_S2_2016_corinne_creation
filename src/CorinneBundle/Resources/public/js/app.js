@@ -1,6 +1,52 @@
+// ********************************************************************
+// *                       Appel Fonction
+// ********************************************************************
+jQuery(document).ready(function($) {
 
-// Shorthand for $( document ).ready()
+    init_corinne();
+    gestionSlider();
+    autoplay();
 
+    // RETOUR VERS LE HAUT
+    retour_haut();
+
+    // ZOOM SUR LES IMAGES
+    zoom_images();
+
+    // Fontion fonction
+    gere_facebook();
+
+    // deroulement_card();
+
+});
+
+// ********************************************************************
+// *                       JS Genral
+// ********************************************************************
+
+function init_corinne()
+{
+    // pour le menu hamburger
+    $(".button-collapse").sideNav();
+    $('#contact-body').hide();
+
+    $("#contact-body").hide().show(1000).css("display", "block");
+    $("#access-body").hide().show(2000).css("display" ,"block");
+
+    $('#textarea1').trigger('autoresize');
+
+    $('.modal-trigger').leanModal();
+
+}
+
+function zoom_images() {
+    $('.materialboxed').materialbox();
+}
+
+
+// ********************************************************************
+// *                       Sliders
+// ********************************************************************
 
 function autoplay() {
     $('.carousel').carousel('next');
@@ -15,19 +61,9 @@ function gestionSlider() {
     });
 }
 
-
-function init_corinne()
-{
-    // pour le menu hamburger
-    $(".button-collapse").sideNav();
-    $('#contact-body').hide();
-
-    $("#contact-body").hide().show(1000).css("display", "flex");
-    $('#textarea1').trigger('autoresize');
-
-    $('.modal-trigger').leanModal();
-
-}
+// ********************************************************************
+// *                       Bouton retour vers haut
+// ********************************************************************
 
 function retour_haut() {
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
@@ -50,9 +86,10 @@ function retour_haut() {
     });
 }
 
-function zoom_images() {
-    $('.materialboxed').materialbox();
-}
+
+// ********************************************************************
+// *                       Facebook
+// ********************************************************************
 
 function gere_facebook() {
 
@@ -63,24 +100,8 @@ function gere_facebook() {
         js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
 }
 
 // ********************************************************************
-// *                       Programme principal
+// *                       Click droit off
 // ********************************************************************
-jQuery(document).ready(function($) {
-    console.log("jQuery est prêt  pour corinne création");
-
-    init_corinne();
-    gestionSlider();
-    autoplay();
-
-    // // RETOUR VERS LE HAUT
-    retour_haut();
-
-    // ZOOM SUR LES IMAGES
-    zoom_images();
-
-    gere_facebook();
-});

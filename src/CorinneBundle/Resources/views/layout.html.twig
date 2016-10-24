@@ -34,7 +34,8 @@
                                 </div>
                                 <div class="row">
                                     <li class="col s12 m12 offset-m1">
-                                        <a href="{{ path('corinne_contact') }}"><span id="idContact" class="navTextCC">Contact</span></a>
+                                        {#<a href="{{ path('corinne_contact') }}" target="_blank"><span id="idContact" class="navTextCC">Contact</span></a>#}
+                                        <a class="modal-trigger" href="#modal1"><span id="idContact" class="navTextCC">Contact</span></a>
                                     </li>
                                 </div>
                             </ul>
@@ -65,6 +66,13 @@
         </div>
     </header>
 
+    <!-- Modal Trigger -->
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            {{ render(controller('CorinneBundle:Default:contact')) }}
+        </div>
+    </div>
 
 {% endblock %}
 
@@ -74,12 +82,9 @@
         <div class="row">
             <div class="col l12 s12">
                 <p class="text-copyright"><a href="{{ path('corinne_access') }}"> ©</a> Copyright all rights reserved - design by <a href="{{ asset('http://www.wildcodeschool.fr') }}">Wild Code School.</a></p>
-                <div id="facebook" class="fb-like" data-href="https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/?pnref=lhc"
-                     data-width="70" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                <div class="fb-like" data-href="https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/?pnref=lhc" data-width="70" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             </div>
         </div>
     </footer>
-
-
 {% endblock %}
 

@@ -24,7 +24,7 @@ class SousCategorieController extends Controller
 
         $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findAll();
 
-        return $this->render('souscategorie/index.html.twig', array(
+        return $this->render('@Corinne/admin/souscategorie/index.html.twig', array(
             'sousCategories' => $sousCategories,
         ));
     }
@@ -47,7 +47,7 @@ class SousCategorieController extends Controller
             return $this->redirectToRoute('souscategorie_show', array('id' => $sousCategorie->getId()));
         }
 
-        return $this->render('souscategorie/new.html.twig', array(
+        return $this->render('@Corinne/admin/souscategorie/new.html.twig', array(
             'sousCategorie' => $sousCategorie,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class SousCategorieController extends Controller
     {
         $deleteForm = $this->createDeleteForm($sousCategorie);
 
-        return $this->render('souscategorie/show.html.twig', array(
+        return $this->render('@Corinne/admin/souscategorie/show.html.twig', array(
             'sousCategorie' => $sousCategorie,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class SousCategorieController extends Controller
             return $this->redirectToRoute('souscategorie_edit', array('id' => $sousCategorie->getId()));
         }
 
-        return $this->render('souscategorie/edit.html.twig', array(
+        return $this->render('@Corinne/admin/souscategorie/edit.html.twig', array(
             'sousCategorie' => $sousCategorie,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

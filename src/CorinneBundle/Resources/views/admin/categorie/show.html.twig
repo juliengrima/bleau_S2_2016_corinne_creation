@@ -1,27 +1,27 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
-    <h1>SousCategorie</h1>
+    <h1>Categorie</h1>
 
     <table>
         <tbody>
             <tr>
                 <th>Id</th>
-                <td>{{ sousCategorie.id }}</td>
+                <td>{{ categorie.id }}</td>
             </tr>
             <tr>
-                <th>Nomsouscat</th>
-                <td>{{ sousCategorie.nomsouscat }}</td>
+                <th>Nomcat</th>
+                <td>{{ categorie.nomcat }}</td>
             </tr>
         </tbody>
     </table>
 
     <ul>
         <li>
-            <a href="{{ path('souscategorie_index') }}">Back to the list</a>
+            <a href="{{ path('categorie_index') }}">Back to the list</a>
         </li>
         <li>
-            <a href="{{ path('souscategorie_edit', { 'id': sousCategorie.id }) }}">Edit</a>
+            <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">Edit</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
