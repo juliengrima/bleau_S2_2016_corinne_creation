@@ -1,28 +1,49 @@
 {#{% extends 'base.html.twig' %}#}
 
-{% block body %}
-    <h1>Categorie list</h1>
+<!DOCTYPE html>
+<html>
+<head>
 
-    <table>
-        <thead>
+    <meta charset="UTF-8" />
+    <title>{% block title %}CorinneCréation{% endblock %}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">
+
+</head>
+
+{% block body %}
+    <h1 class="center blue-text">Liste des catégories</h1>
+
+    <table class="bordered  highlight center responsive-table">
+        <thead class="card-panel blue white-text">
             <tr>
-                <th>Id</th>
-                <th>Nomcat</th>
-                <th>Actions</th>
+                <th class="center">Id</th>
+                <th class="center">Nomcat</th>
+                <th class="center">Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for categorie in categories %}
             <tr>
-                <td><a href="{{ path('categorie_show', { 'id': categorie.id }) }}">{{ categorie.id }}</a></td>
-                <td>{{ categorie.nomcat }}</td>
-                <td>
+                <td class="center"><a class=""  href="{{ path('categorie_show', { 'id': categorie.id }) }}">{{ categorie.id }}</a></td>
+                <td class="center">{{ categorie.nomcat }}</td>
+                <td class="center">
                     <ul>
                         <li>
-                            <a href="{{ path('categorie_show', { 'id': categorie.id }) }}">show</a>
+                            <a class="btn  blue" style="width: 15%;" href="{{ path('categorie_show', { 'id': categorie.id }) }}">show</a>
                         </li>
                         <li>
-                            <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">edit</a>
+                            <a class="btn  blue" style="width: 15%" href="{{ path('categorie_edit', { 'id': categorie.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -31,9 +52,9 @@
         </tbody>
     </table>
 
-    <ul>
+    <ul class="center">
         <li>
-            <a href="{{ path('categorie_new') }}">Create a new entry</a>
+            <a class="btn blue" href="{{ path('categorie_new') }}">Ajouter une nouvelle catégorie</a>
         </li>
     </ul>
 {% endblock %}
