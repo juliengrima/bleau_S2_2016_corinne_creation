@@ -1,0 +1,23 @@
+CorinneBundle\Entity\Categorie:
+    type: entity
+    table: null
+    repositoryClass: CorinneBundle\Repository\CategorieRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomcat:
+            type: string
+            length: 255
+    oneToMany:
+        souscategorie:
+            targetEntity: CorinneBundle\Entity\SousCategorie
+            mappedBy: categorie
+        objet:
+            targetEntity: CorinneBundle\Entity\Objet
+            mappedBy: categorie
+
+    lifecycleCallbacks: {  }

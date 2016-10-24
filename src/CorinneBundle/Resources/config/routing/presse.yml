@@ -1,0 +1,24 @@
+presse_index:
+    path:     /
+    defaults: { _controller: "CorinneBundle:Presse:index" }
+    methods:  GET
+
+presse_show:
+    path:     /{id}/show
+    defaults: { _controller: "CorinneBundle:Presse:show" }
+    methods:  GET
+
+presse_new:
+    path:     /new
+    defaults: { _controller: "CorinneBundle:Presse:new" }
+    methods:  [GET, POST]
+
+presse_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CorinneBundle:Presse:edit" }
+    methods:  [GET, POST]
+
+presse_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CorinneBundle:Presse:delete" }
+    methods:  DELETE

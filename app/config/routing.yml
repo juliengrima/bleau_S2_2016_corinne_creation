@@ -1,0 +1,5 @@
+corinne:
+    resource: "@CorinneBundle/Resources/config/routing.yml"
+    prefix:   /
+
+

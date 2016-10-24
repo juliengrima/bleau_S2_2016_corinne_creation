@@ -1,0 +1,24 @@
+ecolabel_index:
+    path:     /
+    defaults: { _controller: "CorinneBundle:Ecolabel:index" }
+    methods:  GET
+
+ecolabel_show:
+    path:     /{id}/show
+    defaults: { _controller: "CorinneBundle:Ecolabel:show" }
+    methods:  GET
+
+ecolabel_new:
+    path:     /new
+    defaults: { _controller: "CorinneBundle:Ecolabel:new" }
+    methods:  [GET, POST]
+
+ecolabel_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CorinneBundle:Ecolabel:edit" }
+    methods:  [GET, POST]
+
+ecolabel_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CorinneBundle:Ecolabel:delete" }
+    methods:  DELETE
