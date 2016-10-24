@@ -1,0 +1,64 @@
+{% extends '@Corinne/layout.html.twig' %}
+
+
+{% block body %}
+
+    <ul class="grid effect-6 grid_press" id="grid">
+        <li><img src="{{ asset('bundles/corinne/img-presse/1.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/2.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/3.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/4.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/5.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/6.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/7.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/8.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/9.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/10.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/11.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/12.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/13.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/14.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/15.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/16.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/17.jpg') }}"></li>
+        <li><img src="{{ asset('bundles/corinne/img-presse/18.jpg') }}"></li>
+    </ul>
+
+    {#<ul class="grid effect-6" id="grid">#}
+        {#{% for source in presse %}#}
+            {#<li><img src="{{ presse.source }}" alt="{{ presse.alt }}"></li>#}
+        {#{% endfor %}#}
+    {#</ul>#}
+
+
+{% endblock %}
+
+{% block js %}
+
+    <script type="text/javascript" src="{{ asset('bundles/corinne/js/masonry_grid/modernizr.custom.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/corinne/js/masonry_grid/masonry.pkgd.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/corinne/js/masonry_grid/js_imagesloaded.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/corinne/js/masonry_grid/js_classie.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/corinne/js/masonry_grid/AnimeOnScroll.js') }}"></script>
+
+    <script>
+        // ********************************************************************
+        // *                       AnimOnScroll Masonry Grid
+        // ********************************************************************
+
+        new AnimOnScroll( document.getElementById( 'grid' ), {
+            minDuration : 0.4,
+            maxDuration : 0.7,
+            viewportFactor : 0.2
+        } );
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-7243260-2']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+{% endblock %}

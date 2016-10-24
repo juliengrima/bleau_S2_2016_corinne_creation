@@ -34,7 +34,8 @@
                                 </div>
                                 <div class="row">
                                     <li class="col s12 m12 offset-m1">
-                                        <a href="{{ path('corinne_contact') }}"><span id="idContact" class="navTextCC">Contact</span></a>
+                                        {#<a href="{{ path('corinne_contact') }}" target="_blank"><span id="idContact" class="navTextCC">Contact</span></a>#}
+                                        <a class="modal-trigger" href="#modal1"><span id="idContact" class="navTextCC">Contact</span></a>
                                     </li>
                                 </div>
                             </ul>
@@ -65,6 +66,13 @@
         </div>
     </header>
 
+    <!-- Modal Trigger -->
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            {{ render(controller('CorinneBundle:Default:contact')) }}
+        </div>
+    </div>
 
 {% endblock %}
 

@@ -1,10 +1,6 @@
 {% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
-    {% for categorie in categories %}
-        {{ categorie.nomcat }}
-    {% endfor %}
-
     <!--Enluminure -->
     <section>
         <div class="row center">
@@ -159,17 +155,3 @@
     </section>
 
 {% endblock %}
-
-{#{% block javascripts %}#}
-{#<SCRIPT>#}
-    {#$('.carousel').carousel('next');#}
-
-
-    {#function autoplay() {#}
-        {#// Next slide#}
-        {#$('.carousel').carousel('next');#}
-        {#setTimeout(autoplay, 4500);#}
-    {#}#}
-    {#autoplay()#}
-{#</SCRIPT>#}
-{#{% endblock %}#}

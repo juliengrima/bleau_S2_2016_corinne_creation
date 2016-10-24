@@ -1,31 +1,31 @@
 corinne_user:
-    prefix:     /
+    prefix:   /
     resource: routing/user.yml
 
 corinne_categorie:
     resource: "@CorinneBundle/Resources/config/routing/categorie.yml"
-    prefix:   /categorie
+    prefix:   /admin/categorie
 
 corinne_souscategorie:
     resource: "@CorinneBundle/Resources/config/routing/souscategorie.yml"
-    prefix:   /souscategorie
+    prefix:   /admin/souscategorie
 
 corinne_objet:
-        resource: "@CorinneBundle/Resources/config/routing/objet.yml"
-        prefix:   /objet
+    resource: "@CorinneBundle/Resources/config/routing/objet.yml"
+    prefix:   /admin/objet
 
 corinne_presse:
-        resource: "@CorinneBundle/Resources/config/routing/presse.yml"
-        prefix:   /presse
+    resource: "@CorinneBundle/Resources/config/routing/presse.yml"
+    prefix:   /admin/presse
 
 corinne_event:
-        resource: "@CorinneBundle/Resources/config/routing/event.yml"
-        prefix:   /event
+    resource: "@CorinneBundle/Resources/config/routing/event.yml"
+    prefix:   /admin/event
 
 corinne_ecolabel:
-        resource: "@CorinneBundle/Resources/config/routing/ecolabel.yml"
-        prefix:   /ecolabel
+    resource: "@CorinneBundle/Resources/config/routing/ecolabel.yml"
+    prefix:   /admin/ecolabel
 
 corinne_contact:
-        resource: "@CorinneBundle/Resources/config/routing/contact.yml"
-        prefix:   /contact
+    resource: "@CorinneBundle/Resources/config/routing/contact.yml"
+    prefix:   /admin/contact
