@@ -4,7 +4,7 @@ corinne_homepage:
 
 corinne_parcour:
     path:     /parcour
-    defaults: { _controller: CorinneBundle:Default:parcour }
+    defaults: { _controller: CorinneBundle:Default:parcours }
 
 corinne_creation:
     path:     /creation
