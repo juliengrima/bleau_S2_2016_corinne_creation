@@ -2,18 +2,33 @@
 
 namespace CorinneBundle\Controller;
 
+use CorinneBundle\CorinneBundle;
+use CorinneBundle\Entity\Presse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+
+//    FONCTIONS D'APPEL POUR AFFICHER LA PRESSE
+    public function sourceAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
+            $presses = $em->getRepository('CorinneBundle:Presse.php')->findAll();
 
-        return $this->render('CorinneBundle:Default:index.html.twig', array(
-                'categories' => $categories
+        return $this->render('@Corinne/User/presse.html.twig', array(
+                'presses' => $presses
         ));
+    }
+
+//    FONCTIONS D'APPEL POUR AFFICHER LES OBJETS
+
+
+
+//  FONCTION D'APPEL DES PAGES QUE L'ON VEUT AFFICHER
+
+    public function indexAction()
+    {
+        return $this->render('@Corinne/Default/index.html.twig');
     }
 
     public function parcourAction()
@@ -48,6 +63,6 @@ class DefaultController extends Controller
 
     public function presseAction()
     {
-        return $this->render('@Corinne/User/presse.twig');
+        return $this->render('@Corinne/User/presse.html.twig');
     }
 }
