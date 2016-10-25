@@ -2,6 +2,8 @@
 
 namespace CorinneBundle\Controller;
 
+use CorinneBundle\Entity\Categorie;
+use CorinneBundle\Entity\Presse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
@@ -12,6 +14,7 @@ class DefaultController extends Controller
 //        return $this->render('X', array(
 //                'categories' => $categories
 //        ));
+            return $this->render('CorinneBundle:Default:index.html.twig');
     }
 
     public function parcourAction()
@@ -31,7 +34,6 @@ class DefaultController extends Controller
 //        var_dump($sousCategories);
 //        endforeach;
 //        $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findAll();
-
 
         return $this->render('CorinneBundle:User:mes_creations.html.twig', array(
             'categories' => $categories

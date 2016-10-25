@@ -10,13 +10,11 @@
                 <img src="{{ asset('bundles/corinne/images/collier3.jpg') }}" alt="img13" class="img-hover"/>
                 <figcaption>
                     <h2><span> {{ categorie.nomcat }}</span> </h2>
-
-
-
                     <ul>
                         {% for souscategorie in categorie.souscategorie %}
                             <li>
-                                {{ souscategorie.nomsouscat }}
+                                <a href="#" class="lien">  {{ souscategorie.nomsouscat }} </a>
+
                             </li>
                         {%  endfor %}
                     </ul>
