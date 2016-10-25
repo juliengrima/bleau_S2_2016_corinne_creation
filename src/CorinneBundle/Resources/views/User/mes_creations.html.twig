@@ -11,8 +11,14 @@
                 <figcaption>
                     <h2><span> {{ categorie.nomcat }}</span> </h2>
 
+
+
                     <ul>
-                            <li> </li>
+                        {% for souscategorie in categorie.souscategorie %}
+                            <li>
+                                {{ souscategorie.nomsouscat }}
+                            </li>
+                        {%  endfor %}
                     </ul>
                     <p>
 

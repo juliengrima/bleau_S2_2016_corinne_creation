@@ -32,6 +32,7 @@ class DefaultController extends Controller
 //        endforeach;
 //        $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findAll();
 
+
         return $this->render('CorinneBundle:User:mes_creations.html.twig', array(
             'categories' => $categories
         ));
