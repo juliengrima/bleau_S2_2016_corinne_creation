@@ -2,19 +2,24 @@
 
 namespace CorinneBundle\Controller;
 
+
 use CorinneBundle\Entity\Categorie;
 use CorinneBundle\Entity\Presse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+
+
+//    FONCTIONS D'APPEL POUR AFFICHER LES OBJETS
+
+
+
+//  FONCTION D'APPEL DES PAGES QUE L'ON VEUT AFFICHER
+
     public function indexAction()
     {
-
-//        return $this->render('X', array(
-//                'categories' => $categories
-//        ));
-            return $this->render('CorinneBundle:Default:index.html.twig');
+        return $this->render('@Corinne/Default/index.html.twig');
     }
 
     public function parcourAction()
@@ -26,14 +31,6 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
-
-//        foreach ($categories as $categorie):
-//            $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findBy(
-//                array('categorie' => $categorie
-//                ));
-//        var_dump($sousCategories);
-//        endforeach;
-//        $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findAll();
 
         return $this->render('CorinneBundle:User:mes_creations.html.twig', array(
             'categories' => $categories
@@ -62,6 +59,11 @@ class DefaultController extends Controller
 
     public function presseAction()
     {
-        return $this->render('@Corinne/User/presse.twig');
+        $em = $this->getDoctrine()->getManager();
+        $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
+
+        return $this->render('@Corinne/User/presse.html.twig', array(
+            'presses' => $presses
+        ));
     }
 }
