@@ -22,9 +22,9 @@ class DefaultController extends Controller
         return $this->render('@Corinne/Default/index.html.twig');
     }
 
-    public function parcourAction()
+    public function parcoursAction()
     {
-        return $this->render('CorinneBundle:User:parcour.html.twig');
+        return $this->render('CorinneBundle:User:parcours.html.twig');
     }
 
     public function creationAction()
