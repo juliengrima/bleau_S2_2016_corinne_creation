@@ -16,8 +16,6 @@ class Categorie
         return $this->nomcat;
     }
 
-
-
     /**
      * @var integer
      */
