@@ -1,17 +1,18 @@
 {% extends '@Corinne/layout.html.twig' %}
 
+
 {% block header %}{% endblock %}
+
 {% block body %}
+<header>
+    <nav class="black">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center amber-text">Contactez-nous</a>
+        </div>
+    </nav>
+</header>
+
 <div id="contact-body" class="">
-    <header>
-        <nav class="black">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo center amber-text">Contactez-nous</a>
-            </div>
-        </nav>
-    </header>
-
-
     <main role="main" id="contact-main" class="">
 
         <div id="contact-form" class="">
@@ -69,17 +70,18 @@
                                     <i class="material-icons right black-text">loop</i>
                                 </button>
 
+                                <button class="modal-action modal-close btn waves-effect waves-light offset-s2 col s3 offset-m4 m2 amber black-text " type="reset" name="reset_action">Fermer la fenetre
+                                    <i class="material-icons right black-text">loop</i>
+                                </button>
                             </div>
                         </fieldset>
                     </form>
                 </div>
             </div>
-
-
         </div>
-
-
     </main>
 </div>
 {% endblock %}
-{% block footer %}{% endblock %}
+
+{% block footer %}
+{% endblock %}

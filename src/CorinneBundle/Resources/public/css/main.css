@@ -1,0 +1,670 @@
+/*----- INDEX  ------
+//
+//  1. BALISE RESPONSIVE
+//  2. PARALLAX
+//  3. HEADER
+//  4. barre de vavigation
+//  5. ENTETE
+//  6. LOGO
+//  7. SLIDER
+//  8. TEXT-HOVER
+//  9. IMAGES-HOVER
+//  10. FORMULAIRES
+//  11. FOOTER
+//  12. ICONE RETOUR HAUT
+//
+//
+-------------------*/
+
+html {
+    z-index: -999999;
+    background: url("../images/backg-news2.png") no-repeat center fixed;
+    background-size:100% 100%;
+}
+
+/*Exemples de mise en place de police de caractère dans CSS*/
+/*  font-family: 'Parisienne', cursive;
+    font-family: 'Rochester', cursive;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Sofia', cursive;
+    font-family: 'Crete Round', serif;
+    font-family: 'Days One', sans-serif;
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Pinyon Script', cursive;*/
+
+body{
+    z-index:-1000;
+    font-family: 'Rochester', serif;
+}
+
+ /*Important pour positionner le footer en bas de page*/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+
+/*Pour déboguer la mise en place dans la page*/
+.debug {
+    background-color: greenyellow;
+    border: 1px solid bisque;
+}
+.back {
+    background-color: grey;
+    color: #ffd700;
+}
+
+#modal1 {
+    font-family: 'Crete Round', serif;
+}
+/* BALISES TITRE H1,2,... */
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+
+/*  BALISES P*/
+p {
+    font-size: 1.4em;
+}
+
+.p-padding{
+    padding-left: 50px;
+}
+
+/* TEXT-HOVER */
+.lien {
+    font-size: 18px;
+    color: white !important;
+    -webkit-transition: width 1s, height 1s; /* Safari */
+    transition: width 1s, height 1s;
+    padding-left: 2em;
+}
+.lien:hover {
+    color:  #ffd700;
+    transition: 2s;
+}
+
+
+
+/* LES IMAGES*/
+.img-size{
+    width: 600px;
+    height: 500px;
+}
+
+/*HEADER.PHP*/
+/* ***************************************************************************
+*
+*                           4. BARRE DE NAVIGATION
+*
+**************************************************************************** */
+
+/* taille image */
+.img-logo{
+    width: 100%;
+    max-width: 100%;
+
+}
+
+#menu-index {
+    background-color: transparent;
+    /*background-color: green;*/
+    height: 250px;
+    line-height: 1em;
+    box-shadow: none;
+}
+
+#menu-index-text {
+    margin-top: 3.5%;
+}
+
+.navTextCC {
+    font-size: 1.6em;
+    font-family: 'Rochester', cursive;
+    color: #ffd700 !important;
+    margin-left: 15px;
+    transition-property: color;
+    transition-duration: 0.8s;
+}
+
+.navTextCC:hover {
+    color: white!important;
+}
+
+.navTextMobileCC {
+    font-family: 'Crete Round', serif;
+    transition-property: color;
+    transition-duration: 0.8s;
+}
+.navTextMobileCC:hover {
+    color: #ffd700;
+}
+
+#mobile-demo
+{
+    background-color: black!important;
+}
+/*                      Fin BARRE DE NAVIGATION                            */
+/* ------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* ***************************************************************************
+*
+*                           7 SLIDER 
+*
+**************************************************************************** */
+
+/* ------------------------------------------------------------------------- */
+/* *********            7.1  Slider INDEX HAUT PAGE             ************ */
+
+
+
+
+/*                      Fin SLIDER                                         */
+/* ------------------------------------------------------------------------*/
+
+
+
+/* ************************************************************************* */
+
+/* position de texte */
+
+.row-margin1 {
+    margin-bottom: 5px;
+}
+/* marge entre les liens */
+.row-margin {
+    margin-bottom: -50px;
+}
+/* NAVBAR*/
+
+.text-size2 {
+    font-size: 16px;
+}
+
+/* position des liens */
+.col-margin {
+    width: 300px !important;
+    margin-top: 30px;
+    /*margin-left: 25px !important;*/
+}
+
+.col-size{
+    width: 250px;
+}
+
+/* conteneur de box */
+.containeur {
+    justify-content: center;
+    height: 425px;
+    margin-top: 200px;
+}
+
+/* position de box */
+
+.bloc1 {
+    top: -100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+/* design de box */
+
+.row-img {
+    margin-top: -20px;
+}
+
+#col-img {
+    margin-left: 200px;
+    margin-right: auto;
+}
+
+
+/*INDEX.PHP*/
+/* CARD HORIZONTAL */
+
+.card{
+    background: rgba(0,0,0,0);
+    height: 300px;
+    border: none;
+    box-shadow: none;
+}
+
+.horizontal{
+    height: 300px;
+}
+
+.card .horizontal{
+
+}
+
+#a-action h5{
+    color: #ffd700 !important;
+    text-transform: none !important;
+    transition: color .8s;
+}
+
+#a-action h5:hover {
+    color: white !important;
+}
+
+#card-horizontal-height{
+    height: 300px;
+    max-height: 300px;
+}
+
+#card-horizontal-height-test{
+    height: 300px;
+    max-height: 300px;
+}
+
+.image-height{
+    height: 300px;
+    width: 500px;
+}
+
+#card-image-height .image-height{
+    height: 300px;
+    width: 500px;
+}
+
+/*MES_CREATIONS.PHP*/
+/* **********************************************************************
+
+                      9. HOVER EFFECTS IMAGES STYLE
+
+************************************************************************* */
+.grid {
+     position: relative;
+     margin: 0 auto;
+     list-style: none;
+     text-align: center;
+ }
+
+.margin-grid{
+    position: inherit;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure .img-hover {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    /*padding: 2em;*/
+    color: #fff;
+    /*font-size: 1.25em;*/
+    font-size: 1.70em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.10em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 70%;
+}
+
+
+/* ************************************************************************ */
+/*                           *** Sarah ***                                  */
+/* ************************************************************************ */
+
+figure.effect-sarah {
+    background: #42b078;
+}
+
+figure.effect-sarah .img-hover {
+    max-width: none;
+    width: -webkit-calc(100% + 20px);
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+figure.effect-sarah:hover .img-hover {
+    opacity: 0.4;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah figcaption {
+    text-align: left;
+}
+
+figure.effect-sarah h2 {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5em 0;
+}
+
+figure.effect-sarah h2::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+
+figure.effect-sarah:hover h2::after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-sarah p {
+    padding: 1em 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+
+figure.effect-sarah:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/****************************************************************************
+*                                                                           *
+*                           *** GRID ***                                    *
+*                                                                           *
+****************************************************************************/
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+.grid.effect-6 {
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+}
+
+.grid.effect-6 li.animate {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: rotateX(-80deg);
+    transform: rotateX(-80deg);
+    -webkit-animation: flip .8s ease-in-out forwards;
+    animation: flip .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes flip {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+}
+
+@keyframes flip {
+    0% { }
+    100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+}
+
+.grid_press {
+    max-width: 69em;
+    list-style: none;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.grid_press li {
+    display: block;
+    float: left;
+    padding: 7px;
+    width: 33%;
+    opacity: 0;
+}
+
+.grid_press li.shown,
+.no-js .grid_press li,
+.no-cssanimations .grid li {
+    opacity: 1;
+}
+
+.grid_press li a,
+.grid_press li img {
+    outline: none;
+    border: none;
+    display: block;
+    max-width: 100%;
+}
+
+/****************************************************************************
+*                                                                           *
+*                               10. FORMULAIRES                             *
+*                                                                           *
+*****************************************************************************/
+.formulaire {
+    display: inline-block;
+}
+
+.formulaire .champ {
+    background-color: rgb(36, 121, 0);
+    width: 300px;
+    height: 35px;
+}
+
+.formulaire .bouton {
+    background-color: rgb(70, 121, 0);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* *********            10.1  formulaire  Contact              ************ */
+/* ------------------------------------------------------------------------ */
+
+#contact-form {
+    height: 100%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+#contact-body {
+    font-family: 'Crete Round', sans-serif;
+    background-image: none;
+}
+
+#contact-fieldset {
+    border: #ffd700;
+}
+
+/*                      Fin formulaire CONTACT                             */
+/* ------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------------- */
+
+/* *********            10.2 Formulaire  ACCESS               ************ */
+
+#access-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Crete Round', sans-serif;
+    background-image: none;
+
+}
+
+#access-form {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+/*                      Fin formulaire ACCESS                              */
+/* ------------------------------------------------------------------------*/
+
+
+.modal-content p {
+    text-align: center;
+}
+
+.modal-content h4 {
+    color: #9ccc65;
+    text-align: center;
+}
+.btn {
+    float: right;
+    background-color: #9ccc65;
+}
+
+.contacth3 {
+    color: #9ccc65;
+}
+.input-field .prefix {
+    color: #9ccc65;
+}
+
+/*ECO_LABEL.PHP*/
+/*ALIGNEMENT DU TEXTE*/
+.vertical{
+    margin-top: 50px;
+}
+
+
+/*FOOTER.PHP*/
+/****************************************************************************
+*                               11. FOOTER 
+*****************************************************************************/
+.text-copyright { text-align: center;
+    text-align: center;
+    margin-top: 1px;
+    position: relative;
+    top: 17px;
+    color: #ffffff;
+}
+
+/***************************************************************************
+*                            12. ICONE RETOUR HAUT
+****************************************************************************/
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    background: #9ccc65 url("../images/up-arrow.png") no-repeat center 43%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+header {
+    /*height: 75px;*/
+}
+
+footer {
+    /*height:75px;*/
+}
+
+/* Access Pages */
+
+.brandac-logo{
+    font-size: 03vh;
+}
+
+.navac-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/***************************************************************************
+*                            13. Facebook LIKE
+****************************************************************************/
+#facebook{
+    z-index: 1;
+    opacity: 0;
+
+}
+
+.fb-element{
+    z-index: 2;
+    width: 70px;
+}

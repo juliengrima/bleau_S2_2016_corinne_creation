@@ -1,0 +1,24 @@
+{#{% extends 'base.html.twig' %}#}
+
+{% block body %}
+    <h1>Categorie creation</h1>
+
+    {{ form_start(form) }}
+
+        <div style="background-color: red">
+            <p>Name</p>
+            {{ form_widget(form.nomcat) }}
+            {{ form_errors(form.nomcat) }}
+        </div>
+
+
+        <input type="submit" value="Create" />
+
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('categorie_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

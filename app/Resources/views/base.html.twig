@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8" />
     <title>{% block title %}CorinneCréation{% endblock %}</title>
 
@@ -14,27 +15,28 @@
 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/Main.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">
 
 </head>
 
 <body>
-<div id="fb-root"></div>
-{% block header %}{% endblock %}
-{% block slider %}{% endblock %}
-{% block body %} {% endblock %}
-{% block footer %}{% endblock %}
+    <div id="fb-root"></div>
 
-<!-- Import jQuery before materialize.js -->
-<!-- APPEL SCRIPT JQUERY on line -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    {% block header %}{% endblock %}
+    {% block slider %}{% endblock %}
+    {% block body %} {% endblock %}
+    {% block footer %}{% endblock %}
 
-<!-- Compiled and minified JavaScript offline -->
+    <!-- Import jQuery before materialize.js -->
+    <!-- APPEL SCRIPT JQUERY on line -->
+    <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
 
-<script src="{{ asset('bundles/corinne/js/materialize.min.js') }}"></script>
+    <!-- Compiled and minified JavaScript offline Materialize -->
+    <script src="{{ asset('bundles/corinne/js/materialize.min.js') }}"></script>
 
-<script type="text/javascript" src="{{ asset('bundles/corinne/js/app.js') }}"></script>
+    {% block js %}{% endblock %}
 
+    <script type="text/javascript" src="{{ asset('bundles/corinne/js/app.js') }}"></script>
 
 </body>
 

@@ -1,0 +1,41 @@
+{#{% extends 'base.html.twig' %}#}
+
+{% block body %}
+    <h1>Presse list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Source</th>
+                <th>Alt</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for presse in presses %}
+            <tr>
+                <td><a href="{{ path('presse_show', { 'id': presse.id }) }}">{{ presse.id }}</a></td>
+                <td>{{ presse.source }}</td>
+                <td>{{ presse.alt }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('presse_show', { 'id': presse.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('presse_edit', { 'id': presse.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('presse_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -9,7 +9,6 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Event
 {
-
     /**
      * @var integer
      */
@@ -164,5 +163,33 @@ class Event
     public function getLieu()
     {
         return $this->lieu;
+    }
+    /**
+     * @var \CorinneBundle\Entity\Presse
+     */
+    private $events;
+
+
+    /**
+     * Set events
+     *
+     * @param \CorinneBundle\Entity\Presse $events
+     * @return Event
+     */
+    public function setEvents(\CorinneBundle\Entity\Presse $events = null)
+    {
+        $this->events = $events;
+
+        return $this;
+    }
+
+    /**
+     * Get events
+     *
+     * @return \CorinneBundle\Entity\Presse 
+     */
+    public function getEvents()
+    {
+        return $this->events;
     }
 }
