@@ -23,4 +23,10 @@ CorinneBundle\Entity\Event:
         lieu:
             type: string
             length: 255
+    oneToOne:
+        events:
+            targetEntity: CorinneBundle\Entity\Presse
+            joinColumn:
+                name: presse_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

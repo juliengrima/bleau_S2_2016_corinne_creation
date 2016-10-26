@@ -15,12 +15,6 @@ CorinneBundle\Entity\Presse:
         alt:
             type: string
             length: 255
-    oneToOne:
-        events:
-            targetEntity: CorinneBundle\Entity\Event
-            joinColumn:
-                name: event_id
-                referencedColumnName: id
     lifecycleCallbacks:
         prePersist: [ preUpload, setCreatedAtValue, setExpiresAtValue ]
         preUpdate: [ preUpload, setUpdatedAtValue ]
