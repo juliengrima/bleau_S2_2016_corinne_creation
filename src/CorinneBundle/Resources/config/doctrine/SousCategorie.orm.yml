@@ -19,6 +19,7 @@ CorinneBundle\Entity\SousCategorie:
             joinColumn:
                 name: cat_id
                 referencedColumnName: id
+                nullable: false
     oneToMany:
         objet:
             targetEntity: CorinneBundle\Entity\Objet

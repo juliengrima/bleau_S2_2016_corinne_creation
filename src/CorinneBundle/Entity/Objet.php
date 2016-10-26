@@ -35,14 +35,15 @@ class Objet
     private $slider;
 
     /**
+     * @var \CorinneBundle\Entity\Categorie
+     */
+    private $categ;
+
+    /**
      * @var \CorinneBundle\Entity\SousCategorie
      */
     private $sousCateg;
 
-    /**
-     * @var \CorinneBundle\Entity\Categorie
-     */
-    private $categ;
 
 
     /**
@@ -148,6 +149,30 @@ class Objet
     }
 
     /**
+     * Set categ
+     *
+     * @param \CorinneBundle\Entity\Categorie $categ
+     * @return Objet
+     */
+    public function setCateg(\CorinneBundle\Entity\Categorie $categ = null)
+    {
+        $this->categ = $categ;
+
+        return $this;
+    }
+
+    /**
+     * Get categ
+     *
+     * @return \CorinneBundle\Entity\Categorie
+     */
+    public function getCateg()
+    {
+        return  $this->categ ;
+    }
+
+
+    /**
      * Set sousCateg
      *
      * @param \CorinneBundle\Entity\SousCategorie $sousCateg
@@ -167,29 +192,13 @@ class Objet
      */
     public function getSousCateg()
     {
-        return $this->sousCateg;
+        return  $this->sousCateg;
     }
 
-    /**
-     * Set categ
-     *
-     * @param \CorinneBundle\Entity\Categorie $categ
-     * @return Objet
-     */
-    public function setCateg(\CorinneBundle\Entity\Categorie $categ = null)
-    {
-        $this->categ = $categ;
 
-        return $this;
-    }
 
-    /**
-     * Get categ
-     *
-     * @return \CorinneBundle\Entity\Categorie 
-     */
-    public function getCateg()
+    public function __toString()
     {
-        return $this->categ;
+        return strval($this->id);
     }
 }

@@ -9,6 +9,15 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Categorie
 {
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->nomcat;
+    }
+
+
+
     /**
      * @var integer
      */
