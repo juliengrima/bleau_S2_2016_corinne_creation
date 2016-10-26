@@ -10,7 +10,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-
 //        return $this->render('X', array(
 //                'categories' => $categories
 //        ));
@@ -26,14 +25,6 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
-
-//        foreach ($categories as $categorie):
-//            $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findBy(
-//                array('categorie' => $categorie
-//                ));
-//        var_dump($sousCategories);
-//        endforeach;
-//        $sousCategories = $em->getRepository('CorinneBundle:SousCategorie')->findAll();
 
         return $this->render('CorinneBundle:User:mes_creations.html.twig', array(
             'categories' => $categories
