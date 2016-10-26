@@ -166,36 +166,4 @@ class Presse
     {
         return $this->alt;
     }
-
-
-
-
-    /**
-     * @var \CorinneBundle\Entity\Presse
-     */
-    private $events;
-
-
-    /**
-     * Set events
-     *
-     * @param \CorinneBundle\Entity\Presse $events
-     * @return Presse
-     */
-    public function setEvents(\CorinneBundle\Entity\Presse $events = null)
-    {
-        $this->events = $events;
-
-        return $this;
-    }
-
-    /**
-     * Get events
-     *
-     * @return \CorinneBundle\Entity\Presse 
-     */
-    public function getEvents()
-    {
-        return $this->events;
-    }
 }

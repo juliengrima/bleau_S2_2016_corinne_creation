@@ -23,10 +23,15 @@ CorinneBundle\Entity\Event:
         lieu:
             type: string
             length: 255
-    oneToOne:
-        events:
-            targetEntity: CorinneBundle\Entity\Presse
-            joinColumn:
-                name: presse_id
-                referencedColumnName: id
-    lifecycleCallbacks: {  }
+        source:
+            type: string
+            length: 255
+        alt:
+            type: string
+            length: 255
+    lifecycleCallbacks:
+        prePersist: [ preUpload, setCreatedAtValue, setExpiresAtValue ]
+        preUpdate: [ preUpload, setUpdatedAtValue ]
+        postPersist: [ upload ]
+        postUpdate: [ upload ]
+        postRemove: [ removeUpload ]
