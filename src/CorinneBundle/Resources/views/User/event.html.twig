@@ -3,26 +3,66 @@
 {% block body %}
 
 
-    <div class="container">
-        {% for event in events %}
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <span class="amber-text">{{ event.titre }} <br>
-                    {{ event.descriptif}} <br>
-                    --------------------<br>
-                    du : {{ event.dateDebut|date('d-m-Y') }} au {{ event.dateFin|date('d-m-Y') }} <br>
-                    Horaires : {{ event.dateDebut|date('H') }}H / {{ event.dateFin|date('H') }}H <br>
-                    --------------------<br>
-                    {{ event.lieu }}
-                </span>
-            </div>
-            <div class="col s12 m4 l4">
-                <img src="{{ asset('bundles/corinne/img-event/')}}{{ event.source }}" alt="{{ event.alt }}" class="img-size-event materialboxed">
-            </div>
-            <div class="col s12 m2 l2">
+    {#<div class="container">#}
+        {#{% for event in events %}#}
+        {#<div class="row">#}
+            {#<div class="col s12 m6 l6">#}
+                {#<span class="amber-text">{{ event.titre }} <br>#}
+                    {#{{ event.descriptif}} <br>#}
+                    {#--------------------<br>#}
+                    {#du : {{ event.dateDebut|date('d-m-Y') }} au {{ event.dateFin|date('d-m-Y') }} <br>#}
+                    {#Horaires : {{ event.dateDebut|date('H') }}H / {{ event.dateFin|date('H') }}H <br>#}
+                    {#--------------------<br>#}
+                    {#{{ event.lieu }}#}
+                {#</span>#}
+            {#</div>#}
+            {#<div class="col s12 m4 l4">#}
+                {#<img src="{{ asset('bundles/corinne/img-event/')}}{{ event.source }}" #}
+                     {#alt="{{ event.alt }}" #}
+                     {#class="img-size-event materialboxed">#}
+            {#</div>#}
+            {#<div class="col s12 m2 l2">#}
+            {#</div>#}
+        {#</div>#}
+        {#<span class="amber-text">--------------------------------------------------</span>#}
+        {#{% endfor %}#}
+    {#</div>#}
+    {#img-size-event materialboxed#}
+
+<div class="container">
+    <div class="row">
+    {% for event in events %}
+        <div class="col s12 m6 l6" id="img-size-event">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{ asset('bundles/corinne/img-event/')}}{{ event.source }}"
+                         alt="{{ event.alt }}">
+                </div>
+                <div class="card-content amber-text" id="img-size-event">
+                    <span class="card-title activator amber-text">{{ event.titre }}<i class="material-icons right">more_vert</i></span>
+                    <p>Voir l'évènement</p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">{{ event.titre }}<i class="material-icons right">close</i></span>
+                    <p><span class="amber-text">{{ event.titre }} <br>
+                            {{ event.descriptif}} <br>
+                            --------------------<br>
+                            du : {{ event.dateDebut|date('d-m-Y') }} au {{ event.dateFin|date('d-m-Y') }} <br>
+                            Horaires : {{ event.dateDebut|date('H') }}H / {{ event.dateFin|date('H') }}H <br>
+                            --------------------<br>
+                            {{ event.lieu }}
+                    </span></p>
+                </div>
             </div>
         </div>
-        <span class="amber-text">--------------------------------------------------</span>
-        {% endfor %}
+    {% endfor %}
     </div>
+</div>
+
+
+
+
+
+
+
 {% endblock %}
