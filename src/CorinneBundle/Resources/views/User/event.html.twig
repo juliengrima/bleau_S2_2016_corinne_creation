@@ -1,0 +1,18 @@
+{% extends '@Corinne/layout.html.twig' %}
+
+
+{% block body %}
+
+    <ul class="grid effect-6 grid_press" id="grid">
+        {% for presse in presses %}
+            <li><img src="{{ asset('bundles/corinne/img-presse/')}}{{ presse.source }}" alt="{{ presse.alt }}" class="img-size materialboxed"></li>
+        {% endfor %}
+    </ul>
+    <ul class="grid effect-6 grid_press" id="grid">
+        {% for events in events %}
+            <li><p>{{ events.titre }} / {{ events.descriptif }} / {{ events.datedebut('') }} / {{ events.datefin('') }} / {{ events.lieu }}</p></li>
+        {% endfor %}
+    </ul>
+
+    {#/../../../../web/bundles#}
+{% endblock %}

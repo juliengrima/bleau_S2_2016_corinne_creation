@@ -1,16 +1,13 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
-    <h1>Presse creation</h1>
+    <h1>AJOUT DE PRESSE</h1>
+
+    '{{ dump(presse) }}'
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
         <input type="submit" value="Create" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('presse_index') }}">Back to the list</a>
-        </li>
-    </ul>
 {% endblock %}

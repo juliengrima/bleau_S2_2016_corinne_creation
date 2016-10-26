@@ -2,23 +2,24 @@
 
 namespace CorinneBundle\Controller;
 
+
 use CorinneBundle\Entity\Categorie;
 use CorinneBundle\Entity\Presse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+
+//  FONCTION D'APPEL DES PAGES QUE L'ON VEUT AFFICHER
+
     public function indexAction()
     {
-//        return $this->render('X', array(
-//                'categories' => $categories
-//        ));
-            return $this->render('CorinneBundle:Default:index.html.twig');
+        return $this->render('CorinneBundle:Default:index.html.twig');
     }
 
-    public function parcourAction()
+    public function parcoursAction()
     {
-        return $this->render('CorinneBundle:User:parcour.html.twig');
+        return $this->render('CorinneBundle:User:parcours.html.twig');
     }
 
     public function creationAction()
@@ -38,7 +39,7 @@ class DefaultController extends Controller
 
     public function contactAction()
     {
-    return $this->render('CorinneBundle:User:contact.html.twig');
+        return $this->render('CorinneBundle:User:contact.html.twig');
     }
 
     public function atelierAction()
@@ -53,6 +54,23 @@ class DefaultController extends Controller
 
     public function presseAction()
     {
-        return $this->render('@Corinne/User/presse.twig');
+        $em = $this->getDoctrine()->getManager();
+        $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
+
+        return $this->render('@Corinne/User/presse.html.twig', array(
+            'presses' => $presses
+        ));
+    }
+
+    public function eventAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
+        $events = $em->getRepository('CorinneBundle:Event')->findAll();
+
+        return $this->render('@Corinne/User/event.html.twig', array(
+            'presses' => $presses,
+            'events' => $events
+        ));
     }
 }

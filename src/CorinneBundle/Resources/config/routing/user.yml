@@ -4,7 +4,7 @@ corinne_homepage:
 
 corinne_parcour:
     path:     /parcour
-    defaults: { _controller: CorinneBundle:Default:parcour }
+    defaults: { _controller: CorinneBundle:Default:parcours }
 
 corinne_creation:
     path:     /creation
@@ -33,3 +33,8 @@ corinne_access:
 corinne_presse:
     path:     /presse
     defaults: { _controller: CorinneBundle:Default:presse }
+
+corinne_event:
+    path:     /event
+    defaults: { _controller: CorinneBundle:Default:event }
+
