@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Presse
 {
-    //  FINCTION DE METHOD UPLOAD
+    //  FONCTION DE METHOD UPLOAD
     public $file;
 
     public function preUpload()
@@ -170,4 +170,32 @@ class Presse
 
 
 
+    /**
+     * @var \CorinneBundle\Entity\Presse
+     */
+    private $events;
+
+
+    /**
+     * Set events
+     *
+     * @param \CorinneBundle\Entity\Presse $events
+     * @return Presse
+     */
+    public function setEvents(\CorinneBundle\Entity\Presse $events = null)
+    {
+        $this->events = $events;
+
+        return $this;
+    }
+
+    /**
+     * Get events
+     *
+     * @return \CorinneBundle\Entity\Presse 
+     */
+    public function getEvents()
+    {
+        return $this->events;
+    }
 }

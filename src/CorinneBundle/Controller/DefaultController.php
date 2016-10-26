@@ -10,11 +10,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
 
-
-//    FONCTIONS D'APPEL POUR AFFICHER LES OBJETS
-
-
-
 //  FONCTION D'APPEL DES PAGES QUE L'ON VEUT AFFICHER
 
     public function indexAction()
@@ -64,6 +59,18 @@ class DefaultController extends Controller
 
         return $this->render('@Corinne/User/presse.html.twig', array(
             'presses' => $presses
+        ));
+    }
+
+    public function eventAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
+        $events = $em->getRepository('CorinneBundle:Event')->findAll();
+
+        return $this->render('@Corinne/User/event.html.twig', array(
+            'presses' => $presses,
+            'events' => $events
         ));
     }
 }
