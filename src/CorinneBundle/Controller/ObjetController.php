@@ -24,7 +24,7 @@ class ObjetController extends Controller
 
         $objets = $em->getRepository('CorinneBundle:Objet')->findAll();
 
-        return $this->render('objet/index.html.twig', array(
+        return $this->render('@Corinne/admin/objet/index.html.twig', array(
             'objets' => $objets,
         ));
     }
@@ -44,7 +44,7 @@ class ObjetController extends Controller
             $em->persist($objet);
             $em->flush();
 
-            return $this->redirectToRoute('objet_show', array('id' => $objet->getId()));
+            return $this->redirectToRoute('', array('id' => $objet->getId()));
         }
 
         return $this->render('objet/new.html.twig', array(
