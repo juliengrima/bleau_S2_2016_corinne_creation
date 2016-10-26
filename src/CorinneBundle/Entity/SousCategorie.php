@@ -10,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class SousCategorie
 {
 
+
     public function __toString()
     {
         // TODO: Implement __toString() method.
@@ -17,6 +18,7 @@ class SousCategorie
     }
 
     // YAM GENERATED CODE
+
     /**
      * @var integer
      */
