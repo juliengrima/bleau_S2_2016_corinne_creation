@@ -4,17 +4,32 @@
     <div class="container">
 
         <div class="row">
-            <table>
-                <th></th>
+            <div class="card">
+            <table class="bordered  highlight centered responsive-table">
+                <caption class="amber-text"> <h4>Liste des Oeuvres </h4> </caption>
+                <thead>
+                <tr class="amber-text">
+                    <th class="bordered">Description</th>
+                    <th>Id</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tfooter>
+
+                </tfooter>
+                <tbody>
             {% for objet in objets %}
-               <tr>
-                   <td></td>
-                   <td></td>
+               <tr class="amber-text">
+                   <td> {{ objet.definition }}</td>
+                   <td> {{ objet.id  }}</td>
                    <td></td>
                    <td></td>
                </tr>
             {% endfor %}
+                </tbody>
             </table>
+        </div>
         </div>
     </div>
 

@@ -141,6 +141,10 @@ class CategorieController extends Controller
 
             echo $objet->getDefinition() . '<br>';
         }
-        return new Response("Affichage de la sous catégorie sousCat : ".$id);
+//        return new Response("Affichage de la sous catégorie sousCat : ".$id);
+
+        return $this->render('CorinneBundle:User:liste.html.twig', array(
+            'objets' => $objets
+        ));
     }
 }
