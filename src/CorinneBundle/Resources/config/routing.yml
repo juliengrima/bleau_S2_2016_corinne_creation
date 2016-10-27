@@ -30,6 +30,6 @@ corinne_contact:
     resource: "@CorinneBundle/Resources/config/routing/contact.yml"
     prefix:   /admin/contact
 
-corinne_backend_homepage:
-    prefix: /admin/home
-    resource: "@CorinneBundle/Resources/config/routing/admin.yml"
+corinne_admin:
+    prefix: /
+    resource: routing/admin.yml
