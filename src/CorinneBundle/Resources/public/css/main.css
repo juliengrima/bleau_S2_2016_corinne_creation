@@ -512,6 +512,7 @@ figure.effect-sarah:hover p {
 *****************************************************************************/
 .formulaire {
     display: inline-block;
+    background-color:black;
 }
 
 .formulaire .champ {
@@ -528,6 +529,10 @@ figure.effect-sarah:hover p {
     padding: 0;
 }
 
+.row .col.offset-m4 {
+    margin-left: 66px;
+}
+
 /* ------------------------------------------------------------------------ */
 /* *********            10.1  formulaire  Contact              ************ */
 /* ------------------------------------------------------------------------ */
@@ -536,16 +541,19 @@ figure.effect-sarah:hover p {
     height: 100%;
     margin-bottom: 100px;
     margin-top: 50px;
+
 }
 
 #contact-body {
     font-family: 'Crete Round', sans-serif;
     background-image: none;
+    background-color:black;
 }
 
 #contact-fieldset {
     border: #ffd700;
 }
+
 
 /*                      Fin formulaire CONTACT                             */
 /* ------------------------------------------------------------------------*/
@@ -611,7 +619,11 @@ figure.effect-sarah:hover p {
     margin-top: 1px;
     position: relative;
     top: 17px;
-    color: #ffffff;
+    color: #ffffff!important;
+}
+
+#wild{
+    color:#ffd700;
 }
 
 /***************************************************************************
@@ -662,7 +674,6 @@ footer {
 #facebook{
     z-index: 1;
     opacity: 0;
-
 }
 
 .fb-element{
