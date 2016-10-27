@@ -2,7 +2,7 @@
 
 {% block header %}
     <header>
-        <div class="container">
+        <div class="container box-margin">
             <nav id="menu-index" class="transparent">
                 <div class="nav-wrapper">
                     <div class="row valign-wrapper">
@@ -42,18 +42,18 @@
                         </div>
 
                         <ul class="side-nav" id="mobile-demo">
-                            <li> <a href="parcours.php"         class="center-align navTextMobileCC amber-text">MON HISTOIRE</a></li>
-                            <li> <a href="mes_creations.php"    class="center-align  navTextMobileCC amber-text">MES CREATIONS</a> </li>
-                            <li> <a href="#"                    class="center-align  navTextMobileCC amber-text">COIN PRESSE</a>  </li>
-                            <li> <a href="eco_label.php"  class="center-align  navTextMobileCC amber-text">ECO-LABEL</a> </li>
-                            <li> <a href="contact.php"  class="center-align  navTextMobileCC amber-text">CONTACT</a> </li>
+                            <li> <a href="{{ path('corinne_parcour') }}" class="center-align navTextMobileCC amber-text">MON HISTOIRE</a></li>
+                            <li> <a href="{{ path('corinne_creation') }}" class="center-align  navTextMobileCC amber-text">MES CREATIONS</a> </li>
+                            <li> <a href="{{ path('corinne_presse') }}" class="center-align  navTextMobileCC amber-text">COIN PRESSE</a>  </li>
+                            <li> <a href="{{ path('corinne_ecolabel') }}"  class="center-align  navTextMobileCC amber-text">ECO-LABEL</a> </li>
+                            <li> <a href="{{ path('corinne_contact') }}"  class="center-align  navTextMobileCC amber-text">CONTACT</a> </li>
                         </ul>
 
                     </div>
                     <div  class="row">
 
                         <div class="col s6">
-                            <a href="index.php"><img src="{{ asset('bundles/corinne/images/logo.png') }}" alt="CorinneCreation" class="hide-on-large-only img-logo left"></a>
+                            <a href="{{ path('corinne_homepage') }}"><img src="{{ asset('bundles/corinne/images/logo2.png') }}" alt="CorinneCreation" class="hide-on-large-only img-logo left"></a>
                         </div>
 
                         <div class="col offset-s4 s2">
