@@ -15,10 +15,9 @@ class EcolabelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('source')
+            ->add('file', 'file', array('label' => 'Image  (JPG)', 'required' => false))
             ->add('alt')
-            ->add('texte')
-        ;
+            ->add('texte');
     }
     
     /**

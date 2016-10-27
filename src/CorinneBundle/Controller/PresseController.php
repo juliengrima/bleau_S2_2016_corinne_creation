@@ -39,12 +39,12 @@ class PresseController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-        $em = $this->getDoctrine()->getManager();
+            $em = $this->getDoctrine()->getManager();
 
-        $em->persist($presse);
-        $em->flush();
+            $em->persist($presse);
+            $em->flush();
 
-        return $this->redirectToRoute('presse_show', array('id' => $presse->getId()));
+            return $this->redirectToRoute('presse_show', array('id' => $presse->getId()));
         }
 
         return $this->render('@Corinne/admin/presse/new.html.twig', array(
