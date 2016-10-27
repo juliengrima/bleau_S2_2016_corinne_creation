@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
     <h1>Ecolabel edit</h1>
@@ -12,10 +12,10 @@
         <li>
             <a href="{{ path('ecolabel_index') }}">Back to the list</a>
         </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
+        {#<li>#}
+            {#{{ form_start(delete_form) }}#}
+                {#<input type="submit" value="Delete">#}
+            {#{{ form_end(delete_form) }}#}
+        {#</li>#}
     </ul>
 {% endblock %}

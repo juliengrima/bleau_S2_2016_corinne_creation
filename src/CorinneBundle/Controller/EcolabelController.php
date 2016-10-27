@@ -24,7 +24,7 @@ class EcolabelController extends Controller
 
         $ecolabels = $em->getRepository('CorinneBundle:Ecolabel')->findAll();
 
-        return $this->render('ecolabel/index.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/index.html.twig', array(
             'ecolabels' => $ecolabels,
         ));
     }
@@ -36,18 +36,19 @@ class EcolabelController extends Controller
     public function newAction(Request $request)
     {
         $ecolabel = new Ecolabel();
-        $form = $this->createForm('CorinneBundle\Form\EcolabelType', $ecolabel);
+        $form = $this->createForm(EcolabelType::class, $ecolabel);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($ecolabel);
             $em->flush();
 
             return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
         }
 
-        return $this->render('ecolabel/new.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/new.html.twig', array(
             'ecolabel' => $ecolabel,
             'form' => $form->createView(),
         ));
@@ -61,7 +62,7 @@ class EcolabelController extends Controller
     {
         $deleteForm = $this->createDeleteForm($ecolabel);
 
-        return $this->render('ecolabel/show.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/show.html.twig', array(
             'ecolabel' => $ecolabel,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -82,10 +83,10 @@ class EcolabelController extends Controller
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_edit', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
         }
 
-        return $this->render('ecolabel/edit.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/edit.html.twig', array(
             'ecolabel' => $ecolabel,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
