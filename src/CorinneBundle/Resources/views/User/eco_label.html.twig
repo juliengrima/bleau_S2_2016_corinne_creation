@@ -7,21 +7,19 @@
                 <div class="vertical amber-text">
                 <span >
                     <h4>Eco-label</h4>
+                    {% for ecolabel in ecolabel %}
                     <p>
-                        Dans le cadre de leur plan Climat Energie<br>
-                        Territorial (PCTE), l'agglomération Montargeoise,<br>
-                        rive du loing et le syndycat mixte du pays gatinais,<br>
-                        ont organisé avec la Chambre des Métiers et de <br>
-                        l'Artisanat du Loiret, l'opération "Eco-défis es commerçants<br>
-                        et artisants", qui consiste à valoriser, par l'obtention d'un<br>
-                        label, les artisants qui mettent en place des actions concrètes <br>
-                        en faveur de l'environnement et de la gestion durable des ressources.
+                        {{ ecolabel.texte }}
+
                     </p>
+                    {% endfor %}
                 </span>
                 </div>
             </div>
             <div class="col s12 m6 l6">
-                <img src="{{ asset('bundles/corinne/images/ecodefis.jpg') }}" alt="EcoLabel" class="img-size materialboxed">
+                {% for ecolabel in ecolabel %}
+                <img src="{{ asset('bundles/corinne/img-ecolabel/')}}{{ ecolabel.source }}" alt="{{ ecolabel.alt }}" class="img-size materialboxed">
+                {% endfor %}
             </div>
         </div>
     </div>

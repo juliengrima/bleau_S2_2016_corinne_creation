@@ -34,7 +34,12 @@ class DefaultController extends Controller
 
     public function ecolabelAction()
     {
-        return $this->render('CorinneBundle:User:eco_label.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $ecolabels = $em->getRepository('CorinneBundle:Ecolabel')->findAll();
+
+        return $this->render('@Corinne/User/eco_label.html.twig', array(
+            'ecolabel' => $ecolabels
+        ));
     }
 
     public function contactAction()
@@ -66,7 +71,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $events = $em->getRepository('CorinneBundle:Event')->findAll();
-        
+
 
         return $this->render('@Corinne/User/event.html.twig', array(
             'events' => $events
