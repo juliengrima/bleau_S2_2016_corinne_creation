@@ -14,7 +14,7 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        return $this->render('@Corinne/Default/index.html.twig');
+        return $this->render('CorinneBundle:Default:index.html.twig');
     }
 
     public function parcoursAction()
@@ -39,7 +39,7 @@ class DefaultController extends Controller
 
     public function contactAction()
     {
-    return $this->render('CorinneBundle:User:contact.html.twig');
+        return $this->render('CorinneBundle:User:contact.html.twig');
     }
 
     public function atelierAction()
@@ -66,6 +66,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $events = $em->getRepository('CorinneBundle:Event')->findAll();
+
+        foreach ($events as $event) {
+            $presse = $em->getRepository('CorinneBundle:Presse')->findBy('');
+        }
 
         return $this->render('@Corinne/User/event.html.twig', array(
             'events' => $events
