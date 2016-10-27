@@ -16,8 +16,10 @@ CorinneBundle\Entity\Categorie:
         souscategorie:
             targetEntity: CorinneBundle\Entity\SousCategorie
             mappedBy: categorie
+            nullable: false
         objet:
             targetEntity: CorinneBundle\Entity\Objet
             mappedBy: categorie
+            nullable: false
 
     lifecycleCallbacks: {  }

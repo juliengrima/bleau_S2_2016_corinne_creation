@@ -29,6 +29,7 @@ class EventController extends Controller
         ));
     }
 
+
     /**
      * Creates a new Event entity.
      *
@@ -36,11 +37,12 @@ class EventController extends Controller
     public function newAction(Request $request)
     {
         $event = new Event();
-        $form = $this->createForm('CorinneBundle\Form\EventType', $event);
+        $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($event);
             $em->flush();
 
@@ -51,6 +53,7 @@ class EventController extends Controller
             'event' => $event,
             'form' => $form->createView(),
         ));
+
     }
 
     /**

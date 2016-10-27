@@ -9,7 +9,16 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class SousCategorie
 {
-  
+
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->nomsouscat;
+    }
+
+    // YAM GENERATED CODE
+
     /**
      * @var integer
      */

@@ -10,6 +10,10 @@ corinne_creation:
     path:     /creation
     defaults: { _controller: CorinneBundle:Default:creation }
 
+corinne_liste:
+    path:     /liste/{id}
+    defaults: { _controller: CorinneBundle:Categorie:liste }
+
 corinne_ecolabel:
     path:     /ecolabel
     defaults: { _controller: CorinneBundle:Default:ecolabel }
@@ -33,3 +37,4 @@ corinne_presse:
 corinne_event:
     path:     /event
     defaults: { _controller: CorinneBundle:Default:event }
+
