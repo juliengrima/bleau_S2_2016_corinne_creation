@@ -29,4 +29,6 @@ corinne_ecolabel:
 corinne_contact:
     resource: "@CorinneBundle/Resources/config/routing/contact.yml"
     prefix:   /admin/contact
-
+corinne_backend_homepage:
+    prefix: /admin/index
+    defaults: { _controller: "CorinneBundle:Admin:index" }
