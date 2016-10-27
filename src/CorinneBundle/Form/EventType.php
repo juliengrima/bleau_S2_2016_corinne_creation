@@ -20,6 +20,8 @@ class EventType extends AbstractType
             ->add('dateDebut', 'datetime')
             ->add('dateFin', 'datetime')
             ->add('lieu')
+            ->add('file', 'file', array('label' => 'Image  (JPG)', 'required' => false))
+            ->add('alt')
         ;
     }
     
