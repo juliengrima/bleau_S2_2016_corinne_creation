@@ -4,33 +4,12 @@
 {% block body %}
 
     <ul class="grid effect-6 grid_press" id="grid">
-        <li><img src="{{ asset('bundles/corinne/img-presse/1.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/2.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/3.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/4.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/5.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/6.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/7.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/8.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/9.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/10.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/11.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/12.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/13.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/14.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/15.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/16.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/17.jpg') }}"></li>
-        <li><img src="{{ asset('bundles/corinne/img-presse/18.jpg') }}"></li>
+        {% for objet in objets %}
+            <li><img src="{{ asset('bundles/corinne/images/')}}{{ objet.source }}" alt="{{ objet.alt }}" class="img-size materialboxed"></li>
+        {% endfor %}
     </ul>
 
-    {#<ul class="grid effect-6" id="grid">#}
-        {#{% for source in presse %}#}
-            {#<li><img src="{{ presse.source }}" alt="{{ presse.alt }}"></li>#}
-        {#{% endfor %}#}
-    {#</ul>#}
-
-
+    {#/../../../../web/bundles#}
 {% endblock %}
 
 {% block js %}

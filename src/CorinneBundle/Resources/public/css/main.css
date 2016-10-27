@@ -236,7 +236,7 @@ p {
 /*INDEX.PHP*/
 /* CARD HORIZONTAL */
 
-.card{
+.ju-horizontal{
     background: rgba(0,0,0,0);
     height: 300px;
     border: none;
@@ -247,9 +247,6 @@ p {
     height: 300px;
 }
 
-.card .horizontal{
-
-}
 
 #a-action h5{
     color: #ffd700 !important;
@@ -638,6 +635,10 @@ header {
     /*height: 75px;*/
 }
 
+.box-margin {
+    margin-top: 100px;
+}
+
 footer {
     /*height:75px;*/
 }
@@ -668,3 +669,35 @@ footer {
     z-index: 2;
     width: 70px;
 }
+
+/****************************************************************************
+*                            14. EVENTS                                     *
+****************************************************************************/
+.card-event {
+    background: rgba(0,0,0,0.2);
+    border: none;
+    box-shadow: none;
+
+    /*display: block;*/
+    /*position: absolute;*/
+    /*float: left;*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+
+    /*width: 300px;*/
+
+}
+
+.card-event .card-event-reveal{
+    background-color: rgba(0,0,0,0.7);
+}
+
+.card-title {
+    text-decoration: underline;
+}
+
+.card-image .img-event {
+    width: 200px;
+    height: 300px;
+}
+

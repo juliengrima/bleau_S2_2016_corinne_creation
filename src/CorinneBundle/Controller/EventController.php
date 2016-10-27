@@ -24,10 +24,11 @@ class EventController extends Controller
 
         $events = $em->getRepository('CorinneBundle:Event')->findAll();
 
-        return $this->render('event/index.html.twig', array(
+        return $this->render('@Corinne/admin/event/index.html.twig', array(
             'events' => $events,
         ));
     }
+
 
     /**
      * Creates a new Event entity.
@@ -36,21 +37,23 @@ class EventController extends Controller
     public function newAction(Request $request)
     {
         $event = new Event();
-        $form = $this->createForm('CorinneBundle\Form\EventType', $event);
+        $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($event);
             $em->flush();
 
             return $this->redirectToRoute('event_show', array('id' => $event->getId()));
         }
 
-        return $this->render('event/new.html.twig', array(
+        return $this->render('@Corinne/admin/event/new.html.twig', array(
             'event' => $event,
             'form' => $form->createView(),
         ));
+
     }
 
     /**
@@ -61,7 +64,7 @@ class EventController extends Controller
     {
         $deleteForm = $this->createDeleteForm($event);
 
-        return $this->render('event/show.html.twig', array(
+        return $this->render('@Corinne/admin/event/show.html.twig', array(
             'event' => $event,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +88,7 @@ class EventController extends Controller
             return $this->redirectToRoute('event_edit', array('id' => $event->getId()));
         }
 
-        return $this->render('event/edit.html.twig', array(
+        return $this->render('@Corinne/admin/event/edit.html.twig', array(
             'event' => $event,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

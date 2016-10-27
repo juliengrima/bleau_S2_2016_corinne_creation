@@ -2,28 +2,34 @@
 
 namespace CorinneBundle\Controller;
 
+
+use CorinneBundle\Entity\Categorie;
+use CorinneBundle\Entity\Presse;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
+
+//  FONCTION D'APPEL DES PAGES QUE L'ON VEUT AFFICHER
+
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
-
-        return $this->render('CorinneBundle:Default:index.html.twig', array(
-                'categories' => $categories
-        ));
+        return $this->render('CorinneBundle:Default:index.html.twig');
     }
 
-    public function parcourAction()
+    public function parcoursAction()
     {
-        return $this->render('CorinneBundle:User:parcour.html.twig');
+        return $this->render('CorinneBundle:User:parcours.html.twig');
     }
 
     public function creationAction()
     {
-        return $this->render('CorinneBundle:User:mes_creations.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
+
+        return $this->render('CorinneBundle:User:mes_creations.html.twig', array(
+            'categories' => $categories
+        ));
     }
 
     public function ecolabelAction()
@@ -33,7 +39,7 @@ class DefaultController extends Controller
 
     public function contactAction()
     {
-    return $this->render('CorinneBundle:User:contact.html.twig');
+        return $this->render('CorinneBundle:User:contact.html.twig');
     }
 
     public function atelierAction()
@@ -48,6 +54,25 @@ class DefaultController extends Controller
 
     public function presseAction()
     {
-        return $this->render('@Corinne/User/presse.twig');
+        $em = $this->getDoctrine()->getManager();
+        $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
+
+        return $this->render('@Corinne/User/presse.html.twig', array(
+            'presses' => $presses
+        ));
+    }
+
+    public function eventAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $events = $em->getRepository('CorinneBundle:Event')->findAll();
+
+        foreach ($events as $event) {
+            $presse = $em->getRepository('CorinneBundle:Presse')->findBy('');
+        }
+
+        return $this->render('@Corinne/User/event.html.twig', array(
+            'events' => $events
+        ));
     }
 }
