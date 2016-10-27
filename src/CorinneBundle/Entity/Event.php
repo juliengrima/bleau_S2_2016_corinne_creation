@@ -12,6 +12,9 @@ class Event
     //  FONCTION DE METHOD UPLOAD
     public $file;
 
+    /**
+     * @ORM\PrePersist
+     */
     public function preUpload()
     {
         if (null !== $this->file) {
@@ -21,7 +24,7 @@ class Event
     }
 
     /**
-     * @ORM\postPersist
+     * @ORM\PostPersist
      */
     public function upload()
     {
@@ -38,7 +41,7 @@ class Event
     }
 
     /**
-     * @ORM\postRemove
+     * @ORM\PostRemove
      */
     public function removeUpload()
     {
@@ -279,29 +282,5 @@ class Event
     public function getAlt()
     {
         return $this->alt;
-    }
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function setCreatedAtValue()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PrePersist
-     */
-    public function setExpiresAtValue()
-    {
-        // Add your code here
-    }
-
-    /**
-     * @ORM\PreUpdate
-     */
-    public function setUpdatedAtValue()
-    {
-        // Add your code here
     }
 }
