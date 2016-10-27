@@ -1,0 +1,4 @@
+menu_categorie:
+    path:     /admin/home
+    defaults: { _controller: "CorinneBundle:Admin:index" }
+    methods:  GET

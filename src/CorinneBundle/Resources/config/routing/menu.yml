@@ -1,4 +1,0 @@
-menu_categorie:
-    path:     /admin/menu
-    defaults: { _controller: "CorinneBundle:Categorie:index" }
-    methods:  GET
