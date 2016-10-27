@@ -27,17 +27,18 @@
     <div class="card teal center">
     <h1>Editer la Categorie :</h1>
     </div>
+
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
 
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Editer" />
+        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
 
     {{ form_end(edit_form) }}
 
-    <ul class="center">
+    <ul>
         <li>
 
-            <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour à la liste</a>
+            <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la liste</a>
 
         </li>
         <li>
