@@ -24,7 +24,7 @@ class ObjetController extends Controller
 
         $objets = $em->getRepository('CorinneBundle:Objet')->findAll();
 
-        return $this->render('objet/index.html.twig', array(
+        return $this->render('@Corinne/admin/objet/index.html.twig', array(
             'objets' => $objets,
         ));
     }
@@ -47,7 +47,7 @@ class ObjetController extends Controller
             return $this->redirectToRoute('objet_show', array('id' => $objet->getId()));
         }
 
-        return $this->render('objet/new.html.twig', array(
+        return $this->render('@Corinne/admin/objet/new.html.twig', array(
             'objet' => $objet,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class ObjetController extends Controller
     {
         $deleteForm = $this->createDeleteForm($objet);
 
-        return $this->render('objet/show.html.twig', array(
+        return $this->render('@Corinne/admin/objet/show.html.twig', array(
             'objet' => $objet,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class ObjetController extends Controller
             return $this->redirectToRoute('objet_edit', array('id' => $objet->getId()));
         }
 
-        return $this->render('objet/edit.html.twig', array(
+        return $this->render('@Corinne/admin/objet/edit.html.twig', array(
             'objet' => $objet,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

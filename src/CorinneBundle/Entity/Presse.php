@@ -12,6 +12,9 @@ class Presse
     //  FONCTION DE METHOD UPLOAD
     public $file;
 
+    /**
+     * @ORM\PrePersist
+     */
     public function preUpload()
     {
         if (null !== $this->file) {
@@ -21,7 +24,7 @@ class Presse
     }
 
     /**
-     * @ORM\postPersist
+     * @ORM\PostPersist
      */
     public function upload()
     {
@@ -38,7 +41,7 @@ class Presse
     }
 
     /**
-     * @ORM\postRemove
+     * @ORM\PostRemove
      */
     public function removeUpload()
     {

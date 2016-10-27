@@ -1,8 +1,34 @@
 {#{% extends 'base.html.twig' %}#}
 
-{% block body %}
-    <h1>Presse list</h1>
+<!DOCTYPE html>
+<html>
+<head>
 
+    <meta charset="UTF-8"/>
+
+    <title>{% block title %}CorinneCréation{% endblock %}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia"
+          rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}"
+          media="screen,projection">
+    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
+
+</head>
+
+{% block body %}
+<div class="container">
+    <div class="card teal center">
+    <h1>Liste Presse :</h1>
+    </div>
     <table>
         <thead>
             <tr>
@@ -21,10 +47,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('presse_show', { 'id': presse.id }) }}">show</a>
+                            <a href="{{ path('presse_show', { 'id': presse.id }) }}" class="waves-effect waves-light btn" style="width:100px">voir</a>
                         </li>
                         <li>
-                            <a href="{{ path('presse_edit', { 'id': presse.id }) }}">edit</a>
+                            <a href="{{ path('presse_edit', { 'id': presse.id }) }}" class="waves-effect waves-light btn" style="width:100px">editer</a>
                         </li>
                     </ul>
                 </td>
@@ -35,7 +61,14 @@
 
     <ul>
         <li>
-            <a href="{{ path('presse_new') }}">Create a new entry</a>
+            <a href="{{ path('presse_new') }}" class="waves-effect waves-light btn" style="width:280px">Ajouter une presse</a>
         </li>
     </ul>
+    <ul>
+        <li>
+            <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
+                au menu</a>
+        </li>
+    </ul>
+</div>
 {% endblock %}
