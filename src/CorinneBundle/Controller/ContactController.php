@@ -35,22 +35,53 @@ class ContactController extends Controller
      */
     public function newAction(Request $request)
     {
-        $contact = new Contact();
-        $form = $this->createForm('CorinneBundle\Form\ContactType', $contact);
-        $form->handleRequest($request);
+        $request = $this->container->get('request');
+        $routeName = $request->get('_route');
+//        var_dump($routeName); die();
+//        var_dump($request->request->get('check')); die();
+//          var_dump($request); die();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush();
+        if (null !== $request->request->get('check')) {
 
-            return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
+//            ENREGISTREMENT DU CONTACT ET ENVOI DU MAIL
+            if ($form->isSubmitted () && $form->isValid ()) {
+
+                $contact = new Contact();
+                $contact->setNom ($request->request->get ('nom'));
+                $contact->setPrenom ($request->request->get ('prenom'));
+                $contact->settel ($request->request->get ('tel'));
+                $contact->setMail ($request->request->get ('mail'));
+
+                $em = $this->getDoctrine ()->getManager ();
+                $em->persist ($contact);
+                $em->flush ();
+
+//                ENVOI DU MAIL
+
+
+
+            }
+        }
+        else {
+//            ENVOI DU MAIL
+
+
         }
 
-        return $this->render('contact/new.html.twig', array(
-            'contact' => $contact,
-            'form' => $form->createView(),
-        ));
+
+//                return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
+//            }
+//
+//            return $this->render('@Corinne/admin/contact/new.html.twig', array(
+//                'contact' => $contact,
+////            'form' => $form->createView(),
+//            ));
+//        }
+//        else{
+////            ENVOI DU MAIL
+//        }
+        return $this->redirectToRoute($routeName);
+
     }
 
     /**

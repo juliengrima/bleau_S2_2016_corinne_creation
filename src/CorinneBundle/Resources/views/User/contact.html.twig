@@ -19,20 +19,19 @@
 
             <div class="container" >
                 <div class="row">
-                    <form class="">
-
+                    <form action="{{ path('contact_new') }}" method="post">
                         <fieldset id="fieldset-contact" class="amber-text black">
                             <legend class="amber-text">Vos coordonnées</legend>
 
                             <div class="row">
                                 <div class="input-field col s12 m6 amber-text">
                                     <i class="material-icons prefix amber-text">perm_identity</i>
-                                    <input id="prenom" type="text" class="validate amber-text"  autofocus required="" >
+                                    <input id="prenom" type="text" class="validate amber-text"  autofocus required="" name="prenom">
                                     <label for="prenom" class="amber-text">Prénom</label>
                                 </div>
                                 <div class="input-field col s12 m6">
                                     <i class="material-icons prefix amber-text">perm_identity</i>
-                                    <input id="nom" type="text" class="validate amber-text" required="">
+                                    <input id="nom" type="text" class="validate amber-text" required="" name="nom">
                                     <label for="nom" class="amber-text">Nom</label>
                                 </div>
                             </div>
@@ -40,7 +39,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix amber-text">phone</i>
-                                    <input id="telephone" type="tel" class="validate amber-text">
+                                    <input id="telephone" type="tel" class="validate amber-text" name="tel">
                                     <label for="telephone" class="amber-text">Téléphone</label>
                                 </div>
                             </div>
@@ -48,7 +47,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix  amber-text">email</i>
-                                    <input id="email" type="email" class="validate amber-text">
+                                    <input id="email" type="email" class="validate amber-text" name="email">
                                     <label for="email" class="amber-text">Email</label>
                                 </div>
                             </div>
@@ -60,7 +59,7 @@
                                 </div>
                                 <div>
                                     <p>
-                                        <input type="checkbox" id="test5" />
+                                        <input type="checkbox" id="test5" name="check"/>
                                         <label for="test5" class="amber-text">J'accepte l'enregitrement de mes données</label>
                                     </p>
                                 </div>

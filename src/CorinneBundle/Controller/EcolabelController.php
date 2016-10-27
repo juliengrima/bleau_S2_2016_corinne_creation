@@ -79,6 +79,7 @@ class EcolabelController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $ecolabel->preUpload();
             $em = $this->getDoctrine()->getManager();
             $em->persist($ecolabel);
             $em->flush();
