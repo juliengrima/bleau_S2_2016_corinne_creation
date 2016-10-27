@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
     init_corinne();
     gestionSlider();
     autoplay();
+    // click_droit_off();
 
     // RETOUR VERS LE HAUT
     retour_haut();
@@ -105,3 +106,30 @@ function gere_facebook() {
 // ********************************************************************
 // *                       Click droit off
 // ********************************************************************
+function click_droit_off() {
+    //if IE4+
+   document.onselectstart = new Function("return false");
+   document.oncontextmenu = new Function("return false");
+   //if NS6
+   if (window.sidebar) {
+       document.onmousedown = disableselect;
+       document.onclick = reEnable;
+   }
+
+    $('img').mousedown(function (event) {
+        switch (event.which) {
+            case 1:
+//                alert('Left Mouse button pressed.');
+                break;
+            case 2:
+                // alert('Middle Mouse button pressed.');
+                break;
+            case 3:
+
+                $('#modalAlert').openModal();
+                break;
+            default:
+                alert('You have a strange Mouse!');
+        }
+    });
+}
