@@ -66,10 +66,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $events = $em->getRepository('CorinneBundle:Event')->findAll();
-
-        foreach ($events as $event) {
-            $presse = $em->getRepository('CorinneBundle:Presse')->findBy('');
-        }
+        
 
         return $this->render('@Corinne/User/event.html.twig', array(
             'events' => $events
