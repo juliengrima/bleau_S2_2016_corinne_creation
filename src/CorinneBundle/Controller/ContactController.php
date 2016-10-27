@@ -24,7 +24,7 @@ class ContactController extends Controller
 
         $contacts = $em->getRepository('CorinneBundle:Contact')->findAll();
 
-        return $this->render('contact/index.html.twig', array(
+        return $this->render('@Corinne/admin/contact/index.html.twig', array(
             'contacts' => $contacts,
         ));
     }
@@ -47,7 +47,7 @@ class ContactController extends Controller
             return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
         }
 
-        return $this->render('contact/new.html.twig', array(
+        return $this->render('@Corinne/admin/contact/new.html.twig', array(
             'contact' => $contact,
             'form' => $form->createView(),
         ));
@@ -61,7 +61,7 @@ class ContactController extends Controller
     {
         $deleteForm = $this->createDeleteForm($contact);
 
-        return $this->render('contact/show.html.twig', array(
+        return $this->render('@Corinne/admin/contact/show.html.twig', array(
             'contact' => $contact,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +85,7 @@ class ContactController extends Controller
             return $this->redirectToRoute('contact_edit', array('id' => $contact->getId()));
         }
 
-        return $this->render('contact/edit.html.twig', array(
+        return $this->render('@Corinne/admin/contact/edit.html.twig', array(
             'contact' => $contact,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

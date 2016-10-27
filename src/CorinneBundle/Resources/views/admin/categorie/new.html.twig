@@ -6,6 +6,8 @@
 
     <meta charset="UTF-8" />
 
+    <title>{% block title %}CorinneCréation{% endblock %}</title>
+
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +16,10 @@
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
+    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
@@ -28,11 +34,9 @@
     </div>
     {{ form_start(form) }}
 
-
             <p>Name</p>
             {{ form_widget(form.nomcat) }}
             {{ form_errors(form.nomcat) }}
-
 
 
         <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Creation" />
@@ -41,7 +45,9 @@
 
     <ul>
         <li>
+
             <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour à la Liste</a>
+
         </li>
     </ul>
     </div>

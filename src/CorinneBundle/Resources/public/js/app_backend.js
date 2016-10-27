@@ -1,27 +1,21 @@
+/**
+ * Created by pascal on 27/10/16.
+ */
 // ********************************************************************
-// *                       Appel Fonction
+// *                       main function
 // ********************************************************************
 jQuery(document).ready(function($) {
-
+    console.log('jQuery app_backend a démarré...');
     init_corinne();
-    gestionSlider();
-    autoplay();
 
-    // RETOUR VERS LE HAUT
-    retour_haut();
 
     // ZOOM SUR LES IMAGES
     zoom_images();
 
-    // Fontion fonction
-    gere_facebook();
-
-    // deroulement_card();
-
 });
 
 // ********************************************************************
-// *                       JS General
+// *                       initialisation
 // ********************************************************************
 
 function init_corinne()
