@@ -536,6 +536,16 @@ figure.effect-sarah:hover p {
 /* ------------------------------------------------------------------------ */
 /* *********            10.1  formulaire  Contact              ************ */
 /* ------------------------------------------------------------------------ */
+.modal {
+    overflow: hidden;
+    width: 60%;
+    height: 100%;
+    padding-bottom: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: rgba(0,0,0,0.2);
+}
+
 
 #contact-form {
     height: 100%;
