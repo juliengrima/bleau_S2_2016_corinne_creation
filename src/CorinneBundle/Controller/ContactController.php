@@ -78,7 +78,7 @@ class ContactController extends Controller
                             'prenom' => $contact->setPrenom(),
                             'mail' => $contact->setMail(),
                             'tel' => $contact->setTel(),
-                            'text' => $contact->
+
                         )
                     ),
                     'text/html'
