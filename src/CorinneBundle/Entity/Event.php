@@ -53,7 +53,7 @@ class Event
     //  FONCTION DE TEST DU DOSSIER UPLOAD
     protected function getUploadDir()
     {
-        return 'bundles/corinne/img-event';
+        return 'uploads/img-event';
     }
 
     protected function getUploadRootDir()

@@ -53,7 +53,7 @@ class Presse
     //  FONCTION DE TEST DU DOSSIER UPLOAD
     protected function getUploadDir()
     {
-        return 'bundles/corinne/img-presse';
+        return 'uploads/img-presse';
     }
 
     protected function getUploadRootDir()
