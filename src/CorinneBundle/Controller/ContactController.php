@@ -38,6 +38,8 @@ class ContactController extends Controller
         $routeName = $this->container->get('request')->get('_route');
         $check = $request->request->get('check');
         $text = $request->request->get('text');
+        $mail = $request->request->get('email');
+
 //        var_dump($request->request->get('check')) .'\n';
 //        var_dump($request->request->get('nom')) .'\n';
 //        var_dump($request->request->get('prenom')) .'\n';
@@ -53,9 +55,9 @@ class ContactController extends Controller
             $contact->setNom ($request->request->get ('nom'));
             $contact->setPrenom ($request->request->get ('prenom'));
             $contact->setTel ($request->request->get ('tel'));
-            $contact->setMail ($request->request->get ('mail'));
-            $text->request->get ('text');
-            $mail = $request->request->get('mail');
+            $contact->setMail ($request->request->get ('email'));
+
+
 
                 $em = $this->getDoctrine ()->getManager ();
                 $em->persist ($contact);
@@ -63,11 +65,6 @@ class ContactController extends Controller
 
 //               ENVOI DU MAIL
             $from = $this->getParameter('mailer_user');
-//            $name = $request->request->get('nom');
-//            $firstname = $request->request->get('prenom');
-//            $mail = $request->request->get('mail');
-//            $tel = $request->request->get('tel');
-//            $msg = $request->request->get('text');
             $message = \Swift_Message::newInstance()
                 ->setSubject('Contact Coriine Création')
                 ->setFrom(array($from => 'corinne'))
@@ -112,9 +109,50 @@ class ContactController extends Controller
                 'mail' => $contact,
             ));
         }
-        else{
+        else {
 //            ENVOI DU MAIL
-
+            $from = $this->getParameter('mailer_user');
+            $name = $request->request->get('nom');
+            $firstname = $request->request->get('prenom');
+            $mail = $request->request->get('email');
+            $tel = $request->request->get('tel');
+            $msg = $request->request->get('text');
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Contact Coriine Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($from)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/User/mailclient.html.twig',
+                        array(
+                            'nom' => $name,
+                            'prenom' => $firstname,
+                            'mail' => $mail,
+                            'tel' => $tel,
+                            'text' => $msg
+                        )
+                    ),
+                    'text/html'
+                );
+            $message2 = \Swift_Message::newInstance()
+                ->setSubject('Copie Contact Corinne Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($mail)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/User/mailcorinnecreation.html.twig',
+                        array(
+                            'nom' => $name,
+                            'prenom' => $firstname,
+                            'mail' => $mail,
+                            'tel' => $tel,
+                            'text' => $msg
+                        )
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+            $this->get('mailer')->send($message2);
 
         }
         return $this->redirectToRoute($routeName);
