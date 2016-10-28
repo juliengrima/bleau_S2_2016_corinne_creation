@@ -4,7 +4,6 @@ namespace CorinneBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use CorinneBundle\Entity\Presse;
 use CorinneBundle\Form\PresseType;
 
@@ -24,7 +23,7 @@ class PresseController extends Controller
 
         $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
 
-        return $this->render('presse/index.html.twig', array(
+        return $this->render('@Corinne/admin/presse/index.html.twig', array(
             'presses' => $presses,
         ));
     }
@@ -36,21 +35,23 @@ class PresseController extends Controller
     public function newAction(Request $request)
     {
         $presse = new Presse();
-        $form = $this->createForm('CorinneBundle\Form\PresseType', $presse);
+        $form = $this->createForm(PresseType::class, $presse);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($presse);
             $em->flush();
 
             return $this->redirectToRoute('presse_show', array('id' => $presse->getId()));
         }
 
-        return $this->render('presse/new.html.twig', array(
+        return $this->render('@Corinne/admin/presse/new.html.twig', array(
             'presse' => $presse,
             'form' => $form->createView(),
         ));
+
     }
 
     /**
@@ -61,7 +62,7 @@ class PresseController extends Controller
     {
         $deleteForm = $this->createDeleteForm($presse);
 
-        return $this->render('presse/show.html.twig', array(
+        return $this->render('@Corinne/admin/presse/show.html.twig', array(
             'presse' => $presse,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -85,7 +86,7 @@ class PresseController extends Controller
             return $this->redirectToRoute('presse_edit', array('id' => $presse->getId()));
         }
 
-        return $this->render('presse/edit.html.twig', array(
+        return $this->render('@Corinne/admin/presse/edit.html.twig', array(
             'presse' => $presse,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

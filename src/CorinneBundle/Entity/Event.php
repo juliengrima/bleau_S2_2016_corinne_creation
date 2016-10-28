@@ -9,7 +9,69 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Event
 {
+    //  FONCTION DE METHOD UPLOAD
+    public $file;
 
+    /**
+     * @ORM\PrePersist
+     */
+    public function preUpload()
+    {
+        if (null !== $this->file) {
+            // do whatever you want to generate a unique name
+            $this->source = uniqid().'.'.$this->file->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
+
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file->move($this->getUploadRootDir(), $this->source);
+
+        unset($this->file);
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
+
+    //  FONCTION DE TEST DU DOSSIER UPLOAD
+    protected function getUploadDir()
+    {
+        return 'uploads/img-event';
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__.'/../../../web/'.$this->getUploadDir();
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->source ? null : $this->getUploadDir().'/'.$this->source;
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->source ? null : $this->getUploadRootDir().'/'.$this->source;
+    }
+
+//     CODE GENERER
     /**
      * @var integer
      */
@@ -39,6 +101,16 @@ class Event
      * @var string
      */
     private $lieu;
+
+    /**
+     * @var string
+     */
+    private $source;
+
+    /**
+     * @var string
+     */
+    private $alt;
 
 
     /**
@@ -164,5 +236,51 @@ class Event
     public function getLieu()
     {
         return $this->lieu;
+    }
+
+    /**
+     * Set source
+     *
+     * @param string $source
+     * @return Event
+     */
+    public function setSource($source)
+    {
+        $this->source = $source;
+
+        return $this;
+    }
+
+    /**
+     * Get source
+     *
+     * @return string 
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    /**
+     * Set alt
+     *
+     * @param string $alt
+     * @return Event
+     */
+    public function setAlt($alt)
+    {
+        $this->alt = $alt;
+
+        return $this;
+    }
+
+    /**
+     * Get alt
+     *
+     * @return string 
+     */
+    public function getAlt()
+    {
+        return $this->alt;
     }
 }

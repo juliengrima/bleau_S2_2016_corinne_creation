@@ -5,10 +5,9 @@ namespace CorinneBundle\Controller;
 use CorinneBundle\CorinneBundle;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use CorinneBundle\Entity\Categorie;
 use CorinneBundle\Form\CategorieType;
-
+use Symfony\Component\HttpFoundation\Response;
 /**
  * Categorie controller.
  *
@@ -125,5 +124,27 @@ class CategorieController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    public function listeAction($id) {
+        $em = $this->getDoctrine()->getManager();
+        $objets = $em->getRepository('CorinneBundle:Objet')->findBy(array('sousCateg' => $id));
+
+//        return $this->render('CorinneBundle:User:liste.html.twig', array(
+//            'objets' => $objets
+//        ));
+//
+
+        foreach ($objets as $objet) {
+
+            // $advert est une instance de Advert
+
+            echo $objet->getDefinition() . '<br>';
+        }
+//        return new Response("Affichage de la sous catégorie sousCat : ".$id);
+
+        return $this->render('CorinneBundle:User:liste.html.twig', array(
+            'objets' => $objets
+        ));
     }
 }

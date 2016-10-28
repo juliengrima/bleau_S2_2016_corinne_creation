@@ -9,6 +9,28 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Contact
 {
+
+    public function  __toString ()
+    {
+        // TODO: Implement __toString() method.
+        return $this->nom;
+
+    }
+
+    private $msg;
+
+    public function getMsg(){
+        return $this->msg;
+    }
+
+    public function setMsg($msg){
+        $this->msg = $msg;
+    }
+
+
+//    GENERATED CODE
+
+
     /**
      * @var int
      */

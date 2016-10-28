@@ -1,28 +1,21 @@
+/**
+ * Created by pascal on 27/10/16.
+ */
 // ********************************************************************
-// *                       Appel Fonction
+// *                       main function
 // ********************************************************************
 jQuery(document).ready(function($) {
-
+    console.log('jQuery app_backend a démarré...');
     init_corinne();
-    gestionSlider();
-    autoplay();
-    click_droit_off();
 
-    // RETOUR VERS LE HAUT
-    retour_haut();
 
     // ZOOM SUR LES IMAGES
     zoom_images();
 
-    // Fontion fonction
-    gere_facebook();
-
-    // deroulement_card();
-
 });
 
 // ********************************************************************
-// *                       JS General
+// *                       initialisation
 // ********************************************************************
 
 function init_corinne()
@@ -106,30 +99,3 @@ function gere_facebook() {
 // ********************************************************************
 // *                       Click droit off
 // ********************************************************************
-function click_droit_off() {
-    //if IE4+
-   document.onselectstart = new Function("return false");
-   document.oncontextmenu = new Function("return false");
-   //if NS6
-   if (window.sidebar) {
-       document.onmousedown = disableselect;
-       document.onclick = reEnable;
-   }
-
-    $('img').mousedown(function (event) {
-        switch (event.which) {
-            case 1:
-//                alert('Left Mouse button pressed.');
-                break;
-            case 2:
-                // alert('Middle Mouse button pressed.');
-                break;
-            case 3:
-
-                $('#modalAlert').openModal();
-                break;
-            default:
-                alert('You have a strange Mouse!');
-        }
-    });
-}

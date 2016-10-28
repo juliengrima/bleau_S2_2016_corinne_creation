@@ -1,0 +1,5 @@
+Ens\JobeetBundle\Entity\Job:
+    properties:
+        # ...
+        file:
+            - Image: ~
