@@ -15,12 +15,12 @@ class ObjetType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('source')
-            ->add('alt')
             ->add('definition')
             ->add('slider')
             ->add('sousCateg')
             ->add('categ')
+            ->add('source', 'file', array('label' => 'Image  (JPG)', 'required' => false))
+            ->add('alt')
         ;
     }
     
