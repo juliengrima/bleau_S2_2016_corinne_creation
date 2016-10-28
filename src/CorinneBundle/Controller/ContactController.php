@@ -21,7 +21,6 @@ class ContactController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $contacts = $em->getRepository('CorinneBundle:Contact')->findAll();
 
         return $this->render('@Corinne/admin/contact/index.html.twig', array(
@@ -54,7 +53,7 @@ class ContactController extends Controller
             $contact->setPrenom ($request->request->get ('prenom'));
             $contact->setTel ($request->request->get ('tel'));
             $contact->setMail ($request->request->get ('mail'));
-            $contact->setMail ($request->request->get ('text'));
+            $contact->se ($request->request->get ('text'));
 
                 $em = $this->getDoctrine ()->getManager ();
                 $em->persist ($contact);
@@ -68,18 +67,18 @@ class ContactController extends Controller
 //            $tel = $request->request->get('tel');
 //            $msg = $request->request->get('text');
             $message = \Swift_Message::newInstance()
-                ->setSubject('Contact Coriine Création')
+                ->setSubject('Contact Corinne Création')
                 ->setFrom(array($from => 'corinne'))
                 ->setTo($from)
                 ->setBody(
                     $this->renderView(
                         '@Corinne/User/mailclient.html.twig',
                         array(
-                            'nom' => $contact,
-                            'prenom' => $contact,
-                            'mail' => $contact,
-                            'tel' => $contact,
-                            'text' => $contact
+                            'nom' => $contact->setNom(),
+                            'prenom' => $contact->setPrenom(),
+                            'mail' => $contact->setMail(),
+                            'tel' => $contact->setTel(),
+                            'text' => $contact->
                         )
                     ),
                     'text/html'
