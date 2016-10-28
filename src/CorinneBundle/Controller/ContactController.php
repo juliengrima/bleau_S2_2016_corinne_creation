@@ -21,10 +21,9 @@ class ContactController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $contacts = $em->getRepository('CorinneBundle:Contact')->findAll();
 
-        return $this->render('contact/index.html.twig', array(
+        return $this->render('@Corinne/admin/contact/index.html.twig', array(
             'contacts' => $contacts,
         ));
     }
@@ -36,7 +35,9 @@ class ContactController extends Controller
     public function newAction(Request $request){
 
         $routeName = $this->container->get('request')->get('_route');
-        $contact = $request->request->get('check');
+        $check = $request->request->get('check');
+        $text = $request->request->get('text');
+        $mail = $request->request->get('email');
 
 //        var_dump($request->request->get('check')) .'\n';
 //        var_dump($request->request->get('nom')) .'\n';
@@ -46,15 +47,16 @@ class ContactController extends Controller
 //        var_dump($request->request->get('text')); die();
 
 
-        if ( $contact == "on") {
+        if ( $check == "on") {
 
 //          ENREGISTREMENT DU CONTACT ET ENVOI DU MAIL
             $contact = new Contact();
             $contact->setNom ($request->request->get ('nom'));
             $contact->setPrenom ($request->request->get ('prenom'));
             $contact->setTel ($request->request->get ('tel'));
-            $contact->setMail ($request->request->get ('mail'));
-            $contact->setMail ($request->request->get ('text'));
+            $contact->setMail ($request->request->get ('email'));
+
+
 
                 $em = $this->getDoctrine ()->getManager ();
                 $em->persist ($contact);
@@ -62,13 +64,8 @@ class ContactController extends Controller
 
 //               ENVOI DU MAIL
             $from = $this->getParameter('mailer_user');
-//            $name = $request->request->get('nom');
-//            $firstname = $request->request->get('prenom');
-//            $mail = $request->request->get('mail');
-//            $tel = $request->request->get('tel');
-//            $msg = $request->request->get('text');
             $message = \Swift_Message::newInstance()
-                ->setSubject('Contact Coriine Création')
+                ->setSubject('Contact Corinne Création')
                 ->setFrom(array($from => 'corinne'))
                 ->setTo($from)
                 ->setBody(
@@ -79,7 +76,7 @@ class ContactController extends Controller
                             'prenom' => $contact,
                             'mail' => $contact,
                             'tel' => $contact,
-                            'text' => $contact
+                            'text' => $text
                         )
                     ),
                     'text/html'
@@ -96,7 +93,7 @@ class ContactController extends Controller
                             'prenom' => $contact,
                             'mail' => $contact,
                             'tel' => $contact,
-                            'text' => $contact
+                            'text' => $text
                         )
                     ),
                     'text/html'
@@ -111,13 +108,53 @@ class ContactController extends Controller
                 'mail' => $contact,
             ));
         }
-        else{
+        else {
 //            ENVOI DU MAIL
-
+            $from = $this->getParameter('mailer_user');
+            $name = $request->request->get('nom');
+            $firstname = $request->request->get('prenom');
+            $mail = $request->request->get('email');
+            $tel = $request->request->get('tel');
+            $msg = $request->request->get('text');
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Contact Coriine Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($from)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/User/mailclient.html.twig',
+                        array(
+                            'nom' => $name,
+                            'prenom' => $firstname,
+                            'mail' => $mail,
+                            'tel' => $tel,
+                            'text' => $msg
+                        )
+                    ),
+                    'text/html'
+                );
+            $message2 = \Swift_Message::newInstance()
+                ->setSubject('Copie Contact Corinne Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($mail)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/User/mailcorinnecreation.html.twig',
+                        array(
+                            'nom' => $name,
+                            'prenom' => $firstname,
+                            'mail' => $mail,
+                            'tel' => $tel,
+                            'text' => $msg
+                        )
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+            $this->get('mailer')->send($message2);
 
         }
         return $this->redirectToRoute($routeName);
-
     }
 
     /**
@@ -128,7 +165,7 @@ class ContactController extends Controller
     {
         $deleteForm = $this->createDeleteForm($contact);
 
-        return $this->render('contact/show.html.twig', array(
+        return $this->render('@Corinne/admin/contact/show.html.twig', array(
             'contact' => $contact,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -152,7 +189,7 @@ class ContactController extends Controller
             return $this->redirectToRoute('contact_edit', array('id' => $contact->getId()));
         }
 
-        return $this->render('contact/edit.html.twig', array(
+        return $this->render('@Corinne/admin/contact/edit.html.twig', array(
             'contact' => $contact,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

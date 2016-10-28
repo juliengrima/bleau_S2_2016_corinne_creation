@@ -29,3 +29,7 @@ corinne_ecolabel:
 corinne_contact:
     resource: "@CorinneBundle/Resources/config/routing/contact.yml"
     prefix:   /admin/contact
+
+corinne_admin:
+    prefix: /
+    resource: routing/admin.yml

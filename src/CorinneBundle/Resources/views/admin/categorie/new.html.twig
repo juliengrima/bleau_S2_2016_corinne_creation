@@ -6,6 +6,8 @@
 
     <meta charset="UTF-8" />
 
+    <title>{% block title %}CorinneCréation{% endblock %}</title>
+
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,29 +21,30 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
     {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
 
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
+    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
+
 </head>
 
 {% block body %}
     <div class="container">
     <div class="card teal center">
-    <h1>Categorie creation :</h1>
+    <h1 class="white-text">Categorie creation :</h1>
     </div>
     {{ form_start(form) }}
-
 
             <p>Name</p>
             {{ form_widget(form.nomcat) }}
             {{ form_errors(form.nomcat) }}
 
-
-
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Creation" />
+        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
 
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour à la Liste</a>
+            <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>
         </li>
     </ul>
     </div>

@@ -60,13 +60,15 @@ main {
 #modal1 {
     font-family: 'Crete Round', serif;
 }
-/* BALISES TITRE H1,2,... */
-h1{}
-h2{}
-h3{}
-h4{}
-h5{}
-h6{}
+
+#modalAlert {
+    font-family: 'Crete Round', serif;
+}
+
+#modalAlert .modal-footer {
+    font-family: 'Crete Round', serif;
+}
+
 
 /*  BALISES P*/
 p {

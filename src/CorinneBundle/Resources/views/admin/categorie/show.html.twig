@@ -1,11 +1,9 @@
 {#{% extends 'base.html.twig' %}#}
-
 <!DOCTYPE html>
 <html>
 <head>
-
     <meta charset="UTF-8" />
-
+    <title>{% block title %}CorinneCréation{% endblock %}</title>
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,34 +21,35 @@
 
 {% block body %}
     <div class="container">
-    <div class="card teal center">
-    <h1>Vue de la Categorie :</h1>
-    </div>
-    <table class="bordered highlight centered responsive-table">
-        <tbody>
+        <div class="card teal center">
+            <h1 class="white-text">Vue de la Categorie :</h1>
+        </div>
+
+        <table class="bordered  highlight center responsive-table">
+
+            <tbody>
             <tr>
-                <th>Id</th>
+                <th class="center">Id</th>
                 <td>{{ categorie.id }}</td>
             </tr>
             <tr>
-                <th>Nomcat</th>
+                <th class="center">Nomcat</th>
                 <td>{{ categorie.nomcat }}</td>
             </tr>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>
-        </li>
-        <li>
-            <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}" class="waves-effect waves-light btn" style="width:220px">Editer</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
+            </tbody>
+        </table>
+        <ul>
+            <li>
+                <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>
+            </li>
+            <li>
+                <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}" class="waves-effect waves-light btn" style="width:220px">Editer</a>
+            </li>
+            <li>
+                {{ form_start(delete_form) }}
                 <input class="waves-effect waves-light btn" type="submit" value="Supprimer" style="width:220px">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+                {{ form_end(delete_form) }}
+            </li>
+        </ul>
     </div>
 {% endblock %}
