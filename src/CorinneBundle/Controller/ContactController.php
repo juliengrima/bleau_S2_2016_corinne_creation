@@ -33,53 +33,132 @@ class ContactController extends Controller
      * Creates a new Contact entity.
      *
      */
-    public function newAction(Request $request)
-    {
-        $request = $this->container->get('request');
-        $routeName = $request->get('_route');
-//        var_dump($routeName); die();
-//        var_dump($request->request->get('check')); die();
-//          var_dump($request); die();
+    public function newAction(Request $request){
 
-        if (null !== $request->request->get('check')) {
+        $routeName = $this->container->get('request')->get('_route');
+        $contact = $request->request->get('check');
 
-//            ENREGISTREMENT DU CONTACT ET ENVOI DU MAIL
-            if ($form->isSubmitted () && $form->isValid ()) {
+//        var_dump($request->request->get('check')) .'\n';
+//        var_dump($request->request->get('nom')) .'\n';
+//        var_dump($request->request->get('prenom')) .'\n';
+//        var_dump($request->request->get('tel')) .'\n';
+//        var_dump($request->request->get('email')) .'\n';
+//        var_dump($request->request->get('text')); die();
 
-                $contact = new Contact();
-                $contact->setNom ($request->request->get ('nom'));
-                $contact->setPrenom ($request->request->get ('prenom'));
-                $contact->settel ($request->request->get ('tel'));
-                $contact->setMail ($request->request->get ('mail'));
+
+        if ( $contact == "on") {
+
+//          ENREGISTREMENT DU CONTACT ET ENVOI DU MAIL
+            $contact = new Contact();
+            $contact->setNom ($request->request->get ('nom'));
+            $contact->setPrenom ($request->request->get ('prenom'));
+            $contact->setTel ($request->request->get ('tel'));
+            $contact->setMail ($request->request->get ('mail'));
+            $contact->setMail ($request->request->get ('text'));
 
                 $em = $this->getDoctrine ()->getManager ();
                 $em->persist ($contact);
                 $em->flush ();
 
-//                ENVOI DU MAIL
+//               ENVOI DU MAIL
+            $from = $this->getParameter('mailer_user');
+//            $name = $request->request->get('nom');
+//            $firstname = $request->request->get('prenom');
+//            $mail = $request->request->get('mail');
+//            $tel = $request->request->get('tel');
+//            $msg = $request->request->get('text');
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Contact Coriine Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($from)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/user/mailclient.html.twig',
+                        array(
+                            'nom' => $contact,
+                            'prenom' => $contact,
+                            'mail' => $contact,
+                            'tel' => $contact,
+                            'text' => $contact
+                        )
+                    ),
+                    'text/html'
+                );
+            $message2 = \Swift_Message::newInstance()
+                ->setSubject('Copie Contact Corinne Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($mail)
+                ->setBody(
+                    $this->renderView(
+                        '@Chouettes/user/mailcorinnecreation.html.twig',
+                        array(
+                            'nom' => $contact,
+                            'prenom' => $contact,
+                            'mail' => $contact,
+                            'tel' => $contact,
+                            'tel' => $contact
+                        )
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+            $this->get('mailer')->send($message2);
 
 
 
-            }
+
+
+            return $this->render('@Corinne/admin/contact/new.html.twig', array(
+                'contact' => $contact,
+//            'form' => $form->createView(),
+            ));
         }
-        else {
+        else{
 //            ENVOI DU MAIL
 
-
+            $from = $this->getParameter('mailer_user');
+            $name = $request->request->get('nom');
+            $firstname = $request->request->get('prenom');
+            $mail = $request->request->get('mail');
+            $sujet = $request->request->get('Sujet');
+            $msg = $request->request->get('msg');
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Contact Chouettes')
+                ->setFrom(array($from => 'ChouettesHiboux'))
+                ->setTo($from)
+                ->setBody(
+                    $this->renderView(
+                        '@Chouettes/user/mail.html.twig',
+                        array(
+                            'nom' => $name,
+                            'prenom' => $firstname,
+                            'mail' => $mail,
+                            'sujet' => $sujet,
+                            'message' => $msg
+                        )
+                    ),
+                    'text/html'
+                );
+            $message2 = \Swift_Message::newInstance()
+                ->setSubject('Copie Contact Chouettes')
+                ->setFrom(array($from => 'ChouettesHiboux'))
+                ->setTo($mail)
+                ->setBody(
+                    $this->renderView(
+                        '@Chouettes/user/mail2.html.twig',
+                        array(
+                            'nom' => $name,
+                            'prenom' => $firstname,
+                            'mail' => $mail,
+                            'sujet' => $sujet,
+                            'message' => $msg
+                        )
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+            $this->get('mailer')->send($message2);
         }
-
-
-//                return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
-//            }
-//
-//            return $this->render('@Corinne/admin/contact/new.html.twig', array(
-//                'contact' => $contact,
-////            'form' => $form->createView(),
-//            ));
-//        }
-//        else{
-////            ENVOI DU MAIL
-//        }
         return $this->redirectToRoute($routeName);
 
     }
