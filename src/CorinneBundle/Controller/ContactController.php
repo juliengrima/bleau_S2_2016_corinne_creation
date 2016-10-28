@@ -73,7 +73,7 @@ class ContactController extends Controller
                 ->setTo($from)
                 ->setBody(
                     $this->renderView(
-                        '@Corinne/user/mailclient.html.twig',
+                        '@Corinne/User/mailclient.html.twig',
                         array(
                             'nom' => $contact,
                             'prenom' => $contact,
@@ -90,13 +90,13 @@ class ContactController extends Controller
                 ->setTo($mail)
                 ->setBody(
                     $this->renderView(
-                        '@Chouettes/user/mailcorinnecreation.html.twig',
+                        '@Corinne/User/mailcorinnecreation.html.twig',
                         array(
                             'nom' => $contact,
                             'prenom' => $contact,
                             'mail' => $contact,
                             'tel' => $contact,
-                            'tel' => $contact
+                            'text' => $contact
                         )
                     ),
                     'text/html'
@@ -104,60 +104,17 @@ class ContactController extends Controller
             $this->get('mailer')->send($message);
             $this->get('mailer')->send($message2);
 
-
-
-
-
             return $this->render('@Corinne/admin/contact/new.html.twig', array(
-                'contact' => $contact,
-//            'form' => $form->createView(),
+                'nom' => $contact,
+                'prenom' => $contact,
+                'tel' => $contact,
+                'mail' => $contact,
             ));
         }
         else{
 //            ENVOI DU MAIL
 
-            $from = $this->getParameter('mailer_user');
-            $name = $request->request->get('nom');
-            $firstname = $request->request->get('prenom');
-            $mail = $request->request->get('mail');
-            $sujet = $request->request->get('Sujet');
-            $msg = $request->request->get('msg');
-            $message = \Swift_Message::newInstance()
-                ->setSubject('Contact Chouettes')
-                ->setFrom(array($from => 'ChouettesHiboux'))
-                ->setTo($from)
-                ->setBody(
-                    $this->renderView(
-                        '@Chouettes/user/mail.html.twig',
-                        array(
-                            'nom' => $name,
-                            'prenom' => $firstname,
-                            'mail' => $mail,
-                            'sujet' => $sujet,
-                            'message' => $msg
-                        )
-                    ),
-                    'text/html'
-                );
-            $message2 = \Swift_Message::newInstance()
-                ->setSubject('Copie Contact Chouettes')
-                ->setFrom(array($from => 'ChouettesHiboux'))
-                ->setTo($mail)
-                ->setBody(
-                    $this->renderView(
-                        '@Chouettes/user/mail2.html.twig',
-                        array(
-                            'nom' => $name,
-                            'prenom' => $firstname,
-                            'mail' => $mail,
-                            'sujet' => $sujet,
-                            'message' => $msg
-                        )
-                    ),
-                    'text/html'
-                );
-            $this->get('mailer')->send($message);
-            $this->get('mailer')->send($message2);
+
         }
         return $this->redirectToRoute($routeName);
 

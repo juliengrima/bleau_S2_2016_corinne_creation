@@ -77,4 +77,14 @@ class DefaultController extends Controller
             'events' => $events
         ));
     }
+
+    public function mailClientAction()
+    {
+        return $this->render('@Corinne:User:mailclient.html.twig');
+    }
+
+    public function mailCorinneCreationAction()
+    {
+        return $this->render('@Corinne:User:mailcorinnecreation.html.twig');
+    }
 }
