@@ -36,8 +36,8 @@ class ContactController extends Controller
     public function newAction(Request $request){
 
         $routeName = $this->container->get('request')->get('_route');
-        $contact = $request->request->get('check');
-
+        $check = $request->request->get('check');
+        $text = $request->request->get('text');
 //        var_dump($request->request->get('check')) .'\n';
 //        var_dump($request->request->get('nom')) .'\n';
 //        var_dump($request->request->get('prenom')) .'\n';
@@ -46,7 +46,7 @@ class ContactController extends Controller
 //        var_dump($request->request->get('text')); die();
 
 
-        if ( $contact == "on") {
+        if ( $check == "on") {
 
 //          ENREGISTREMENT DU CONTACT ET ENVOI DU MAIL
             $contact = new Contact();
@@ -54,7 +54,8 @@ class ContactController extends Controller
             $contact->setPrenom ($request->request->get ('prenom'));
             $contact->setTel ($request->request->get ('tel'));
             $contact->setMail ($request->request->get ('mail'));
-            $contact->setMail ($request->request->get ('text'));
+            $text->request->get ('text');
+            $mail = $request->request->get('mail');
 
                 $em = $this->getDoctrine ()->getManager ();
                 $em->persist ($contact);
@@ -79,7 +80,7 @@ class ContactController extends Controller
                             'prenom' => $contact,
                             'mail' => $contact,
                             'tel' => $contact,
-                            'text' => $contact
+                            'text' => $text
                         )
                     ),
                     'text/html'
@@ -96,7 +97,7 @@ class ContactController extends Controller
                             'prenom' => $contact,
                             'mail' => $contact,
                             'tel' => $contact,
-                            'text' => $contact
+                            'text' => $text
                         )
                     ),
                     'text/html'

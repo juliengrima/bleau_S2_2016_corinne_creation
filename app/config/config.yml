@@ -62,10 +62,7 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"
-    host:      "smtp.laposte.net"
-    port:      "%mailer_port%"
-    encryption: "%mailer_encryption%"
-    auth_mode:  "%mailer_auth_mode%"
+    host:      "%mailer_host%"
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
