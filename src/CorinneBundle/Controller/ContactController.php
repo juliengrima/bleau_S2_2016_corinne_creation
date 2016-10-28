@@ -33,24 +33,90 @@ class ContactController extends Controller
      * Creates a new Contact entity.
      *
      */
-    public function newAction(Request $request)
-    {
-        $contact = new Contact();
-        $form = $this->createForm('CorinneBundle\Form\ContactType', $contact);
-        $form->handleRequest($request);
+    public function newAction(Request $request){
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush();
+        $routeName = $this->container->get('request')->get('_route');
+        $contact = $request->request->get('check');
 
-            return $this->redirectToRoute('contact_show', array('id' => $contact->getId()));
+//        var_dump($request->request->get('check')) .'\n';
+//        var_dump($request->request->get('nom')) .'\n';
+//        var_dump($request->request->get('prenom')) .'\n';
+//        var_dump($request->request->get('tel')) .'\n';
+//        var_dump($request->request->get('email')) .'\n';
+//        var_dump($request->request->get('text')); die();
+
+
+        if ( $contact == "on") {
+
+//          ENREGISTREMENT DU CONTACT ET ENVOI DU MAIL
+            $contact = new Contact();
+            $contact->setNom ($request->request->get ('nom'));
+            $contact->setPrenom ($request->request->get ('prenom'));
+            $contact->setTel ($request->request->get ('tel'));
+            $contact->setMail ($request->request->get ('mail'));
+            $contact->setMail ($request->request->get ('text'));
+
+                $em = $this->getDoctrine ()->getManager ();
+                $em->persist ($contact);
+                $em->flush ();
+
+//               ENVOI DU MAIL
+            $from = $this->getParameter('mailer_user');
+//            $name = $request->request->get('nom');
+//            $firstname = $request->request->get('prenom');
+//            $mail = $request->request->get('mail');
+//            $tel = $request->request->get('tel');
+//            $msg = $request->request->get('text');
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Contact Coriine Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($from)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/User/mailclient.html.twig',
+                        array(
+                            'nom' => $contact,
+                            'prenom' => $contact,
+                            'mail' => $contact,
+                            'tel' => $contact,
+                            'text' => $contact
+                        )
+                    ),
+                    'text/html'
+                );
+            $message2 = \Swift_Message::newInstance()
+                ->setSubject('Copie Contact Corinne Création')
+                ->setFrom(array($from => 'corinne'))
+                ->setTo($mail)
+                ->setBody(
+                    $this->renderView(
+                        '@Corinne/User/mailcorinnecreation.html.twig',
+                        array(
+                            'nom' => $contact,
+                            'prenom' => $contact,
+                            'mail' => $contact,
+                            'tel' => $contact,
+                            'text' => $contact
+                        )
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+            $this->get('mailer')->send($message2);
+
+            return $this->render('@Corinne/admin/contact/new.html.twig', array(
+                'nom' => $contact,
+                'prenom' => $contact,
+                'tel' => $contact,
+                'mail' => $contact,
+            ));
         }
+        else{
+//            ENVOI DU MAIL
 
-        return $this->render('@Corinne/admin/contact/new.html.twig', array(
-            'contact' => $contact,
-            'form' => $form->createView(),
-        ));
+
+        }
+        return $this->redirectToRoute($routeName);
     }
 
     /**

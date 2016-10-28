@@ -38,3 +38,10 @@ corinne_event:
     path:     /event
     defaults: { _controller: CorinneBundle:Default:event }
 
+corinne_mailclient:
+    path:     /mailclient
+    defaults: { _controller: CorinneBundle:Default:mailClient }
+
+corinne_mailcorinnecreation:
+    path:     /mailcorinnecreation
+    defaults: { _controller: CorinneBundle:Default:mailCorinneCreation }
