@@ -4,20 +4,41 @@
 
     <div class="container">
         <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="carousel carousel-slider">
-                    <a class="carousel-item" href="#one!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/atelier1.JPG') }}"></a>
-                    <a class="carousel-item" href="#two!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/atelier2.JPG') }}"></a>
-                    <a class="carousel-item" href="#three!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/atelier3.JPG') }}"></a>
-                    <a class="carousel-item" href="#four!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/atelier4.JPG') }}"></a>
-                    <a class="carousel-item" href="#five!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/atelier5.JPG') }}"></a>
-                    <a class="carousel-item" href="#six!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/plan de travail 1.JPG') }}"></a>
-                    <a class="carousel-item" href="#seven!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/plan_de_travail1.jpg') }}"></a>
-                    <a class="carousel-item" href="#heigt!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/poudredeverre.jpg') }}"></a>
-                    <a class="carousel-item" href="#nine!"><img class="img-size" alt="atelier" src="{{ asset('bundles/corinne/images/soudure.jpg') }}"></a>
+            <div class="">
+                <div class="carousel">
+                    <a class="carousel-item" href="#one!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/atelier1.JPG') }}"></a>
+                    <a class="carousel-item" href="#two!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/atelier2.JPG') }}"></a>
+                    <a class="carousel-item" href="#three!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/atelier3.JPG') }}"></a>
+                    <a class="carousel-item" href="#four!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/atelier4.JPG') }}"></a>
+                    <a class="carousel-item" href="#five!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/atelier5.JPG') }}"></a>
+                    <a class="carousel-item" href="#six!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/plan de travail 1.JPG') }}"></a>
+                    <a class="carousel-item" href="#seven!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/plan_de_travail1.jpg') }}"></a>
+                    <a class="carousel-item" href="#heigt!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/poudredeverre.jpg') }}"></a>
+                    <a class="carousel-item" href="#nine!"><img class="responsive-img" alt="atelier" src="{{ asset('bundles/corinne/images/soudure.jpg') }}"></a>
                 </div>
             </div>
         </div>
+
+        {#<div class="row ">#}
+            {#<div class="carousel" id="">#}
+                {#<a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" alt="atelier"/></a>#}
+                {#<a class="carousel-item" href="#two!"><img  class="responsive-img" src="{{ asset('bundles/corinne/images/atelier2.JPG') }}"alt="atelier"/></a>#}
+                {#<a class="carousel-item" href="#three!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/images/atelier3.JPG') }}" alt="atelier"/></a>#}
+                {#<a class="carousel-item" href="#four!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/images/atelier4.JPG') }}" alt="atelier"/></a>#}
+                {#<a class="carousel-item" href="#five!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/images/atelier5.JPG') }}" alt="atelier"/> </a>#}
+
+            {#</div>#}
+        {#</div>#}
     </div>
 
+    <script>
+        $(document).ready(function() {
+            console.log('jquery atelier chargé');
+//            $('.carousel.carousel-slider').carousel({full_width: true});
+        });
+
+    </script>
+
+
 {% endblock %}
+

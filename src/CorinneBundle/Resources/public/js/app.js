@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
     init_corinne();
     gestionSlider();
     autoplay();
-    // click_droit_off();
+    click_droit_off();
 
     // RETOUR VERS LE HAUT
     retour_haut();
