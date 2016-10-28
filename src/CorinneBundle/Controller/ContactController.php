@@ -21,7 +21,6 @@ class ContactController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
         $contacts = $em->getRepository('CorinneBundle:Contact')->findAll();
 
         return $this->render('@Corinne/admin/contact/index.html.twig', array(
@@ -66,7 +65,7 @@ class ContactController extends Controller
 //               ENVOI DU MAIL
             $from = $this->getParameter('mailer_user');
             $message = \Swift_Message::newInstance()
-                ->setSubject('Contact Coriine Création')
+                ->setSubject('Contact Corinne Création')
                 ->setFrom(array($from => 'corinne'))
                 ->setTo($from)
                 ->setBody(
