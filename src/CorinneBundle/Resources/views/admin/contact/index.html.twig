@@ -2,76 +2,73 @@
 
 {% block body %}
 
+    <div class="container">
 
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Les contacts :</h1>
+                </div>
+            </div>
+        </div>
 
+        <div class="row center">
+            <div class="col s12 m12 l12">
+                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
+                    au menu</a>
+            </div>
+        </div>
 
+        <div class="row center">
+            <div class="col s12 m6 l2">
+                <p>Numéro du contact</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>Nom</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>Prenom</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>Téléphone</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>E-mail</p>
+            </div>
+            <div class="col s12 m6 l2">
+            </div>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Liste de Contact :</h1>
-    </div>
-    <table class="bordered highlight centered responsive-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Mail</th>
-                <th>Tel</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for contact in contacts %}
-            <tr>
-                <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
-                <td>{{ contact.nom }}</td>
-                <td>{{ contact.prenom }}</td>
-                <td>{{ contact.mail }}</td>
-                <td>{{ contact.tel }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('contact_show', { 'id': contact.id }) }}" class="waves-effect waves-light btn" style="width:100px">Voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}" class="waves-effect waves-light btn" style="width:100px">editer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">
+                <div class="row center spacing-rows">
+                    <div class="e">
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.id }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.nom }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.prenom }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.tel }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.mail }}
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
+                        {#<input type="hidden" name="_method" value="DELETE" />#}
+                        {#{{ form_widget(delete_form) }}#}
+                        {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
+                    </div>
+                </div>
+            </a>
         {% endfor %}
-        </tbody>
-    </table>
 
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('contact_new') }}" class="waves-effect waves-light btn" style="width:310px">Créer un nouveau contact</a>#}
-        {#</li>#}
-    {#</ul>#}
-    <ul>
-        <li>
-            <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:310px">Retour au menu</a>
-        </li>
-    </ul>
-</div>
+    </div>
+
 {% endblock %}
