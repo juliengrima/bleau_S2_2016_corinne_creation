@@ -1,56 +1,65 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Event list :</h1>
-    </div>
-    <table class="bordered highlight centered responsive-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Descriptif</th>
-                <th>Datedebut</th>
-                <th>Datefin</th>
-                <th>Lieu</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for event in events %}
-            <tr>
-                <td><a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.id }}</a></td>
-                <td>{{ event.titre }}</td>
-                <td>{{ event.descriptif }}</td>
-                <td>{% if event.dateDebut %}{{ event.dateDebut|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{% if event.dateFin %}{{ event.dateFin|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ event.lieu }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('event_show', { 'id': event.id }) }}" class="waves-effect waves-light btn" style="width:100px">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('event_edit', { 'id': event.id }) }}" class="waves-effect waves-light btn" style="width:100px">editer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('event_new') }}" class="waves-effect waves-light btn" style="width:280px">Ajouter un event</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                au menu</a>
-        </li>
-    </ul>
-</div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Evènements :</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l6">
+                <a href="{{ path('event_new') }}" class="waves-effect waves-light btn" style="width:280px">Nouvel évènement</a>
+            </div>
+            <div class="col s12 m6 l6">
+                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
+                    au menu</a>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l3">
+                <p>Id de l'évènement</p>
+            </div>
+            <div class="col s12 m6 l3">
+                <p>Titre</p>
+            </div>
+            <div class="col s12 m6 l3">
+                <p>Lieu</p>
+            </div>
+            <div class="col s12 m6 l3">
+            </div>
+        </div>
+
+        {% for event in events %}
+            <a href="{{ path('event_edit', { 'id': event.id }) }}">
+                <div class="row center">
+                    <div class="e">
+                        <div class="col s12 m6 l3 f">
+                            {{ event.id }}
+                        </div>
+                        <div class="col s12 m6 l3 f">
+                            {{ event.titre }}
+                        </div>
+                        <div class="col s12 m6 l3 f">
+                            {{ event.lieu }}
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
+                        {#<input type="hidden" name="_method" value="DELETE" />#}
+                        {#{{ form_widget(delete_form) }}#}
+                        {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+
+    </div>
+
 {% endblock %}

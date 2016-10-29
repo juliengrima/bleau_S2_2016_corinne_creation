@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card teal center">
-                    <h1 class="white-text">Listes des Categories :</h1>
+                    <h1 class="white-text">Categories :</h1>
                 </div>
             </div>
         </div>
@@ -26,8 +26,6 @@
 
         <div class="row center">
                 <div class="col s12 m6 l3">
-                </div>
-                <div class="col s12 m6 l3">
                     <p>Numéro de catégorie</p>
                 </div>
                 <div class="col s12 m6 l3">
@@ -35,26 +33,32 @@
                 </div>
                 <div class="col s12 m6 l3">
                 </div>
+            <div class="col s12 m6 l3">
+            </div>
         </div>
 
         {% for categorie in categories %}
-        <div class="row center">
-                <div class="col s12 m6 l3">
-                </div>
-                <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">
-                    <div class="e">
-                        <div class="col s12 m6 l3 f">
-                            {{ categorie.id }}
-                        </div>
-                        <div class="col s12 m6 l3 f">
-                            {{ categorie.nomcat }}
-                        </div>
+        <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">
+            <div class="row center spacing-rows">
+                <div class="e">
+                    <div class="col s12 m6 l3 f">
+                        {{ categorie.id }}
                     </div>
-                </a>
-                <div class="col s12 m6 l3">
-                    <img src="{{ asset('bundles/corinne/images/poubelle.png') }}">
+                    <div class="col s12 m6 l3 f">
+                        {{ categorie.nomcat }}
+                    </div>
+                    <div class="col s12 m6 l3 f">
+                        <img src="{ asset('uploads/img-categorie/')}}{{ categorie.source }}" class="img-size">
+                    </div>
                 </div>
-        </div>
+                <div class="col s12 m6 l3">
+                {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
+                    {#<input type="hidden" name="_method" value="DELETE" />#}
+                    {#{{ form_widget(delete_form) }}#}
+                    {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
+                </div>
+            </div>
+        </a>
         {% endfor %}
 
     </div>
