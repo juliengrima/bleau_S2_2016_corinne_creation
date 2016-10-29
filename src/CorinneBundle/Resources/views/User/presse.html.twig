@@ -4,7 +4,7 @@
 {% block body %}
     <ul class="grid effect-6 grid_press" id="grid">
         {% for presse in presses %}
-            <li><img src="{{ asset('bundles/corinne/img-presse/')}}{{ presse.source }}" alt="{{ presse.alt }}" class="img-size materialboxed"></li>
+            <li><img src="{{ asset('uploads/img-presse/')}}{{ presse.source }}" alt="{{ presse.alt }}" class="img-size materialboxed"></li>
         {% endfor %}
     </ul>
 
