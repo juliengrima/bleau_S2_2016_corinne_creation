@@ -1,24 +1,46 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Ecolabel edit :</h1>
-    </div>
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
-    {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('ecolabel_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la liste</a>
-        </li>
-        {#<li>#}
-            {#{{ form_start(delete_form) }}#}
-                {#<input type="submit" value="Delete">#}
-            {#{{ form_end(delete_form) }}#}
-        {#</li>#}
-    </ul>
-</div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Categories :</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row center">
+            <form action="{{ path('ecolabel_edit', { 'id': ecolabel.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+                <div class="col s12 m6 l6">
+                    <h5>Text</h5>
+                    <textarea rows="10" cols="400" name="text">{{ ecolabel.texte }}</textarea>
+                </div>
+                <div class="col s12 m6 l6">
+                    <h5>Image</h5>
+                    <input type="file" name="source" value="">
+                </div>
+                <div class="row center">
+                    <div class="col s12 m12 l12">
+                        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l4">
+                {{ form_start(delete_form) }}
+                <input type="submit" value="Supprimer" class="waves-effect waves-light btn" style="width:220px">
+                {{ form_end(delete_form) }}
+            </div>
+            <div class="col s12 m6 l4">
+                <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la liste</a>
+            </div>
+        </div>
+
+    </div>
 {% endblock %}

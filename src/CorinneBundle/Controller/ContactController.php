@@ -101,14 +101,13 @@ class ContactController extends Controller
             $this->get('mailer')->send($message);
             $this->get('mailer')->send($message2);
 
-            return $this->redirectToRoute($routeName);
 
-//            return $this->render('@Corinne/admin/contact/new.html.twig', array(
-//                'nom' => $contact,
-//                'prenom' => $contact,
-//                'tel' => $contact,
-//                'mail' => $contact,
-//            ));
+            return $this->render('@Corinne/admin/contact/new.html.twig', array(
+                'nom' => $contact,
+                'prenom' => $contact,
+                'tel' => $contact,
+                'mail' => $contact,
+            ));
         }
         else {
 //            ENVOI DU MAIL

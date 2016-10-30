@@ -37,17 +37,17 @@
                 <div class="row center">
                     <div class="e">
                         <div class="col s12 m6 l4 f">
-                            {{ ecolabel.texte }}
+                            <p>{{ ecolabel.texte }}</p>
                         </div>
                         <div class="col s12 m6 l4 f">
-                            <img src="{ asset('uploads/img-ecolabel/')}}{{ ecolabel.source }}" class="img-size">
+                            <img src="{{ asset('uploads/img-ecolabel/')}}{{ ecolabel.source }}" class="img-eco">
                         </div>
                     </div>
                     <div class="col s12 m6 l4">
-                        {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
-                        {#<input type="hidden" name="_method" value="DELETE" />#}
-                        {#{{ form_widget(delete_form) }}#}
-                        {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
+                        <form action="{{ path('ecolabel_delete', { 'id': ecolabel.id }) }}" method="post">
+                        <input type="hidden" name="_method" value="{{ ecolabel.id }}" />
+                        <a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>
+                        </form>
                     </div>
                 </div>
             </a>

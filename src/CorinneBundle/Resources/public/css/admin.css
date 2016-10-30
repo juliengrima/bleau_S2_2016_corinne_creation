@@ -48,7 +48,7 @@ $**************************************************/
 
 a {
     font-family: 'Crete Round', sans-serif;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     color: #20B2AA;
 }
 
@@ -62,7 +62,6 @@ a:hover{
 
 div .e {
     background: gainsboro;
-    white-space: nowrap;
 }
 
 div .e:hover .f {
@@ -74,11 +73,12 @@ div .e:hover .f {
 }
 
 .delete {
-    width: 30%;
+    width: 80%;
 }
 
-.img-size {
-    width: 40%;
+.img-eco {
+    width: 106.9%;
+
 }
 
 
@@ -95,4 +95,9 @@ div .e:hover .f {
 
 .text-size {
     font-size: 1.8em;
+}
+
+.width-text {
+    width: 300px;
+    height: 200px;
 }
