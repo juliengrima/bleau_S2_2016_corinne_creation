@@ -1,6 +1,7 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
+
 <div class="container">
     <div class="card teal center">
     <h1 class="white-text">Créer un Contact :</h1>
@@ -10,10 +11,11 @@
         <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('contact_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour à la liste</a>
-        </li>
-    </ul>
-</div>
+    {#<ul>#}
+        {#<li>#}
+            {#<a href="{{ path('contact_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour à la liste</a>#}
+        {#</li>#}
+    {#</ul>#}
+{#</div>#}
+
 {% endblock %}
