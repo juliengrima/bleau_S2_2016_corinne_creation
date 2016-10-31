@@ -1,75 +1,74 @@
-{#{% extends 'base.html.twig' %}#}
-
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta charset="UTF-8" />
-    <title>{% block title %}CorinneCréation{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia" rel="stylesheet">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
-    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
-
-</head>
+{% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Liste de Contact :</h1>
-    </div>
-    <table class="bordered highlight centered responsive-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Mail</th>
-                <th>Tel</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for contact in contacts %}
-            <tr>
-                <td><a href="{{ path('contact_show', { 'id': contact.id }) }}">{{ contact.id }}</a></td>
-                <td>{{ contact.nom }}</td>
-                <td>{{ contact.prenom }}</td>
-                <td>{{ contact.mail }}</td>
-                <td>{{ contact.tel }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('contact_show', { 'id': contact.id }) }}" class="waves-effect waves-light btn" style="width:100px">Voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}" class="waves-effect waves-light btn" style="width:100px">editer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('contact_new') }}" class="waves-effect waves-light btn" style="width:310px">Créer un nouveau contact</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:310px">Retour au menu</a>
-        </li>
-    </ul>
-</div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Les contacts :</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m12 l12">
+                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
+                    au menu</a>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l2">
+                <p>Numéro du contact</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>Nom</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>Prenom</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>Téléphone</p>
+            </div>
+            <div class="col s12 m6 l2">
+                <p>E-mail</p>
+            </div>
+            <div class="col s12 m6 l2">
+            </div>
+        </div>
+
+        {% for contact in contacts %}
+            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">
+                <div class="row center spacing-rows">
+                    <div class="e">
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.id }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.nom }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.prenom }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.tel }}
+                        </div>
+                        <div class="col s12 m6 l2 f">
+                            {{ contact.mail }}
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l2">
+                        {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
+                        {#<input type="hidden" name="_method" value="DELETE" />#}
+                        {#{{ form_widget(delete_form) }}#}
+                        {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+
+    </div>
+
 {% endblock %}

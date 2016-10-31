@@ -1,73 +1,63 @@
-{#{% extends 'base.html.twig' %}#}
-
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta charset="UTF-8"/>
-
-    <title>{% block title %}CorinneCréation{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia"
-          rel="stylesheet">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}"
-          media="screen,projection">
-    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
-
-</head>
+{% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Liste SousCategorie :</h1>
-    </div>
-    <table class="bordered highlight centered responsive-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nomsouscat</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for sousCategorie in sousCategories %}
-            <tr>
-                <td><a href="{{ path('souscategorie_show', { 'id': sousCategorie.id }) }}">{{ sousCategorie.id }}</a></td>
-                <td>{{ sousCategorie.nomsouscat }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('souscategorie_show', { 'id': sousCategorie.id }) }}" class="waves-effect waves-light btn" style="width:100px">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('souscategorie_edit', { 'id': sousCategorie.id }) }}" class="waves-effect waves-light btn" style="width:100px">editer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('souscategorie_new') }}" class="waves-effect waves-light btn" style="width:320px">Ajouter
-                une sous categorie</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:320px">Retour
-                au menu</a>
-        </li>
-    </ul>
-</div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Sous Categories :</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l6">
+                <a href="{{ path('souscategorie_new') }}" class="waves-effect waves-light btn" style="width:280px">Nouvelle sous-catégorie</a>
+            </div>
+            <div class="col s12 m6 l6">
+                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
+                    au menu</a>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l3">
+            </div>
+            <div class="col s12 m6 l3">
+                <p>Numéro de sous-catégorie</p>
+            </div>
+            <div class="col s12 m6 l3">
+                <p>Sous-catégorie</p>
+            </div>
+            <div class="col s12 m6 l3">
+            </div>
+        </div>
+
+        {% for sousCategorie in sousCategories %}
+            <a href="{{ path('souscategorie_edit', { 'id': sousCategorie.id }) }}">
+                <div class="row center">
+                    <div class="col s12 m6 l3">
+                    </div>
+                    <div class="e">
+                        <div class="col s12 m6 l3 f">
+                            {{ sousCategorie.id }}
+                        </div>
+                        <div class="col s12 m6 l3 f">
+                            {{ sousCategorie.nomsouscat }}
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
+                            {#<input type="hidden" name="_method" value="DELETE" />#}
+                            {#{{ form_widget(delete_form) }}#}
+                            {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+
+    </div>
+
 {% endblock %}

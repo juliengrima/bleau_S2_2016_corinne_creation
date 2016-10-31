@@ -12,7 +12,6 @@ class Event
     //  FONCTION DE METHOD UPLOAD
     public $file;
 
-
     /**
      * @ORM\PrePersist
      */
@@ -24,12 +23,37 @@ class Event
         }
     }
 
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        if (null === $this->file) {
+            return;
+        }
 
+        // if there is an error when moving the file, an exception will
+        // be automatically thrown by move(). This will properly prevent
+        // the entity from being persisted to the database on error
+        $this->file->move($this->getUploadRootDir(), $this->source);
+
+        unset($this->file);
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
 
     //  FONCTION DE TEST DU DOSSIER UPLOAD
     protected function getUploadDir()
     {
-        return 'bundles/corinne/img-event';
+        return 'uploads/img-event';
     }
 
     protected function getUploadRootDir()
@@ -259,8 +283,4 @@ class Event
     {
         return $this->alt;
     }
-
-
-
-
 }

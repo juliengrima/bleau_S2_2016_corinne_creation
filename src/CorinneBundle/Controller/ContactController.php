@@ -101,6 +101,7 @@ class ContactController extends Controller
             $this->get('mailer')->send($message);
             $this->get('mailer')->send($message2);
 
+
             return $this->render('@Corinne/admin/contact/new.html.twig', array(
                 'nom' => $contact,
                 'prenom' => $contact,

@@ -195,4 +195,5 @@ class Categorie
     {
         return $this->objet;
     }
+
 }

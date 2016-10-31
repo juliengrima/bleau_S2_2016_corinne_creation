@@ -1,46 +1,49 @@
-{#{% extends 'base.html.twig' %}#}
-
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta charset="UTF-8" />
-    <title>{% block title %}CorinneCréation{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia" rel="stylesheet">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
-    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
-
-</head>
+{% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Editer le contact :</h1>
-    </div>
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
-    {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('contact_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour à la liste</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Contacts :</h1>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <form action="{{ path('contact_edit', { 'id': contact.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+                <div class="col s12 m6 l3">
+                    <h5>Nom</h5>
+                    <input type="text" name="nom" value="{{ contact.nom }}">
+                    <h5>Prenom</h5>
+                    <input type="text" name="prenom" value="{{ contact.prenom }}">
+                </div>
+                <div class="col s12 m6 l3">
+                    <h5>Téléphone</h5>
+                    </di<input type="text" name="tel" value="{{ contact.tel }}">
+                    <h5>E-mail</h5>
+                    <input type="text" name="mail" value="{{ contact.mail }}">
+                </div>
+                <div class="col s12 m6 l3 btn-heigth">
+                    <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
+                </div>
+            </form>
+        </div>
+
+        <div class="row center">
+            <div class="col s12 m6 l6">
+                <a href="{{ path('contact_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la liste</a>
+            </div>
+            <div class="col s12 m6 l6">
+                {{ form_start(delete_form) }}
                 <input type="submit" value="Supprimer" class="waves-effect waves-light btn" style="width:220px">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-</div>
+                {{ form_end(delete_form) }}
+            </div>
+        </div>
+
+    </div>
+
 {% endblock %}
