@@ -40,6 +40,31 @@ class CategorieController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $fileName = 'uploads/pictures/' . $categorie->getSource();
+            if(file_exists($fileName)) {
+                unlink($fileName);
+            }
+
+
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $categorie->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $categorie->setSource($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($categorie);
             $em->flush();
@@ -78,6 +103,31 @@ class CategorieController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+            $fileName = 'uploads/pictures/' . $categorie->getSource();
+            if(file_exists($fileName)) {
+                unlink($fileName);
+            }
+
+
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $categorie->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $categorie->setSource($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($categorie);
             $em->flush();
@@ -105,6 +155,11 @@ class CategorieController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($categorie);
             $em->flush();
+            $fileName = 'uploads/pictures/' . $categorie->getSource();
+            if(file_exists($fileName)) {
+                unlink($fileName);
+            }
+
         }
 
         return $this->redirectToRoute('categorie_index');

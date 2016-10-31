@@ -28,7 +28,7 @@
 
     <div class="container">
         <div class="card teal center">
-            <h1 class="white-text">Listes des Categories :</h1>
+            <h1 class="white-text">Liste des Categories :</h1>
         </div>
 
         <table class="bordered highlight centered responsive-table">
@@ -36,6 +36,8 @@
             <tr>
                 <th>Id</th>
                 <th>Nomcat</th>
+                <td> Image </td>
+                <td>Alt</td>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -44,6 +46,11 @@
                 <tr>
                     <td><a href="{{ path('categorie_show', { 'id': categorie.id }) }}">{{ categorie.id }}</a></td>
                     <td>{{ categorie.nomcat }}</td>
+                    <td>
+                        <img src="{{ asset('uploads/pictures/' ~ categorie.source) }}" alt="" />
+
+                    </td>
+                    <td>{{ categorie.alt }}</td>
                     <td>
                         <ul>
                             <li>

@@ -12,12 +12,6 @@ CorinneBundle\Entity\SousCategorie:
         nomsouscat:
             type: string
             length: 255
-         source:
-            type: string
-            length: 255
-         alt:
-            type: string
-            length: 255
     manyToOne:
         categorie:
             targetEntity: CorinneBundle\Entity\Categorie

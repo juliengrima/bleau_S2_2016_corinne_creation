@@ -19,7 +19,6 @@ class ObjetType extends AbstractType
             ->add('slider')
             ->add('sousCateg')
             ->add('categ')
-//            ->add('source', 'file', array('label' => 'Image  JPG/jpeg', 'required' => false))
             ->add('source', FileType::class, array('label' => 'Image (fichier JPG)', 'data_class' => null))
             ->add('alt')
         ;
