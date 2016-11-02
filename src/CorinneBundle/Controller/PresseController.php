@@ -44,7 +44,7 @@ class PresseController extends Controller
             $em->persist($presse);
             $em->flush();
 
-            return $this->redirectToRoute('presse_show', array('id' => $presse->getId()));
+            return $this->redirectToRoute('presse_index', array('id' => $presse->getId()));
         }
 
         return $this->render('@Corinne/admin/presse/new.html.twig', array(
@@ -52,20 +52,6 @@ class PresseController extends Controller
             'form' => $form->createView(),
         ));
 
-    }
-
-    /**
-     * Finds and displays a Presse entity.
-     *
-     */
-    public function showAction(Presse $presse)
-    {
-        $deleteForm = $this->createDeleteForm($presse);
-
-        return $this->render('@Corinne/admin/presse/show.html.twig', array(
-            'presse' => $presse,
-            'delete_form' => $deleteForm->createView(),
-        ));
     }
 
     /**
@@ -83,7 +69,7 @@ class PresseController extends Controller
             $em->persist($presse);
             $em->flush();
 
-            return $this->redirectToRoute('presse_edit', array('id' => $presse->getId()));
+            return $this->redirectToRoute('presse_index', array('id' => $presse->getId()));
         }
 
         return $this->render('@Corinne/admin/presse/edit.html.twig', array(
@@ -97,18 +83,18 @@ class PresseController extends Controller
      * Deletes a Presse entity.
      *
      */
-    public function deleteAction(Request $request, Presse $presse)
-    {
-        $form = $this->createDeleteForm($presse);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($presse);
-            $em->flush();
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $presse = $em->getRepository('CorinneBundle:Presse')->findOneById($id);
+        $fileName = 'uploads/pictures/' . $presse->getSource();
+        if(file_exists($fileName)) {
+            unlink($fileName);
         }
+        $em->remove($presse);
+        $em->flush();
 
         return $this->redirectToRoute('presse_index');
+
     }
 
     /**

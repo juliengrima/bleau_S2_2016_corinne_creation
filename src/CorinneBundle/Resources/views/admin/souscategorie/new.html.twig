@@ -1,19 +1,40 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Créer SousCategorie :</h1>
-    </div>
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
-    {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('souscategorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>
-        </li>
-    </ul>
-</div>
+    <div class="container">
+        <div class="card teal center">
+            <h1 class="white-text">Categorie creation :</h1>
+        </div>
+
+        {{ form_start(form) }}
+        {#<div>#}
+        {##}
+        {#<label>Nom de la catégorie</label>#}
+        {#<select>Catégories</select>#}
+        {#{% for categorie in categories %}#}
+        {#<option>#}
+        {#{{ form_widget(edit_form.nomcat) }}#}
+        {#{{ form_errors(edit_form.nomcat) }}#}
+        {#</option>#}
+        {#{% endfor %}#}
+        {#</div>#}
+        <div>
+            <label>Sous catégorie</label>
+            {{ form_widget(form.nomsouscat) }}
+            {{ form_errors(form.nomsouscat) }}
+        </div>
+        <div class="row center">
+            <ul>
+                <li>
+                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                    <a href="{{ path('souscategorie_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                </li>
+            </ul>
+        </div>
+
+        {{ form_end(form) }}
+
+    </div>
+
 {% endblock %}

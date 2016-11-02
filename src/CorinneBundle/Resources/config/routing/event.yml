@@ -3,11 +3,6 @@ event_index:
     defaults: { _controller: "CorinneBundle:Event:index" }
     methods:  GET
 
-event_show:
-    path:     /{id}/show
-    defaults: { _controller: "CorinneBundle:Event:show" }
-    methods:  GET
-
 event_new:
     path:     /new
     defaults: { _controller: "CorinneBundle:Event:new" }
@@ -21,4 +16,4 @@ event_edit:
 event_delete:
     path:     /{id}/delete
     defaults: { _controller: "CorinneBundle:Event:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]

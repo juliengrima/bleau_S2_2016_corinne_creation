@@ -159,60 +159,18 @@ class ContactController extends Controller
     }
 
     /**
-     * Finds and displays a Contact entity.
-     *
-     */
-    public function showAction(Contact $contact)
-    {
-        $deleteForm = $this->createDeleteForm($contact);
-
-        return $this->render('@Corinne/admin/contact/show.html.twig', array(
-            'contact' => $contact,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Displays a form to edit an existing Contact entity.
-     *
-     */
-    public function editAction(Request $request, Contact $contact)
-    {
-        $deleteForm = $this->createDeleteForm($contact);
-        $editForm = $this->createForm('CorinneBundle\Form\ContactType', $contact);
-        $editForm->handleRequest($request);
-
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($contact);
-            $em->flush();
-
-            return $this->redirectToRoute('contact_edit', array('id' => $contact->getId()));
-        }
-
-        return $this->render('@Corinne/admin/contact/edit.html.twig', array(
-            'contact' => $contact,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Deletes a Contact entity.
      *
      */
-    public function deleteAction(Request $request, Contact $contact)
-    {
-        $form = $this->createDeleteForm($contact);
-        $form->handleRequest($request);
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $contact = $em->getRepository('CorinneBundle:Contact')->findOneById($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($contact);
-            $em->flush();
-        }
+        $em->remove($contact);
+        $em->flush();
 
         return $this->redirectToRoute('contact_index');
+
     }
 
     /**

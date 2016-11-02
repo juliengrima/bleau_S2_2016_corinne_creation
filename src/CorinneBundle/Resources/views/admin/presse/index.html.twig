@@ -7,53 +7,103 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card teal center">
-                    <h1 class="white-text">Presse :</h1>
+                    <h1 class="white-text">Presses :</h1>
                 </div>
             </div>
         </div>
 
         <div class="row center">
-            <div class="col s12 m6 l6">
-                <a href="{{ path('presse_new') }}" class="waves-effect waves-light btn" style="width:280px">Nouvelle presse</a>
-            </div>
-            <div class="col s12 m6 l6">
-                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                    au menu</a>
+            <div class="col s12">
+                <a href="{{ path('presse_new') }}" class="waves-effect waves-light btn">Nouvelle presse</a>
             </div>
         </div>
 
-        <div class="row center">
-            <div class="col s12 m6 l4">
-                <p>Numéro de presse</p>
-            </div>
-            <div class="col s12 m6 l4">
-                <p>Coupure de presse</p>
-            </div>
-            <div class="col s12 m6 l4">
-            </div>
-        </div>
+        <table class="highlight centered">
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Nom de la presse</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+            </thead>
 
-        {% for presse in presses %}
-            <a href="{{ path('presse_edit', { 'id': presse.id }) }}">
-                <div class="row center spacing-rows">
-                    <div class="e">
-                        <div class="col s12 m6 l4 f">
-                            {{ presse.id }}
-                        </div>
-                        <div class="col s12 m6 l4 f">
-                            <img src="{{ asset('uploads/img-presse/')}}{{ presse.source }}" class="img-size">
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
+            <tbody> <!-- Corps du tableau -->
+            {% for presse in presses %}
+                <tr>
+                    <td>{{ presse.source }}</td>
+                    <td>
+                        <img src="{{ asset('uploads/img-presse/')}}{{ presse.source }}" class="img-eco">
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('presse_edit', { 'id': presse.id }) }}">Editer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('presse_delete', { 'id': presse.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+    {#<div class="container">#}
+
+        {#<div class="row">#}
+            {#<div class="col s12 m12 l12">#}
+                {#<div class="card teal center">#}
+                    {#<h1 class="white-text">Presse :</h1>#}
+                {#</div>#}
+            {#</div>#}
+        {#</div>#}
+
+        {#<div class="row center">#}
+            {#<div class="col s12 m6 l6">#}
+                {#<a href="{{ path('presse_new') }}" class="waves-effect waves-light btn" style="width:280px">Nouvelle presse</a>#}
+            {#</div>#}
+            {#<div class="col s12 m6 l6">#}
+                {#<a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour#}
+                    {#au menu</a>#}
+            {#</div>#}
+        {#</div>#}
+
+        {#<div class="row center">#}
+            {#<div class="col s12 m6 l4">#}
+                {#<p>Numéro de presse</p>#}
+            {#</div>#}
+            {#<div class="col s12 m6 l4">#}
+                {#<p>Coupure de presse</p>#}
+            {#</div>#}
+            {#<div class="col s12 m6 l4">#}
+            {#</div>#}
+        {#</div>#}
+
+        {#{% for presse in presses %}#}
+            {#<a href="{{ path('presse_edit', { 'id': presse.id }) }}">#}
+                {#<div class="row center spacing-rows">#}
+                    {#<div class="e">#}
+                        {#<div class="col s12 m6 l4 f">#}
+                            {#{{ presse.id }}#}
+                        {#</div>#}
+                        {#<div class="col s12 m6 l4 f">#}
+                            {#<img src="{{ asset('uploads/img-presse/')}}{{ presse.source }}" class="img-size">#}
+                        {#</div>#}
+                    {#</div>#}
+                    {#<div class="col s12 m6 l4">#}
                         {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
                         {#<input type="hidden" name="_method" value="DELETE" />#}
                         {#{{ form_widget(delete_form) }}#}
                         {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
+                    {#</div>#}
+                {#</div>#}
+            {#</a>#}
+        {#{% endfor %}#}
 
-    </div>
+    {#</div>#}
 
 {% endblock %}

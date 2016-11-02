@@ -55,20 +55,6 @@ class EcolabelController extends Controller
     }
 
     /**
-     * Finds and displays a Ecolabel entity.
-     *
-     */
-    public function showAction(Ecolabel $ecolabel)
-    {
-        $deleteForm = $this->createDeleteForm($ecolabel);
-
-        return $this->render('@Corinne/admin/ecolabel/show.html.twig', array(
-            'ecolabel' => $ecolabel,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing Ecolabel entity.
      *
      */

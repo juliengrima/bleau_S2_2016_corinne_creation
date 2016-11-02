@@ -1,24 +1,39 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-    <h1 class="white-text">Editer Objet :</h1>
-    </div>
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
-    {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('objet_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la liste</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer" class="waves-effect waves-light btn" style="width:220px">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
-</div>
+    <div class="container">
+        <div class="card teal center">
+            <h1 class="white-text">Editer une oeuvre :</h1>
+        </div>
+
+        {{ form_start(edit_form) }}
+        <div>
+            <label>Image</label>
+            {{ form_widget(edit_form.source) }}
+            {{ form_errors(edit_form.source) }}
+        </div>
+        <div>
+            <label>Nom de l'image</label>
+            {{ form_widget(edit_form.alt) }}
+            {{ form_errors(edit_form.alt) }}
+        </div>
+        <div>
+            <label>Définition</label>
+            {{ form_widget(edit_form.definition) }}
+            {{ form_errors(edit_form.definition) }}
+        </div>
+        <div class="row center">
+            <ul>
+                <li>
+                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                    <a href="{{ path('objet_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                </li>
+            </ul>
+        </div>
+
+        {{ form_end(edit_form) }}
+
+    </div>
+
 {% endblock %}
