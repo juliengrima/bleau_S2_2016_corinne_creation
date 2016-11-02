@@ -4,71 +4,43 @@
 
     <div class="container">
 
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card teal center">
-                    <h1 class="white-text">Les contacts :</h1>
+                    <h1 class="white-text">Contact :</h1>
                 </div>
             </div>
         </div>
 
-        <div class="row center">
-            <div class="col s12 m12 l12">
-                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                    au menu</a>
-            </div>
-        </div>
+        <table class="highlight">
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Téléphone</th>
+                <th>E-mail</th>
+            </tr>
+            </thead>
 
-        <div class="row center">
-            <div class="col s12 m6 l2">
-                <p>Numéro du contact</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>Nom</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>Prenom</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>Téléphone</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>E-mail</p>
-            </div>
-            <div class="col s12 m6 l2">
-            </div>
-        </div>
-
-        {% for contact in contacts %}
-            <a href="{{ path('contact_edit', { 'id': contact.id }) }}">
-                <div class="row center spacing-rows">
-                    <div class="e">
-                        <div class="col s12 m6 l2 f">
-                            {{ contact.id }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {{ contact.nom }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {{ contact.prenom }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {{ contact.tel }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {{ contact.mail }}
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l2">
-                        {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
-                        {#<input type="hidden" name="_method" value="DELETE" />#}
-                        {#{{ form_widget(delete_form) }}#}
-                        {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
-
+            <tbody> <!-- Corps du tableau -->
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.nom }}</td>
+                    <td>{{ contact.prenom }}</td>
+                    <td>{{ contact.tel }}</td>
+                    <td>{{ contact.mail }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('contact_delete', { 'id': contact.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 
 {% endblock %}

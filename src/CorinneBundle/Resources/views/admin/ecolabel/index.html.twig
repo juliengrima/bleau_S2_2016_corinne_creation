@@ -1,58 +1,49 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
+
 {% block body %}
+
     <div class="container">
+
 
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card teal center">
-                    <h1 class="white-text">Eco-label :</h1>
+                    <h1 class="white-text">Categories :</h1>
                 </div>
             </div>
         </div>
 
-        <div class="row center">
-            <div class="col s12 m6 l6">
-                <a href="{{ path('ecolabel_new') }}" class="waves-effect red darken-4 btn" style="width:280px">Nouveau label</a>
-            </div>
-            <div class="col s12 m6 l6">
-                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                    au menu</a>
-            </div>
-        </div>
+        <table>
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+            </thead>
 
-        <div class="row center">
-            <div class="col s12 m6 l4">
-                <p>Description</p>
-            </div>
-            <div class="col s12 m6 l4">
-                <p>Image</p>
-            </div>
-            <div class="col s12 m6 l4">
-            </div>
-        </div>
-
-        {% for ecolabel in ecolabels %}
-            <a href="{{ path('ecolabel_edit', { 'id': ecolabel.id }) }}">
-                <div class="row center">
-                    <div class="e">
-                        <div class="col s12 m6 l4 f">
-                            <p>{{ ecolabel.texte }}</p>
-                        </div>
-                        <div class="col s12 m6 l4 f">
-                            <img src="{{ asset('uploads/img-ecolabel/')}}{{ ecolabel.source }}" class="img-eco">
-                        </div>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <form action="{{ path('ecolabel_delete', { 'id': ecolabel.id }) }}" method="post">
-                        <input type="hidden" name="_method" value="{{ ecolabel.id }}" />
-                        <a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>
-                        </form>
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
-
+            <tbody> <!-- Corps du tableau -->
+            {% for ecolabel in ecolabels %}
+                <tr>
+                    <td>{{ ecolabel.texte }}</td>
+                    <td>
+                        <img src="{{ asset('uploads/img-ecolabel/')}}{{ ecolabel.source }}"  class="img-eco">
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('ecolabel_edit', { 'id': ecolabel.id }) }}">Editer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('ecolabel_delete', { 'id': ecolabel.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 
 {% endblock %}

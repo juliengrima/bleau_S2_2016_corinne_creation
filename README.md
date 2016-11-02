@@ -20,3 +20,12 @@ A Symfony project created on October 17, 2016, 4:43 pm.
    debut de mise en page des edit. 
   Bugs : - contact_edit
          - contact_new (probleme envoie des mails)
+
+
+
+
+
+
+
+
+PENSEZ A CREER PAGE ECOLABEL VIA LA ROUTE
