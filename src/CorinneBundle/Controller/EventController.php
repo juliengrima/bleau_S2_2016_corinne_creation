@@ -46,7 +46,7 @@ class EventController extends Controller
             $em->persist($event);
             $em->flush();
 
-            return $this->redirectToRoute('event_show', array('id' => $event->getId()));
+            return $this->redirectToRoute('event_index', array('id' => $event->getId()));
         }
         ;
         $datedebut = date("d.m.y");
@@ -58,20 +58,6 @@ class EventController extends Controller
             'form' => $form->createView(),
         ));
 
-    }
-
-    /**
-     * Finds and displays a Event entity.
-     *
-     */
-    public function showAction(Event $event)
-    {
-        $deleteForm = $this->createDeleteForm($event);
-
-        return $this->render('@Corinne/admin/event/show.html.twig', array(
-            'event' => $event,
-            'delete_form' => $deleteForm->createView(),
-        ));
     }
 
     /**
@@ -89,7 +75,7 @@ class EventController extends Controller
             $em->persist($event);
             $em->flush();
 
-            return $this->redirectToRoute('event_edit', array('id' => $event->getId()));
+            return $this->redirectToRoute('event_index', array('id' => $event->getId()));
         }
 
         return $this->render('@Corinne/admin/event/edit.html.twig', array(
@@ -103,18 +89,18 @@ class EventController extends Controller
      * Deletes a Event entity.
      *
      */
-    public function deleteAction(Request $request, Event $event)
-    {
-        $form = $this->createDeleteForm($event);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($event);
-            $em->flush();
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $event = $em->getRepository('CorinneBundle:Event')->findOneById($id);
+        $fileName = 'uploads/imgp-event/' . $event->getSource();
+        if(file_exists($fileName)) {
+            unlink($fileName);
         }
+        $em->remove($event);
+        $em->flush();
 
         return $this->redirectToRoute('event_index');
+
     }
 
     /**

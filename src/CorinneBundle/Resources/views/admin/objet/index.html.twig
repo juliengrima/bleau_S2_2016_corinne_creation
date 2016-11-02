@@ -4,6 +4,7 @@
 
     <div class="container">
 
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card teal center">
@@ -13,66 +14,43 @@
         </div>
 
         <div class="row center">
-            <div class="col s12 m6 l6">
-                <a href="{{ path('objet_new') }}" class="waves-effect waves-light btn" style="width:280px">Nouvel oeuvre</a>
-            </div>
-            <div class="col s12 m6 l6">
-                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                    au menu</a>
+            <div class="col s12">
+                <a href="{{ path('objet_new') }}" class="waves-effect waves-light btn">Nouvelle Oeuvre</a>
             </div>
         </div>
 
-        <div class="row center">
-            <div class="col s12 m6 l2">
-                <p>Numéro de l'oeuvre</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>Image</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>nom de l'image</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>Définition</p>
-            </div>
-            <div class="col s12 m6 l2">
-                <p>ajout au carousel</p>
-            </div>
-            <div class="col s12 m6 l2">
-            </div>
-        </div>
+        <table class="highlight centered">
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Image</th>
+                <td>Nom de l'image</td>
+                <th>Définition</th>
+                <th>Carousel</th>
+                <th>Action</th>
+            </tr>
+            </thead>
 
-        {% for objet in objets %}
-
-            <div class="row center">
-                <a href="{{ path('objet_edit', { 'id': objet.id }) }}">
-                    <div class="e">
-                        <div class="col s12 m6 l2 f">
-                            {{ objet.id }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            <img src="{{ asset('uploads/pictures/' ~ objet.source) }}" alt="" />
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {{ objet.alt }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {{ objet.definition }}
-                        </div>
-                        <div class="col s12 m6 l2 f">
-                            {% if objet.slider %}Yes{% else %}No{% endif %}
-                        </div>
-                    </div>
-                </a>
-                <div class="col s12 m6 l2">
-                    {#<form action="{{ path('categorie_delete', { 'id': categorie.id }) }}" method="post">#}
-                    {#<input type="hidden" name="_method" value="DELETE" />#}
-                    {#{{ form_widget(delete_form) }}#}
-                    {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
-                </div>
-            </div>
-        {% endfor %}
-
+            <tbody> <!-- Corps du tableau -->
+            {% for objet in objets %}
+                <tr>
+                    <td><img src="{{ asset('uploads/pictures/')}}{{ objet.source }}" class="img-eco">}</td>
+                    <td>{{ objet.alt }}</td>
+                    <td>{{ objet.definition }}</td>
+                    <td> {% if objet.slider %}Yes{% else %}No{% endif %}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('objet_edit', { 'id': objet.id }) }}">Editer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('objet_delete', { 'id': objet.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 
 {% endblock %}

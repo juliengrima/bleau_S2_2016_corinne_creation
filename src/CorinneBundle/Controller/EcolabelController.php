@@ -61,26 +61,12 @@ class EcolabelController extends Controller
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_index', array('id' => $ecolabel->getId()));
         }
 
         return $this->render('@Corinne/admin/ecolabel/new.html.twig', array(
             'ecolabel' => $ecolabel,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Ecolabel entity.
-     *
-     */
-    public function showAction(Ecolabel $ecolabel)
-    {
-        $deleteForm = $this->createDeleteForm($ecolabel);
-
-        return $this->render('@Corinne/admin/ecolabel/show.html.twig', array(
-            'ecolabel' => $ecolabel,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -123,7 +109,7 @@ class EcolabelController extends Controller
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_index', array('id' => $ecolabel->getId()));
         }
 
         return $this->render('@Corinne/admin/ecolabel/edit.html.twig', array(

@@ -3,18 +3,28 @@
 {% block body %}
 <div class="container">
     <div class="card teal center">
-    <h1 class="white-text">Ajout De Presse :</h1>
+    <h1 class="white-text">Ajouter une Presse :</h1>
     </div>
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
+        <div>
+            <label>Coupure de presse</label>
+            {{ form_widget(form.file) }}
+            {{ form_errors(form.file) }}
+        </div>
+        <div>
+            <label>Nom de la coupure</label>
+            {{ form_widget(form.alt) }}
+            {{ form_errors(form.alt) }}
+        </div>
+        <div class="row center">
+            <ul>
+                <li>
+                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                    <a href="{{ path('presse_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                </li>
+            </ul>
+        </div>
     {{ form_end(form) }}
-    <ul>
-        <li>
-
-            <a href="{{ path('presse_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>
-
-        </li>
-    </ul>
 </div>
+
 {% endblock %}

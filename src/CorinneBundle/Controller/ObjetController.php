@@ -63,26 +63,12 @@ class ObjetController extends Controller
             $em->persist($objet);
             $em->flush();
 
-            return $this->redirectToRoute('objet_show', array('id' => $objet->getId()));
+            return $this->redirectToRoute('objet_index', array('id' => $objet->getId()));
         }
 
         return $this->render('@Corinne/admin/objet/new.html.twig', array(
             'objet' => $objet,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Objet entity.
-     *
-     */
-    public function showAction(Objet $objet)
-    {
-        $deleteForm = $this->createDeleteForm($objet);
-
-        return $this->render('@Corinne/admin/objet/show.html.twig', array(
-            'objet' => $objet,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -126,7 +112,7 @@ class ObjetController extends Controller
             $em->persist($objet);
             $em->flush();
 
-            return $this->redirectToRoute('objet_edit', array('id' => $objet->getId()));
+            return $this->redirectToRoute('objet_index', array('id' => $objet->getId()));
         }
 
         return $this->render('@Corinne/admin/objet/edit.html.twig', array(
@@ -140,20 +126,18 @@ class ObjetController extends Controller
      * Deletes a Objet entity.
      *
      */
-    public function deleteAction(Request $request, Objet $objet)
-    {
-        $form = $this->createDeleteForm($objet);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($objet);
-            $em->flush();
-            $filename = 'uploads/pictures/' . $objet->getSource();
-            unlink($filename);
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $objet = $em->getRepository('CorinneBundle:Objet')->findOneById($id);
+        $fileName = 'uploads/pictures/' . $objet->getSource();
+        if(file_exists($fileName)) {
+            unlink($fileName);
         }
+        $em->remove($objet);
+        $em->flush();
 
         return $this->redirectToRoute('objet_index');
+
     }
 
     /**

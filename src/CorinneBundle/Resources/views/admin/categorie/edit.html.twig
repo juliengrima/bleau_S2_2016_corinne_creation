@@ -2,41 +2,37 @@
 
 
 {% block body %}
-
     <div class="container">
-
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="card teal center">
-                    <h1 class="white-text">Categories :</h1>
-                </div>
-            </div>
+        <div class="card teal center">
+            <h1 class="white-text">Editer une categorie :</h1>
         </div>
 
-
-        <div class="row">
-            <form action="{{ path('categorie_edit', { 'id': categorie.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-                <div class="col s12 m6 l4">
-                    <h5>catégorie</h5>
-                    <input type="text" name="categorie" value="{{ categorie.nomcat }}">
-                </div>
-                <div class="col s12 m6 l4 btn-heigth">
-                    <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
-                </div>
-            </form>
+        {{ form_start(edit_form) }}
+        <div>
+            <label>Nom de la catégorie</label>
+            {{ form_widget(edit_form.nomcat) }}
+            {{ form_errors(edit_form.nomcat) }}
         </div>
-
+        <div>
+            <label>Image de la categorie</label>
+            {{ form_widget(edit_form.source) }}
+            {{ form_errors(edit_form.source) }}
+        </div>
+        <div>
+            <label>Alt</label>
+            {{ form_widget(edit_form.alt) }}
+            {{ form_errors(edit_form.alt) }}
+        </div>
         <div class="row center">
-            <div class="col s12 m6 l6">
-                <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la liste</a>
-            </div>
-            <div class="col s12 m6 l6">
-                {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer" class="waves-effect waves-light btn" style="width:220px">
-                {{ form_end(delete_form) }}
-            </div>
+            <ul>
+                <li>
+                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                    <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                </li>
+            </ul>
         </div>
+
+        {{ form_end(edit_form) }}
 
     </div>
-
 {% endblock %}

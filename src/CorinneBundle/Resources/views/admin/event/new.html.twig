@@ -3,14 +3,63 @@
 {% block body %}
 <div class="container">
     <div class="card teal center">
-    <h1 class="white-text">Event creation</h1>
+        <h1 class="white-text">Ajouter un évènement</h1>
     </div>
+
     {{ form_start(form) }}
+
     {{ event.dateDebut | date('d-m-Y') }}
     {{ datedebut | date('d-m-Y') }}
         {{ form_widget(form) }}
 
         <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
+
+        <div>
+            <label>Titre</label>
+            {{ form_widget(form.titre) }}
+            {{ form_errors(form.titre) }}
+        </div>
+        <div>
+            <label>Descriptif</label>
+            {{ form_widget(form.descriptif) }}
+            {{ form_errors(form.descriptif) }}
+        </div>
+        <div>
+            <label>Date de début</label>
+            {{ form_widget(form.dateDebut) }}
+            {{ form_errors(form.dateDebut) }}
+        </div>
+        <div>
+            <label>Date de fin</label>
+            {{ form_widget(form.dateFin) }}
+            {{ form_errors(form.dateFin) }}
+        </div>
+        <div>
+            <label>Lieu</label>
+            {{ form_widget(form.lieu) }}
+            {{ form_errors(form.lieu) }}
+        </div>
+        <div>
+            <label>Image</label>
+            {{ form_widget(form.file) }}
+            {{ form_errors(form.file) }}
+        </div>
+        <div>
+            <label>Mon de l'image</label>
+            {{ form_widget(form.alt) }}
+            {{ form_errors(form.alt) }}
+        </div>
+        <div></div>
+        <div class="row center">
+            <ul>
+                <li>
+                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                    <a href="{{ path('event_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                </li>
+            </ul>
+        </div>
+
     {{ form_end(form) }}
 </div>
+
 {% endblock %}

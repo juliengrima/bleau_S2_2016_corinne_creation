@@ -17,16 +17,6 @@ class Contact
 
     }
 
-    private $msg;
-
-    public function getMsg(){
-        return $this->msg;
-    }
-
-    public function setMsg($msg){
-        $this->msg = $msg;
-    }
-
 
 //    GENERATED CODE
 
