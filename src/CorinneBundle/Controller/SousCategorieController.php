@@ -54,20 +54,6 @@ class SousCategorieController extends Controller
     }
 
     /**
-     * Finds and displays a SousCategorie entity.
-     *
-     */
-    public function showAction(SousCategorie $sousCategorie)
-    {
-        $deleteForm = $this->createDeleteForm($sousCategorie);
-
-        return $this->render('@Corinne/admin/souscategorie/show.html.twig', array(
-            'sousCategorie' => $sousCategorie,
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
      * Displays a form to edit an existing SousCategorie entity.
      *
      */
@@ -122,4 +108,19 @@ class SousCategorieController extends Controller
             ->getForm()
         ;
     }
+
+    /*
+     * APPEL DE L'ENTITY CATEGORIE
+     */
+//    public function categorieAction(){
+//
+//        $em = $this->getDoctrine()->getManager();
+//        $categories = $em->getRepository('CorinneBundle:Categorie')->findBy($id);
+//
+//        return $this->renderView(
+//            array(
+//                'categories' => $categories
+//            ));
+//    }
+
 }

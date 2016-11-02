@@ -3,19 +3,37 @@
 namespace CorinneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 
 /**
  * Objet
  */
 class Objet
 {
+    public function __toString()
+    {
+        return strval($this->id);
+    }
+    //  FONCTION DE METHOD UPLOAD
+
+//  GENERATED CODE
+
+
     /**
      * @var integer
      */
     private $id;
 
+
     /**
-     * @var string
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Please, upload the product brochure as a PDF file.")
+     * @Assert\File(
+     *     maxSize = "400k",
+     *     mimeTypes={ "image/jpeg", "image/jpg", "image/png" })
      */
     private $source;
 
@@ -197,8 +215,5 @@ class Objet
 
 
 
-    public function __toString()
-    {
-        return strval($this->id);
-    }
+
 }

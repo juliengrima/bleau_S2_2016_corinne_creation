@@ -9,15 +9,14 @@
 
         {{ form_start(form) }}
         {#<div>#}
-        {##}
-        {#<label>Nom de la catégorie</label>#}
-        {#<select>Catégories</select>#}
-        {#{% for categorie in categories %}#}
-        {#<option>#}
-        {#{{ form_widget(edit_form.nomcat) }}#}
-        {#{{ form_errors(edit_form.nomcat) }}#}
-        {#</option>#}
-        {#{% endfor %}#}
+            {#<label>Nom de la catégorie</label>#}
+            {#<select>Catégories</select>#}
+            {#{% for categorie in categories %}#}
+            {#<option>#}
+            {#{{ form_widget(form.nomcat) }}#}
+            {#{{ form_errors(form.nomcat) }}#}
+            {#</option>#}
+            {#{% endfor %}#}
         {#</div>#}
         <div>
             <label>Sous catégorie</label>
