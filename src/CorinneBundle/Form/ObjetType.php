@@ -5,7 +5,7 @@ namespace CorinneBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 class ObjetType extends AbstractType
 {
     /**
@@ -19,7 +19,7 @@ class ObjetType extends AbstractType
             ->add('slider')
             ->add('sousCateg')
             ->add('categ')
-            ->add('source', 'file', array('label' => 'Image  (JPG)', 'required' => false))
+            ->add('source', FileType::class, array('label' => 'Image (fichier JPG)', 'data_class' => null))
             ->add('alt')
         ;
     }

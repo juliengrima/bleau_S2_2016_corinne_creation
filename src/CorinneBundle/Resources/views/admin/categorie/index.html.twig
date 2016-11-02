@@ -5,6 +5,7 @@
 
     <div class="container">
 
+
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="card teal center">
@@ -47,7 +48,7 @@
                         {{ categorie.nomcat }}
                     </div>
                     <div class="col s12 m6 l3 f">
-                        <img src="{ asset('uploads/img-categorie/')}}{{ categorie.source }}" class="img-size">
+                        <img src="{{ asset('uploads/pictures/' ~ categorie.source) }}" alt="" />
                     </div>
                 </div>
                 <div class="col s12 m6 l3">

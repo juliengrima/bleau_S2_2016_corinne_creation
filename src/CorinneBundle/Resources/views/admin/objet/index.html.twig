@@ -43,6 +43,7 @@
         </div>
 
         {% for objet in objets %}
+
             <div class="row center">
                 <a href="{{ path('objet_edit', { 'id': objet.id }) }}">
                     <div class="e">
@@ -50,7 +51,7 @@
                             {{ objet.id }}
                         </div>
                         <div class="col s12 m6 l2 f">
-                            {{ objet.source }}
+                            <img src="{{ asset('uploads/pictures/' ~ objet.source) }}" alt="" />
                         </div>
                         <div class="col s12 m6 l2 f">
                             {{ objet.alt }}

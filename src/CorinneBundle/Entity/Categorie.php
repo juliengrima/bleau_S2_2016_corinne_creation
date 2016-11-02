@@ -3,6 +3,7 @@
 namespace CorinneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Categorie
@@ -14,6 +15,56 @@ class Categorie
     {
         // TODO: Implement __toString() method.
         return $this->nomcat;
+    }
+
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Please, upload the product brochure as a PDF file.")
+     * @Assert\File(
+     *     maxSize = "400k",
+     *     mimeTypes={ "application/pdf", "image/jpeg" })
+     */
+    private $source;
+
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    public function setSource($source)
+    {
+        $this->source = $source;
+
+        return $this;
+    }
+
+    /**
+     * @var string
+     */
+    private $alt;
+    /**
+     * Set alt
+     *
+     * @param string $alt
+     * @return Objet
+     */
+    public function setAlt($alt)
+    {
+        $this->alt = $alt;
+
+        return $this;
+    }
+
+    /**
+     * Get alt
+     *
+     * @return string
+     */
+    public function getAlt()
+    {
+        return $this->alt;
     }
 
     // YAM GENERATED CODE
@@ -144,60 +195,5 @@ class Categorie
     {
         return $this->objet;
     }
-    /**
-     * @var string
-     */
-    private $source;
 
-    /**
-     * @var string
-     */
-    private $alt;
-
-
-    /**
-     * Set source
-     *
-     * @param string $source
-     * @return Categorie
-     */
-    public function setSource($source)
-    {
-        $this->source = $source;
-
-        return $this;
-    }
-
-    /**
-     * Get source
-     *
-     * @return string 
-     */
-    public function getSource()
-    {
-        return $this->source;
-    }
-
-    /**
-     * Set alt
-     *
-     * @param string $alt
-     * @return Categorie
-     */
-    public function setAlt($alt)
-    {
-        $this->alt = $alt;
-
-        return $this;
-    }
-
-    /**
-     * Get alt
-     *
-     * @return string 
-     */
-    public function getAlt()
-    {
-        return $this->alt;
-    }
 }

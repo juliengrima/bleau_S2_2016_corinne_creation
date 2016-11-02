@@ -17,6 +17,11 @@
             <tr>
                 <th class="center">Nomcat</th>
                 <td>{{ categorie.nomcat }}</td>
+                <td>
+                    <img src="{{ asset('uploads/pictures/' ~ categorie.source) }}" alt="" />
+
+                </td>
+                <td>{{ categorie.alt }}</td>
             </tr>
             </tbody>
         </table>

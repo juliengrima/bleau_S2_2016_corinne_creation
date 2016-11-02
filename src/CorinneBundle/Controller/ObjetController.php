@@ -40,6 +40,25 @@ class ObjetController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $objet->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $objet->setSource($fileName);
+
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($objet);
             $em->flush();
@@ -78,6 +97,31 @@ class ObjetController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+
+            $fileName = 'uploads/pictures/' . $objet->getSource();
+            if(file_exists($fileName)) {
+                unlink($fileName);
+            }
+
+
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $objet->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $objet->setSource($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($objet);
             $em->flush();
@@ -105,6 +149,8 @@ class ObjetController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($objet);
             $em->flush();
+            $filename = 'uploads/pictures/' . $objet->getSource();
+            unlink($filename);
         }
 
         return $this->redirectToRoute('objet_index');
