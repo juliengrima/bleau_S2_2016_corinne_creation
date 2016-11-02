@@ -108,19 +108,4 @@ class SousCategorieController extends Controller
             ->getForm()
         ;
     }
-
-    /*
-     * APPEL DE L'ENTITY CATEGORIE
-     */
-//    public function categorieAction(){
-//
-//        $em = $this->getDoctrine()->getManager();
-//        $categories = $em->getRepository('CorinneBundle:Categorie')->findBy($id);
-//
-//        return $this->renderView(
-//            array(
-//                'categories' => $categories
-//            ));
-//    }
-
 }

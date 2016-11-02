@@ -18,7 +18,3 @@ souscategorie_delete:
     defaults: { _controller: "CorinneBundle:SousCategorie:delete" }
     methods:  [GET, POST]
 
-categorie_index:
-    path:     /
-    defaults: { _controller: "CorinneBundle:Categorie:index" }
-    methods:  GET
