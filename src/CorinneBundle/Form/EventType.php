@@ -18,7 +18,7 @@ class EventType extends AbstractType
             ->add('titre')
             ->add('descriptif')
             ->add('dateDebut', 'datetime')
-            ->add('dateFin', 'date')
+            ->add('dateFin', 'datetime')
             ->add('lieu')
             ->add('file', 'file', array('label' => 'Image  (JPG)', 'required' => false))
             ->add('alt')

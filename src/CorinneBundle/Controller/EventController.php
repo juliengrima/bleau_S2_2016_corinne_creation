@@ -52,7 +52,6 @@ class EventController extends Controller
         $datedebut = date("d.m.y");
 
         return $this->render('@Corinne/admin/event/new.html.twig', array(
-//        return $this->render('@Corinne/admin/event/test.html.twig', array(
             'event' => $event,
             'datedebut' => $datedebut,
             'form' => $form->createView(),

@@ -8,20 +8,12 @@
         </div>
 
         {{ form_start(form) }}
-        {#<div>#}
-            {#<label>Categorie</label>#}
-            {#<select>Catégories</select>#}
-            {#{% for categorie in categories  %}#}
-                {#<option></option>#}
-            {#{% endfor %}#}
-        {#</div>#}
-        {#<div>#}
-            {#<label>Sous-categorie</label>#}
-            {#<select>Sous-catégories</select>#}
-            {#{% for categorie in categories  %}#}
-                {#<option></option>#}
-            {#{% endfor %}#}
-        {#</div>#}
+        <div>
+            <label>Image</label>
+            {{ form_widget(form.sousCateg) }}
+            {{ form_errors(form.sousCateg) }}
+        </div>
+        <div>
         <div>
             <label>Image</label>
             {{ form_widget(form.source) }}

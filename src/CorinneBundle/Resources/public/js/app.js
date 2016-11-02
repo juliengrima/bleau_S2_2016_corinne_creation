@@ -2,6 +2,7 @@
 // *                       Appel Fonction
 // ********************************************************************
 jQuery(document).ready(function($) {
+    console.log('ca marche ');
 
     init_corinne();
     gestionSlider();
