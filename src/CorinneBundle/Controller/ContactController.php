@@ -34,7 +34,7 @@ class ContactController extends Controller
      */
     public function newAction(Request $request){
 
-        $routeName = $this->container->get('request')->get('_route');
+//        $routeName = $this->container->get('request')->get('_route');
         $check = $request->request->get('check');
         $text = $request->request->get('text');
         $mail = $request->request->get('email');
@@ -66,7 +66,7 @@ class ContactController extends Controller
             $from = $this->getParameter('mailer_user');
             $message = \Swift_Message::newInstance()
                 ->setSubject('Contact Corinne Création')
-                ->setFrom(array($from => 'corinne'))
+                ->setFrom(array($from => 'allard.corinne@laposte.net'))
                 ->setTo($from)
                 ->setBody(
                     $this->renderView(
@@ -83,7 +83,7 @@ class ContactController extends Controller
                 );
             $message2 = \Swift_Message::newInstance()
                 ->setSubject('Copie Contact Corinne Création')
-                ->setFrom(array($from => 'corinne'))
+                ->setFrom(array($from => 'allard.corinne@laposte.net'))
                 ->setTo($mail)
                 ->setBody(
                     $this->renderView(
@@ -100,13 +100,6 @@ class ContactController extends Controller
                 );
             $this->get('mailer')->send($message);
             $this->get('mailer')->send($message2);
-
-            return $this->render('@Corinne/admin/contact/new.html.twig', array(
-                'nom' => $contact,
-                'prenom' => $contact,
-                'tel' => $contact,
-                'mail' => $contact,
-            ));
 
 //            return $this->render('@Corinne/admin/contact/new.html.twig', array(
 //                'nom' => $contact,
@@ -125,7 +118,7 @@ class ContactController extends Controller
             $msg = $request->request->get('text');
             $message = \Swift_Message::newInstance()
                 ->setSubject('Contact Coriine Création')
-                ->setFrom(array($from => 'corinne'))
+                ->setFrom(array($from => 'allard.corinne@laposte.net'))
                 ->setTo($from)
                 ->setBody(
                     $this->renderView(
@@ -142,7 +135,7 @@ class ContactController extends Controller
                 );
             $message2 = \Swift_Message::newInstance()
                 ->setSubject('Copie Contact Corinne Création')
-                ->setFrom(array($from => 'corinne'))
+                ->setFrom(array($from => 'allard.corinne@laposte.net'))
                 ->setTo($mail)
                 ->setBody(
                     $this->renderView(
@@ -161,7 +154,7 @@ class ContactController extends Controller
             $this->get('mailer')->send($message2);
 
         }
-        return $this->redirectToRoute($routeName);
+        return $this->redirectToRoute('corinne_homepage');
     }
 
     /**
