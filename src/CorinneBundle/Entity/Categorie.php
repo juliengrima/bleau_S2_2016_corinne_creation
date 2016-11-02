@@ -23,8 +23,8 @@ class Categorie
      *
      * @Assert\NotBlank(message="Please, upload the product brochure as a PDF file.")
      * @Assert\File(
-     *     maxSize = "400k",
-     *     mimeTypes={"image/*" })
+     *     maxSize = "600k",
+     *     mimeTypes={ "image/*" })
      */
     private $source;
 

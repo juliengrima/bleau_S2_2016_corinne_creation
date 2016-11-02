@@ -3,73 +3,20 @@
 namespace CorinneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Ecolabel
  */
 class Ecolabel
 {
-    //  FONCTION DE METHOD UPLOAD
+
+    /**
+     * @var integer
+     */
     public $file;
 
-    public function preUpload()
-    {
-        if (null !== $this->file) {
-            // do whatever you want to generate a unique name
-            $this->source = uniqid().'.'.$this->file->guessExtension();
-        }
-    }
-
-    /**
-     * @ORM\postPersist
-     */
-    public function upload()
-    {
-        if (null === $this->file) {
-            return;
-        }
-
-        // if there is an error when moving the file, an exception will
-        // be automatically thrown by move(). This will properly prevent
-        // the entity from being persisted to the database on error
-        $this->file->move($this->getUploadRootDir(), $this->source);
-
-        unset($this->file);
-    }
-
-    /**
-     * @ORM\postRemove
-     */
-    public function removeUpload()
-    {
-        if ($file = $this->getAbsolutePath()) {
-            unlink($file);
-        }
-    }
-
-    //  FONCTION DE TEST DU DOSSIER UPLOAD
-    protected function getUploadDir()
-    {
-        return 'uploads/img-ecolabel';
-    }
-
-    protected function getUploadRootDir()
-    {
-        return __DIR__.'/../../../web/'.$this->getUploadDir();
-    }
-
-    public function getWebPath()
-    {
-        return null === $this->source ? null : $this->getUploadDir().'/'.$this->source;
-    }
-
-    public function getAbsolutePath()
-    {
-        return null === $this->source ? null : $this->getUploadRootDir().'/'.$this->source;
-    }
-
-
-//  CODE GENERER
+//  GENERATED CODE
     /**
      * @var integer
      */

@@ -38,6 +38,12 @@ function init_corinne()
 
     $('.modal-trigger').leanModal();
 
+
+    $(".dropdown-button").dropdown();
+
+
+
+
 }
 
 function zoom_images() {

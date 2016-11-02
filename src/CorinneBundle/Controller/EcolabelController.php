@@ -40,12 +40,28 @@ class EcolabelController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+            // $file stores the uploaded IMAGE file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $ecolabel->getSource();
 
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $ecolabel->setSource($fileName);
+
+            $em = $this->getDoctrine()->getManager();
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_index', array('id' => $ecolabel->getId()));
         }
 
         return $this->render('@Corinne/admin/ecolabel/new.html.twig', array(
@@ -65,12 +81,35 @@ class EcolabelController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $ecolabel->preUpload();
+            $fileName = 'uploads/pictures/' . $ecolabel->getSource();
+            if(file_exists($fileName)) {
+                unlink($fileName);
+            }
+
+
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $ecolabel->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $ecolabel->setSource($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_index', array('id' => $ecolabel->getId()));
         }
 
         return $this->render('@Corinne/admin/ecolabel/edit.html.twig', array(
@@ -93,6 +132,12 @@ class EcolabelController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($ecolabel);
             $em->flush();
+
+            $filename = 'uploads/pictures/' . $ecolabel->getSource();
+            if(file_exists($filename)) {
+                unlink($filename);
+            }
+
         }
 
         return $this->redirectToRoute('ecolabel_index');

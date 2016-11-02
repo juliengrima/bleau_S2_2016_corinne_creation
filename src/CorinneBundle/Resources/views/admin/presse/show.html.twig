@@ -1,0 +1,41 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="card teal center">
+    <h1 class="white-text">Presse</h1>
+    </div>
+
+
+    <table class="bordered  highlight center responsive-table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ presse.id }}</td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>{{ presse.source }}</td>
+            </tr>
+            <tr>
+                <th>Alt</th>
+                <td>{{ presse.alt }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('presse_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>
+        </li>
+        <li>
+            <a href="{{ path('presse_edit', { 'id': presse.id }) }}" class="waves-effect waves-light btn" style="width:220px"</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input class="waves-effect waves-light btn" type="submit" value="Supprimer" style="width:220px">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+</div>
+{% endblock %}

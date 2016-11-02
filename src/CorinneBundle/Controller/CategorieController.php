@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use CorinneBundle\Entity\Categorie;
 use CorinneBundle\Form\CategorieType;
 use Symfony\Component\HttpFoundation\Response;
+use Imagick;
 /**
  * Categorie controller.
  *
@@ -23,6 +24,23 @@ class CategorieController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $categories = $em->getRepository('CorinneBundle:Categorie')->findAll();
+
+//        foreach ($categories as $element) {
+
+//            $element['picture_min'] = '42';
+//            var_dump($element);
+
+
+//            header('Content-type: image/jpeg');
+
+//            $image = new \Imagick('uploads/pictures/' . $element->getSource());
+//            $image = new \Imagick('uploads/pictures/c1d13bee49265dad8508c9466f7c6f46.jpeg' );
+// Si 0 est fourni comme paramètre de hauteur ou de largeur,
+// les proportions seront conservées
+//            $image->thumbnailImage(100, 0);
+
+//            echo $image;
+//        }
 
         return $this->render('@Corinne/admin/categorie/index.html.twig', array(
             'categories' => $categories,
