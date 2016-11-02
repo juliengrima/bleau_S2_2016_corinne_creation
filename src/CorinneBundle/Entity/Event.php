@@ -89,6 +89,9 @@ class Event
 
     /**
      * @var \DateTime
+     *
+     * @ORM\Column(name="action_date", type="datetime", precision=0)
+     *
      */
     private $dateDebut;
 

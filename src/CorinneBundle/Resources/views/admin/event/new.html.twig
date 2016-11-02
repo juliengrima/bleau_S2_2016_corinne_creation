@@ -6,7 +6,10 @@
     <h1 class="white-text">Event creation</h1>
     </div>
     {{ form_start(form) }}
+    {{ event.dateDebut | date('d-m-Y') }}
+    {{ datedebut | date('d-m-Y') }}
         {{ form_widget(form) }}
+
         <input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />
     {{ form_end(form) }}
 </div>
