@@ -14,48 +14,6 @@
             </div>
         </div>
 
-        {#<div class="row center">#}
-            {#<div class="col s12 m6 l6">#}
-                {#<a href="{{ path('ecolabel_new') }}" class="waves-effect red darken-4 btn" style="width:280px">Nouveau label</a>#}
-            {#</div>#}
-            {#<div class="col s12 m6 l6">#}
-                {#<a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour#}
-                    {#au menu</a>#}
-            {#</div>#}
-        {#</div>#}
-
-        {#<div class="row center">#}
-            {#<div class="col s12 m6 l4">#}
-                {#<p>Description</p>#}
-            {#</div>#}
-            {#<div class="col s12 m6 l4">#}
-                {#<p>Image</p>#}
-            {#</div>#}
-            {#<div class="col s12 m6 l4">#}
-            {#</div>#}
-        {#</div>#}
-
-        {#{% for ecolabel in ecolabels %}#}
-            {#<a href="{{ path('ecolabel_edit', { 'id': ecolabel.id }) }}">#}
-                {#<div class="row center">#}
-                    {#<div class="e">#}
-                        {#<div class="col s12 m6 l4 f">#}
-                            {#<p>{{ ecolabel.texte }}</p>#}
-                        {#</div>#}
-                        {#<div class="col s12 m6 l4 f">#}
-                            {#<img src="{{ asset('uploads/pictures/' ~ ecolabel.source) }}" alt="img-eco" />#}
-                        {#</div>#}
-                    {#</div>#}
-                    {#<div class="col s12 m6 l4">#}
-                        {#<form action="{{ path('ecolabel_delete', { 'id': ecolabel.id }) }}" method="post">#}
-                        {#<input type="hidden" name="_method" value="{{ ecolabel.id }}" />#}
-                        {#<a type="submit"><img src="{{ asset('bundles/corinne/images/poubelle.png') }}" class="delete"></a>#}
-                        {#</form>#}
-                    {#</div>#}
-                {#</div>#}
-            {#</a>#}
-        {#{% endfor %}#}
-
         <table>
             <thead> <!-- En-tête du tableau -->
             <tr>
@@ -71,17 +29,14 @@
                 <tr>
                     <td>{{ ecolabel.texte }}</td>
                     <td>
-                        {#<img src="{{ asset('uploads/img-ecolabel/')}}{{ ecolabel.source }}"  class="img-eco">#}
-                        <img src="{{ asset('uploads/pictures/' ~ ecolabel.source) }}" alt="img-eco" />
+                        <img src="{{ asset('uploads/pictures/') }}{{ (ecolabel.source) }}" alt="img-eco" />
                     </td>
                     <td>
                         <ul>
                             <li>
                                 <a href="{{ path('ecolabel_edit', { 'id': ecolabel.id }) }}">Editer</a>
                             </li>
-                            {#<li>#}
-                                {#<a href="{{ path('ecolabel_delete', { 'id': ecolabel.id }) }}">Supprimer</a>#}
-                            {#</li>#}
+
                         </ul>
                     </td>
                 </tr>

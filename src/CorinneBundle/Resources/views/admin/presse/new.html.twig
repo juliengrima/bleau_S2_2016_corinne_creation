@@ -6,16 +6,25 @@
     <h1 class="white-text">Ajouter une Presse :</h1>
     </div>
     {{ form_start(form) }}
-        <div>
-            <label>Coupure de presse</label>
-            {{ form_widget(form.file) }}
-            {{ form_errors(form.file) }}
+    <center>
+    <div class="reducto">
+        <div class="row left-align">
+            <div class="col s12">
+                <label><h6>Coupure de presse</h6></label>
+                {{ form_widget(form.file) }}
+                {{ form_errors(form.file) }}
+            </div>
         </div>
-        <div>
-            <label>Nom de la coupure</label>
-            {{ form_widget(form.alt) }}
-            {{ form_errors(form.alt) }}
+        <div class="row left-align">
+            <div col s12>
+                <label>Nom de la coupure</label>
+                {{ form_widget(form.alt) }}
+                {{ form_errors(form.alt) }}
+            </div>
         </div>
+    </div>
+    </center>
+
         <div class="row center">
             <ul>
                 <li>

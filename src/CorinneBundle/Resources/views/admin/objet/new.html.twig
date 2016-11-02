@@ -8,31 +8,43 @@
         </div>
 
         {{ form_start(form) }}
-        <div>
-            <label>Image</label>
-            {{ form_widget(form.sousCateg) }}
-            {{ form_errors(form.sousCateg) }}
-        </div>
-        <div>
-        <div>
-            <label>Image</label>
-            {{ form_widget(form.source) }}
-            {{ form_errors(form.source) }}
-        </div>
-        <div>
-            <label>Nom de l'image</label>
-            {{ form_widget(form.alt) }}
-            {{ form_errors(form.alt) }}
-        </div>
-        <div>
-            <label>Alt</label>
-            {{ form_widget(form.definition) }}
-            {{ form_errors(form.definition) }}
-        </div>
-        <div>
-            <label>Ajouter au carousel</label>
+        <center>
+        <div class="reducto">
+            <div class="row left-align">
+                <div class="col s12">
+                    <label><h6>Image</h6></label>
+                    {{ form_widget(form.sousCateg) }}
+                    {{ form_errors(form.sousCateg) }}
+                </div>
+            </div>
+            <div class="row left-align">
+                <div class="col s12">
+                    <label><h6>Image</h6></label>
+                    {{ form_widget(form.source) }}
+                    {{ form_errors(form.source) }}
+                </div>
+            </div>
+            <div class="row left-align">
+                <div class="col s12">
+                    <label><h6>Nom de l'image</h6></label>
+                    {{ form_widget(form.alt) }}
+                    {{ form_errors(form.alt) }}
+                </div>
+            </div>
+            <div class="row left-align">
+                <div class="col s12">
+                    <label><h6>Description</h6></label>
+                    {{ form_widget(form.definition) }}
+                    {{ form_errors(form.definition) }}
+                </div>
+            </div>
+            {#<div>#}
+                {#<label>Ajouter au carousel</label>#}
+            {#</div>#}
 
         </div>
+        </center>
+
         <div class="row center">
             <ul>
                 <li>

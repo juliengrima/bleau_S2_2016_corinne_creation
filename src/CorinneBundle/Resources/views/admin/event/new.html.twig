@@ -7,49 +7,57 @@
     </div>
 
         {{ form_start(form) }}
-        <div class="row">
-            <label>Titre</label>
-            {{ form_widget(form.titre) }}
-            {{ form_errors(form.titre) }}
-        </div>
-        <div class="row">
-            <label>Descriptif</label>
-            {{ form_widget(form.descriptif) }}
-            {{ form_errors(form.descriptif) }}
-        </div>
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <label>Date de début</label>
-                <div class="input-field">
-                {{ form_widget(form.dateDebut) }}
-                {{ form_errors(form.dateDebut) }}
-                </div
+        <center>
+        <div class="reducto">
+            <div class="row">
+                <label><h6>Titre</h6></label>
+                {{ form_widget(form.titre) }}
+                {{ form_errors(form.titre) }}
+            </div>
+            <div class="row">
+                <label><h6>Descriptif</h6></label>
+                {{ form_widget(form.descriptif) }}
+                {{ form_errors(form.descriptif) }}
             </div>
         </div>
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <label>Date de fin</label>
-                <div class="input-field">
-                {{ form_widget(form.dateFin) }}
-                {{ form_errors(form.dateFin) }}
+        </center>
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <label><h6>Date de début</h6></label>
+                    <div class="input-field">
+                    {{ form_widget(form.dateDebut) }}
+                    {{ form_errors(form.dateDebut) }}
+                    </div
                 </div>
             </div>
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <label><h6>Date de fin</h6></label>
+                    <div class="input-field">
+                    {{ form_widget(form.dateFin) }}
+                    {{ form_errors(form.dateFin) }}
+                    </div>
+                </div>
+            </div>
+        <center>
+        <div class="reducto">
+            <div class="row">
+                <label><h6>Lieu</h6></label>
+                {{ form_widget(form.lieu) }}
+                {{ form_errors(form.lieu) }}
+            </div>
+            <div class="row">
+                <label><h6>Image</h6></label>
+                {{ form_widget(form.file) }}
+                {{ form_errors(form.file) }}
+            </div>
+            <div class="row">
+                <label><h6>Nom de l'image</h6></label>
+                {{ form_widget(form.alt) }}
+                {{ form_errors(form.alt) }}
+            </div>
         </div>
-        <div class="row">
-            <label>Lieu</label>
-            {{ form_widget(form.lieu) }}
-            {{ form_errors(form.lieu) }}
-        </div>
-        <div class="row">
-            <label>Image</label>
-            {{ form_widget(form.file) }}
-            {{ form_errors(form.file) }}
-        </div>
-        <div class="row">
-            <label>Mon de l'image</label>
-            {{ form_widget(form.alt) }}
-            {{ form_errors(form.alt) }}
-        </div>
+        </center>
 
         <div class="row center">
             <ul>

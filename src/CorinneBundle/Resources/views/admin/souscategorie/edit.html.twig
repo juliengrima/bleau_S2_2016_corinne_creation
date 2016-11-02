@@ -4,26 +4,29 @@
 
     <div class="container">
         <div class="card teal center">
-            <h1 class="white-text">Categorie creation :</h1>
+            <h1 class="white-text">Editer une sous catégorie :</h1>
         </div>
 
         {{ form_start(edit_form) }}
-        {#<div>#}
-           {##}
-            {#<label>Nom de la catégorie</label>#}
-            {#<select>Catégories</select>#}
-            {#{% for categorie in categories %}#}
-            {#<option>#}
-            {#{{ form_widget(edit_form.nomcat) }}#}
-            {#{{ form_errors(edit_form.nomcat) }}#}
-            {#</option>#}
-            {#{% endfor %}#}
-        {#</div>#}
-        <div>
-            <label>Sous catégorie</label>
-            {{ form_widget(edit_form.nomsouscat) }}
-            {{ form_errors(edit_form.nomsouscat) }}
+        <center>
+        <div class="reducto">
+            <div class="row left-align">
+                <div class="col s12">
+                    <label><h6>catégorie</h6></label>
+                    {{ form_widget(edit_form.categorie) }}
+                    {{ form_errors(edit_form.categorie) }}
+                </div>
+            </div>
+            <div class="row left-align">
+                <div class="co s12">
+                    <label><h6>Sous catégorie</h6></label>
+                    {{ form_widget(edit_form.nomsouscat) }}
+                    {{ form_errors(edit_form.nomsouscat) }}
+                </div>
+            </div>
         </div>
+        </center>
+
         <div class="row center">
             <ul>
                 <li>

@@ -6,41 +6,59 @@
     <h1 class="white-text">Editer un évènement :</h1>
     </div>
     {{ form_start(edit_form) }}
-    <div>
-        <label>Titre</label>
-        {{ form_widget(edit_form.titre) }}
-        {{ form_errors(edit_form.titre) }}
+
+    <center>
+        <div class="reducto">
+            <div class="row">
+                <label><h6>Titre</h6></label>
+                {{ form_widget(edit_form.titre) }}
+                {{ form_errors(edit_form.titre) }}
+            </div>
+            <div class="row">
+                <label><h6>Descriptif</h6></label>
+                {{ form_widget(edit_form.descriptif) }}
+                {{ form_errors(edit_form.descriptif) }}
+            </div>
+        </div>
+    </center>
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <label><h6>Date de début</h6></label>
+            <div class="input-field">
+                {{ form_widget(edit_form.dateDebut) }}
+                {{ form_errors(edit_form.dateDebut) }}
+            </div
+        </div>
     </div>
-    <div>
-        <label>Descriptif</label>
-        {{ form_widget(edit_form.descriptif) }}
-        {{ form_errors(edit_form.descriptif) }}
+    <div class="row">
+        <div class="col s12 m6 l6">
+            <label><h6>Date de fin</h6></label>
+            <div class="input-field">
+                {{ form_widget(edit_form.dateFin) }}
+                {{ form_errors(edit_form.dateFin) }}
+            </div>
+        </div>
     </div>
-    <div>
-        <label>Date de début</label>
-        {{ form_widget(edit_form.dateDebut) }}
-        {{ form_errors(edit_form.dateDebut) }}
-    </div>
-    <div>
-        <label>Date de fin</label>
-        {{ form_widget(edit_form.dateFin) }}
-        {{ form_errors(edit_form.dateFin) }}
-    </div>
-    <div>
-        <label>Lieu</label>
-        {{ form_widget(edit_form.lieu) }}
-        {{ form_errors(edit_form.lieu) }}
-    </div>
-    <div>
-        <label>Image</label>
-        {{ form_widget(edit_form.file) }}
-        {{ form_errors(edit_form.file) }}
-    </div>
-    <div>
-        <label>Mon de l'image</label>
-        {{ form_widget(edit_form.alt) }}
-        {{ form_errors(edit_form.alt) }}
-    </div>
+    <center>
+        <div class="reducto">
+            <div class="row">
+                <label><h6>Lieu</h6></label>
+                {{ form_widget(edit_form.lieu) }}
+                {{ form_errors(edit_form.lieu) }}
+            </div>
+            <div class="row">
+                <label><h6>Image</h6></label>
+                {{ form_widget(edit_form.file) }}
+                {{ form_errors(edit_form.file) }}
+            </div>
+            <div class="row">
+                <label><h6>Nom de l'image</h6></label>
+                {{ form_widget(edit_form.alt) }}
+                {{ form_errors(edit_form.alt) }}
+            </div>
+        </div>
+    </center>
+
     <div class="row center">
         <ul>
             <li>
