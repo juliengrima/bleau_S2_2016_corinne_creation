@@ -1,75 +1,76 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
-        <h1 class="white-text">Ajouter un évènement</h1>
-    </div>
 
-        {{ form_start(form) }}
-        <center>
-        <div class="reducto">
-            <div class="row">
-                <label><h6>Titre</h6></label>
-                {{ form_widget(form.titre) }}
-                {{ form_errors(form.titre) }}
-            </div>
-            <div class="row">
-                <label><h6>Descriptif</h6></label>
-                {{ form_widget(form.descriptif) }}
-                {{ form_errors(form.descriptif) }}
-            </div>
+    <div class="container">
+        <div class="card teal center">
+            <h1 class="white-text">Ajouter un évènement</h1>
         </div>
-        </center>
-            <div class="row">
-                <div class="col s12 m6 l6">
-                    <label><h6>Date de début</h6></label>
-                    <div class="input-field">
-                    {{ form_widget(form.dateDebut) }}
-                    {{ form_errors(form.dateDebut) }}
-                    </div
+
+            {{ form_start(form) }}
+            <center>
+            <div class="reducto">
+                <div class="row">
+                    <label><h6>Titre</h6></label>
+                    {{ form_widget(form.titre) }}
+                    {{ form_errors(form.titre) }}
+                </div>
+                <div class="row">
+                    <label><h6>Descriptif</h6></label>
+                    {{ form_widget(form.descriptif) }}
+                    {{ form_errors(form.descriptif) }}
                 </div>
             </div>
-            <div class="row">
-                <div class="col s12 m6 l6">
-                    <label><h6>Date de fin</h6></label>
-                    <div class="input-field">
-                    {{ form_widget(form.dateFin) }}
-                    {{ form_errors(form.dateFin) }}
+            </center>
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <label><h6>Date de début</h6></label>
+                        <div class="input-field">
+                        {{ form_widget(form.dateDebut) }}
+                        {{ form_errors(form.dateDebut) }}
+                        </div
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col s12 m6 l6">
+                        <label><h6>Date de fin</h6></label>
+                        <div class="input-field">
+                        {{ form_widget(form.dateFin) }}
+                        {{ form_errors(form.dateFin) }}
+                        </div>
+                    </div>
+                </div>
+            <center>
+            <div class="reducto">
+                <div class="row">
+                    <label><h6>Lieu</h6></label>
+                    {{ form_widget(form.lieu) }}
+                    {{ form_errors(form.lieu) }}
+                </div>
+                <div class="row">
+                    <label><h6>Image</h6></label>
+                    {{ form_widget(form.file) }}
+                    {{ form_errors(form.file) }}
+                </div>
+                <div class="row">
+                    <label><h6>Nom de l'image</h6></label>
+                    {{ form_widget(form.alt) }}
+                    {{ form_errors(form.alt) }}
+                </div>
             </div>
-        <center>
-        <div class="reducto">
-            <div class="row">
-                <label><h6>Lieu</h6></label>
-                {{ form_widget(form.lieu) }}
-                {{ form_errors(form.lieu) }}
-            </div>
-            <div class="row">
-                <label><h6>Image</h6></label>
-                {{ form_widget(form.file) }}
-                {{ form_errors(form.file) }}
-            </div>
-            <div class="row">
-                <label><h6>Nom de l'image</h6></label>
-                {{ form_widget(form.alt) }}
-                {{ form_errors(form.alt) }}
-            </div>
-        </div>
-        </center>
+            </center>
 
-        <div class="row center">
-            <ul>
-                <li>
-                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
-                    <a href="{{ path('event_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
-                </li>
-            </ul>
-        </div>
+            <div class="row center">
+                <ul>
+                    <li>
+                        <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                        <a href="{{ path('event_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                    </li>
+                </ul>
+            </div>
 
-    {{ form_end(form) }}
-</div>
+        {{ form_end(form) }}
+    </div>
 
 {% endblock %}
 

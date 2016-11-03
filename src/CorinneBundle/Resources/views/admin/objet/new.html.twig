@@ -12,7 +12,7 @@
         <div class="reducto">
             <div class="row left-align">
                 <div class="col s12">
-                    <label><h6>Image</h6></label>
+                    <label><h6>Sous catégorie</h6></label>
                     {{ form_widget(form.sousCateg) }}
                     {{ form_errors(form.sousCateg) }}
                 </div>
@@ -38,9 +38,13 @@
                     {{ form_errors(form.definition) }}
                 </div>
             </div>
-            {#<div>#}
-                {#<label>Ajouter au carousel</label>#}
-            {#</div>#}
+            <div class="row left-align">
+                <div class="col s12">
+                    {{ form_widget(form.slider) }}
+                    <label><h6>Ajouter au slider</h6></label>
+                    {{ form_errors(form.slider) }}
+                </div>
+            </div>
 
         </div>
         </center>
@@ -58,24 +62,4 @@
 
     </div>
 
-
-
-
-
-
-{#<div class="container">#}
-    {#<div class="card teal center">#}
-    {#<h1 class="white-text">Création d'oeuvre:</h1>#}
-    {#</div>#}
-    {#{{ form_start(form) }}#}
-        {#{{ form_widget(form) }}#}
-        {#<input class="waves-effect waves-light btn" style="width:220px" type="submit" value="Valider" />#}
-    {#{{ form_end(form) }}#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('objet_index') }}" class="waves-effect waves-light btn" style="width:220px">Retour a la Liste</a>#}
-        {#</li>#}
-    {#</ul>#}
-{#</div>#}
 {% endblock %}

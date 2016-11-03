@@ -2,7 +2,7 @@
 
 {% block body %}
 
-    <center class="container">
+    <div class="container">
         <div class="card teal center">
             <h1 class="white-text">Editer une oeuvre :</h1>
         </div>
@@ -10,13 +10,6 @@
         {{ form_start(edit_form) }}
         <center>
         <div class="reducto">
-            <div class="row left-align">
-                <div class="col s12">
-                    <label>categorie</label>
-                    {{ form_widget(edit_form.categ) }}
-                    {{ form_errors(edit_form.categ) }}
-                </div>
-            </div>
             <div class="row left-align">
                 <div class="col s12">
                     <label>Sous catégorie</label>
@@ -43,6 +36,13 @@
                     <label>Définition</label>
                     {{ form_widget(edit_form.definition) }}
                     {{ form_errors(edit_form.definition) }}
+                </div>
+            </div>
+            <div class="row left-align">
+                <div class="col s12">
+                    {{ form_widget(edit_form.slider) }}
+                    <label>Ajouter au slider</label>
+                    {{ form_errors(edit_form.slider) }}
                 </div>
             </div>
         </div>
