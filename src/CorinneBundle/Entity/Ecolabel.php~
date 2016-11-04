@@ -50,7 +50,7 @@ class Ecolabel
     //  FONCTION DE TEST DU DOSSIER UPLOAD
     protected function getUploadDir()
     {
-        return 'bundles/corinne/img-ecolabel';
+        return 'uploads/img-ecolabel';
     }
 
     protected function getUploadRootDir()

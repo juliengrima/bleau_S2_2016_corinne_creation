@@ -3,11 +3,6 @@ objet_index:
     defaults: { _controller: "CorinneBundle:Objet:index" }
     methods:  GET
 
-objet_show:
-    path:     /{id}/show
-    defaults: { _controller: "CorinneBundle:Objet:show" }
-    methods:  GET
-
 objet_new:
     path:     /new
     defaults: { _controller: "CorinneBundle:Objet:new" }
@@ -21,4 +16,5 @@ objet_edit:
 objet_delete:
     path:     /{id}/delete
     defaults: { _controller: "CorinneBundle:Objet:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]
+

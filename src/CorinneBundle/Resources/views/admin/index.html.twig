@@ -1,12 +1,10 @@
-{#{% extends 'base.html.twig' %}#}
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>Administration-CorinneCréation</title>
 
-    <meta charset="UTF-8" />
-    <title>{% block title %}CorinneCréation{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {#<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />#}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -16,58 +14,90 @@
 
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}" media="screen,projection">
-    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
-
+    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/admin.css') }}">
 </head>
+
+<body>
+<header>
+    <!-- Dropdown Structure -->
+    <ul id="categorie-dropdown" class="dropdown-content teal white-text">
+        <li><a href="{{ path('categorie_index') }}" class="white-text">Catégorie</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ path('categorie_new') }}" class="white-text">Ajouter catégorie</a></li>
+    </ul>
+
+    <!-- Dropdown Structure -->
+    <ul id="souscat-dropdown" class="dropdown-content teal white-text">
+        <li><a  href="{{ path('souscategorie_index') }}"  class="white-text">sous catégorie</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ path('souscategorie_new') }}" class="white-text">Ajouter sous catégorie</a></li>
+    </ul>
+
+    <!-- Dropdown Structure -->
+    <ul id="event-dropdown" class="dropdown-content teal white-text">
+        <li><a  href="{{ path('event_index') }}"  class="white-text">Evenement</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ path('event_new') }}" class="white-text">Ajouter un évenement</a></li>
+    </ul>
+
+    <!-- Dropdown Structure -->
+    <ul id="presse-dropdown" class="dropdown-content teal white-text">
+        <li><a  href="{{ path('presse_index') }}"  class="white-text">Presse</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ path('presse_new') }}" class="white-text">Ajouter une presse</a></li>
+    </ul>
+
+    <!-- Dropdown Structure -->
+    <ul id="objet-dropdown" class="dropdown-content teal white-text">
+        <li><a  href="{{ path('objet_index') }}"  class="white-text">Oeuvres</a></li>
+        <li class="divider"></li>
+        <li><a href="{{ path('objet_new') }}" class="white-text">Ajouter une oeuvre</a></li>
+    </ul>
+
+    <nav>
+        <div class="nav-wrapper teal">
+            <a href="#!" class="brand-logo right">Administration </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li><a class="dropdown-button" data-activates="categorie-dropdown" href="#!">Catégories <i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" data-activates="souscat-dropdown" href="#!">Sous catégories <i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" data-activates="objet-dropdown" > Oeuvres <i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" data-activates="event-dropdown" href="#!">Evenements<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" data-activates="presse-dropdown" href="#!">Presses<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="{{ path('ecolabel_index') }}">Ecolabel</a></li>
+                <li><a href="{{ path('contact_index') }}">Contacts</a></li>
+                <li><a href="{{ path('corinne_homepage') }}" class="amber-text">Corinne Création</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="{{ path('categorie_index') }}">Catégories</a></li>
+                <li><a href="{{ path('souscategorie_index') }}">Sous catégories</a></li>
+                <li><a href="{{ path('objet_index') }}">Oeuvres</a></li>
+                <li><a href="{{ path('event_index') }}">Evenements</a></li>
+                <li><a href="{{ path('presse_index') }}">Presses</a></li>
+                <li><a href="{{ path('contact_index') }}">Contacts</a></li>
+                <li><a href="{{ path('ecolabel_index') }}">Ecolabel</a></li>
+                <li><a href="{{ path('corinne_homepage') }}">Corinne Création</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
 {% block body %}
 
-    <header>
-        {#<div class="container">#}
-        <nav>
-            <div class="nav-wrapper teal">
-                <a href="#!" class="brand-logo right">Administration </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="left hide-on-med-and-down">
-                    <li><a href="{{ path('objet_index') }}">Oeuvres</a></li>
-                    <li><a href="{{ path('categorie_index') }}">Catégories</a></li>
-                    <li><a href="{{ path('souscategorie_index') }}">Sous catégories</a></li>
-                    <li><a href="{{ path('event_index') }}">Evenements</a></li>
-                    <li><a href="{{ path('presse_index') }}">Presses</a></li>
-                    <li><a href="{{ path('contact_index') }}">Contacts</a></li>
-                    <li><a href="{{ path('ecolabel_index') }}">Ecolabel</a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li><a href="{{ path('objet_index') }}">Oeuvres</a></li>
-                    <li><a href="{{ path('categorie_index') }}">Catégories</a></li>
-                    <li><a href="{{ path('souscategorie_index') }}">Sous catégories</a></li>
-                    <li><a href="{{ path('event_index') }}">Evenements</a></li>
-                    <li><a href="{{ path('presse_index') }}">Presses</a></li>
-                    <li><a href="{{ path('contact_index') }}">Contacts</a></li>
-                    <li><a href="{{ path('ecolabel_index') }}">Ecolabel</a></li>
-                </ul>
-            </div>
-        </nav>
-        {#</div>#}
-    </header>
-
-    <main role="main">
-
-    </main>
-
-    <footer>
-
-    </footer>
-
-    <!-- Import jQuery before materialize.js -->
-    <!-- APPEL SCRIPT JQUERY on line -->
-    <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
-
-    <!-- Compiled and minified JavaScript offline Materialize -->
-    <script src="{{ asset('bundles/corinne/js/materialize.min.js') }}"></script>
-
-    {% block js %}{% endblock %}
-
-    <script type="text/javascript" src="{{ asset('bundles/corinne/js/app_backend.js') }}"></script>
-
 {% endblock %}
+
+<!-- Import jQuery before materialize.js -->
+<!-- APPEL SCRIPT JQUERY on line -->
+<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+
+<!-- Compiled and minified JavaScript offline Materialize -->
+<script src="{{ asset('bundles/corinne/js/materialize.min.js') }}"></script>
+
+{% block js %}{% endblock %}
+
+<script type="text/javascript" src="{{ asset('bundles/corinne/js/app_backend.js') }}"></script>
+
+
+</body>
+
+</html>

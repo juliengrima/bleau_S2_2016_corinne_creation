@@ -1,58 +1,48 @@
-{#{% extends 'base.html.twig' %}#}
+{% extends '@Corinne/admin/index.html.twig' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta charset="UTF-8"/>
-
-    <title>{% block title %}CorinneCréation{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia"
-          rel="stylesheet">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}"
-          media="screen,projection">
-    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
-
-</head>
 
 {% block body %}
 
     <div class="container">
-        <div class="card teal center">
-            <h1 class="white-text">Listes des Categories :</h1>
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Categories :</h1>
+                </div>
+            </div>
         </div>
 
-        <table class="bordered highlight centered responsive-table">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nomcat</th>
-                <th>Actions</th>
-            </tr>
+        <div class="row center">
+            <div class="col s12">
+                <a href="{{ path('categorie_new') }}" class="waves-effect waves-light btn">Nouvelle catégorie</a>
+            </div>
+        </div>
+
+        <table class="highlight centered">
+
+            <thead> <!-- En-tête du tableau -->
+                <tr>
+                    <th>Nom de la categorie</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
             </thead>
-            <tbody>
+
+            <tbody> <!-- Corps du tableau -->
             {% for categorie in categories %}
                 <tr>
-                    <td><a href="{{ path('categorie_show', { 'id': categorie.id }) }}">{{ categorie.id }}</a></td>
                     <td>{{ categorie.nomcat }}</td>
+                    <td>
+                        <img src="{{ asset('uploads/pictures/')}}{{ categorie.source }}" class="img-eco">
+                    </td>
                     <td>
                         <ul>
                             <li>
-                                <a href="{{ path('categorie_show', { 'id': categorie.id }) }}"
-                                   class="waves-effect waves-light btn" style="width:100px">voir</a>
+                                <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">Editer</a>
                             </li>
                             <li>
-                                <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}"
-                                   class="waves-effect waves-light btn" style="width:100px">editer</a>
+                                <a href="{{ path('categorie_delete', { 'id': categorie.id }) }}">Supprimer</a>
                             </li>
                         </ul>
                     </td>
@@ -60,19 +50,6 @@
             {% endfor %}
             </tbody>
         </table>
-
-        <ul>
-            <li>
-                <a href="{{ path('categorie_new') }}" class="waves-effect waves-light btn" style="width:280px">Ajouter
-                    une categorie</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                    au menu</a>
-            </li>
-        </ul>
     </div>
 
 {% endblock %}

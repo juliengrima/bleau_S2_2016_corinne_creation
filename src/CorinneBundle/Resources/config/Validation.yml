@@ -1,5 +1,7 @@
-Ens\JobeetBundle\Entity\Job:
+CorinneBundle\Entity\Objet:
     properties:
-        # ...
-        file:
-            - Image: ~
+        source:
+            - Image:
+                maxSize: 400k
+                mimeTypes: [image/*]
+                mimeTypesMessage: Please upload a valid picture

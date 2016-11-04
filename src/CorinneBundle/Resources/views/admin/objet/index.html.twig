@@ -1,80 +1,56 @@
-{#{% extends 'base.html.twig' %}#}
-
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta charset="UTF-8"/>
-
-    <title>{% block title %}CorinneCréation{% endblock %}</title>
-
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Crete+Round|Days+One|Fredoka+One|Nunito|Parisienne|Pinyon+Script|Rochester|Sacramento|Sofia"
-          rel="stylesheet">
-
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/materialize.min.css') }}"
-          media="screen,projection">
-    {#<link type="text/css" rel="stylesheet" href="{{ asset('bundles/corinne/css/main.css') }}">#}
-
-</head>
+{% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
-<div class="container">
-    <div class="card teal center">
 
-    <h1 class="white-text">Liste des Oeuvres :</h1>
+    <div class="container">
 
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Oeuvres :</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12">
+                <a href="{{ path('objet_new') }}" class="waves-effect waves-light btn">Nouvelle Oeuvre</a>
+            </div>
+        </div>
+
+        <table class="highlight centered">
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Image</th>
+                <td>Nom de l'image</td>
+                <th>Définition</th>
+                <th>Carousel</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody> <!-- Corps du tableau -->
+            {% for objet in objets %}
+                <tr>
+                    <td><img src="{{ asset('uploads/pictures/')}}{{ objet.source }}" class="img-eco">}</td>
+                    <td>{{ objet.alt }}</td>
+                    <td>{{ objet.definition }}</td>
+                    <td> {% if objet.slider %}Yes{% else %}No{% endif %}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('objet_edit', { 'id': objet.id }) }}">Editer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('objet_delete', { 'id': objet.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
-    <table class="bordered highlight centered responsive-table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Source</th>
-                <th>Alt</th>
-                <th>Definition</th>
-                <th>Slider</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for objet in objets %}
-            <tr>
-                <td><a href="{{ path('objet_show', { 'id': objet.id }) }}">{{ objet.id }}</a></td>
-                <td>{{ objet.source }}</td>
-                <td>{{ objet.alt }}</td>
-                <td>{{ objet.definition }}</td>
-                <td>{% if objet.slider %}Yes{% else %}No{% endif %}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('objet_show', { 'id': objet.id }) }}" class="waves-effect waves-light btn" style="width:100px">voir</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('objet_edit', { 'id': objet.id }) }}" class="waves-effect waves-light btn" style="width:100px">editer</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('objet_new') }}" class="waves-effect waves-light btn" style="width:280px">Ajouter
-                dans la liste</a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="{{ path('menu_categorie') }}" class="waves-effect waves-light btn" style="width:280px">Retour
-                au menu</a>
-        </li>
-    </ul>
 {% endblock %}

@@ -3,11 +3,6 @@ presse_index:
     defaults: { _controller: "CorinneBundle:Presse:index" }
     methods:  GET
 
-presse_show:
-    path:     /{id}/show
-    defaults: { _controller: "CorinneBundle:Presse:show" }
-    methods:  GET
-
 presse_new:
     path:     /new
     defaults: { _controller: "CorinneBundle:Presse:new" }
@@ -21,4 +16,4 @@ presse_edit:
 presse_delete:
     path:     /{id}/delete
     defaults: { _controller: "CorinneBundle:Presse:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]

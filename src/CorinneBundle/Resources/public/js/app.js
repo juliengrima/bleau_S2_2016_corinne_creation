@@ -2,6 +2,7 @@
 // *                       Appel Fonction
 // ********************************************************************
 jQuery(document).ready(function($) {
+    console.log('ca marche ');
 
     init_corinne();
     gestionSlider();
@@ -37,6 +38,12 @@ function init_corinne()
     $('#textarea1').trigger('autoresize');
 
     $('.modal-trigger').leanModal();
+
+
+    $(".dropdown-button").dropdown();
+
+
+
 
 }
 

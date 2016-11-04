@@ -36,3 +36,4 @@ CorinneBundle\Entity\Objet:
                 nullable: false
 
     lifecycleCallbacks: {  }
+

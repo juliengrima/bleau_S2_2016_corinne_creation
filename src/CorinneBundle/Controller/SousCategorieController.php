@@ -44,26 +44,12 @@ class SousCategorieController extends Controller
             $em->persist($sousCategorie);
             $em->flush();
 
-            return $this->redirectToRoute('souscategorie_show', array('id' => $sousCategorie->getId()));
+            return $this->redirectToRoute('souscategorie_index', array('id' => $sousCategorie->getId()));
         }
 
         return $this->render('@Corinne/admin/souscategorie/new.html.twig', array(
             'sousCategorie' => $sousCategorie,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a SousCategorie entity.
-     *
-     */
-    public function showAction(SousCategorie $sousCategorie)
-    {
-        $deleteForm = $this->createDeleteForm($sousCategorie);
-
-        return $this->render('@Corinne/admin/souscategorie/show.html.twig', array(
-            'sousCategorie' => $sousCategorie,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -96,18 +82,15 @@ class SousCategorieController extends Controller
      * Deletes a SousCategorie entity.
      *
      */
-    public function deleteAction(Request $request, SousCategorie $sousCategorie)
-    {
-        $form = $this->createDeleteForm($sousCategorie);
-        $form->handleRequest($request);
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $scateg = $em->getRepository('CorinneBundle:SousCategorie')->findOneById($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($sousCategorie);
-            $em->flush();
-        }
+        $em->remove($scateg);
+        $em->flush();
 
         return $this->redirectToRoute('souscategorie_index');
+
     }
 
     /**
