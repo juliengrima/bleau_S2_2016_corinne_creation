@@ -6,6 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 class ObjetType extends AbstractType
 {
     /**
@@ -16,9 +17,12 @@ class ObjetType extends AbstractType
     {
         $builder
             ->add('definition')
-            ->add('slider')
             ->add('sousCateg')
             ->add('categ')
+            ->add('slider', CheckboxType::class, array(
+                'label'    => 'Ajouter au carousel',
+                'required' => false,
+            ))
             ->add('source', FileType::class, array('label' => 'Image (fichier JPG)', 'data_class' => null))
             ->add('alt')
         ;
