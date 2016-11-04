@@ -1,0 +1,6 @@
+CorinneBundle\Entity\Objet:
+    properties:
+        source:
+            - Image:
+                maxSize: 200
+                mimeTypesMessage: Please charge une image valide

@@ -2,7 +2,7 @@
 // *                       Appel Fonction
 // ********************************************************************
 jQuery(document).ready(function($) {
-
+    console.log('jQuery de app.js a démarré');
     init_corinne();
     gestionSlider();
     autoplay();
@@ -40,9 +40,6 @@ function init_corinne()
 
 
     $(".dropdown-button").dropdown();
-
-
-
 
 }
 

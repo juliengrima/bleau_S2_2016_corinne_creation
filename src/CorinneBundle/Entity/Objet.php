@@ -32,7 +32,8 @@ class Objet
      *
      * @Assert\NotBlank(message="Please, upload the product brochure as a PDF file.")
      * @Assert\File(
-     *     maxSize = "400k",
+     *     maxSize
+     *      = "400k",
      *     mimeTypes={ "image/jpeg", "image/jpg", "image/png" })
      */
     private $source;
