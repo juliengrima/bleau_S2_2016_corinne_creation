@@ -152,34 +152,18 @@ p {
 {
     background-color: black!important;
 }
+
+.right-size-mif {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 10% !important;
+}
+
+/***************************************************************************/
 /*                      Fin BARRE DE NAVIGATION                            */
 /* ------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-/* ***************************************************************************
-*
-*                           7 SLIDER 
-*
-**************************************************************************** */
-
-/* ------------------------------------------------------------------------- */
-/* *********            7.1  Slider INDEX HAUT PAGE             ************ */
-
-
-
-
-/*                      Fin SLIDER                                         */
-/* ------------------------------------------------------------------------*/
-
-
-
-/* ************************************************************************* */
 
 /* position de texte */
 
@@ -701,15 +685,6 @@ footer {
     border: none;
     box-shadow: none;
     font-family: 'Crete Round', serif;
-
-    /*display: block;*/
-    /*position: absolute;*/
-    /*float: left;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-
-    /*width: 300px;*/
-
 }
 
 .card-event .card-event-reveal{
@@ -723,5 +698,35 @@ footer {
 .card-image .img-event {
     width: 200px;
     height: 300px;
+}
+
+.right-size-mereau {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    width: 20% !important;
+}
+
+/***************************************************************************
+*                                                                          *
+*                                   LISTE                                  *
+*                                                                          *
+***************************************************************************/
+
+.opaque {
+    background: rgba(0,0,0,0.2);
+    width: 250px !important;
+    height: 250px;
+    box-shadow: none;
+    border: none;
+}
+
+.liste-size {
+    width: 250px !important;
+    height: 250px;
+}
+
+.container-padding {
+    padding-bottom: 50px;
 }
 

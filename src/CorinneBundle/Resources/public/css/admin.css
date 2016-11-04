@@ -19,7 +19,7 @@
 * --- 2.6 - Presse
 * --- 2.7 - Sous Categorie
 *
-* -- 1 - EDIT
+* -- 1 - NEW
 * --- 3.1 - Categorie
 * --- 3.2 - Contact
 * --- 3.3 - Eco Label
@@ -28,7 +28,7 @@
 * --- 3.6 - Presse
 * --- 3.7 - Sous Categorie
 *
-* -- 1 - EDIT
+* -- 1 - SHOW
 * --- 4.1 - Categorie
 * --- 4.2 - Contact
 * --- 4.3 - Eco Label
@@ -77,7 +77,9 @@ div .e:hover .f {
 }
 
 .img-eco {
-    width: 50%;
+    /*width: 50% !important;*/
+    width: 100px;
+    height: 100px;
 }
 
 
@@ -99,4 +101,15 @@ div .e:hover .f {
 .width-text {
     width: 300px;
     height: 200px;
+}
+
+/**************************************************
+*                                                 *
+*                      NEW                        *
+*                                                 *
+**************************************************/
+
+.reducto{
+    width: 400px;
+
 }

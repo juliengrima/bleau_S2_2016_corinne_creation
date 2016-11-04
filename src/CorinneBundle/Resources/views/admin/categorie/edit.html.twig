@@ -8,21 +8,33 @@
         </div>
 
         {{ form_start(edit_form) }}
-        <div>
-            <label>Nom de la catégorie</label>
-            {{ form_widget(edit_form.nomcat) }}
-            {{ form_errors(edit_form.nomcat) }}
-        </div>
-        <div>
-            <label>Image de la categorie</label>
-            {{ form_widget(edit_form.source) }}
-            {{ form_errors(edit_form.source) }}
-        </div>
-        <div>
-            <label>Alt</label>
-            {{ form_widget(edit_form.alt) }}
-            {{ form_errors(edit_form.alt) }}
-        </div>
+        <center>
+            <div class="reducto">
+                <div class="row left-align">
+                    <div class="col s12">
+                    <label>Nom de la catégorie</label>
+                    {{ form_widget(edit_form.nomcat) }}
+                    {{ form_errors(edit_form.nomcat) }}
+                    </div>
+                </div>
+                <div class="row left-align">
+                    <div class="col s12">
+                    <label>Image de la categorie</label>
+                    {{ form_widget(edit_form.source) }}
+                    {{ form_errors(edit_form.source) }}
+                    </div>
+                </div>
+                <div class="row left-align">
+                    <div class="col s12">
+                    <label>Nom de l'image</label>
+                    {{ form_widget(edit_form.alt) }}
+                    {{ form_errors(edit_form.alt) }}
+                    </div>
+                </div>
+            </div>
+        </center>
+
+
         <div class="row center">
             <ul>
                 <li>

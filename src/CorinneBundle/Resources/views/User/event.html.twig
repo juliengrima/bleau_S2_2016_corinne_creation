@@ -1,36 +1,50 @@
 {% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
-
-<div class="container">
-    <div class="row">
-    {% for event in events %}
-        <div class="col s12 m6 l4 position">
-            <div class="card card-event">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator img-event" src="{{ asset('uploads/img-event/')}}{{ event.source }}"
-                         alt="{{ event.alt }}">
-                </div>
-                <div class="card-content activator amber-text" id="img-size-event">
-                    <span class="card-title  amber-text">{{ event.titre }}<i class="material-icons right">more_vert</i></span>
-                    <p>Voir l'évènement</p>
-                </div>
-                <div class="card-reveal card-event-reveal">
-                    <span class="card-title amber-text">{{ event.titre }}<i class="material-icons right">close</i></span>
-                    <p><span class="amber-text">{{ event.titre }} <br>
-                            {{ event.descriptif}} <br>
-                            --------------------<br>
-                            du : {{ event.dateDebut|date('d-m-Y') }} au {{ event.dateFin|date('d-m-Y') }} <br>
-                            Horaires : {{ event.dateDebut|date('H') }}H / {{ event.dateFin|date('H') }}H <br>
-                            --------------------<br>
-                            {{ event.lieu }}
-                    </span></p>
-                </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <a href="https://drive.google.com/file/d/0B9DtNZpPt4nlRlpkdlMtWExsNGc/view">
+                    <img src="{{ asset('bundles/corinne/images/mereau.png') }}" class="right right-size-mereau">
+                </a>
             </div>
         </div>
-    {% endfor %}
     </div>
-</div>
+
+    <div class="container">
+        <div class="row">
+
+        {% for event in events %}
+
+            <div class="col s12 m6 l4">
+                <div class="card card-event">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator img-event" src="{{ asset('uploads/img-event/')}}{{ event.source }}"
+                             alt="{{ event.alt }}">
+                    </div>
+                    <div class="card-content activator amber-text" id="img-size-event">
+                        <span class="card-title  amber-text">{{ event.titre }}<i class="material-icons right">more_vert</i></span>
+                        <p>Voir l'évènement</p>
+                    </div>
+                    <div class="card-reveal card-event-reveal">
+                        <span class="card-title amber-text">{{ event.titre }}<i class="material-icons right">close</i></span>
+                        <p><span class="amber-text">{{ event.titre }} <br>
+                                {{ event.descriptif}} <br>
+                                --------------------<br>
+                                du : {{ event.dateDebut|date('d-m-Y') }} au {{ event.dateFin|date('d-m-Y') }} <br>
+                                Horaires : {{ event.dateDebut|date('H') }}H / {{ event.dateFin|date('H') }}H <br>
+                                --------------------<br>
+                                {{ event.lieu }}
+                        </span></p>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+        </div>
+    </div>
 
 
 {% endblock %}
@@ -52,14 +66,5 @@
             maxDuration : 0.7,
             viewportFactor : 0.2
         } );
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-7243260-2']);
-        _gaq.push(['_trackPageview']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
     </script>
 {% endblock %}

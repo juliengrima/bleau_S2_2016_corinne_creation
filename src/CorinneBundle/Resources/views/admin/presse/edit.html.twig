@@ -1,21 +1,31 @@
 {% extends '@Corinne/admin/index.html.twig' %}
 
 {% block body %}
+
     <div class="container">
         <div class="card teal center">
             <h1 class="white-text">Editer une presse :</h1>
         </div>
         {{ form_start(edit_form) }}
-        <div>
-            <label>Coupure de presse</label>
-            {{ form_widget(edit_form.file) }}
-            {{ form_errors(edit_form.file) }}
+        <center>
+        <div class="reducto">
+            <div class="row left-align">
+                <div class="col s12">
+                    <label><h6>Coupure de presse</h6></label>
+                    {{ form_widget(edit_form.file) }}
+                    {{ form_errors(edit_form.file) }}
+                </div>
+            </div>
+            <div class="row left-align">
+                <div class="col s12">
+                    <label>Nom de la coupure</label>
+                    {{ form_widget(edit_form.alt) }}
+                    {{ form_errors(edit_form.alt) }}
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Nom de la coupure</label>
-            {{ form_widget(edit_form.alt) }}
-            {{ form_errors(edit_form.alt) }}
-        </div>
+        </center>
+
         <div class="row center">
             <ul>
                 <li>

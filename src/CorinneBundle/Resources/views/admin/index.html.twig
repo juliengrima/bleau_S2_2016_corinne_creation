@@ -54,14 +54,6 @@
         <li><a href="{{ path('objet_new') }}" class="white-text">Ajouter une oeuvre</a></li>
     </ul>
 
-    <!-- Dropdown Structure -->
-    <ul id="ecolabel-dropdown" class="dropdown-content teal white-text">
-        <li><a  href="{{ path('ecolabel_index') }}"  class="white-text">Ecolabel</a></li>
-        <li class="divider"></li>
-        <li><a href="{{ path('ecolabel_new') }}" class="white-text">Ajouter un écolabel</a></li>
-    </ul>
-
-
     <nav>
         <div class="nav-wrapper teal">
             <a href="#!" class="brand-logo right">Administration </a>
@@ -72,10 +64,9 @@
                 <li><a class="dropdown-button" data-activates="objet-dropdown" > Oeuvres <i class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a class="dropdown-button" data-activates="event-dropdown" href="#!">Evenements<i class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a class="dropdown-button" data-activates="presse-dropdown" href="#!">Presses<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a class="dropdown-button" data-activates="ecolabel-dropdown" href="#!">Ecolabel<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="{{ path('ecolabel_index') }}">Ecolabel</a></li>
                 <li><a href="{{ path('contact_index') }}">Contacts</a></li>
                 <li><a href="{{ path('corinne_homepage') }}" class="amber-text">Corinne Création</a></li>
-
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="{{ path('categorie_index') }}">Catégories</a></li>
