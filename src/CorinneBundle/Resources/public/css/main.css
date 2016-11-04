@@ -714,8 +714,7 @@ footer {
 ***************************************************************************/
 
 .opaque {
-    /*display: inline-block;*/
-    background: rgba(0,0,0,0);
+    background: rgba(0,0,0,0.2);
     width: 250px !important;
     height: 250px;
     box-shadow: none;
@@ -726,3 +725,8 @@ footer {
     width: 250px !important;
     height: 250px;
 }
+
+.container-padding {
+    padding-bottom: 50px;
+}
+
