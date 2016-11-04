@@ -21,10 +21,13 @@ A Symfony project created on October 17, 2016, 4:43 pm.
   Bugs : - contact_edit
          - contact_new (probleme envoie des mails)
 
-
 4 - finition css admin et correction affichage
+    - !!!!!à fixer foreignkey edit & delete de le sous categorie!!!!! 
 
-5 - Dossier a créer pour le web 
+
+
+
+12 - Dossier a créer dans le web 
     - uploads/img-creation
     - uploads/img-ecolabel
     - uploads/img-event
@@ -33,4 +36,4 @@ A Symfony project created on October 17, 2016, 4:43 pm.
     - uploads/pictures
 
 Page ecolabel\new non visible car non util pour l'utilisateur: 
-y acceder par le lien directement.
+y acceder par la barre d'addresse directement.
