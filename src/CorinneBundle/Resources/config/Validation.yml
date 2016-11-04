@@ -1,7 +1,0 @@
-CorinneBundle\Entity\Objet:
-    properties:
-        source:
-            - Image:
-                maxSize: 400k
-                mimeTypes: [image/*]
-                mimeTypesMessage: Please upload a valid picture
