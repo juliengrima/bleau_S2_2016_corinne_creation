@@ -153,12 +153,14 @@ p {
     background-color: black!important;
 }
 
-
-.right-float {
-    width: 70px !important;
-    height: 70px !important;
-    float: right;
+.right-size-mif {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 10% !important;
 }
+
+/***************************************************************************/
 /*                      Fin BARRE DE NAVIGATION                            */
 /* ------------------------------------------------------------------------*/
 
@@ -683,15 +685,6 @@ footer {
     border: none;
     box-shadow: none;
     font-family: 'Crete Round', serif;
-
-    /*display: block;*/
-    /*position: absolute;*/
-    /*float: left;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-
-    /*width: 300px;*/
-
 }
 
 .card-event .card-event-reveal{
@@ -707,16 +700,29 @@ footer {
     height: 300px;
 }
 
-.right-size-mif {
-    position: absolute;
-    right: 10%;
-    top: 10%;
-    width: 10% !important;
-}
-
 .right-size-mereau {
     position: absolute;
     right: 5%;
     top: 35%;
     width: 20% !important;
+}
+
+/***************************************************************************
+*                                                                          *
+*                                   LISTE                                  *
+*                                                                          *
+***************************************************************************/
+
+.opaque {
+    /*display: inline-block;*/
+    background: rgba(0,0,0,0);
+    width: 250px !important;
+    height: 250px;
+    box-shadow: none;
+    border: none;
+}
+
+.liste-size {
+    width: 250px !important;
+    height: 250px;
 }
