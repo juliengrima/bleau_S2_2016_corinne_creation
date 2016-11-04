@@ -87,7 +87,7 @@ class SousCategorieController extends Controller
         $scateg = $em->getRepository('CorinneBundle:SousCategorie')->findOneById($id);
 // condition si objet vide supprimer
 
-        var_dump($scateg->getObjet());
+//        var_dump($scateg->getObjet());
 
         if ($scateg->getObjet() != null){
             return $this->redirectToRoute('souscategorie_index');
