@@ -13,6 +13,14 @@
             {{ form_widget(edit_form.source) }}
             {{ form_errors(edit_form.source) }}
         </div>
+
+
+        <div class="input-field">
+            {{ form_widget(edit_form.slider) }}
+            {{ form_label(edit_form.slider, "ajouter au slider ?") }}
+            {{ form_errors(edit_form.slider) }}
+        </div>
+
         <div>
             <label>Nom de l'image</label>
             {{ form_widget(edit_form.alt) }}
@@ -23,6 +31,22 @@
             {{ form_widget(edit_form.definition) }}
             {{ form_errors(edit_form.definition) }}
         </div>
+
+
+        <div class="row">
+            <div class="input-field col s12">
+                {{ form_label(edit_form.categ, "Catégorie") }}
+                {{ form_widget(edit_form.categ) }}
+                {{ form_errors(edit_form.categ) }}
+            </div>
+        </div>
+        <div class="input-field">
+            <label>Sous catégorie</label>
+            {{ form_widget(edit_form.sousCateg) }}
+            {{ form_errors(edit_form.sousCateg) }}
+        </div>
+
+
         <div class="row center">
             <ul>
                 <li>
