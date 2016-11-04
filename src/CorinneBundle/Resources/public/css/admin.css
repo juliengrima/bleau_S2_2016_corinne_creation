@@ -78,8 +78,8 @@ div .e:hover .f {
 
 .img-eco {
     /*width: 50% !important;*/
-    width: 100px;
-    height: 100px;
+    width: 200px !important;
+    height: 200px !important;
 }
 
 

@@ -31,7 +31,7 @@
             <tbody> <!-- Corps du tableau -->
             {% for sousCategorie in sousCategories %}
                 <tr>
-                    {#<td></td>#}
+                    <td>{{ sousCategorie.categorie }}</td>
                     <td>{{ sousCategorie.nomsouscat }}</td>
                     <td>
                         <ul>
