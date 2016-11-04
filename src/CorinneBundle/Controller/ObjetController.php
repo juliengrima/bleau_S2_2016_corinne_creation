@@ -106,7 +106,7 @@ class ObjetController extends Controller
             // Update the 'brochure' property to store the PDF file name
             // instead of its contents
             $objet->setSource($fileName);
-
+            $objet->setCateg($objet->getSousCateg()->getCategorie());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($objet);

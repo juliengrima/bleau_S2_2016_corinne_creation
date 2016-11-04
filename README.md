@@ -32,5 +32,5 @@ A Symfony project created on October 17, 2016, 4:43 pm.
     - uploads/img-slider
     - uploads/pictures
 
-
-PENSEZ A CREER PAGE ECOLABEL VIA LA ROUTE
+Page ecolabel\new non visible car non util pour l'utilisateur: 
+y acceder par le lien directement.
