@@ -13,19 +13,24 @@
 
     <div class="row ">
         <div class="carousel hide-on-small-only" id="carousel-index">
-            <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('bundles/corinne/img-slider/collier1.jpg') }}" alt="anneau de feu"/></a>
-            <a class="carousel-item" href="#two!"><img  class="responsive-img" src="{{ asset('uploads/img-slider/collier2.jpg') }}" alt="tiffany"/></a>
-            <a class="carousel-item" href="#three!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/collier3.jpg') }}" alt="croix"/></a>
-            <a class="carousel-item" href="#four!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/bague.jpg') }}" alt="fleur verre fusonné"/></a>
-            <a class="carousel-item" href="#five!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/bracelet.jpg') }}" alt="la tendresse"/> </a>
+
+
+            {% for objet in objets %}
+
+            <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('uploads/pictures/')}}{{ objet.source }}" alt="anneau de feu"/></a>
+
+            {% endfor %}
         </div>
     </div>
     <div class="row">
         <div class="carousel carousel-slider  hide-on-med-and-up" >
-            <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/collier1.jpg') }}" alt="fleur verre fusonné"/>   </a>
-            <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/collier2.jpg') }}" alt="la tendresse"/> </a>
-            <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/bracelet.jpg') }}" alt="la tendresse"/> </a>
-            <a class="carousel-item" href="#quatre!">  <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/bague.jpg') }}" alt="la tendresse"/> </a>
+
+            {% for objet in objets %}
+
+                <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('uploads/pictures/')}}{{ objet.source }}" alt="anneau de feu"/></a>
+
+            {% endfor %}
+
         </div>
     </div>
 

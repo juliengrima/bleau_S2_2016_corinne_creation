@@ -14,7 +14,12 @@ class DefaultController extends Controller
 
     public function indexAction()
     {
-        return $this->render('CorinneBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $objets = $em->getRepository('CorinneBundle:Objet')->findAll();
+
+        return $this->render('CorinneBundle:Default:index.html.twig', array(
+            'objets' => $objets));
     }
 
     public function parcoursAction()
