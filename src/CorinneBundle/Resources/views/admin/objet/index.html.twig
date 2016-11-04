@@ -33,7 +33,7 @@
             <tbody> <!-- Corps du tableau -->
             {% for objet in objets %}
                 <tr>
-                    <td><img src="{{ asset('uploads/pictures/')}}{{ objet.source }}" class="img-eco">}</td>
+                    <td><img src="{{ asset('uploads/pictures/')}}{{ objet.source }}" class="img-eco"></td>
                     <td>{{ objet.alt }}</td>
                     <td>{{ objet.definition }}</td>
                     <td> {% if objet.slider %}Yes{% else %}No{% endif %}</td>
