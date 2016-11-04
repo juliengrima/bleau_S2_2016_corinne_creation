@@ -707,3 +707,16 @@ footer {
     height: 300px;
 }
 
+.right-size-mif {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 10% !important;
+}
+
+.right-size-mereau {
+    position: absolute;
+    right: 5%;
+    top: 35%;
+    width: 20% !important;
+}
