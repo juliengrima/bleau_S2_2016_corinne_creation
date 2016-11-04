@@ -24,8 +24,13 @@ A Symfony project created on October 17, 2016, 4:43 pm.
 
 4 - finition css admin et correction affichage
 
-
-
+5 - Dossier a créer pour le web 
+    - uploads/img-creation
+    - uploads/img-ecolabel
+    - uploads/img-event
+    - uploads/img-presse
+    - uploads/img-slider
+    - uploads/pictures
 
 
 PENSEZ A CREER PAGE ECOLABEL VIA LA ROUTE
