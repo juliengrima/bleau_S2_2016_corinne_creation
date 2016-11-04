@@ -57,7 +57,7 @@ class ObjetController extends Controller
             // instead of its contents
             $objet->setSource($fileName);
 
-
+            $objet->setCateg($objet->getSousCateg()->getCategorie());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($objet);
@@ -110,7 +110,6 @@ class ObjetController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($objet);
 
-            $objet->setCateg($objet->getSousCateg()->getCategorie());
 
             $em->flush();
 
