@@ -23,4 +23,11 @@ CorinneBundle\Entity\Event:
         lieu:
             type: string
             length: 255
-    lifecycleCallbacks: {  }
+        source:
+            type: string
+            length: 255
+        alt:
+            type: string
+            length: 255
+    lifecycleCallbacks:
+

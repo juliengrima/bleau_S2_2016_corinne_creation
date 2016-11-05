@@ -4,11 +4,15 @@ corinne_homepage:
 
 corinne_parcour:
     path:     /parcour
-    defaults: { _controller: CorinneBundle:Default:parcour }
+    defaults: { _controller: CorinneBundle:Default:parcours }
 
 corinne_creation:
     path:     /creation
     defaults: { _controller: CorinneBundle:Default:creation }
+
+corinne_liste:
+    path:     /liste/{id}
+    defaults: { _controller: CorinneBundle:Categorie:liste }
 
 corinne_ecolabel:
     path:     /ecolabel
@@ -30,3 +34,14 @@ corinne_presse:
     path:     /presse
     defaults: { _controller: CorinneBundle:Default:presse }
 
+corinne_event:
+    path:     /event
+    defaults: { _controller: CorinneBundle:Default:event }
+
+corinne_mailclient:
+    path:     /mailclient
+    defaults: { _controller: CorinneBundle:Default:mailClient }
+
+corinne_mailcorinnecreation:
+    path:     /mailcorinnecreation
+    defaults: { _controller: CorinneBundle:Default:mailCorinneCreation }

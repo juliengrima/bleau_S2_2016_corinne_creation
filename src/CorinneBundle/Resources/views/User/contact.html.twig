@@ -1,85 +1,120 @@
 {% extends '@Corinne/layout.html.twig' %}
+{% block header %} {% endblock %}
 
-{% block header %}{% endblock %}
 {% block body %}
-<div id="contact-body" class="">
-    <header>
-        <nav class="black">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo center amber-text">Contactez-nous</a>
-            </div>
-        </nav>
-    </header>
 
+    <div id="contact-body" class="">
+        <main role="main" id="contact-main" class="">
 
-    <main role="main" id="contact-main" class="">
+            <div id="contact-form " class="">
 
-        <div id="contact-form" class="">
+                <div class="container">
+                    <div class="row">
+                        <form action="{{ path('contact_new') }}" method="post">
+                            <fieldset id="fieldset-contact" class="amber-text black">
+                                <legend class="amber-text">Vos coordonnées</legend>
+                                {{ form_start(form) }}
 
-            <div class="container" >
-                <div class="row">
-                    <form class="">
+                                <div class="row">
+                                    <div class="input-field col s12 m6 amber-text">
+                                        <i class="material-icons prefix amber-text">perm_identity</i>
+                                        <label for="{{ form.prenom.vars.full_name }}" class="amber-text">Prénom</label>
+                                        <input id="{{ form.prenom.vars.id }}"
+                                               name="{{ form.prenom.vars.full_name }}"
+                                               type="text" class="validate amber-text"  autofocus required="">
+                                        {{ form_errors(form.prenom) }}
+                                        {% do form.prenom.setRendered %}
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <i class="material-icons prefix amber-text">perm_identity</i>
+                                        <label for=" {{ form.nom.vars.full_name }}" class="amber-text">Nom</label>
 
-                        <fieldset id="fieldset-contact" class="amber-text black">
-                            <legend class="amber-text">Vos coordonnées</legend>
-
-                            <div class="row">
-                                <div class="input-field col s12 m6 amber-text">
-                                    <i class="material-icons prefix amber-text">perm_identity</i>
-                                    <input id="prenom" type="text" class="validate amber-text"  autofocus required="" >
-                                    <label for="prenom" class="amber-text">Prénom</label>
+                                        <input id="{{ form.nom.vars.id }}"
+                                               name=" {{ form.nom.vars.full_name }}"
+                                               type="text" class="validate amber-text" required="" >
+                                        {{ form_errors(form.nom) }}
+                                        {% do form.nom.setRendered %}
+                                    </div>
                                 </div>
-                                <div class="input-field col s12 m6">
-                                    <i class="material-icons prefix amber-text">perm_identity</i>
-                                    <input id="nom" type="text" class="validate amber-text" required="">
-                                    <label for="nom" class="amber-text">Nom</label>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix amber-text">phone</i>
+                                        <label for="{{ form.tel.vars.full_name }}" class="amber-text">Téléphone</label>
+                                        <input id="{{ form.tel.vars.id }}"
+                                               name="{{ form.tel.vars.full_name }}"
+                                               type="tel" class="validate amber-text" >
+                                        {{ form_errors(form.tel) }}
+                                        {% do form.tel.setRendered %}
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix amber-text">phone</i>
-                                    <input id="telephone" type="tel" class="validate amber-text">
-                                    <label for="telephone" class="amber-text">Téléphone</label>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix  amber-text">email</i>
+                                        <label for="{{ form.mail.vars.full_name }}" class="amber-text">Email</label>
+                                        <input id="{{ form.mail.vars.id }}"
+                                               name="{{ form.mail.vars.full_name }}"
+                                               type="email" class="validate amber-text">
+                                        {{ form_errors(form.mail) }}
+                                        {% do form.mail.setRendered %}
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix  amber-text">email</i>
-                                    <input id="email" type="email" class="validate amber-text">
-                                    <label for="email" class="amber-text">Email</label>
+                                {#variables#}
+
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix amber-text">mode_edit</i>
+                                        <textarea id="{{ form.texte.vars.id }}"
+                                                  name="{{ form.texte.vars.full_name }}"
+                                                  class="materialize-textarea amber-text"  cols="30" rows="10"> </textarea>
+                                        <label for="{{ form.texte.vars.full_name }}" class="amber-text">Votre message</label>
+                                        {{ form_errors(form.texte) }}
+                                        {% do form.texte.setRendered %}
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix amber-text">mode_edit</i>
-                                    <textarea  class="materialize-textarea amber-text" name="textarea1" id="" cols="30" rows="10"> </textarea>
-                                    <label for="textarea1" class="amber-text">Votre message</label>
+
+                                <div class="row">
+                                    <div class="col s1"></div>
+
+                                    <input id="{{ form.isSave.vars.id }}"
+                                           name="{{ form.isSave.vars.full_name }}"
+                                           type="checkbox" class="col  s2"/>
+
+                                    {#<label for=name="{{ form.isSave.vars.full_name }}" class="amber-text">J'accepte l'enregistrement de mes données</label>#}
+
+                                    {{ form_label(form.isSave, "J'accepte l'enregistrement de mes données", { 'attr': {'class': 'amber-text'} } ) }}
+
+                                    {{ form_errors(form.isSave) }}
+                                    {% do form.isSave.setRendered %}
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <button class="btn waves-effect waves-light offset-s2 col s3  offset-m2 m2 amber black-text" type="submit" name="submit_action">Envoyer
-                                    <i class="material-icons right">send</i>
-                                </button>
+                                {{ dump(form) }}
+
+                                {#Boutons#}
+
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light offset-s2 col s3  offset-m2 m2 amber black-text" type="submit" name="submit_action">Envoyer
+                                        <i class="material-icons right">send</i>
+                                    </button>
 
 
-                                <button class="btn waves-effect waves-light offset-s2 col s3 offset-m4 m2 amber black-text " type="reset" name="reset_action">Annuler
-                                    <i class="material-icons right black-text">loop</i>
-                                </button>
+                                    <button class="btn waves-effect waves-light offset-s2 col s3 offset-m4 m2 amber black-text left" type="reset" name="reset_action">Annuler
+                                        <i class="material-icons right black-text">loop</i>
+                                    </button>
 
-                            </div>
-                        </fieldset>
-                    </form>
+                                    <button class="modal-action modal-close btn waves-effect waves-light offset-s2 col s3 offset-m4 m2 amber black-text center" type="reset" name="reset_action">Fermer
+                                        <i class="material-icons right black-text">shuffle</i>
+                                    </button>
+                                </div>
+                                <div class=""> {{ form_rest(form) }} </div>
+                                {{ form_end(form) }}
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
+        </main>
+    </div>
 
 
-        </div>
-
-
-    </main>
-</div>
 {% endblock %}
-{% block footer %}{% endblock %}

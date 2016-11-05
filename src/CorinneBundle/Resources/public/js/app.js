@@ -1,6 +1,58 @@
+// ********************************************************************
+// *                       Appel Fonction
+// ********************************************************************
+jQuery(document).ready(function($) {
 
-// Shorthand for $( document ).ready()
+    console.log('jQuery de app.js a démarré');
+    init_corinne();
+    gestionSlider();
+    autoplay();
+    click_droit_off();
 
+    // RETOUR VERS LE HAUT
+    retour_haut();
+
+    // ZOOM SUR LES IMAGES
+    zoom_images();
+
+    // Fontion fonction
+    gere_facebook();
+
+    // deroulement_card();
+
+});
+
+// ********************************************************************
+// *                       JS General
+// ********************************************************************
+
+function init_corinne()
+{
+    // pour le menu hamburger
+    $(".button-collapse").sideNav();
+    $('#contact-body').hide();
+
+
+    $("#contact-body").hide().show(1000).css("display", "block");
+    $("#access-body").hide().show(2000).css("display" ,"block");
+
+    $('#textarea1').trigger('autoresize');
+
+    $('.modal-trigger').leanModal();
+
+
+    $(".dropdown-button").dropdown();
+
+}
+
+function zoom_images() {
+    $('.materialboxed').materialbox();
+}
+
+
+// ********************************************************************
+// *                       Sliders
+// ********************************************************************
 
 function autoplay() {
     $('.carousel').carousel('next');
@@ -15,21 +67,9 @@ function gestionSlider() {
     });
 }
 
-
-function init_corinne()
-{
-    // pour le menu hamburger
-    $(".button-collapse").sideNav();
-    $('#contact-body').hide();
-
-    $("#contact-body").hide().show(1000).css("display", "flex");
-    $("#access-body").hide().show(1500).css("display" ,"flex");
-
-    $('#textarea1').trigger('autoresize');
-
-    $('.modal-trigger').leanModal();
-
-}
+// ********************************************************************
+// *                       Bouton retour vers haut
+// ********************************************************************
 
 function retour_haut() {
     $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
@@ -52,9 +92,10 @@ function retour_haut() {
     });
 }
 
-function zoom_images() {
-    $('.materialboxed').materialbox();
-}
+
+// ********************************************************************
+// *                       Facebook
+// ********************************************************************
 
 function gere_facebook() {
 
@@ -65,24 +106,53 @@ function gere_facebook() {
         js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
 }
 
 // ********************************************************************
-// *                       Programme principal
+// *                       Click droit off
 // ********************************************************************
-jQuery(document).ready(function($) {
-    console.log("jQuery est prêt  pour corinne création");
+function click_droit_off() {
+    //if IE4+
+   document.onselectstart = new Function("return false");
+   document.oncontextmenu = new Function("return false");
+   //if NS6
+   if (window.sidebar) {
+       document.onmousedown = disableselect;
+       document.onclick = reEnable;
+   }
 
-    init_corinne();
-    gestionSlider();
-    autoplay();
+    $('img').mousedown(function (event) {
+        switch (event.which) {
+            case 1:
+//                alert('Left Mouse button pressed.');
+                break;
+            case 2:
+                // alert('Middle Mouse button pressed.');
+                break;
+            case 3:
 
-    // // RETOUR VERS LE HAUT
-    retour_haut();
+                $('#modalAlert').openModal();
+                break;
+            default:
+                alert('You have a strange Mouse!');
+        }
+    });
+}
 
-    // ZOOM SUR LES IMAGES
-    zoom_images();
+function animonscroll() {
+    new AnimOnScroll( document.getElementById( 'grid' ), {
+        minDuration : 0.4,
+        maxDuration : 0.7,
+        viewportFactor : 0.2
+    } );
 
-    gere_facebook();
-});
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7243260-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+}

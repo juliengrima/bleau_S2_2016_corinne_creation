@@ -4,7 +4,6 @@ namespace CorinneBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-
 use CorinneBundle\Entity\Presse;
 use CorinneBundle\Form\PresseType;
 
@@ -24,7 +23,7 @@ class PresseController extends Controller
 
         $presses = $em->getRepository('CorinneBundle:Presse')->findAll();
 
-        return $this->render('presse/index.html.twig', array(
+        return $this->render('@Corinne/admin/presse/index.html.twig', array(
             'presses' => $presses,
         ));
     }
@@ -36,35 +35,23 @@ class PresseController extends Controller
     public function newAction(Request $request)
     {
         $presse = new Presse();
-        $form = $this->createForm('CorinneBundle\Form\PresseType', $presse);
+        $form = $this->createForm(PresseType::class, $presse);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($presse);
             $em->flush();
 
-            return $this->redirectToRoute('presse_show', array('id' => $presse->getId()));
+            return $this->redirectToRoute('presse_index', array('id' => $presse->getId()));
         }
 
-        return $this->render('presse/new.html.twig', array(
+        return $this->render('@Corinne/admin/presse/new.html.twig', array(
             'presse' => $presse,
             'form' => $form->createView(),
         ));
-    }
 
-    /**
-     * Finds and displays a Presse entity.
-     *
-     */
-    public function showAction(Presse $presse)
-    {
-        $deleteForm = $this->createDeleteForm($presse);
-
-        return $this->render('presse/show.html.twig', array(
-            'presse' => $presse,
-            'delete_form' => $deleteForm->createView(),
-        ));
     }
 
     /**
@@ -82,10 +69,10 @@ class PresseController extends Controller
             $em->persist($presse);
             $em->flush();
 
-            return $this->redirectToRoute('presse_edit', array('id' => $presse->getId()));
+            return $this->redirectToRoute('presse_index', array('id' => $presse->getId()));
         }
 
-        return $this->render('presse/edit.html.twig', array(
+        return $this->render('@Corinne/admin/presse/edit.html.twig', array(
             'presse' => $presse,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -96,18 +83,18 @@ class PresseController extends Controller
      * Deletes a Presse entity.
      *
      */
-    public function deleteAction(Request $request, Presse $presse)
-    {
-        $form = $this->createDeleteForm($presse);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($presse);
-            $em->flush();
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $presse = $em->getRepository('CorinneBundle:Presse')->findOneById($id);
+        $fileName = 'uploads/pictures/' . $presse->getSource();
+        if(file_exists($fileName)) {
+            unlink($fileName);
         }
+        $em->remove($presse);
+        $em->flush();
 
         return $this->redirectToRoute('presse_index');
+
     }
 
     /**

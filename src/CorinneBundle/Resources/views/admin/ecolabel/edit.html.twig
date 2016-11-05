@@ -1,0 +1,45 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="card teal center">
+            <h1 class="white-text">Editer l'éco label :</h1>
+        </div>
+
+        {{ form_start(edit_form) }}
+        <div class="row">
+            <div class="col s12">
+                <label>Texte</label>
+                {{ form_widget(edit_form.texte) }}
+                {{ form_errors(edit_form.texte) }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <label>Image de la categorie</label>
+                {{ form_widget(edit_form.file) }}
+                {{ form_errors(edit_form.file) }}
+            </div>
+        </div>
+        <div class="row hide">
+            <div class="col s12">
+                <label>Nom de l'image</label>
+                {{ form_widget(edit_form.alt) }}
+                {{ form_errors(edit_form.alt) }}
+            </div>
+        </div>
+        <div class="row center">
+            <ul>
+                <li>
+                    <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                    <a href="{{ path('ecolabel_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                </li>
+            </ul>
+        </div>
+
+        {{ form_end(edit_form) }}
+
+    </div>
+
+{% endblock %}

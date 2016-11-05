@@ -1,0 +1,55 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="card teal center">
+    <h1 class="white-text">Editer un évènement :</h1>
+    </div>
+    {{ form_start(edit_form) }}
+    <div>
+        <label>Titre</label>
+        {{ form_widget(edit_form.titre) }}
+        {{ form_errors(edit_form.titre) }}
+    </div>
+    <div>
+        <label>Descriptif</label>
+        {{ form_widget(edit_form.descriptif) }}
+        {{ form_errors(edit_form.descriptif) }}
+    </div>
+    <div>
+        <label>Date de début</label>
+        {{ form_widget(edit_form.dateDebut) }}
+        {{ form_errors(edit_form.dateDebut) }}
+    </div>
+    <div>
+        <label>Date de fin</label>
+        {{ form_widget(edit_form.dateFin) }}
+        {{ form_errors(edit_form.dateFin) }}
+    </div>
+    <div>
+        <label>Lieu</label>
+        {{ form_widget(edit_form.lieu) }}
+        {{ form_errors(edit_form.lieu) }}
+    </div>
+    <div>
+        <label>Image</label>
+        {{ form_widget(edit_form.file) }}
+        {{ form_errors(edit_form.file) }}
+    </div>
+    <div>
+        <label>Mon de l'image</label>
+        {{ form_widget(edit_form.alt) }}
+        {{ form_errors(edit_form.alt) }}
+    </div>
+    <div class="row center">
+        <ul>
+            <li>
+                <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                <a href="{{ path('event_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+            </li>
+        </ul>
+    </div>
+
+    {{ form_end(edit_form) }}
+</div>
+{% endblock %}

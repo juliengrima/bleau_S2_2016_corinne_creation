@@ -12,12 +12,20 @@ CorinneBundle\Entity\Categorie:
         nomcat:
             type: string
             length: 255
+        source:
+            type: string
+            length: 255
+        alt:
+            type: string
+            length: 255
     oneToMany:
         souscategorie:
             targetEntity: CorinneBundle\Entity\SousCategorie
             mappedBy: categorie
+            nullable: false
         objet:
             targetEntity: CorinneBundle\Entity\Objet
             mappedBy: categorie
+            nullable: false
 
     lifecycleCallbacks: {  }

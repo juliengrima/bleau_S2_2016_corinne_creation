@@ -3,11 +3,6 @@ categorie_index:
     defaults: { _controller: "CorinneBundle:Categorie:index" }
     methods:  GET
 
-categorie_show:
-    path:     /{id}/show
-    defaults: { _controller: "CorinneBundle:Categorie:show" }
-    methods:  GET
-
 categorie_new:
     path:     /new
     defaults: { _controller: "CorinneBundle:Categorie:new" }
@@ -21,4 +16,4 @@ categorie_edit:
 categorie_delete:
     path:     /{id}/delete
     defaults: { _controller: "CorinneBundle:Categorie:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]

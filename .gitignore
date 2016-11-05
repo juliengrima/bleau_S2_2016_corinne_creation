@@ -10,15 +10,8 @@
 /vendor/
 /bin/
 /composer.phar
-<<<<<<< HEAD
-/.idea/
-/.idea/workspace.xml
-.idea/
-.idea/workspace.xml
-=======
-.idea/workspace.xml
-.idea/
-
->>>>>>> de8667cb72f944ea55e0dd9a95a39167c4c5b30a
+.idea
+nbproject
+uploads
 
 

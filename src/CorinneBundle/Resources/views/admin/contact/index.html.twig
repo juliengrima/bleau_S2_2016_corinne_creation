@@ -1,0 +1,46 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Contact :</h1>
+                </div>
+            </div>
+        </div>
+
+        <table class="highlight">
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Téléphone</th>
+                <th>E-mail</th>
+            </tr>
+            </thead>
+
+            <tbody> <!-- Corps du tableau -->
+            {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.nom }}</td>
+                    <td>{{ contact.prenom }}</td>
+                    <td>{{ contact.tel }}</td>
+                    <td>{{ contact.mail }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('contact_delete', { 'id': contact.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

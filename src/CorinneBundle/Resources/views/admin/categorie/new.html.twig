@@ -1,0 +1,38 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+
+{% block body %}
+    <div class="container">
+        <div class="card teal center">
+            <h1 class="white-text">Ajouter une categorie :</h1>
+        </div>
+
+        {{ form_start(form) }}
+            <div>
+                <label>Nom de la catégorie</label>
+                {{ form_widget(form.nomcat) }}
+                {{ form_errors(form.nomcat) }}
+            </div>
+            <div>
+                <label>Image de la categorie</label>
+                {{ form_widget(form.source) }}
+                {{ form_errors(form.source) }}
+            </div>
+            <div>
+                <label>Alt</label>
+                {{ form_widget(form.alt) }}
+                {{ form_errors(form.alt) }}
+            </div>
+            <div class="row center">
+                <ul>
+                    <li>
+                        <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                        <a href="{{ path('categorie_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+                    </li>
+                </ul>
+            </div>
+
+        {{ form_end(form) }}
+
+    </div>
+{% endblock %}

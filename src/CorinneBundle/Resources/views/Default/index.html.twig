@@ -1,10 +1,6 @@
 {% extends '@Corinne/layout.html.twig' %}
 
 {% block body %}
-    {% for categorie in categories %}
-        {{ categorie.nomcat }}
-    {% endfor %}
-
     <!--Enluminure -->
     <section>
         <div class="row center">
@@ -17,19 +13,31 @@
 
     <div class="row ">
         <div class="carousel hide-on-small-only" id="carousel-index">
-            <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('bundles/corinne/img-slider/anneau_de_feu.jpg') }}" alt="anneau de feu"/></a>
-            <a class="carousel-item" href="#two!"><img  class="responsive-img" src="{{ asset('bundles/corinne/img-slider/tiffany.jpg') }}" alt="tiffany"/></a>
-            <a class="carousel-item" href="#three!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/croix.jpg') }}" alt="croix"/></a>
-            <a class="carousel-item" href="#four!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/fleur_verre_fusionne_1024.jpg') }}" alt="fleur verre fusonné"/></a>
-            <a class="carousel-item" href="#five!"><img  class="responsive-img"  src="{{ asset('bundles/corinne/img-slider/la_tendresse.jpg') }}" alt="la tendresse"/> </a>
+
+            {% for objet in objets %}
+            <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('uploads/pictures/')}}{{ objet.source }}" alt="anneau de feu"/></a>
+            {#<a class="carousel-item" href="#two!"><img  class="responsive-img" src="{{ asset('uploads/img-slider/collier2.jpg') }}" alt="tiffany"/></a>#}
+            {#<a class="carousel-item" href="#three!"><img  class="responsive-img"  src="{{ asset('uploads/img-slider/collier3.jpg') }}" alt="croix"/></a>#}
+            {#<a class="carousel-item" href="#four!"><img  class="responsive-img"  src="{{ asset('uploads/img-slider/bague.jpg') }}" alt="fleur verre fusonné"/></a>#}
+            {#<a class="carousel-item" href="#five!"><img  class="responsive-img"  src="{{ asset('uploads/img-slider/bracelet.jpg') }}" alt="la tendresse"/> </a>#}
+            {% endfor %}
         </div>
     </div>
     <div class="row">
         <div class="carousel carousel-slider  hide-on-med-and-up" >
-            <a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/fleur_verre_fusionne_1024.jpg') }}" alt="fleur verre fusonné"/>   </a>
-            <a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/la_tendresse.jpg') }}" alt="la tendresse"/> </a>
-            <a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/bracelet_cabochon.jpg') }}" alt="la tendresse"/> </a>
-            <a class="carousel-item" href="#quatre!">  <img  class="responsive-img mobile-img"  src="{{ asset('bundles/corinne/img-slider/anneau_de_feu.jpg') }}" alt="la tendresse"/> </a>
+            {% for objet in objets %}
+                <a class="carousel-item" href="#one!"><img  class="responsive-img" src="{{ asset('uploads/pictures/')}}{{ objet.source }}" alt="anneau de feu"/></a>
+                {#<a class="carousel-item" href="#two!"><img  class="responsive-img" src="{{ asset('uploads/img-slider/collier2.jpg') }}" alt="tiffany"/></a>#}
+                {#<a class="carousel-item" href="#three!"><img  class="responsive-img"  src="{{ asset('uploads/img-slider/collier3.jpg') }}" alt="croix"/></a>#}
+                {#<a class="carousel-item" href="#four!"><img  class="responsive-img"  src="{{ asset('uploads/img-slider/bague.jpg') }}" alt="fleur verre fusonné"/></a>#}
+                {#<a class="carousel-item" href="#five!"><img  class="responsive-img"  src="{{ asset('uploads/img-slider/bracelet.jpg') }}" alt="la tendresse"/> </a>#}
+            {% endfor %}
+
+
+            {#<a class="carousel-item" href="#un!"> <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/collier1.jpg') }}" alt="fleur verre fusonné"/>   </a>#}
+            {#<a class="carousel-item" href="#deux!">  <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/collier2.jpg') }}" alt="la tendresse"/> </a>#}
+            {#<a class="carousel-item" href="#trois!">  <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/bracelet.jpg') }}" alt="la tendresse"/> </a>#}
+            {#<a class="carousel-item" href="#quatre!">  <img  class="responsive-img mobile-img"  src="{{ asset('uploads/img-slider/bague.jpg') }}" alt="la tendresse"/> </a>#}
         </div>
     </div>
 
@@ -42,7 +50,7 @@
             <div class="col s2 m6 l1 "></div>
         </div>
     </section>
-<br><br>
+    <br><br>
     <main role="main">
 
         <!--Enluminure Coeur-->
@@ -61,7 +69,7 @@
                 <div class="row">
                     <!--partie écran large et tablette-->
                     <div class="col s12 m12 l12  ">
-                        <div class="card horizontal hide-on-small-only">
+                        <div class="card ju-horizontal horizontal hide-on-small-only">
                             <div class="card-stacked">
                                 <div class="card-content">
                                     <h4 class="header center amber-text">Mes évènements</h4>
@@ -74,11 +82,11 @@
                                 </div>
 
                                 <div class="card-action center" id="a-action">
-                                    <a href="events.php"><h5>Venir à mes évènements</h5></a>
+                                    <a href="{{ path('corinne_event') }}"><h5>Venir à mes évènements</h5></a>
                                 </div>
                             </div>
                             <div class="card-image" id="card-image-collection-height">
-                                <a href="events.php">
+                                <a href="{{ path('corinne_event') }}">
                                     <img src="{{ asset('bundles/corinne/images/collection.jpg') }}" class="image-height" alt="collection.jpg">
                                 </a>
                             </div>
@@ -87,7 +95,7 @@
                     <!--partie pour Mobile-->
                     <div class="row hide-on-med-and-up">
                         <div class="card-image" id="">
-                            <a href="events.php.php"><img src="{{ asset('bundles/corinne/images/collection.jpg') }}" alt="events" class="responsive-img"></a>
+                            <a href="{{ path('corinne_event') }}"><img src="{{ asset('bundles/corinne/images/collection.jpg') }}" alt="events" class="responsive-img"></a>
                         </div>
                         <h4 class="center amber-text">Mes évènements</h4>
                         <p class="amber-text center">
@@ -110,11 +118,12 @@
                     <!--partie écran large et tablette-->
                     <div class="col s12 m12 l12  ">
 
-                        <div class="card horizontal hide-on-small-only">
+                        <div class="card ju-horizontal horizontal hide-on-small-only">
                             <div class="card-image" id="card-image-collection-height">
                                 <a href="{{ path('corinne_atelier') }}">
                                     <img src="{{ asset('bundles/corinne/images/atelier1.JPG') }}" class="image-height" alt="collection.jpg">
-                                </a>                        </div>
+                                </a>
+                            </div>
                             <div class="card-stacked">
                                 <div class="card-content">
                                     <h4 class="header center amber-text">Mon atelier</h4>
@@ -159,17 +168,3 @@
     </section>
 
 {% endblock %}
-
-{#{% block javascripts %}#}
-{#<SCRIPT>#}
-    {#$('.carousel').carousel('next');#}
-
-
-    {#function autoplay() {#}
-        {#// Next slide#}
-        {#$('.carousel').carousel('next');#}
-        {#setTimeout(autoplay, 4500);#}
-    {#}#}
-    {#autoplay()#}
-{#</SCRIPT>#}
-{#{% endblock %}#}

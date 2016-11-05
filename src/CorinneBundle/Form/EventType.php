@@ -17,9 +17,21 @@ class EventType extends AbstractType
         $builder
             ->add('titre')
             ->add('descriptif')
-            ->add('dateDebut', 'datetime')
-            ->add('dateFin', 'datetime')
+
+            ->add('dateDebut', 'date',
+                array(
+                    'input' => 'datetime',
+                    'widget' => 'single_text'))
+
+            ->add('dateFin', 'date',  array(
+                'widget' => 'single_text',
+                'input' => 'datetime',
+                'format' => 'dd/MM/yyyy',
+            ))
+
             ->add('lieu')
+            ->add('file', 'file', array('label' => 'Image  (JPG)', 'required' => false))
+            ->add('alt')
         ;
     }
     

@@ -3,6 +3,7 @@
 namespace CorinneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Ecolabel
@@ -10,6 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Ecolabel
 {
 
+    /**
+     * @var integer
+     */
+    public $file;
+
+//  GENERATED CODE
     /**
      * @var integer
      */
@@ -108,5 +115,29 @@ class Ecolabel
     public function getTexte()
     {
         return $this->texte;
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function setExpiresAtValue()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PreUpdate
+     */
+    public function setUpdatedAtValue()
+    {
+        // Add your code here
     }
 }

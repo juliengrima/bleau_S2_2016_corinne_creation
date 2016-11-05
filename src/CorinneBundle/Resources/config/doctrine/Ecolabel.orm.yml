@@ -17,4 +17,7 @@ CorinneBundle\Entity\Ecolabel:
             length: 255
         texte:
             type: text
-    lifecycleCallbacks: {  }
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue, setExpiresAtValue ]
+        preUpdate: [ setUpdatedAtValue ]
+

@@ -1,0 +1,56 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Oeuvres :</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12">
+                <a href="{{ path('objet_new') }}" class="waves-effect waves-light btn">Nouvelle Oeuvre</a>
+            </div>
+        </div>
+
+        <table class="highlight centered">
+            <thead> <!-- En-tête du tableau -->
+            <tr>
+                <th>Image</th>
+                <td>Nom de l'image</td>
+                <th>Définition</th>
+                <th>Carousel</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+
+            <tbody> <!-- Corps du tableau -->
+            {% for objet in objets %}
+                <tr>
+                    <td><img src="{{ asset('uploads/pictures/')}}{{ objet.source }}" class="img-eco">}</td>
+                    <td>{{ objet.alt }}</td>
+                    <td>{{ objet.definition }}</td>
+                    <td> {% if objet.slider %}Yes{% else %}No{% endif %}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('objet_edit', { 'id': objet.id }) }}">Editer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('objet_delete', { 'id': objet.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

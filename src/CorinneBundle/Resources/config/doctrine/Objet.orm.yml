@@ -26,11 +26,14 @@ CorinneBundle\Entity\Objet:
             joinColumn:
                 name: souscat_id
                 referencedColumnName: id
+                nullable: false
         categ:
             targetEntity: CorinneBundle\Entity\Categorie
             inversedBy: objet
             joinColumn:
                 name: cat_id
                 referencedColumnName: id
+                nullable: false
 
     lifecycleCallbacks: {  }
+

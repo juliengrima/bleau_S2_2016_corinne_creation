@@ -2,51 +2,25 @@
 
 {% block body %}
 <div class="container">
+
     <div class="row">
+        {% for categorie in categories %}
         <div class="col s12 m6 l6 grid margin-grid">
             <figure class="effect-sarah" >
-                <img src="{{ asset('bundles/corinne/images/collier3.jpg') }}" alt="img13" class="img-hover"/>
+                <img src="{{ asset('uploads/img-creation/') }}{{ categorie.source }}" alt="img13" class="img-hover"/>
                 <figcaption>
-                    <h2><span>Bijoux</span></h2>
-                    <p id="a-size"><a href="" class="lien">Colliers</a><br>
-                        <a href="" class="lien">Bracelets</a><br>
-                        <a href="" class="lien">Boucles d'oreilles</a><br>
-                        <a href="" class="lien">Bagues</a><br>
-                        <a href="" class="lien">Broches</a><br>
-                        <a href="" class="lien">Accessoires</a><br>
-                        <a href="" class="lien">Piercings</a></p>
+                    <h2><span> {{ categorie.nomcat }}</span> </h2>
+                    <ul>
+                        {% for souscategorie in categorie.souscategorie %}
+                            <li>
+                                <a href={{ path('corinne_liste', { 'id':souscategorie.id }) }} class="lien">  {{ souscategorie.nomsouscat }} </a>
+                            </li>
+                        {%  endfor %}
+                    </ul>
                 </figcaption>
             </figure>
         </div>
-        <div class="col s12 m6 l6 grid margin-grid">
-            <figure class="effect-sarah" >
-                <img src="{{ asset('bundles/corinne/images/vase1.jpg') }}" alt="img20" class="img-hover"/>
-                <figcaption>
-                    <h2><span>Art de la table</span></h2>
-                    <p><a href="#" class="lien">Colliers</a><br>
-                </figcaption>
-            </figure>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l6 grid margin-grid">
-            <figure class="effect-sarah" >
-                <img src="{{ asset('bundles/corinne/images/COEURfondblanc.jpg') }}" alt="img13" class="img-hover"/>
-                <figcaption>
-                    <h2><span>Dans le jardin</span></h2>
-                    <p><a href="" class="lien">Colliers</a><br>
-                </figcaption>
-            </figure>
-        </div>
-        <div class="col s12 m6 l6 grid margin-grid">
-            <figure class="effect-sarah" >
-                <img src="{{ asset('bundles/corinne/images/bracelet.jpg') }}" alt="img20" class="img-hover"/>
-                <figcaption>
-                    <h2><span>Verre recyclé</span></h2>
-                    <p><a href="" class="lien">Colliers</a><br>
-                </figcaption>
-            </figure>
-        </div>
+        {% endfor %}
     </div>
 </div>
 

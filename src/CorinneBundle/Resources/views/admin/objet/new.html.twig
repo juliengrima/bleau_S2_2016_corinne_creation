@@ -1,0 +1,62 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="card-panel  z-depth-5">
+        <div class="card teal center">
+            <h1 class="white-text">Ajouter une oeuvre :</h1>
+        </div>
+
+
+            {{ form_start(form) }}
+
+            <div >
+                {{  form_label(form.source, "choisissez une image") }}
+                {{ form_widget(form.source) }}
+                {{ form_errors(form.source) }}
+            </div>
+            <div class="input-field">
+                <label>Nom de l'image</label>
+                {{ form_widget(form.alt) }}
+                {{ form_errors(form.alt) }}
+            </div>
+
+            <div class="input-field">
+                {{ form_widget(form.slider) }}
+                {{ form_label(form.slider, "ajouter au slider ?") }}
+                {{ form_errors(form.slider) }}
+            </div>
+
+            <div class="input-field">
+                <label>Alt</label>
+                {{ form_widget(form.definition) }}
+                {{ form_errors(form.definition) }}
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    {{ form_label(form.categ, "Catégorie") }}
+                    {{ form_widget(form.categ) }}
+                    {{ form_errors(form.categ) }}
+                </div>
+            </div>
+            <div class="input-field">
+                <label>Sous catégorie</label>
+                {{ form_widget(form.sousCateg) }}
+                {{ form_errors(form.sousCateg) }}
+            </div>
+
+            <div class="row center">
+                <input class="waves-effect waves-light btn" type="submit" value="Valider" />
+                <a href="{{ path('objet_index') }}" class="waves-effect waves-light btn">Retour a la Liste</a>
+            </div>
+
+            <div class=""> {{ form_rest(form) }} </div>
+
+            {{ form_end(form) }}
+
+    </div>
+
+
+    {% endblock %}

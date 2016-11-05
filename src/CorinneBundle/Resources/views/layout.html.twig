@@ -2,7 +2,7 @@
 
 {% block header %}
     <header>
-        <div class="container">
+        <div class="container box-margin">
             <nav id="menu-index" class="transparent">
                 <div class="nav-wrapper">
                     <div class="row valign-wrapper">
@@ -34,25 +34,26 @@
                                 </div>
                                 <div class="row">
                                     <li class="col s12 m12 offset-m1">
-                                        <a href="{{ path('corinne_contact') }}"><span id="idContact" class="navTextCC">Contact</span></a>
+                                        <a href="{{ path('contact_new') }}"><span id="idContact" class="navTextCC">Contact</span></a>
+                                        {#<a class="modal-trigger" href="#modal1"><span id="idContact" class="navTextCC">Contact</span></a>#}
                                     </li>
                                 </div>
                             </ul>
                         </div>
 
                         <ul class="side-nav" id="mobile-demo">
-                            <li> <a href="parcours.php"         class="center-align navTextMobileCC amber-text">MON HISTOIRE</a></li>
-                            <li> <a href="mes_creations.php"    class="center-align  navTextMobileCC amber-text">MES CREATIONS</a> </li>
-                            <li> <a href="#"                    class="center-align  navTextMobileCC amber-text">COIN PRESSE</a>  </li>
-                            <li> <a href="eco_label.php"  class="center-align  navTextMobileCC amber-text">ECO-LABEL</a> </li>
-                            <li> <a href="contact.php"  class="center-align  navTextMobileCC amber-text">CONTACT</a> </li>
+                            <li> <a href="{{ path('corinne_parcour') }}" class="center-align navTextMobileCC amber-text">MON HISTOIRE</a></li>
+                            <li> <a href="{{ path('corinne_creation') }}" class="center-align  navTextMobileCC amber-text">MES CREATIONS</a> </li>
+                            <li> <a href="{{ path('corinne_presse') }}" class="center-align  navTextMobileCC amber-text">COIN PRESSE</a>  </li>
+                            <li> <a href="{{ path('corinne_ecolabel') }}"  class="center-align  navTextMobileCC amber-text">ECO-LABEL</a> </li>
+                            <li> <a href="{{ path('corinne_contact') }}"  class="center-align  navTextMobileCC amber-text">CONTACT</a> </li>
                         </ul>
 
                     </div>
                     <div  class="row">
 
                         <div class="col s6">
-                            <a href="index.php"><img src="{{ asset('bundles/corinne/images/logo.png') }}" alt="CorinneCreation" class="hide-on-large-only img-logo left"></a>
+                            <a href="{{ path('corinne_homepage') }}"><img src="{{ asset('bundles/corinne/images/logo2.png') }}" alt="CorinneCreation" class="hide-on-large-only img-logo left"></a>
                         </div>
 
                         <div class="col offset-s4 s2">
@@ -65,6 +66,27 @@
         </div>
     </header>
 
+    <!-- Modal Trigger -->
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            {#{{ render(controller('CorinneBundle:Default:contact')) }}#}
+        </div>
+    </div>
+
+    <div id="modalAlert" class="modal modal-fixed-footer">
+        <div class="modal-content white">
+            <h4>Votre attention s'il vous plait</h4>
+            <p class="center valign">
+                <br>
+                Ses oeuvres sont le fruit de mon travail,<br>
+                Cela représente un investissement personnel important.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
+        </div>
+    </div>
 
 {% endblock %}
 
@@ -73,9 +95,8 @@
     <footer class="container">
         <div class="row">
             <div class="col l12 s12">
-                <p class="text-copyright"><a href="{{ path('corinne_access') }}"> ©</a> Copyright all rights reserved - design by <a href="{{ asset('http://www.wildcodeschool.fr') }}">Wild Code School.</a></p>
-                <div id="facebook" class="fb-like" data-href="https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/?pnref=lhc"
-                     data-width="70" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                <p class="text-copyright"><a href="{{ path('corinne_access') }} " style="color:white">©</a> Copyright all rights reserved - design by <a href="{{ asset('http://www.wildcodeschool.fr') }}" style="color:white"><span id="wild">&nbsp; Wild Code School.</span></a></span>
+                <div class="fb-like" data-href="https://www.facebook.com/Corinne-Creations-cr%C3%A9ation-dobjets-et-bijoux-en-verre-artisan-verrier-657167984349510/?pnref=lhc" data-width="70" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             </div>
         </div>
     </footer>

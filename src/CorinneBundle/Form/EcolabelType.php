@@ -5,6 +5,7 @@ namespace CorinneBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class EcolabelType extends AbstractType
 {
@@ -15,10 +16,9 @@ class EcolabelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('source')
+            ->add('source', FileType::class, array('label' => 'Image (fichier JPG)', 'data_class' => null))
             ->add('alt')
-            ->add('texte')
-        ;
+            ->add('texte');
     }
     
     /**

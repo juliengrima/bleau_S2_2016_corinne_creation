@@ -3,6 +3,7 @@
 namespace CorinneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Categorie
@@ -10,6 +11,63 @@ use Doctrine\ORM\Mapping as ORM;
 class Categorie
 {
 
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return $this->nomcat;
+    }
+
+
+    /**
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Please, upload the product brochure as a PDF file.")
+     * @Assert\File(
+     *     maxSize = "600k",
+     *     mimeTypes={ "image/*" })
+     */
+    private $source;
+
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    public function setSource($source)
+    {
+        $this->source = $source;
+
+        return $this;
+    }
+
+    /**
+     * @var string
+     */
+    private $alt;
+    /**
+     * Set alt
+     *
+     * @param string $alt
+     * @return Objet
+     */
+    public function setAlt($alt)
+    {
+        $this->alt = $alt;
+
+        return $this;
+    }
+
+    /**
+     * Get alt
+     *
+     * @return string
+     */
+    public function getAlt()
+    {
+        return $this->alt;
+    }
+
+    // YAM GENERATED CODE
     /**
      * @var integer
      */
@@ -137,4 +195,5 @@ class Categorie
     {
         return $this->objet;
     }
+
 }

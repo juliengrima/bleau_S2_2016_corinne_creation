@@ -1,0 +1,55 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+
+{% block body %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card teal center">
+                    <h1 class="white-text">Categories :</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row center">
+            <div class="col s12">
+                <a href="{{ path('categorie_new') }}" class="waves-effect waves-light btn">Nouvelle catégorie</a>
+            </div>
+        </div>
+
+        <table class="highlight centered">
+
+            <thead> <!-- En-tête du tableau -->
+                <tr>
+                    <th>Nom de la categorie</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody> <!-- Corps du tableau -->
+            {% for categorie in categories %}
+                <tr>
+                    <td>{{ categorie.nomcat }}</td>
+                    <td>
+                        <img src="{{ asset('uploads/pictures/')}}{{ categorie.source }}" class="img-eco">
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('categorie_edit', { 'id': categorie.id }) }}">Editer</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('categorie_delete', { 'id': categorie.id }) }}">Supprimer</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

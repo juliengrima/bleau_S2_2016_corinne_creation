@@ -1,0 +1,93 @@
+{% extends '@Corinne/admin/index.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="card-panel z-depth-5">
+
+            <div class="card-title teal center">
+                <h1 class="white-text">Ajouter un évènement</h1>
+            </div>
+
+            {{ form_start(form) }}
+            <div class="row">
+                <div class="input-field col s12 m3 l3">
+                    {{ form_label(form.titre, "Titre de l'evenement") }}
+                    {{ form_widget(form.titre) }}
+                    {{ form_errors(form.titre) }}
+                </div>
+
+                <div class="input-field col s12 offset-m1 m8 offset-l1 l8  ">
+                    {{ form_label(form.descriptif, "Description de l'evenement") }}
+                    {{ form_widget(form.descriptif, {'attr': {'class': 'materialize-textarea'}}) }}
+                    {{ form_errors(form.descriptif) }}
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    {{ form_label(form.dateDebut, "Date de début") }}
+                    <input type="date" class=""
+                           id="{{ form.dateDebut.vars.id }}"
+                           name="{{ form.dateDebut.vars.full_name }}"
+                        value="{{ form.dateDebut.vars.value }}">
+                    {#{{ form_label(form.dateDebut, "Date de début") }}#}
+                    {#{{ form_widget(form.dateDebut , { 'attr': {'type': 'date'} })  }}#}
+                    {{ form_errors(form.dateDebut) }}
+                    {% do form.dateDebut.setRendered %}
+
+                </div>
+                {#{{ dump(form.dateDebut.vars) }}#}
+                <div class="col s12 m3 offset-l4 l4 ">
+                    {{ form_label(form.dateFin, "Date de fin") }}
+                    <input type="date" class=""
+                           id="{{ form.dateFin.vars.id }}"
+                           name="{{ form.dateFin.vars.full_name }}"
+                           value="{{ form.dateFin.vars.value }}">
+
+                    {#{{ form_widget(form.dateFin , { 'attr': {'class': 'browser-default'} })  }}#}
+
+                    {{ form_errors(form.dateFin) }}
+                    {% do form.dateFin.setRendered %}
+
+                </div>
+            </div>
+
+            <div class="input-field">
+                {{ form_label(form.lieu, "Lieu de l'evenement") }}
+                {{ form_widget(form.lieu) }}
+                {{ form_errors(form.lieu) }}
+            </div>
+
+
+            <div class="input-field col s12 m4">
+                {{ form_label(form.alt, "Nom de l'image") }}
+                {{ form_widget(form.alt) }}
+                {{ form_errors(form.alt) }}
+            </div>
+
+            <div class="row">
+                <div class="">
+                    <div class="">
+                        {{ form_label(form.file, "choisir une image") }}
+                        {{ form_widget(form.file  , { 'attr': {'class': 'btn'} }  ) }}
+                        {{ form_errors(form.file) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-panel center">
+                <input class="waves-effect waves-light btn-large teal" type="submit" value="Valider" />
+                <a href="{{ path('event_index') }}" class="waves-effect waves-light btn-large teal">Retour </a>
+            </div>
+
+            <div class=""> {{ form_rest(form) }} </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+{% endblock %}
+

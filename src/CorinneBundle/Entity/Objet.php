@@ -3,19 +3,38 @@
 namespace CorinneBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 
 /**
  * Objet
  */
 class Objet
 {
+    public function __toString()
+    {
+        return strval($this->id);
+    }
+    //  FONCTION DE METHOD UPLOAD
+
+//  GENERATED CODE
+
+
     /**
      * @var integer
      */
     private $id;
 
+
     /**
-     * @var string
+     * @ORM\Column(type="string")
+     *
+     * @Assert\NotBlank(message="Please, upload the product brochure as a PDF file.")
+     * @Assert\File(
+     *     maxSize
+     *      = "2048k",
+     *     mimeTypes={ "image/jpeg", "image/jpg", "image/png" })
      */
     private $source;
 
@@ -35,14 +54,15 @@ class Objet
     private $slider;
 
     /**
+     * @var \CorinneBundle\Entity\Categorie
+     */
+    private $categ;
+
+    /**
      * @var \CorinneBundle\Entity\SousCategorie
      */
     private $sousCateg;
 
-    /**
-     * @var \CorinneBundle\Entity\Categorie
-     */
-    private $categ;
 
 
     /**
@@ -148,6 +168,30 @@ class Objet
     }
 
     /**
+     * Set categ
+     *
+     * @param \CorinneBundle\Entity\Categorie $categ
+     * @return Objet
+     */
+    public function setCateg(\CorinneBundle\Entity\Categorie $categ = null)
+    {
+        $this->categ = $categ;
+
+        return $this;
+    }
+
+    /**
+     * Get categ
+     *
+     * @return \CorinneBundle\Entity\Categorie
+     */
+    public function getCateg()
+    {
+        return  $this->categ ;
+    }
+
+
+    /**
      * Set sousCateg
      *
      * @param \CorinneBundle\Entity\SousCategorie $sousCateg
@@ -167,29 +211,10 @@ class Objet
      */
     public function getSousCateg()
     {
-        return $this->sousCateg;
+        return  $this->sousCateg;
     }
 
-    /**
-     * Set categ
-     *
-     * @param \CorinneBundle\Entity\Categorie $categ
-     * @return Objet
-     */
-    public function setCateg(\CorinneBundle\Entity\Categorie $categ = null)
-    {
-        $this->categ = $categ;
 
-        return $this;
-    }
 
-    /**
-     * Get categ
-     *
-     * @return \CorinneBundle\Entity\Categorie 
-     */
-    public function getCateg()
-    {
-        return $this->categ;
-    }
+
 }

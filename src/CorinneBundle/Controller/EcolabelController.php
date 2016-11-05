@@ -24,7 +24,7 @@ class EcolabelController extends Controller
 
         $ecolabels = $em->getRepository('CorinneBundle:Ecolabel')->findAll();
 
-        return $this->render('ecolabel/index.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/index.html.twig', array(
             'ecolabels' => $ecolabels,
         ));
     }
@@ -36,34 +36,37 @@ class EcolabelController extends Controller
     public function newAction(Request $request)
     {
         $ecolabel = new Ecolabel();
-        $form = $this->createForm('CorinneBundle\Form\EcolabelType', $ecolabel);
+        $form = $this->createForm(EcolabelType::class, $ecolabel);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            // $file stores the uploaded IMAGE file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $ecolabel->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $ecolabel->setSource($fileName);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_show', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_index', array('id' => $ecolabel->getId()));
         }
 
-        return $this->render('ecolabel/new.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/new.html.twig', array(
             'ecolabel' => $ecolabel,
             'form' => $form->createView(),
-        ));
-    }
-
-    /**
-     * Finds and displays a Ecolabel entity.
-     *
-     */
-    public function showAction(Ecolabel $ecolabel)
-    {
-        $deleteForm = $this->createDeleteForm($ecolabel);
-
-        return $this->render('ecolabel/show.html.twig', array(
-            'ecolabel' => $ecolabel,
-            'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -78,14 +81,38 @@ class EcolabelController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $fileName = 'uploads/pictures/' . $ecolabel->getSource();
+            if(file_exists($fileName)) {
+                unlink($fileName);
+            }
+
+
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $ecolabel->getSource();
+
+            // Generate a unique name for the file before saving it
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            // Move the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('pictures_directory'),
+                $fileName
+            );
+
+            // Update the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $ecolabel->setSource($fileName);
+
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($ecolabel);
             $em->flush();
 
-            return $this->redirectToRoute('ecolabel_edit', array('id' => $ecolabel->getId()));
+            return $this->redirectToRoute('ecolabel_index', array('id' => $ecolabel->getId()));
         }
 
-        return $this->render('ecolabel/edit.html.twig', array(
+        return $this->render('@Corinne/admin/ecolabel/edit.html.twig', array(
             'ecolabel' => $ecolabel,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -105,6 +132,12 @@ class EcolabelController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($ecolabel);
             $em->flush();
+
+            $filename = 'uploads/pictures/' . $ecolabel->getSource();
+            if(file_exists($filename)) {
+                unlink($filename);
+            }
+
         }
 
         return $this->redirectToRoute('ecolabel_index');
